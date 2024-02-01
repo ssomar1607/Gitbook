@@ -148,13 +148,6 @@ To give the permissions of all items, I advice you to download a permission plug
   * <mark style="color:blue;">**/eb giveall {id} {quantity}**</mark>** **<mark style="color:purple;">**\[world]**</mark>
 * Permission: `eb.cmd.giveall`
 
-#### Give an EB in a specific slot of a player  <img src="../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">
-
-* Command:&#x20;
-  * <mark style="color:blue;">**/ei giveslot {playername} {id} {quantity} {slot}**</mark>** **<mark style="color:purple;">**\[usage]**</mark>
-  * _Default usage : The usage that is in the config of your EI_
-* Permission: `eb.cmd.giveslot`
-
 #### Give an EB in a specific slot of a player&#x20;
 
 * Command:&#x20;

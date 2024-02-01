@@ -20,6 +20,6 @@ First of all, this tutorial will be related ONLY to launch the diamond axe, if w
 
 * If you have the <mark style="color:red;">**\[Premium Version]**</mark> you could add a lot of things and make it look like this (or whatever you want, this is just an example)
 
-GIF DELETED BECAUSE OF ITS SIZE
+GIF DELETED BECAUSE OF ITS SIZE T
 
 * That's it, the tutorial of the basic idea + showcase what you can do, I hope you understood, have a nice day ! :P
