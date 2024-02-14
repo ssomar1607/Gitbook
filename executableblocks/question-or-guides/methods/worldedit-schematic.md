@@ -18,3 +18,7 @@ Replace the placeholders for what you want.
 {% hint style="info" %}
 for the NAMEOFYOURWORLD field in the world command, the name of the world that's going to be placed there must be at all lowercase. Using %player\_world\_lower% is recommended if you want to get the world of where the user is at.
 {% endhint %}
+
+{% hint style="info" %}
+If you're using FastAsyncWorldEdit, rewrite the `worldedit:` part to `fastasyncworldedit:`
+{% endhint %}
