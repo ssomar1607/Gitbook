@@ -4,6 +4,8 @@ First of all, to better understanding this tutorial you must read first [<mark s
 
 {% embed url="https://youtu.be/tfiEoQG_qWI" %}
 
+{% embed url="https://youtu.be/9r7n3omVNnY" %}
+
 ## Commentary
 
 * As I said, I'll suppose you know basic stuff, so, this tutorial will only focus on the bow or items with per states texture itself, I won't explain how to create a texture pack, where the items go, etc etc, just the state mechanic itself.
