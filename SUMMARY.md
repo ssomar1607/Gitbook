@@ -21,7 +21,7 @@
 * [✨    Score particles](tools-for-all-plugins-score/score-particles.md)
 * [🧮    Variables](tools-for-all-plugins-score/variables.md)
 * [⛏️   Blocks Hardnesses](tools-for-all-plugins-score/blocks-hardnesses.md)
-* [✔ Compatible Plugins](tools-for-all-plugins-score/compatible-plugins.md)
+* [✔️ Compatible Plugins](tools-for-all-plugins-score/compatible-plugins.md)
 * [🤖 General Questions | Guides](tools-for-all-plugins-score/general-questions-or-guides/README.md)
   * [Technical-Level Info](tools-for-all-plugins-score/general-questions-or-guides/technical-level-info.md)
   * [SCore](tools-for-all-plugins-score/general-questions-or-guides/score.md)
@@ -45,7 +45,7 @@
     * [Activators Descriptions / GIFs](executableitems/configurations/activator-configuration/activators-descriptions-gifs.md)
     * [Activators features](executableitems/configurations/activator-configuration/activators-features.md)
     * [Activator Examples](executableitems/configurations/activator-configuration/activator-examples.md)
-* [⌨ Commands & Permissions](executableitems/commands-and-permissions.md)
+* [⌨️ Commands & Permissions](executableitems/commands-and-permissions.md)
 * [🤖 Questions | Guides](executableitems/questions-or-guides/README.md)
   * [Frequently Asked Questions](executableitems/questions-or-guides/frequently-asked-questions/README.md)
     * [PROJECTILE\_HIT\_... activators not working](executableitems/questions-or-guides/frequently-asked-questions/projectile\_hit\_...-activators-not-working.md)
@@ -151,7 +151,7 @@
   * [Custom sounds](executableitems/questions-or-guides/custom-sounds.md)
   * [Plugin performances optimization](executableitems/questions-or-guides/plugin-performances-optimization.md)
 * [🔦 MC Versions Compatibility](executableitems/mc-versions-compatibility.md)
-* [⚙ Developer API](executableitems/developer-api.md)
+* [⚙️ Developer API](executableitems/developer-api.md)
 
 ## ExecutableBlocks
 
@@ -165,7 +165,7 @@
     * [List of the Activators](executableblocks/configurations/activator-configuration/list-of-the-activators.md)
     * [Activators features](executableblocks/configurations/activator-configuration/activators-features.md)
     * [Activator Examples](executableblocks/configurations/activator-configuration/activator-examples.md)
-* [⌨ Commands & Permissions](executableblocks/commands-and-permissions.md)
+* [⌨️ Commands & Permissions](executableblocks/commands-and-permissions.md)
 * [🤖 Question | Guides](executableblocks/question-or-guides/README.md)
   * [Frequently Asked Questions](executableblocks/question-or-guides/frequently-asked-questions/README.md)
     * [Free vs Premium](executableblocks/question-or-guides/frequently-asked-questions/free-vs-premium.md)
@@ -194,7 +194,7 @@
   * [Methods](executableblocks/question-or-guides/methods/README.md)
     * [Timed actions](executableblocks/question-or-guides/methods/timed-actions.md)
     * [Worldedit schematic](executableblocks/question-or-guides/methods/worldedit-schematic.md)
-* [⚙ Developer API](executableblocks/developer-api.md)
+* [⚙️ Developer API](executableblocks/developer-api.md)
 
 ## ExecutableEvents
 
@@ -218,13 +218,13 @@
     * [Give new/old players an item once](executableevents/question-or-guides/tutorials/give-new-old-players-an-item-once.md)
     * [Run commands after killing x amount of mobs](executableevents/question-or-guides/tutorials/run-commands-after-killing-x-amount-of-mobs.md)
     * [Detect player entry/leave from a worldguard region](executableevents/question-or-guides/tutorials/detect-player-entry-leave-from-a-worldguard-region.md)
-* [⌨ Commands & Permissions](executableevents/commands-and-permissions.md)
+* [⌨️ Commands & Permissions](executableevents/commands-and-permissions.md)
 
 ## CustomPiglinsTrades
 
 * [📌 Information CPT](custompiglinstrades/information-cpt.md)
-* [⌨ Commands & Permissions](custompiglinstrades/commands-and-permissions.md)
-* [✔ Compatible Plugins](custompiglinstrades/compatible-plugins.md)
+* [⌨️ Commands & Permissions](custompiglinstrades/commands-and-permissions.md)
+* [✔️ Compatible Plugins](custompiglinstrades/compatible-plugins.md)
 
 ## TEAM AND DONATIONS
 

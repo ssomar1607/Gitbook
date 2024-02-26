@@ -17,7 +17,7 @@
   * Extra Info: The item has to be a placeable block.
 
 ```yaml
-material: DIAMOND
+material: DIRT
 ```
 
 {% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html" %}
