@@ -103,7 +103,7 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 * Example:
 
 ```
-- BREAK
+ - BREAK
 ```
 
 
@@ -111,13 +111,14 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 ### CONTENT\_ADD
 
 * Info: Adds an item into a container
-* Command: CONTENT\_ADD {Item} \[Amount]
+* Command: CONTENT\_ADD {Item} \[Amount] \[slot]
   * {Item}: Item to add
   * \[Amount]: Amount to add (default is 1)
 * Example:
 
 ```
 - CONTENT_ADD STONE 1
+- CONTENT_ADD EI:Myitem 1
 ```
 
 
@@ -533,7 +534,7 @@ Damages nearest player
 ```
 
 {% hint style="info" %}
-It requires ShopGUIPlus & Vault
+It requires ShopGUIPlus (priority) & Vault & CMI prices
 {% endhint %}
 
 ### SETBLOCK

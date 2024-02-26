@@ -26,6 +26,9 @@ Damages nearest player
 
 ```
 - ALL_PLAYERS DAMAGE 5
+- ALL_PLAYERS say Hello %parseother_{% raw %}
+{%around_target%}
+{% endraw %}_{player_name}%
 ```
 
 Run multiple commands : Give a random item to all player, all players will not have the same.

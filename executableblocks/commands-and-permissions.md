@@ -1,4 +1,4 @@
-# ⌨ Commands & Permissions
+# ⌨️ Commands & Permissions
 
 
 
@@ -50,6 +50,14 @@ To give the permissions of all items, I advice you to download a permission plug
   * If you want **copy the item/block of another plugin**, or a custom vanilla block (Banner, Custom block, ...), You need to install my other plugin, ExecutableItems, type **/ei create {id}** and then import your ExecutableItem in ExecutableBlocks.
 * Permission: `eb.cmd.create`
 
+####
+
+#### Open the a gui with the EB(s) placed
+
+* command: /eb show-placed filter/sort:
+
+<figure><img src="../.gitbook/assets/image.png" alt="" width="338"><figcaption></figcaption></figure>
+
 #### Open the editor / menu
 
 * Command: <mark style="color:blue;">**/eb editor**</mark> or <mark style="color:blue;">**/eb show**</mark>
@@ -68,6 +76,11 @@ To give the permissions of all items, I advice you to download a permission plug
 #### Reload the plugin (only 1 block)
 
 * Command: <mark style="color:blue;">**/eb reload {block\_id}**</mark>
+* Permission: `eb.cmd.reload`
+
+**Reload a folder**
+
+* Command: <mark style="color:blue;">**/eb reload folder:Name\_Of\_My\_Folder**</mark>
 * Permission: `eb.cmd.reload`
 
 #### Delete an ExecutableBlock

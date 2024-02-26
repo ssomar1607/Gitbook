@@ -27,8 +27,9 @@
 * <mark style="color:blue;">**PLAYER\_DROP\_ITEM**</mark> : Activates when a player drops an item.
 * <mark style="color:blue;">**PLAYER\_EDIT\_BOOK**</mark>** : Activates when a player made changes to the book and quill and pressed done or sign the book.**
 * <mark style="color:blue;">**PLAYER\_ENABLE\_GLIDE**</mark>** : Activates when the player starts gliding.**
-* <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_PLOT**</mark>**  : Activates if you enter a plot from the PlotSquared plugin. (TO CHECK)**
-* <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_LAND**</mark>** : Activates if you enter in your land or a land where you are trusted (TO CHECK)**
+* <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_PLOT**</mark>**  : Activates if you enter a plot from the PlotSquared plugin.**&#x20;
+* <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_LAND**</mark>** : Activates if you enter in your land or a land where you are trusted**&#x20;
+* <mark style="color:blue;">**PLAYER\_ENTITY\_PLACE**</mark>** : Activates when the player places an entity (armor stands, boats, minecarts and end crystal)**&#x20;
 * <mark style="color:blue;">**PLAYER\_FOOD\_CHANGE**</mark>** : Activates when the player food changes.**
 * <mark style="color:blue;">**PLAYER\_FIRST\_CONNECTION**</mark> : **Activates when the player joins for first time on the server.**
 * <mark style="color:blue;">**PLAYER\_FERTILIZE\_BLOCK**</mark>** : Activates if a player fertilizes blocks with bone meal.**
@@ -44,8 +45,8 @@
 * <mark style="color:blue;">**PLAYER\_JUMP**</mark>**  : Activates when a player jumps.**
 * <mark style="color:blue;">**PLAYER\_KILL\_ENTITY**</mark>**  : Activates when a player kills an entity.**
 * <mark style="color:blue;">**PLAYER\_KILL\_PLAYER**</mark> ** : Activates when a player kills a player**.
-* <mark style="color:blue;">**PLAYER\_LEAVE\_HIS\_PLOT**</mark>**  : Activates if you leave a plot from the PlotSquared plugin. (TO CHECK)**
-* <mark style="color:blue;">**PLAYER\_LEAVE\_HIS\_LAND**</mark>** : Activates if you leave your land or a land where you are trusted (TO CHECK)**
+* <mark style="color:blue;">**PLAYER\_LEAVE\_HIS\_PLOT**</mark>**  : Activates if you leave a plot from the PlotSquared plugin.**
+* <mark style="color:blue;">**PLAYER\_LEAVE\_HIS\_LAND**</mark>** : Activates if you leave your land or a land where you are trusted**
 * <mark style="color:blue;">**PLAYER\_LEFT\_CLICK**</mark> : Activates when a player left-clicks the item.
 * <mark style="color:blue;">**PLAYER\_MOUNT**</mark>** : Activates when a player mounts an entity.**&#x20;
 * <mark style="color:blue;">**PLAYER\_SEND\_MESSAGE**</mark>** : Activates when a player sends a message.**&#x20;
@@ -59,7 +60,8 @@
 * <mark style="color:blue;">**PLAYER\_RESPAWN**</mark>**  : Activates when a player re-spawns.**
 * <mark style="color:blue;">**PLAYER\_RIGHT\_CLICK**</mark> : Activates when a player right-clicks the item.
 * <mark style="color:blue;">**PLAYER\_SHEAR\_ENTITY**</mark>**  : Activates when a player shears an entity.**
-* <mark style="color:blue;">**PLAYER\_SELECT\_THE\_EI**</mark>**  : Activates when a player selects the EI item in the hotbar. (TO CHECK)**
+* <mark style="color:blue;">**PLAYER\_SELECT\_THE\_EI**</mark>**  : Activates when a player selects the EI item in the hotbar.**&#x20;
+* <mark style="color:blue;">**PLAYER\_SWAP\_HANDI**</mark>**  : Activates when a player swap hands.**&#x20;
 * <mark style="color:blue;">**PLAYER\_TARGETED\_BY\_AN\_ENTITY**</mark> : Activates when an entity targets a player.
 * <mark style="color:blue;">**PLAYER\_TRAMPLE\_CROP**</mark> : Activates when a player tramples a crop.
 * PLAYER\_PORTAL: Activates when a player enters to a portal

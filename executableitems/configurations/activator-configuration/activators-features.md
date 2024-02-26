@@ -255,6 +255,15 @@ cooldown: 30
 * Description: Cooldown for activating an activator (in seconds)
 * Required: NO, (Default 30)
 
+
+
+{% hint style="info" %}
+Custom cooldown features:
+
+* pauseWhenOffline : It pauses the cooldown when the player disconnect
+* pausePlaceholdersConditions : It pauses the cooldown when the placeholderConditions set is valid
+{% endhint %}
+
 ### isCooldownInTicks
 
 * Example:&#x20;
@@ -736,6 +745,7 @@ detailedEntities:
  - MM-Giant
  - MM-MyMob
  - '!SKELETON' #this blacklist
+ - ZOMBIE{CustomName:"*"}
 ```
 
 {% embed url="https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities" %}

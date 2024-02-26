@@ -9,6 +9,7 @@
 * [<mark style="color:orange;">**LOOP**</mark>](list-of-the-activators.md#undefined) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates in repeat as long as the block is placed.**
 * [<mark style="color:blue;">**PLAYER\_ALL\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_all\_click\_on) : Activates when a player clicks on the Executable Block.
 * [<mark style="color:blue;">**PLAYER\_BREAK**</mark>](list-of-the-activators.md#player\_break) : Activates when a player breaks the Executable Block.
+* <mark style="color:blue;">**PLAYER\_BREAK\_BLOCK\_UNDER\_THE\_EB**</mark> : Activates when a player breaks a block under the ExecutableBlock.
 * [<mark style="color:orange;">**PLAYER\_DEATH\_ON**</mark>](list-of-the-activators.md#player\_death\_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a player dies on that Executable Block.**
 * [<mark style="color:blue;">**PLAYER\_EAT\_ON**</mark>](list-of-the-activators.md#player\_eat\_on) : Activates when a player eats while in an Executable Block.
 * [<mark style="color:blue;">**PLAYER\_FALL\_ON**</mark>](list-of-the-activators.md#player\_fall\_on) : Activates when a player falls on the Executable Block. (must take fall damage to count)

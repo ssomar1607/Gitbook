@@ -4,7 +4,7 @@ description: >-
   ExecutableItems
 ---
 
-# ✔ Compatible Plugins
+# ✔️ Compatible Plugins
 
 {% hint style="info" %}
 Take note that this list is strict related compatible plugins, almost every plugin is compatible with Ssomar plugins, if you want to run a command from another plugin, just replace the name of the target with the placeholders. \
@@ -259,6 +259,16 @@ _It will add the Advanced enchantment **Haste** with a level of **1** on your Ex
 
 * You can use conditions to checks if the player has specific magic values.
 * You can use commands to get or remove magic values.
+
+### FACTIONS UUID
+
+* It supports
+  * Block protections
+  * Custom claim conditions
+
+### CMI
+
+* SELL\_CONTENT command supports CMI prices
 
 
 

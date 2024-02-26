@@ -1,4 +1,4 @@
-# ⌨ Commands & Permissions
+# ⌨️ Commands & Permissions
 
 ## Permissions
 
@@ -51,6 +51,11 @@ To give the permissions of all items, I advice you to download a permission plug
 **Reload only 1 item**
 
 * Command: <mark style="color:blue;">**/ei reload \<Id of the item>**</mark>
+* Permission: `ei.cmd.reload`
+
+**Reload a folder**
+
+* Command: <mark style="color:blue;">**/ei reload folder:Name\_Of\_My\_Folder**</mark>
 * Permission: `ei.cmd.reload`
 
 #### Regenerates the default items configs

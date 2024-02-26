@@ -632,20 +632,10 @@ For tags specifications, refer to this list:
 
 ```yaml
 playerConditions:
-    ifIsOnTheBlock: 
-        material0:
-            material: DIAMOND_BLOCK
-        material1:
-            material: FURNACE
-            tags: '{lit:true}'
-        material2:
-            material: ALL_PLANKS
-    ifIsOnTheBlockMsg: '' #<- Here is where you will add the custom message.
-    
-    ifIsNotOnTheBlock:
-     material0:
-       material: COBWEB
-    ifIsNotOnTheBlockMsg: '' #<- Here is where you will add the custom message.
+    ifIsOnTheBlock:
+        blocks:
+        - EXECUTABLEBLOCKS:FREE_HUT
+        - DIAMOND_BLOCK
 ```
 
 * Example Situations:
@@ -689,6 +679,10 @@ playerConditions:
 For tags specifications, refer to this list:
 
 {% embed url="https://minecraft.fandom.com/wiki/Block_states" %}
+
+{% hint style="info" %}
+It supports IA and EB blocks
+{% endhint %}
 
 ### ifPlayerMounts - Not
 

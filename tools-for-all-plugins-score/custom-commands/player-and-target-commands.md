@@ -86,6 +86,20 @@ _Sorted by alphabetical order_
 - MOB_AROUND 7 true STUN_ENABLE <+> DELAY 5 <+> STUN_DISABLE
 ```
 
+### <+::step1> (Around Command Connector when many AROUND, MOB\_AROUND, NEAREST, MOB\_NEAREST, ALL\_PLAYERS, ALL\_MOBS AND IF are nested)
+
+```
+- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND 5 false say &a(2)&e%around_target::step2%
+```
+
+```
+- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
+```
+
+```
+- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
+```
+
 ### ABSORPTION
 
 * Info: Gives absorption effect to the player
@@ -179,6 +193,20 @@ Damages nearby players by 20 player damage in a 7 block radius
 
 ```
 - AROUND 7 false DAMAGE 20
+```
+
+Many around in the same command
+
+```
+- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND 5 false say &a(2)&e%around_target::step2%
+```
+
+```
+- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
+```
+
+```
+- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
 ```
 
 #### You can add conditions to AROUND command
@@ -387,6 +415,23 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 
 
 
+### EECOOLDOWN
+
+* Info: It applys a cooldown to a specific ExecutableItems
+* Command: EECOOLDOWN {PLAYER} {ID} {SECONDS} {boolean TICKS} {optional activator}
+  * {PLAYER}: The player to target the command
+  * {ID}: The id of the ExecutableItem
+  * {Seconds}: The amount of time
+  * {boolean TICKS}: If you want the time to be in ticks
+  * \[optional activator id]: You can apply it to a specific activator id
+* Example:&#x20;
+
+```
+- EECOOLDOWN %player% thisismyid 10 true
+```
+
+
+
 ### FORMAT\_ENCHANTMENTS
 
 * Info: It formats all enchantments in your lore
@@ -558,6 +603,7 @@ MINECART_BOOST 10
 - MOB_AROUND 5 execute at %around_target_uuid% run summon lightning_bolt
 - MOB_AROUND 5 BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
 - MOB_AROUND 5 true effect give %around_target_uuid% poison 10 10
+- MOB_AROUND 10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
 ```
 
 To use entity nbt on the WHITELIST/BLACKLIST field, you need to install NBT API plugin
@@ -843,11 +889,11 @@ You can only use one type of formatting at once in the same SENDMESSAGE command,
 ### SETTEMPBLOCKPOS
 
 * Info: Set a temporary block in a specific position
-* Command: SETTEMPBLOCKPOS {x} {y} {z} {material} {time in ticks} \[bypassProtection true-false]
+* Command: SETTEMPBLOCKPOS {x} {y} {z} {material} {time in ticks} \[bypassProtection true-false] \[blocks list]
 * Example:
 
 ```
-- SETTEMPBLOCKPOS %entity_x% %entity_y% %entity_z% BEDROCK 40 true
+ - SETTEMPBLOCKPOS %entity_x% %entity_y% %entity_z% BEDROCK 40 true !AIR,!WATER
 ```
 
 {% hint style="warning" %}
@@ -859,7 +905,7 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 ### SETBLOCKPOS
 
 * Info: Set a block in a specific position
-* Command: SETBLOCKPOS {x} {y} {z} {material} \[bypassProtection true-false]
+* Command: SETBLOCKPOS {x} {y} {z} {material} \[bypassProtection true-false] \[replace true or false]
 * Example:
 
 ```
@@ -941,6 +987,10 @@ You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/b
 ```
 - SETITEMCUSTOMMODELDATA 10 10
 ```
+
+{% hint style="info" %}
+It supports -1 to mainhand
+{% endhint %}
 
 
 

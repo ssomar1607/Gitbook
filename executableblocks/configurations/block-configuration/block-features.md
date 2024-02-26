@@ -279,6 +279,26 @@ Default -> 1
 Half speed of default -> 0.5
 {% endhint %}
 
+## Brewing stand features
+
+### brewingStandSpeed
+
+* It allows to customize the speed of your brewingStand
+* Example:
+
+```
+brewingStandFeatures:
+  brewingStandSpeed: 1.0
+```
+
+{% hint style="info" %}
+Default -> 1
+
+2 times default velocity -> 2
+
+Half speed of default -> 0.5
+{% endhint %}
+
 ## Hopper features
 
 ### amountItemsTransferred
@@ -377,3 +397,13 @@ DisplayFeatures:
     isCollidable: false
 ```
 
+## Cancel
+
+### cancelLiquidDestroy
+
+* Info: It will cancel the destruction of seeds, player heads by water/lava
+* Example:&#x20;
+
+```
+cancelLiquidDestroy: true
+```

@@ -1,4 +1,4 @@
-# ⌨ Commands & Permissions
+# ⌨️ Commands & Permissions
 
 ## Permissions
 
@@ -25,6 +25,11 @@
 #### Reload the plugin
 
 * Command: <mark style="color:blue;">**/ee reload**</mark>
+* Permission: `ee.cmd.reload`
+
+**Reload a folder**
+
+* Command: <mark style="color:blue;">**/ee reload folder:Name\_Of\_My\_Folder**</mark>
 * Permission: `ee.cmd.reload`
 
 #### Delete an ExecutableEvent
