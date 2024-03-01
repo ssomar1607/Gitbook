@@ -601,7 +601,7 @@ MINECART_BOOST 10
 ```
 - MOB_AROUND 3 false BURN 10
 - MOB_AROUND 5 execute at %around_target_uuid% run summon lightning_bolt
-- MOB_AROUND 5 BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
+- MOB_AROUND 5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
 - MOB_AROUND 5 true effect give %around_target_uuid% poison 10 10
 - MOB_AROUND 10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
 ```
