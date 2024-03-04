@@ -209,6 +209,12 @@ Many around in the same command
 - AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
 ```
 
+```
+- AROUND 10 false CONDITIONS(%::parseother_{% raw %}
+{%player%}
+{% endraw %}_{betterteams_name}::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
+```
+
 #### You can add conditions to AROUND command
 
 * The condition looks like AROUND \<distance> \<msg> CONDITIONS(\<conditions>) \<command>
