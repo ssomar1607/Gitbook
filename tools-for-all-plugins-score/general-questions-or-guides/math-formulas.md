@@ -70,14 +70,10 @@ Example Usage:\
 You want to get the distance between you and a specific XYZ location which is x:30, y:60, z:-120
 
 ```
-%math_0_(ABS({player_x}-(30))+ABS({player_y}-(60))+ABS({player_z}-(-120)))%
+%math_(SQRT(ABS(({x1})-({x2}))^2+ABS(({y1})-({y2}))^2+ABS(({z1})-({z2}))^2))%
 ```
 
-{% hint style="info" %}
-How this works is that it computes the difference between your x coordinates and the mentioned x coordinates then sets the difference into absolute value so it would always be a positive number no matter what. Same goes for computing the difference of y and z coordinates.
 
-After getting the absolute values of the difference of the x y z values, it adds it up and you get the sum of the distance between your location and the said location.
-{% endhint %}
 
 ## Using offsets to distance target from location
 
