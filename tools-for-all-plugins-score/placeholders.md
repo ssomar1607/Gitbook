@@ -202,3 +202,14 @@ It returns the cooldown of the activator1 of the EI Free\_Lotery. It works with 
 ### SETGLOW
 
 * You can get the glow color with %score\_cmd-glow% using it on the plugin TAB
+
+### RECEIVE\_EFFECT
+
+placeholders for activators RECEIVE\_EFFECT (in EI and EE)
+
+```
+%effect_received%
+%effect_received_lower%
+%effect_received_level%
+%effect_received_duration%
+```

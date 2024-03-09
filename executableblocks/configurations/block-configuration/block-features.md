@@ -279,6 +279,24 @@ Default -> 1
 Half speed of default -> 0.5
 {% endhint %}
 
+### infiniteFuel
+
+* Makes the block not require fuel to run
+
+```
+furnaceFeatures:
+  infiniteFuel: true
+```
+
+### infiniteVisualLit
+
+* Makes the block look like it's lit
+
+```
+furnaceFeatures:
+  infiniteVisualLit: true
+```
+
 ## Brewing stand features
 
 ### brewingStandSpeed
@@ -395,6 +413,19 @@ DisplayFeatures:
     width: 1.0
     height: 1.0
     isCollidable: false
+```
+
+## Chiseled Bookshelf
+
+### occupiedSlots
+
+* Sets which slots (Index 0-5) would have a book in it
+
+```
+chiseledBookshelfFeatures:
+  occupiedSlots:
+  - '2'
+  - '5'
 ```
 
 ## Cancel

@@ -9,6 +9,7 @@
 * [<mark style="color:orange;">**LOOP**</mark>](list-of-the-activators.md#undefined) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates in repeat as long as the block is placed.**
 * [<mark style="color:blue;">**PLAYER\_ALL\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_all\_click\_on) : Activates when a player clicks on the Executable Block.
 * [<mark style="color:blue;">**PLAYER\_BREAK**</mark>](list-of-the-activators.md#player\_break) : Activates when a player breaks the Executable Block.
+* <mark style="color:blue;">**PLAYER\_BREAK\_BLOCK\_ABOVE\_THE\_EB**</mark>**: Activates when the block above the eb is broken by a player.**
 * <mark style="color:blue;">**PLAYER\_BREAK\_BLOCK\_UNDER\_THE\_EB**</mark> : Activates when a player breaks a block under the ExecutableBlock.
 * [<mark style="color:orange;">**PLAYER\_DEATH\_ON**</mark>](list-of-the-activators.md#player\_death\_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a player dies on that Executable Block.**
 * [<mark style="color:blue;">**PLAYER\_EAT\_ON**</mark>](list-of-the-activators.md#player\_eat\_on) : Activates when a player eats while in an Executable Block.
@@ -18,17 +19,16 @@
 * [<mark style="color:blue;">**PLAYER\_PLACE**</mark>](list-of-the-activators.md#player\_place) : Activates when a player places the Executable Block.
 * [<mark style="color:orange;">**PLAYER\_PRESS**</mark>](list-of-the-activators.md#player\_press) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: (Executable Block must be a pressure plate) Activates when a player steps on the Executable Block Pressure Plate.**
 * [<mark style="color:blue;">**PLAYER\_RIGHT\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_right\_click\_on) : Activates when a player right clicks on the Executable Block.
-* [<mark style="color:blue;">**PLAYER\_SNEAK\_ON**</mark>](list-of-the-activators.md#player\_sneak\_on) : Activates when a player "sneak" on the Executable Block.
 * <mark style="color:orange;">**PLAYER\_SCROLL\_DOWN\_BY\_TARGETTING\_THE\_EB**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when the player is looking at the eb and scrolls down**
 * <mark style="color:orange;">**PLAYER\_SCROLL\_UP\_BY\_TARGETTING\_THE\_EB**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **:  Activates when the player is looking at the eb and scrolls up**
+* [<mark style="color:blue;">**PLAYER\_SNEAK\_ON**</mark>](list-of-the-activators.md#player\_sneak\_on) : Activates when a player "sneak" on the Executable Block.
 * [<mark style="color:orange;">**PLAYER\_SPRINT\_ON**</mark>](list-of-the-activators.md#player\_sprint\_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a player sprint on the Executable Block.**
 * [<mark style="color:blue;">**PLAYER\_WALK\_ON**</mark>](list-of-the-activators.md#player\_walk\_on) : Activates when a player walks on the Executable Block.
 * [<mark style="color:orange;">**PROJECTILE\_HIT**</mark>](list-of-the-activators.md#projectile\_hit) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a projectile hit the Executable Block.**
-* **REDSTONE\_SIGNAL\_ENABLE:** Activates when the EB is a block that can receive power (redstone tripwire, trapdoor, button, lever, etc) and receives signal.
-* **REDSTONE\_SIGNAL\_DISABLE:** Activates when the EB is a block that can create / store power (redstone tripwire, trapdoor, button, lever, etc) and stop receiving signal.
-* **BLOCK\_DRY: Activates when corals or farmlands got dried.**
-* **PLAYER\_BREAK\_BLOCK\_ABOVE\_THE\_EB: Activates when the block above the eb is broken by a player.**
-* **BREAK\_BLOCK\_ABOVE\_THE\_EB: Activates when the block above the eb is broken**
+* <mark style="color:orange;">**REDSTONE\_SIGNAL\_ENABLE**</mark><img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**:** Activates when the EB is a block that can receive power (redstone tripwire, trapdoor, button, lever, etc) and receives signal.
+* <mark style="color:orange;">**REDSTONE\_SIGNAL\_DISABLE**</mark><img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**:** Activates when the EB is a block that can create / store power (redstone tripwire, trapdoor, button, lever, etc) and stop receiving signal.
+* <mark style="color:orange;">**BLOCK\_DRY**</mark><img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when corals or farmlands got dried.**
+* <mark style="color:blue;">**BREAK\_BLOCK\_ABOVE\_THE\_EB**</mark>**: Activates when the block above the eb is broken**
 
 
 

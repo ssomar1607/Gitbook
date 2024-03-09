@@ -10,6 +10,8 @@ So what you would type in the config will be **`50 < CONDITION < 250`**
 {% hint style="info" %}
 If a condition fails to be met, **you can enable cancelEvent** so if a specific condition isn't completed, cancelEvent will run.  You can also customize the error message !
 
+You can also run commands if the condition has failed to execute!
+
 Example:
 {% endhint %}
 
@@ -19,6 +21,8 @@ worldConditions:
       - CLEAR
     ifWeatherMsg: '' #<- Here is where you will add the custom message.
     ifWeatherCancel: true
+    ifWeatherCmds:
+    - say not clear
 ```
 
 <details>

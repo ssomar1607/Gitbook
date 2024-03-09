@@ -9,6 +9,8 @@ description: >-
 {% hint style="info" %}
 If a condition fails to be met, **you can enable cancelEvent** so if a specific condition isn't completed, cancelEvent will run.  You can also customize the error message !
 
+You can also run commands if the condition has failed to execute!
+
 Example:
 {% endhint %}
 
@@ -17,6 +19,8 @@ Example:
     ifOwnerOfTheEI: true
     ifOwnerOfTheEIMsg: '&cMy custom error message here'
     ifOwnerOfTheEICancel: true
+    ifOwnerOfTheEICmds:
+    - say i am looking for someone else
 ```
 
 ### ifNeedPlayerConfirmation:
