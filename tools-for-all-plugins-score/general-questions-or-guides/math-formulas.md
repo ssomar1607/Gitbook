@@ -21,6 +21,12 @@ Requires:\
 
 Example Usage:&#x20;
 
+{% code overflow="wrap" %}
+```
+- mm m spawn SkeletonKing 1 %world%,%math_(%x%)+2*SIN({player_yaw}*-1)*COS({player_pitch}*-1)%,%math_(%y%)+2*SIN({player_pitch}*-1)%,%math_(%z%)+2*COS({player_yaw}*-1)*COS({player_pitch}*-1)%,%player_yaw%,%player_pitch%
+```
+{% endcode %}
+
 ```yaml
 - execute at %player% run particle flame ~ ~1.6 ~ %math_2*SIN({player_yaw}*-1)*COS({player_pitch}*-1)% %math_2*SIN({player_pitch}*-1)% %math_2*COS({player_yaw}*-1)*COS({player_pitch}*-1)% 0.7 0
 ```
@@ -72,8 +78,6 @@ You want to get the distance between you and a specific XYZ location which is x:
 ```
 %math_(SQRT(ABS(({x1})-({x2}))^2+ABS(({y1})-({y2}))^2+ABS(({z1})-({z2}))^2))%
 ```
-
-
 
 ## Using offsets to distance target from location
 
