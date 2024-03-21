@@ -964,6 +964,10 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 
 
 
+{% hint style="info" %}
+Use the website: [https://www.tydac.ch/color/](https://www.tydac.ch/color/) for the leather color
+{% endhint %}
+
 ### SETITEMATTRIBUTE
 
 * Info: It sets an attribute to an item.
