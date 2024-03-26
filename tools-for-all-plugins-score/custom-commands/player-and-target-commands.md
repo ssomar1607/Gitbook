@@ -6,7 +6,7 @@ You need to know that by default all commands are run by the console, so if you 
 _(Click on SUDO or SUDOOP for more infos)_
 
 \
-**Don't use this option for vanilla commands, to use vanilla commands properly go to FAQ and "How to use vanilla commands",**
+**Don't use this option for vanilla commands and CUSTOM COMMANDS, to use vanilla commands properly go to FAQ and "How to use vanilla commands",**
 {% endhint %}
 
 {% hint style="success" %}

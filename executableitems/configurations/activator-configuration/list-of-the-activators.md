@@ -45,7 +45,7 @@
 * [<mark style="color:orange;">**PLAYER\_FISH\_PLAYER**</mark>](list-of-the-activators.md#player\_fish\_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber catches a player.**
 * [<mark style="color:blue;">**PLAYER\_HIT\_PLAYER**</mark>](list-of-the-activators.md#player\_hit\_player) **:** Activates when the player hits a player
 * [<mark style="color:orange;">**PLAYER\_HIT\_ENTITY**</mark>](list-of-the-activators.md#player\_hit\_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: **Activates when the player hits an entity**&#x20;
-* **PLAYER\_HARVEST\_BLOCK**: Activates when the player harvests a block
+* **PLAYER\_HARVEST\_BLOCK**: Activates when the player harvests a block (Example: Activator runs if the player right clicks a sweet berry bush that contains berries that can be harvested upon right-click)
 * [<mark style="color:orange;">**PLAYER\_ITEM\_BREAK**</mark>](list-of-the-activators.md#player\_item\_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player breaks the item by making it loose all its durability.**
 * [<mark style="color:orange;">**PLAYER\_JUMP**</mark>](list-of-the-activators.md#player\_jump) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player jumps.**
 * [<mark style="color:orange;">**PLAYER\_KILL\_ENTITY**</mark>](list-of-the-activators.md#player\_kill\_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player kills an entity.**
