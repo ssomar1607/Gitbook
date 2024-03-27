@@ -19,6 +19,12 @@ You can add a custom item as icon folder using the next format
 ThisIsTheNameOfMyFolder\[icon-GOLDEN\_SWORD]
 {% endhint %}
 
+{% hint style="info" %}
+If your server host does not allow you to use special characters such as brackets, the only solution seems to be this, you can try using SFTP to create the folder instead of the file manager, there is help with setting up SFTP here: [https://support.minehut.com/hc/en-us/articles/27126955782291-How-do-I-use-SFTP-on-my-server](https://support.minehut.com/hc/en-us/articles/27126955782291-How-do-I-use-SFTP-on-my-server) assuming the server host allows you to directly access your server files through SFTP\
+\
+Credits: @stxrblxzer &#x20;
+{% endhint %}
+
 ### Move items to a folder
 
 * To move items inside a folder you have to create them with /ei create
