@@ -49,5 +49,23 @@ It supports PAPI Placeholders
 
 
 
+## Command Issues
 
+### Issues related to ' and " symbols
 
+While writing commands like:
+
+{% code overflow="wrap" %}
+```
+MOB_AROUND 10 true BLACKLIST(ARMOR_STAND) execute at %around_target_uuid% run summon armor_stand ~ ~3 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:0b,Tags:["mete0"],ArmorItems:[{},{},{},{id:"minecraft:magma_block",Count:1b,tag:{CustomModelData:10002}}]}
+```
+{% endcode %}
+
+You might encounter console errors such as:
+
+```
+[07:41:08 INFO]: Expected '}'
+...:minecraft:magma_block,Count:1b,tag:{CustomModelData:10002}}]}<--[HERE]
+```
+
+To fix it, change the `"` symbols to `'`
