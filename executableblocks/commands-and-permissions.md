@@ -110,7 +110,7 @@ To give the permissions of all items, I advice you to download a permission plug
 
 #### Remove an EB at a specific position
 
-* Command: <mark style="color:blue;">**/eb remove {id} {x} {y} {y} {world}**</mark> \[replaceWithAir default true]
+* Command: <mark style="color:blue;">**/eb remove {x} {y} {y} {world}**</mark> \[replaceWithAir default true]
 * Permission: `eb.cmd.remove`
 
 #### Fill a region selection with an EB

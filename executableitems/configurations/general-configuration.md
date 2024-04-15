@@ -2,21 +2,21 @@
 
 {% code title="config.yml" %}
 ```yaml
-pickup-limit: -1
-disable-world: []
-premium-enable-cooldown-for-op: true #Premium only
+pickupLimit: -1
+disabledWorlds: []
+premiumEnableCooldownForOp: true #Premium only
 checkVersionMsg: true
 disableTestItems: false # If you have a big server with a lot of players, it's recommended to turn this option on true
 silentEIGive: false
 silentMessagePreventionErrorHeadDBError: false
 disableBackup: false #<- Backup your items config at each start / reload of the server
 deleteBackupsAfterDays: 7 #<- It will deletes backups older than this number of days
-whitelisted-worlds: [] #iTS A WITHELIST, ExecutableItems plugin will only work in these worlds.
+whitelistedWorlds: [] #iTS A WITHELIST, ExecutableItems plugin will only work in these worlds.
 giveLimit: 100 #Limit the maximum items you can give with the give command
 jetMinionsGenerateBreakActivator : true #false/true If it is turned to true, when a minion breaks a block, an event will be created to simulate that the owner of the minion has broken the block.
 exceptions: #This disable the action of activators with specific DamageCauses
   PLAYER_HIT_ENTITY:
-    -THORNS
+    - THORNS
 logs: #This is a log that appears on console for utility.
   dropped: true
   spawned: true
