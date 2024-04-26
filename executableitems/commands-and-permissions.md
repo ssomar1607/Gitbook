@@ -136,12 +136,14 @@ It works even with offline players
     * <mark style="color:blue;">**/ei give %player% SurgeBlade{Variables:{charge:%var\_charge%+1},Usage:%usage%-1} 1**</mark>
     * <mark style="color:blue;">**/ei give %player% BoneBlade 1**</mark>
 * Permission: `ei.cmd.give`
+* Works for offline players
 
 #### GiveAll command
 
 * Command:&#x20;
   * <mark style="color:blue;">**/ei giveall {id} {quantity}**</mark>** **<mark style="color:purple;">**\[world]**</mark>
 * Permission: `ei.cmd.giveall`
+* Does not work for offline players
 
 #### Give an EI in a specific slot of a player  <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 

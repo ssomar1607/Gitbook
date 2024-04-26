@@ -894,10 +894,6 @@ You can only use one type of formatting at once in the same SENDMESSAGE command,
 
 ### SETTEMPBLOCKPOS
 
-* Info: Set a temporary block in a specific position
-* Command: SETTEMPBLOCKPOS {x} {y} {z} {material} {time in ticks} \[bypassProtection true-false] \[blocks list]
-* Example:
-
 ```
  - SETTEMPBLOCKPOS %entity_x% %entity_y% %entity_z% BEDROCK 40 true !AIR,!WATER
 ```
