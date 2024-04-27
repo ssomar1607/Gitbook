@@ -65,7 +65,8 @@
 * <mark style="color:blue;">**PLAYER\_TARGETED\_BY\_AN\_ENTITY**</mark> : Activates when an entity targets a player.
 * <mark style="color:blue;">**PLAYER\_TRAMPLE\_CROP**</mark> : Activates when a player tramples a crop.
 * PLAYER\_PORTAL: Activates when a player enters to a portal
-* <mark style="color:blue;">**LOOP**</mark>**  : Activates in repeat**
+* <mark style="color:blue;">**LOOP**</mark>**  : Activates in repeat per player**
+* <mark style="color:blue;">**LOOP\_SERVER**</mark>** : Activates in repeat one time each loop**
 * **BLOCK\_DRY: Activates when corals or farmlands got dried.**
 * <mark style="color:orange;">**ENTITY\_SPAWN**</mark>**: Activates when an entity spawns**
 * <mark style="color:orange;">**ENTITY\_BEFORE\_DEATH**</mark>**: Activates before the entity dies**

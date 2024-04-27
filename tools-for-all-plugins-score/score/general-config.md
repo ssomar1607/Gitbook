@@ -2,7 +2,8 @@
 
 
 
-<pre class="language-yaml"><code class="lang-yaml"># EN by Ssomar
+```yaml
+# EN by Ssomar
 # FR by Ssomar
 # ES by ?
 # HU by ?
@@ -23,5 +24,7 @@ jetMinionsGenerateBreakActivator : false
 silenceOutputs:
 - "Run effect"
 - "blacklist"
-<strong>#if an output contains **blacklist** or **Run effect** and if it is from of a command executed in an activator that has the feature silenceOutput it will be hidden
-</strong></code></pre>
+#if an output contains **blacklist** or **Run effect** and if it is from of a command executed in an activator that has the feature silenceOutput it will be hidden
+enableDetectionEntitiesFromSpawner: false
+#(default true) it adds a tag to all entities spawned from a spawner
+```

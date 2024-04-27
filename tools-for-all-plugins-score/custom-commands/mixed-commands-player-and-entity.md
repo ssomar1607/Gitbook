@@ -195,6 +195,10 @@ You can see how function works here [https://www.geogebra.org/calculator](https:
 Damage type is ENTITY\_ATTACK if there is a player involved. Otherwise, it's CUSTOM
 {% endhint %}
 
+{% hint style="info" %}
+It triggers the hit/damages activators of EE/EI
+{% endhint %}
+
 ### DAMAGE\_NO\_KNOCKBACK
 
 * Info: Damages the player with a specific amount without applying knockback. (Damage dealt with the help of this command is not counted as player damage and more of an indirect damage)
@@ -215,6 +219,12 @@ Damage type is ENTITY\_ATTACK if there is a player involved. Otherwise, it's CUS
 ```
 
 * This command will deal 25% of the player's hp
+
+{% hint style="info" %}
+It triggers the hit/damages activators of EE/EI
+{% endhint %}
+
+
 
 ### DAMAGE\_BOOST
 
@@ -584,6 +594,26 @@ This is not the same as essential's smite command. If you want to smite your tar
 ```
 - TELEPORTONCURSOR 8 true
 ```
+
+
+
+### TRANSFER\_ITEM
+
+* Info: It transfer an item on the inventory
+* Command: TRANSFER\_ITEM {slot of launcher} {slot of receiver}
+  * {slot of launcher}: Slot of the item who is going to move
+  * {slot of receiver}: Slot where the item will land
+* Example:
+
+```
+- TRANSFER_ITEM 38 40
+```
+
+{% hint style="info" %}
+\-1 to mainhand
+{% endhint %}
+
+
 
 ### UNSAFE\_TELEPORTONCURSOR
 
