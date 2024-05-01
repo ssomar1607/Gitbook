@@ -1023,7 +1023,7 @@ It supports -1 to mainhand
 
 
 
-## SETITEMMATERIAL&#x20;
+### SETITEMMATERIAL&#x20;
 
 {% hint style="info" %}
 Only works at 1.20.5 and above
@@ -1115,7 +1115,7 @@ And if you have no other way but using SUDOOP, then use this command. This shoul
 
 
 
-## TRANSFER\_ITEM
+### TRANSFER\_ITEM
 
 * Info: Swaps 2 items in the inventory by slot
 * Command: TRANSFER\_ITEM {slot of launcher} {slot of receiver} \[boolean drop]
