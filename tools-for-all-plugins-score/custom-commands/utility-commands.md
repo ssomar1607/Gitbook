@@ -28,6 +28,10 @@ If you edit the commands in-game don't add the **-** that is before all examples
 
 ## **IF**
 
+{% hint style="info" %}
+CURRENTLY ONLY WORKS IN PLAYER RELATED AND ENTITY RELATED COMMANDS
+{% endhint %}
+
 * Info: Executes commands if condition is met
 * Command: IF {condition\_without\_spaces} {command1} <+> {command2} <+> ...
   * {condition\_without\_spaces}: The condition for the IF to decide whether it runs or not.
@@ -37,6 +41,10 @@ If you edit the commands in-game don't add the **-** that is before all examples
 
 ```
 IF %player_health%>20 say cool
+```
+
+```
+IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
 ```
 
 ## **WHILE**

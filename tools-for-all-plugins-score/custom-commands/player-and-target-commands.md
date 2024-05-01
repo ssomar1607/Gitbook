@@ -1023,6 +1023,22 @@ It supports -1 to mainhand
 
 
 
+## SETITEMMATERIAL&#x20;
+
+{% hint style="info" %}
+Only works at 1.20.5 and above
+{% endhint %}
+
+* Replaces the material of the item with a different material while keeping the nbt of the target item
+* Commands: SETITEMMATERIAL {slot} {material}
+  * {slot}: Slot number&#x20;
+  * {material}: The material you want the item to become into
+* Example:
+
+```
+SETITEMMATERIAL 10 DIAMOND_HOE
+```
+
 ### SETLORE
 
 * Info: Sets a line of lore
@@ -1098,6 +1114,14 @@ And if you have no other way but using SUDOOP, then use this command. This shoul
 ```
 
 
+
+## TRANSFER\_ITEM
+
+* Info: Swaps 2 items in the inventory by slot
+* Command: TRANSFER\_ITEM {slot of launcher} {slot of receiver} \[boolean drop]
+  * {slot of launcher}: Target slot for slot no.1
+  * {slot of receiver}: Target slot for slot no.2
+  * \[boolean drop]: (default = false) Whether {slot of launcher} gets dropped during the swap or not
 
 ### XPBOOST
 

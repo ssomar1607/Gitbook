@@ -145,9 +145,13 @@ To give the permissions of all items, I advice you to download a permission plug
 
 #### Give command
 
+* (Works for offline players)
 * Command:&#x20;
   * <mark style="color:blue;">**/eb give {playername} {id} {quantity}**</mark>
 * Permission: `eb.cmd.give`
+* Examples:
+  * `/eb give Ssomar NivaI{Usage:5,Variables:{a:"B"}} 1`
+  * `/eb give Special70 thornbus 1`
 
 #### Take command
 
