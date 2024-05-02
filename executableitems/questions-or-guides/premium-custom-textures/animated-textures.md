@@ -1,5 +1,9 @@
 # Animated textures
 
+
+
+{% embed url="https://youtu.be/IAAj2a2dBQo" %}
+
 {% hint style="info" %}
 The same I said before, this requires previous knowledge, check [<mark style="color:blue;">**General Items**</mark>](general-items.md) for basic stuff
 {% endhint %}
