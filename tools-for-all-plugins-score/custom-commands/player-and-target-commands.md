@@ -42,6 +42,14 @@ Example:
 
 {% endhint %}
 
+{% hint style="info" %}
+You can use \[\<CLEAR\_IF\_DISCONNECT>] if you want to clear commands if the player disconnects
+
+Example:
+
+* \[\<CLEAR\_IF\_DISCONNECT>] say meow
+{% endhint %}
+
 ## Mixed Commands
 
 In addition of the following list of commands you can also use:
