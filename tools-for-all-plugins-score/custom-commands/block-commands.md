@@ -75,11 +75,11 @@ MOB_AROUND 7 STUN_ENABLE <+> DELAY 5 <+> STUN_DISABLE
 * The condition looks like AROUND \<distance> CONDITIONS(\<conditions>) \<command>
 * Conditions works with placeholders but need to be %::\_::% instead of %\_%
   * For example %::player\_health::%
-* To add MORE than 1 condition use "&" between the conditions
+* To add MORE than 1 condition use "&&" between the conditions
 * Example:
 
 ```
-- AROUND 10 CONDITIONS(%::player_health::%>10&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
+- AROUND 10 CONDITIONS(%::player_health::%>10&&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
 ```
 
 {% hint style="info" %}
