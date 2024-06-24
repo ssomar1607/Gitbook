@@ -185,6 +185,7 @@
     * [Block Textures](executableblocks/question-or-guides/frequently-asked-questions/block-textures.md)
     * [My condition is checking the owner](executableblocks/question-or-guides/frequently-asked-questions/my-condition-is-checking-the-owner.md)
     * [SETEXECUTABLEBLOCK does not work](executableblocks/question-or-guides/frequently-asked-questions/setexecutableblock-does-not-work.md)
+    * [Holograms won't vanish](executableblocks/question-or-guides/frequently-asked-questions/holograms-wont-vanish.md)
   * [Tutorials](executableblocks/question-or-guides/tutorials/README.md)
     * [Boss summoner](executableblocks/question-or-guides/tutorials/boss-summoner.md)
     * [Item generator](executableblocks/question-or-guides/tutorials/item-generator.md)
