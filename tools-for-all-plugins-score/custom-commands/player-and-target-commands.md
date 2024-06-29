@@ -427,7 +427,20 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 - EICOOLDOWN %player% thisismyid 10 true
 ```
 
+### EBCOOLDOWN
 
+* Info: It applys a cooldown to a specific ExecutableBlocks
+* Command: EBCOOLDOWN {PLAYER} {ID} {SECONDS} {boolean TICKS} \[optional activator id]
+  * {PLAYER}: The player to target the command
+  * {ID}: The id of the ExecutableItem
+  * {Seconds}: The amount of time
+  * {boolean TICKS}: If you want the time to be in ticks
+  * \[optional activator id]: You can apply it to a specific activator id
+* Example:&#x20;
+
+```
+- EBCOOLDOWN %player% thisismyid 10 true
+```
 
 ### EECOOLDOWN
 
@@ -508,7 +521,14 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 - HEAD
 ```
 
+### JOBS\_MONEY\_BOOST
 
+(FOR JOBS PLUGIN)
+
+* Info: Increases the money gained temporarily
+* Command: JOBS\_MONEY\_BOOST {multiplier} {timeinsecs}
+  * {multiplier}: Multiplier value
+  * {timeinsecs}: Duration of the boost in seconds
 
 ### LAUNCH
 

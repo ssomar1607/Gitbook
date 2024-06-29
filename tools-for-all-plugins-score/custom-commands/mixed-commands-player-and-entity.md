@@ -415,6 +415,22 @@ It can be used as many times as you want, it will get stacked **additively**, th
 
 
 
+### MLIB\_DAMAGE
+
+* Info: Deals damage to target but the damage type is mainly from MythicLib plugin
+* Command: MLIB\_DAMAGE {number} {damageType} {knockback} \[element]
+  * {number}: Damage dealt to targets
+  * {damage\_type}: Damage type inflicted
+    * Example: MAGIC, PHYSICAL, WEAPON, SKILL, PROJECTILE, UNARMED, ON\_HIT, MINION, DOT;
+  * {knockback}: true/false whether it knocks back the target
+  * \[element]: Specified what kind of element the attack is
+    * Reference: [https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref\_type=heads](https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref\_type=heads)
+* Example:
+
+```
+- MLIB_DAMAGE 10 PHYSICAL false FIRE
+```
+
 ### OPMESSAGE
 
 * Info: It sends a message to OP online players and the console
