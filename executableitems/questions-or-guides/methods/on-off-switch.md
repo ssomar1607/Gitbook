@@ -40,9 +40,13 @@ description: >-
 
 ### Variables Modification
 
+{% hint style="info" %}
+In recent updates, "Variables modification" icon is now named as "Variables". Other than that, nothing else has changed significantly. The new version's gui looks shouldn't be too different from the old version
+{% endhint %}
+
 ![First click this icon in the activator editor](https://imgur.com/LVCMrRl.png)
 
-![Create a variable modificationng](https://imgur.com/r50hLwy.png)
+![Create a variable modification](https://imgur.com/r50hLwy.png)
 
 ![Select the variable that we created earlier](https://imgur.com/sksRDkO.png)
 
