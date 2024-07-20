@@ -200,9 +200,9 @@ This means that you have a 1/3 chance of getting coal, iron or gold
 
 ```
 - 'RANDOM RUN: 2'
-- give %player% diamond 1 +++ &aYou receive &b1 Diamond
-- give %player% emerald 1 +++ &aYou receive &21 Emerald
-- give %player% diamond_block 1 +++ &aYou receive &b1 Diamond block
+- give %player% diamond 1 +++ SENDMESSAGE &aYou receive &b1 Diamond
+- give %player% emerald 1 +++ SENDMESSAGE &aYou receive &21 Emerald
+- give %player% diamond_block 1 +++ SENDMESSAGE &aYou receive &b1 Diamond block
 - RANDOM END
 ```
 
