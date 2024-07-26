@@ -2,35 +2,44 @@
 
 {% code title="config.yml" %}
 ```yaml
+# ----------------------------------
+# -
+#       ExecutableItems
+# -
+#         By: Ssomar
+# -
+# ----------------------------------
+# -
+# WIKI HERE : https://docs.ssomar.com/executableitems/information-ei
+# DISCORD HERE : https://discord.com/invite/TRmSwJaYNv
+# -
 pickupLimit: -1
 disabledWorlds: []
-premiumEnableCooldownForOp: true #Premium only
-checkVersionMsg: true
-disableTestItems: false # If you have a big server with a lot of players, it's recommended to turn this option on true
-silentEIGive: false
-silentMessagePreventionErrorHeadDBError: false
-disableBackup: false #<- Backup your items config at each start / reload of the server
-deleteBackupsAfterDays: 7 #<- It will deletes backups older than this number of days
-whitelistedWorlds: [] #iTS A WITHELIST, ExecutableItems plugin will only work in these worlds.
-giveLimit: 100 #Limit the maximum items you can give with the give command
-jetMinionsGenerateBreakActivator : true #false/true If it is turned to true, when a minion breaks a block, an event will be created to simulate that the owner of the minion has broken the block.
-exceptions: #This disable the action of activators with specific DamageCauses
-  PLAYER_HIT_ENTITY:
-    - THORNS
-logs: #This is a log that appears on console for utility.
-  dropped: true
-  spawned: true
-
-#optional config related to whitelist item per world (you can add a feature similar
-#in the config of an item specific, you can do the same here, its just different way
-#to do the same)
+whitelistedWorlds: []
 whitelistItemsPerWorld:
   myWorld:
-    - "myEI1"
-    - "myEI2"
+  - myEI1
+  - myEI2
   myWorld2:
-    - "myEI3"
-    - "myEI4"
+  - myEI3
+  - myEI4
+premiumEnableCooldownForOp: true # Premium only
+checkVersionMsg: true
+disableTestItems: false # If you have a big server with a lot of players, it's recommended to turn this option on true
+silentMessagePreventionErrorHeadDBError: false
+disableBackup: false # <- Backup your items config at each start / reload of the server
+deleteBackupsAfterDays: 7 # <- It will deletes backups older than this number of days
+enableGarbageCollectorAfterReload: false # <- It will enable the garbage collector after a reload of the server
+giveLimit: 100
+# enableTexturesPack: true #Only for 1.20.5+ servers
+texturesPackUrl: https://github.com/Ssomar-Developement/items/raw/main/__textures__/ExecutableItems_Pack.zip # Only for 1.20.5+ servers
+logs:
+  dropped: true
+  spawned: true
+debugOnlyRun: false # /ei debug will only display the run debug message
+config_12_04_2024: true
+silentGive: false
+
 ```
 {% endcode %}
 
