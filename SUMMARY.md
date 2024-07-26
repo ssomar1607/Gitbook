@@ -47,6 +47,7 @@
     * [Activator Examples](executableitems/configurations/activator-configuration/activator-examples.md)
 * [⌨️ Commands & Permissions](executableitems/commands-and-permissions.md)
 * [🤖 Questions | Guides](executableitems/questions-or-guides/README.md)
+  * [Informal Guides](executableitems/questions-or-guides/informal-guides.md)
   * [Frequently Asked Questions](executableitems/questions-or-guides/frequently-asked-questions/README.md)
     * [PROJECTILE\_HIT\_... activators not working](executableitems/questions-or-guides/frequently-asked-questions/projectile\_hit\_...-activators-not-working.md)
     * [Install/update/errors](executableitems/questions-or-guides/frequently-asked-questions/install-update-errors/README.md)
