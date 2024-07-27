@@ -42,3 +42,27 @@ description: >-
   - if the target is not in the "spawn" region
 ```
 {% endcode %}
+
+
+
+### Run commands after sneaking for 5 seconds
+
+{% code overflow="wrap" %}
+```
+1) Create a SCore variable
+  - score variables-create sneakCount
+    - set the FOR to PLAYER
+    - set the TYPE to NUMBER
+    - set the default value to -1
+2) Create the ei item
+3) Create a PLAYER_ENABLE_SNEAK activator
+  - add the commands:
+  
+  [!] ITEM CONFIG FORM
+  commands:
+  - score variables set player sneakCount 0 %player%
+  - WHILE %score_variables_sneakCount%<5 20 score variables modification player sneakCount 1 %player% <+> IF %score_variables_sneakCount%=5 say run-command-here
+  
+  replace "say run-command-here" with whatever you want to run
+```
+{% endcode %}
