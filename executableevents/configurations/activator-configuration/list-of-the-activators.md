@@ -71,6 +71,7 @@
 * <mark style="color:blue;">**LOOP\_SERVER**</mark>** : Activates in repeat one time each loop**
 * **BLOCK\_DRY: Activates when corals or farmlands got dried.**
 * <mark style="color:orange;">**ENTITY\_SPAWN**</mark>**: Activates when an entity spawns**
+  * If using summon command to trigger this add DELAYTICK 1 before all entityCommands, this happens because the commands doesn't run if the entity doesn't exist, and it will actually exist after 1 tick.
 * <mark style="color:orange;">**ENTITY\_BEFORE\_DEATH**</mark>**: Activates before the entity dies**
 * <mark style="color:orange;">**ENTITY\_BREAK\_DOOR**</mark>**: Activates when an entity breaks a door (as zombie does)**
 * <mark style="color:orange;">**ENTITY\_BREED**</mark>**: Activates when one entiti breeds with another entity**
