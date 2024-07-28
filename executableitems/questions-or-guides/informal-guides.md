@@ -66,3 +66,25 @@ description: >-
   replace "say run-command-here" with whatever you want to run
 ```
 {% endcode %}
+
+
+
+### Give players an item ONCE&#x20;
+
+```
+1) Create a SCore variable
+  - score variables-create system-hasGivenPlayersEI-catalyst
+    - set the FOR to PLAYER
+    - set the TYPE to NUMBER
+    - set the default value to 0
+2) create the ei item
+3) install ExecutableEvents plugin (free)
+4) create an event file
+5) use PLAYER_CONNECTION activator
+  - create a placeholder condition
+    - type: PLAYER_NUMBER
+    - part1: %score_variables_system-hasGivenPlayersEI-catalyst%
+    - comparator: EQUALS
+    - part2: 0
+6) add the ei give command in that activator
+```
