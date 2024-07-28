@@ -34,7 +34,7 @@ Example:
 ```
 
 * Example Situations:
-  * If the player left-clicks the item, the message will pop up notifying you if
+  * If the player left-clicks the item, the message will pop up notifying you if you really want to trigger the activator, if you click again, the activator will run
 * Required: NO (Default: false)
 * More Info: You can edit the message by editing it on the locale: `confirmMessage: 'Click again to confirm' or in ingame.`
 

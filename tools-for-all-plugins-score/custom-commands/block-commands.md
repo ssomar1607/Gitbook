@@ -116,10 +116,10 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
   * \[Amount]: Amount to add (default is 1)
 * Example:
 
-```
-- CONTENT_ADD STONE 1
+<pre><code>- CONTENT_ADD STONE 1
 - CONTENT_ADD EI:Myitem 1
-```
+<strong>- CONTENT_ADD EI:test{Usage:1,Variables:{var1:"My text",var2:2}} 1
+</strong></code></pre>
 
 
 

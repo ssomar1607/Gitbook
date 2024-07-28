@@ -92,6 +92,7 @@ Keep in mind that normally, if you change a feature in an activator of "x" item 
     updateAttributes: false
     updateEnchants: true
     updateCustomModelData: true
+    updateArmorSettings: true/false
 ```
 
 ## Specifics features
@@ -478,7 +479,7 @@ requiredLevelMsg: '&e'
 ```
 
 {% hint style="info" %}
-Compatible with AureliumSkills and MMOCore
+Compatible with AureliumSkills, MMOCore and AuraSkills
 {% endhint %}
 
 ### RequiredMagic (EcoSkills)
@@ -653,6 +654,7 @@ detailedBlocks:
 - EXECUTABLEBLOCKS:CUSTOMDIRT
 - !DIRT
 - ALL_ORES
+- '#MINECRAFT:MINEABLE/PICKAXE'
 ```
 
 * Required: NO (Default: false)

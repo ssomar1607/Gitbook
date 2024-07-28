@@ -72,6 +72,7 @@
 * [<mark style="color:orange;">**PLAYER\_RESPAWN**</mark>](list-of-the-activators.md#player\_respawn) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player re-spawns.**
 * [<mark style="color:blue;">**PLAYER\_RIGHT\_CLICK**</mark>](list-of-the-activators.md#player\_right\_click) : Activates when the player right-clicks the item. (IT REQUIRES EITHER HAVE AN ITEM IN THE HAND OR TARGET AT A BLOCK TO BE TRIGGERED, THIS IS A SPIGOT LIMITATION)
 * [<mark style="color:orange;">**PLAYER\_SHEAR\_ENTITY**</mark>](list-of-the-activators.md#player\_shear\_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player shears an entity.**
+* PLAYER\_SWAPHAND\_THE\_EI: Activates when the player swaphand the EI.
 * [<mark style="color:orange;">**PLAYER\_SELECT\_THE\_EI**</mark>](list-of-the-activators.md#player\_select\_the\_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player selects the EI item in the hotbar.**
 * [<mark style="color:orange;">**PLAYER\_TARGETED\_BY\_AN\_ENTITY**</mark>](list-of-the-activators.md#player\_targeted\_by\_an\_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when an entity targets the player.
 * <mark style="color:blue;">**PLAYER\_TRAMPLE\_CROP**</mark> : Activates when the player tramples a crop.

@@ -228,6 +228,11 @@
 * [⌨️ Commands & Permissions](custompiglinstrades/commands-and-permissions.md)
 * [✔️ Compatible Plugins](custompiglinstrades/compatible-plugins.md)
 
+## ScreenShop
+
+* [📌 Information ScreenShop](screenshop/information-screenshop.md)
+* [✔️ Compatible Plugins](screenshop/compatible-plugins.md)
+
 ## TEAM AND DONATIONS
 
 * [🎆 Contact / Support us ?](team-and-donations/contact-support-us.md)

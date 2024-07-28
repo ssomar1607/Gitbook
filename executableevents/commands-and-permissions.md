@@ -37,15 +37,24 @@
 * Command: <mark style="color:blue;">**/ee delete {id}**</mark>
 * Permission: `ee.cmd.delete`
 
-#### Reload the default blocks of ExecutableBlock
+#### Enables an EE event or a folder of events
 
-* Command: <mark style="color:blue;">**/ee default\_events**</mark>
-* Permission: `eb.cmd.default_events`
+* Command: <mark style="color:blue;">**/ee enable {event}**</mark>
+* Permission: `ee.cmd.enable`
+
+#### Disables an EE event or a folder of events
+
+* Command: <mark style="color:blue;">**/ee disable {event}**</mark>
+* Permission: `ee.cmd.disable`
 
 #### Clear all cooldowns and delayed commands of EE
 
 * Command: <mark style="color:blue;">**/ee clear**</mark>** **<mark style="color:purple;">**\[playerName]**</mark>
 * Permission: `ee.cmd.clear`
+
+{% hint style="info" %}
+It supports entities too just use the entity UUID instead of player name
+{% endhint %}
 
 #### Enable / Disable actionbar of EE
 

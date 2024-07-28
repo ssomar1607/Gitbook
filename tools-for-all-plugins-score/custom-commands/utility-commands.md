@@ -53,6 +53,7 @@ IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
 * Command: WHILE {condition\_without\_spaces} {delay\_in\_ticks} {command1} <+> {command2} <+> ...
   * {condition\_without\_spaces}: The condition for the while loop to decide whether it continues or stops
   * {delay\_in\_ticks}: The delay before the next repetition
+    * Delay supports decimals value but they are casted to the next integer (20.1 -> 20)
   * {command},{command2}: The commands that will be executed in repeat
 * Example:
 
@@ -62,6 +63,10 @@ WHILE %player_health%>10 20 SENDMESSAGE &eHello &6While <+> effect give %player%
 
 {% hint style="info" %}
 It runs async + Condition support double placeholders, example %player\_x%>%player\_z%
+{% endhint %}
+
+{% hint style="info" %}
+The command will be stopped if the player is offline
 {% endhint %}
 
 ## LOOP

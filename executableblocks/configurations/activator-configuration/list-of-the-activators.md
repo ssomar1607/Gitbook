@@ -4,6 +4,8 @@
 
 * [<mark style="color:orange;">**CROP\_GROW**</mark>](list-of-the-activators.md#crop\_grow) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop and it grows.**
 * [<mark style="color:orange;">**CROP\_PLACE\_BLOCK**</mark>](list-of-the-activators.md#crop\_place\_block) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop that places block.**
+* DESTROYED\_BY\_LIQUID**: Activates when the Executable Block is destroyed by liquid.**
+* DESTROYED\_BY\_PISTON**: Activates when the Executable Block is destroyed by a piston.**
 * [<mark style="color:orange;">**ENTITY\_WALK\_ON**</mark>](list-of-the-activators.md#entity\_walk\_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> : **Activates when an entity walks on the Executable Block.**
 * [<mark style="color:orange;">**EXPLOSION\_HIT**</mark>](list-of-the-activators.md#explosion\_hit) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when the Executable block is affected by an explosion.**
 * [<mark style="color:orange;">**LOOP**</mark>](list-of-the-activators.md#undefined) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates in repeat as long as the block is placed.**

@@ -297,6 +297,53 @@ furnaceFeatures:
   infiniteVisualLit: true
 ```
 
+### fortuneMultiplier
+
+* Multiplier of the result.
+
+```
+furnaceFeatures:
+  fortuneMultiplier: 5
+```
+
+{% hint style="info" %}
+It can be negative to remove items from the result storage.
+{% endhint %}
+
+### fortuneChance
+
+* Chance that the fortune applies
+
+```
+furnaceFeatures:
+  fortuneChance: 0.95
+```
+
+
+
+## Directional features
+
+### forceBlockFaceOnPlace
+
+* It forces the block to be placed looking at certain direction
+* Example:
+
+```
+directionalFeatures:
+  forceBlockFaceOnPlace: true
+```
+
+### blockFaceOnPlace
+
+* It sets the face of the block when its placed
+* Example:
+
+```
+directionalFeatures:
+  forceBlockFaceOnPlace: true
+  blockFaceOnPlace: NORTH
+```
+
 ## Brewing stand features
 
 ### brewingStandSpeed
@@ -329,9 +376,9 @@ hopperFeatures:
   amountItemsTransferred: 5
 ```
 
-### Display features
+## Display features
 
-#### Material
+### Material
 
 * Material of the item that will be displayed
 * Example:
@@ -341,7 +388,7 @@ DisplayFeatures:
   material: PAPER
 ```
 
-#### Custom model data
+### Custom model data
 
 * Custom model data of the material that will be displayed
 * Example:
@@ -351,7 +398,7 @@ DisplayFeatures:
   customModelData: 3
 ```
 
-#### Scale
+### Scale
 
 * Scale of the display
 * Example:
@@ -361,7 +408,7 @@ DisplayFeatures:
   scale: 1
 ```
 
-#### aligned
+### aligned
 
 * If you want the display to be aligned
 * Example:
@@ -370,7 +417,7 @@ DisplayFeatures:
 </strong>  aligned: false
 </code></pre>
 
-#### customPitch
+### customPitch
 
 * Select the custom pitch
 * Example:
@@ -380,7 +427,7 @@ DisplayFeatures:
   customPitch: 1
 ```
 
-#### customY
+### customY
 
 * Select the custom Y
 * Example:
@@ -390,7 +437,7 @@ DisplayFeatures:
   customY: 1.0
 ```
 
-#### Glow
+### Glow
 
 * Glow or not
 * Example:
@@ -400,7 +447,7 @@ DisplayFeatures:
   glow: false
 ```
 
-#### Interaction zone features
+### Interaction zone features
 
 * Width of the display
 * Height of the display
@@ -414,6 +461,18 @@ DisplayFeatures:
     height: 1.0
     isCollidable: false
 ```
+
+### Click to break
+
+* Amount of clicks needed to break the display creation
+* Example:
+
+```
+DisplayFeatures:
+  clickToBreak: 3
+```
+
+
 
 ## Chiseled Bookshelf
 

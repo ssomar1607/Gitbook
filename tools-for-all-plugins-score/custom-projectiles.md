@@ -34,6 +34,7 @@ This is the first thing you have to set, the type of projectile you want to crea
 * WITHER\_SKULL
 * DRAGON\_FIREBALL
 * THROWNEXPBOTTLE
+* WIND\_CHARGE
 
 Example:
 

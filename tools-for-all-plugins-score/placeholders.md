@@ -49,7 +49,10 @@ Even if there are multiple %rand:MIN\_VALUE|MAX\_VALUE% placeholders in a comman
 {% hint style="info" %}
 %score\_cooldown\_{plugin}:{object\_id}:{activator\_id}% -> gets the cooldown, it works for all plugins.\
 \
-Example: %score\_cooldown\_EI:Free\_Lotery:activator1%
+Examples:
+
+* %score\_cooldown\_EI:Free\_Lotery:activator1%
+* %score\_cooldown\_EI:cybert1:activator6\_int%
 {% endhint %}
 
 ## Item placeholders
@@ -160,6 +163,22 @@ Example: `%around_target_x%`
 | %var\_MYVAR\_size%           | Returns how many elements/values that list variable contains     | %var\_testVar\_size%                                                                                                                                            |
 | %var\_MYVAR\_contains\_WHAT% | Returns true/false if the mentioned value is present in the list | <p>%var_testVar_contains_Maximo%<br>%var_testVar_contains_%player%%<br>%var_testVar_contains_%checkitem_mat:stone%%<br>%var_testVar_contains_%var_bomberZ%%</p> |
 
+## ExecutableItems
+
+| Placeholder                                                  | Description                                                                    |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| %executableitems\_checkamount%                               | Count all EI amount in the inventory                                           |
+| %executableitems\_checkamount\_slot:0,2,3,4%                 | Count all EI amount in the inventory at the slots 0,2,3,4                      |
+| %executableitems\_checkamount\_id:item1,item2\_slot:0,2,3,4% | Count all EI that are "item1" or "item2" amount in the inv at the slot 0,2,3,4 |
+
+## ExecutableBlocks
+
+| Placeholder                                                   | Description                                                                    |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| %executableblocks\_checkamount%                               | Count all EB amount in the inventory                                           |
+| %executableblocks\_checkamount\_slot:0,2,3,4%                 | Count all EB amount in the inventory at the slots 0,2,3,4                      |
+| %executableblocks\_checkamount\_id:item1,item2\_slot:0,2,3,4% | Count all EB that are "item1" or "item2" amount in the inv at the slot 0,2,3,4 |
+
 ## Circumstantial
 
 ### PLAYER\_WRITE\_COMMAND | PLAYER\_SEND\_MESSAGE
@@ -180,6 +199,11 @@ Example: `%around_target_x%`
   * <mark style="color:orange;">%arg1%</mark> = <mark style="color:blue;">diamond\_sword</mark>
   * <mark style="color:orange;">%arg2%</mark> = <mark style="color:blue;">10</mark>
   * <mark style="color:orange;">%arg3%</mark> = <mark style="color:blue;">true</mark>
+
+
+
+* If you want to get all the args the player wrote use `%all_args%`
+* Or all the args without the first one (useful for commands) `%all_args_without_first%`
 
 ### DAMAGE\_BOOST
 
@@ -205,7 +229,7 @@ It returns the cooldown of the activator1 of the EI Free\_Lotery. It works with 
 
 ### RECEIVE\_EFFECT
 
-placeholders for activators RECEIVE\_EFFECT (in EI and EE)
+Placeholders for activators RECEIVE\_EFFECT (in EI and EE)
 
 ```
 %effect_received%
@@ -213,3 +237,7 @@ placeholders for activators RECEIVE\_EFFECT (in EI and EE)
 %effect_received_level%
 %effect_received_duration%
 ```
+
+{% hint style="info" %}
+They return the minecraft effect name instead of the spigot name
+{% endhint %}

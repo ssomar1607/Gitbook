@@ -163,9 +163,10 @@ And then you can link it to an EB if want the EB to be a head, more info in EB F
 
 * Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his island.
 
-### SuperiorSkyblock2
+### SuperiorSkyblock
 
 * Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his island.
+* Coop feature from the plugin SuperiorSkyblock. For example the commands like MINEINCUBE will not anymore be canceled for the coop players.
 
 ### GriefPrevention
 
@@ -269,6 +270,14 @@ _It will add the Advanced enchantment **Haste** with a level of **1** on your Ex
 ### CMI
 
 * SELL\_CONTENT command supports CMI prices
+
+### JOBS REBORN
+
+* JOBS\_MONEY\_BOOST command work for this plugin.
+
+### AURA SKILLS
+
+* requiredMana features inside the activator supports the mana from this plugin.
 
 
 

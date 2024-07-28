@@ -129,7 +129,7 @@ displayConditions:
 
 * Required: NO&#x20;
 
-#### DURABILITY
+#### DURABILITY (1.20.5 --)
 
 * Info: Allows you to customize the durability of the EI item equal or below it's maximum vanilla durability
 * Example:&#x20;
@@ -139,6 +139,14 @@ durability: 150
 ```
 
 * Required: NO (Default: Max Durability of the Material
+
+#### DURABILITY (1.20.5 ++)
+
+```yaml
+isDurabilityBasedOnUsage: true
+maxDurability: 20 
+durability: 19
+```
 
 #### ENCHANTMENTS
 
@@ -384,6 +392,43 @@ usePerDay: 200
 
 * Required: NO (Default: -1)
 
+
+
+## Food Settings (1.20.5++)
+
+```
+food:
+  nutrition: 1
+  saturation: 1
+  isMeat: false
+  canAlwaysEat: false
+  eatSeconds: 
+```
+
+#### Nutrition
+
+* Info: Set the nutriniotal value of the item
+
+#### Saturation
+
+* Info: The saturation level that the item gives
+
+#### isMeat
+
+* Info: If you can eat the item
+
+#### canAlwaysEat
+
+* Info: If you can always eat the item or only when hunger
+
+#### eatSeconds
+
+* Info: The amount of seconds it takes to eat the item
+
+
+
+
+
 ## Potion Settings
 
 #### POTION SETTINGS
@@ -513,14 +558,15 @@ headDBID: 44328
 
 ## Custom Settings
 
-#### DISABLED WORLDS
+#### whitelistedWorlds
 
-* Info: Prevents players from using the executable item and its activators completely.
+* Info: Prevents or allow the players from using the EI in certain worlds
 * Example:
 
 ```yaml
-disable-world:
-- world
+whitelistedWorlds:
+- ZombieSurvivalWorld_the_end
+- '!ApocalypseWorld'
 ```
 
 #### STORE ITEM INFO
@@ -556,6 +602,10 @@ keepItemOnDeath: true
 
 * Required: NO (Default: false)
 
+{% hint style="info" %}
+Its compatible with worldguard keepInventory and vanilla keepInventory gamerule
+{% endhint %}
+
 #### DISABLE STACK <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * Info: Prevents EI items from stacking
@@ -566,6 +616,21 @@ disableStack: true
 ```
 
 * Required: NO (Default: false)
+
+
+
+#### customStackSize<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> (1.20.5 ++)
+
+* Info: Set the max of stacking of an item
+* Example:&#x20;
+
+```yaml
+customStackSize: 32
+```
+
+* Required: NO (Default: 0)
+
+
 
 ## Variables Settings
 

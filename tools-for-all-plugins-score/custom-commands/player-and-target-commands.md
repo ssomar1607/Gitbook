@@ -427,6 +427,8 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 - EICOOLDOWN %player% thisismyid 10 true
 ```
 
+
+
 ### EBCOOLDOWN
 
 * Info: It applys a cooldown to a specific ExecutableBlocks
@@ -441,6 +443,8 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 ```
 - EBCOOLDOWN %player% thisismyid 10 true
 ```
+
+
 
 ### EECOOLDOWN
 
@@ -463,6 +467,7 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 
 * Info: It formats all enchantments in your lore
 * Command: FORMAT\_ENCHANTMENTS {slot}
+  * It supports -1 as slot to target the mainhand
 * Example:
 
 ```
@@ -521,14 +526,20 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 - HEAD
 ```
 
+
+
 ### JOBS\_MONEY\_BOOST
 
-(FOR JOBS PLUGIN)
+{% hint style="info" %}
+It supports "Jobs reborn"
+{% endhint %}
 
 * Info: Increases the money gained temporarily
 * Command: JOBS\_MONEY\_BOOST {multiplier} {timeinsecs}
   * {multiplier}: Multiplier value
   * {timeinsecs}: Duration of the boost in seconds
+
+
 
 ### LAUNCH
 
@@ -655,6 +666,8 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
 - MOB_aROUND 9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
 ```
 
+
+
 ### MODIFYDURABILITY
 
 * Modifies the durability of a specific item in a specific slot
@@ -737,12 +750,17 @@ Damages nearest player
 ### OPENCHEST
 
 * Info: It opens a chest in the selected location
-* Command: OPENCHEST {world} {x} {y} {z}
+* Command: OPENCHEST {world} {x} {y} {z} \[bypassProtections]
+  * {bypassProtections}: If it will open the chest anyways even if its protected
 * Example:
 
 ```
 - OPENCHEST VanillaWorld 100 100 100
 ```
+
+{% hint style="info" %}
+It supports barrels
+{% endhint %}
 
 
 
@@ -900,8 +918,9 @@ You can only use one type of formatting at once in the same SENDMESSAGE command,
   * {MATERIAL OF PATTERN}: The material of the pattern
 * Example:
 
-```
+```yaml
 - SETARMORTRIM 38 vex netherite
+- SETARMORTRIM 38 null #to clear the armor trim
 ```
 
 
@@ -995,11 +1014,15 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 - SETITEMCOLOR 1 0
 ```
 
-
-
 {% hint style="info" %}
 Use the website: [https://www.tydac.ch/color/](https://www.tydac.ch/color/) for the leather color
 {% endhint %}
+
+{% hint style="info" %}
+It supports FIREWORK\_STAR
+{% endhint %}
+
+
 
 ### SETITEMATTRIBUTE
 
@@ -1066,6 +1089,8 @@ Only works at 1.20.5 and above
 ```
 SETITEMMATERIAL 10 DIAMOND_HOE
 ```
+
+
 
 ### SETLORE
 
@@ -1150,6 +1175,8 @@ And if you have no other way but using SUDOOP, then use this command. This shoul
   * {slot of launcher}: Target slot for slot no.1
   * {slot of receiver}: Target slot for slot no.2
   * \[boolean drop]: (default = false) Whether {slot of launcher} gets dropped during the swap or not
+
+
 
 ### XPBOOST
 

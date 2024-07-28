@@ -82,6 +82,10 @@ To give the permissions of all items, I advice you to download a permission plug
   * ACTIONBARS - Resets all player's actionbars from the ACTIONBAR custom command
 * Permission: `ei.cmd.clear`
 
+{% hint style="info" %}
+It supports entities too just use the entity UUID instead of player name
+{% endhint %}
+
 #### Enable / Disable actionbar of EI
 
 * Command: <mark style="color:blue;">**/ei actionbar**</mark>** **<mark style="color:orange;">**{on or off}**</mark>
@@ -130,7 +134,7 @@ It works even with offline players
 #### Give command
 
 * Command: (The variables and usage part besides the id is optional)
-  * <mark style="color:blue;">**/ei give {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity}**</mark>&#x20;
+  * <mark style="color:blue;">**/ei give {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity}**</mark> \[giveOfflinePlayer default true]
   * Examples:&#x20;
     * <mark style="color:blue;">**/ei give %player% Genesis\_Crystal{Variables:{vibraniun:10,proton:30},Usage:10} 3**</mark>&#x20;
     * <mark style="color:blue;">**/ei give %player% SurgeBlade{Variables:{charge:%var\_charge%+1},Usage:%usage%-1} 1**</mark>
@@ -141,14 +145,14 @@ It works even with offline players
 #### GiveAll command
 
 * Command:&#x20;
-  * <mark style="color:blue;">**/ei giveall {id} {quantity}**</mark>** **<mark style="color:purple;">**\[world]**</mark>
+  * <mark style="color:blue;">**/ei giveall {id} {quantity}**</mark>** **<mark style="color:purple;">**\[world]**</mark> \[giveOfflinePlayer default false]
 * Permission: `ei.cmd.giveall`
 * Does not work for offline players
 
 #### Give an EI in a specific slot of a player  <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * Command: (The variables and usage part besides the id is optional)
-  * <mark style="color:blue;">**/ei giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false] USAGE(\<usage>) VAR(\<var>)**</mark>
+  * <mark style="color:blue;">**/ei giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false]**</mark>
   * Examples:&#x20;
     * <mark style="color:blue;">**/ei giveslot Ssomar test{Variables:(x:"Hey",world:"Island"),Usage:50} 1 0**</mark> &#x20;
     * <mark style="color:blue;">**/ei giveslot Special70 rum{Usage:69420,Variables:(tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK")} 1 %slot%**</mark>
@@ -170,6 +174,7 @@ It works even with offline players
     * <mark style="color:blue;">**Example:**</mark>
       * <mark style="color:blue;">**ei drop totemshatter 1 %world% %x% %y% %z%**</mark>
       * <mark style="color:blue;">**ei drop nuclearWar{Usage:3,Variables:(niconico:"nii")} 25 %block\_world% %block\_x% %block\_y% %block\_z%**</mark>
+      * <mark style="color:blue;">**ei drop cybert1\_5{Variables:{eh:5},Usage:5} 1 world 535 74 1329**</mark>
   * _Default quantity : 1_
   * _Default location : The location of the player who has executed this command_
 * Permission: `ei.cmd.drop`

@@ -98,6 +98,10 @@ To give the permissions of all items, I advice you to download a permission plug
 * Command: <mark style="color:blue;">**/eb clear**</mark>** **<mark style="color:purple;">**\[playerName]**</mark>
 * Permission: `eb.cmd.clear`
 
+{% hint style="info" %}
+It supports entities too just use the entity UUID instead of player name
+{% endhint %}
+
 #### Enable / Disable actionbar of EB
 
 * Command: <mark style="color:blue;">**/eb actionbar**</mark>** **<mark style="color:orange;">**{on or off}**</mark>
@@ -147,11 +151,13 @@ To give the permissions of all items, I advice you to download a permission plug
 
 * (Works for offline players)
 * Command:&#x20;
-  * <mark style="color:blue;">**/eb give {playername} {id} {quantity}**</mark>
+  * <mark style="color:blue;">**/eb give {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity}**</mark> \[giveOfflinePlayer default true]
 * Permission: `eb.cmd.give`
 * Examples:
-  * `/eb give Ssomar NivaI{Usage:5,Variables:{a:"B"}} 1`
-  * `/eb give Special70 thornbus 1`
+  * Examples:&#x20;
+    * <mark style="color:blue;">**/eb give %player% Genesis\_Crystal{Variables:{vibraniun:10,proton:30},Usage:10} 3**</mark>&#x20;
+    * <mark style="color:blue;">**/eb give %player% SurgeBlade{Variables:{charge:%var\_charge%+1},Usage:%usage%-1} 1**</mark>
+    * <mark style="color:blue;">**/eb give %player% BoneBlade 1**</mark>
 
 #### Take command
 
@@ -168,10 +174,11 @@ To give the permissions of all items, I advice you to download a permission plug
 #### Give an EB in a specific slot of a player&#x20;
 
 * Command:&#x20;
-  * <mark style="color:blue;">**/eb giveslot {playername} {id} {quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false] USAGE(\<usage>) VAR(\<var>)**</mark>
+  * <mark style="color:blue;">**/eb giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false]**</mark>
   * Examples:&#x20;
-    * <mark style="color:blue;">**/eb giveslot Ssomar test 1 0 USAGE(50) VAR(x:Hey,world:Island)**</mark>
-    * <mark style="color:blue;">**/eb giveslot Special70 rum 1 %slot% USAGE(69420) VAR(tell\_me:WHY,aint\_nothing:BUT\_A\_HEARTBREAK)**</mark>
+    * <mark style="color:blue;">**/eb giveslot Ssomar test{Variables:(x:"Hey",world:"Island"),Usage:50} 1 0**</mark> &#x20;
+    * <mark style="color:blue;">**/eb giveslot Special70 rum{Usage:69420,Variables:(tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK")} 1 %slot%**</mark>
+    * <mark style="color:blue;">**/eb giveslot Ssomar xyz{Variables:{test:"Hello boss!"},Usage:5} 1 5**</mark>
   * _Default usage : The usage that is in the config of your EB_
   * _Override allow the EB to take that slot, and if there was an item there, it is going to move to another slot or get dropped to the ground._
 * Permission: `eb.cmd.giveslot`

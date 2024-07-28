@@ -23,6 +23,7 @@
   * `messageIfNotValid:`: The custom message if the custom placeholder condition didn't match with the first and second part
   * `cancelEventIfNotValid:`: If the custom placeholder condition didn't match with the first and second part, the activator's event will be cancelled. (Default: false)
   * `stopCheckingOtherConditionsIfNotValid`: If the conditions is not valid the other conditions won't be checked, so only 1 message of error will be displayed. (Default:true)
+  * `placeholderConditionCmds`: If the conditions are not met this list of commands will run.
 * Example:
 
 ```yaml
@@ -34,6 +35,10 @@ placeholdersConditions:
       part2: 'no'
       messageIfNotValid: ''
       cancelEventIfNotValid: false
+      stopCheckingOtherConditionsIfNotValid: true
+      placeholderConditionCmds:
+      - SENDMESSAGE &eerror
+      - execute run kill %player%
 ```
 
 ```yaml
@@ -45,6 +50,7 @@ placeholdersConditions:
       part2: 'Ssomar<OR>Special70<OR>Vayk'
       messageIfNotValid: ''
       cancelEventIfNotValid: false
+      stopCheckingOtherConditionsIfNotValid: true
 (ITS VALID)
 ```
 
@@ -57,6 +63,7 @@ placeholdersConditions:
       part2: 'Ssomar<OR>Special70<OR>Vayk'
       messageIfNotValid: ''
       cancelEventIfNotValid: false
+      stopCheckingOtherConditionsIfNotValid: true
 (ITS NOT VALID)
 ```
 
@@ -72,6 +79,10 @@ placeholdersConditions:
       part2: 'SW'
       messageIfNotValid: ''
       cancelEventIfNotValid: false
+      stopCheckingOtherConditionsIfNotValid: true
+      placeholderConditionCmds:
+      - SENDMESSAGE &eerror
+      - execute run kill %player%
 ```
 
 * Required: NO

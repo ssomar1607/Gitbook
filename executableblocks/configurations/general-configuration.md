@@ -1,6 +1,21 @@
 # General Configuration
 
 ```yaml
-whitelisted-worlds: [] #iTS A WITHELIST, ExecutableItems plugin will only work in these worlds.
-giveLimit: 100 #Limit the maximum items you can give with the give command
+checkVersionMsg: true
+whitelistedWorlds: []
+giveLimit: 100
+silentGive: true
+premiumEnableCooldownForOp: true
+
+displayDefaultScale: 1.0
+displayDefaultPitch: 90
+displayDefaultTransform: NONE 
+
+forceCorrectionIfChunkIsUnloaded: false # Check if the block material match with th EB config material (let it to false if you have performance issue)
+config_12_04_2024: true
 ```
+
+{% hint style="info" %}
+displayDefaultTransform: NONE \
+(https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/ItemDisplay.ItemDisplayTransform.html)
+{% endhint %}

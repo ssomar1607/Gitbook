@@ -1,10 +1,8 @@
 ---
-description: >-
-  Here is a non-exhaustive list of plugin that you can combine with
-  ExecutableItems
+description: Here is a non-exhaustive list of plugin that you can combine.
 ---
 
-# ✔ Compatible Plugins
+# ✔️ Compatible Plugins
 
 ### ExecutableItems
 

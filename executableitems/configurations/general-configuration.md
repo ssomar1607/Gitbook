@@ -2,44 +2,32 @@
 
 {% code title="config.yml" %}
 ```yaml
-# ----------------------------------
-# -
-#       ExecutableItems
-# -
-#         By: Ssomar
-# -
-# ----------------------------------
-# -
-# WIKI HERE : https://docs.ssomar.com/executableitems/information-ei
-# DISCORD HERE : https://discord.com/invite/TRmSwJaYNv
-# -
 pickupLimit: -1
-disabledWorlds: []
-whitelistedWorlds: []
+disabledWorlds: [] #Its a blacklist, EI will be disabled in these worlds
+whitelistedWorlds: [] #Its a whitelist, EI will be enabled only in these worlds
 whitelistItemsPerWorld:
   myWorld:
-  - myEI1
-  - myEI2
+    - "myEI1"
+    - "myEI2"
   myWorld2:
-  - myEI3
-  - myEI4
-premiumEnableCooldownForOp: true # Premium only
+    - "myEI3"
+    - "myEI4"
+premiumEnableCooldownForOp: true #Premium only
 checkVersionMsg: true
 disableTestItems: false # If you have a big server with a lot of players, it's recommended to turn this option on true
+silentEIGive: false
 silentMessagePreventionErrorHeadDBError: false
-disableBackup: false # <- Backup your items config at each start / reload of the server
-deleteBackupsAfterDays: 7 # <- It will deletes backups older than this number of days
-enableGarbageCollectorAfterReload: false # <- It will enable the garbage collector after a reload of the server
+disableBackup: false #<- Backup your items config at each start / reload of the server
+deleteBackupsAfterDays: 7 #<- It will deletes backups older than this number of days
+enableGarbageCollectorAfterReload: false #<- It will enable the garbage collector after a reload of the server
 giveLimit: 100
-# enableTexturesPack: true #Only for 1.20.5+ servers
-texturesPackUrl: https://github.com/Ssomar-Developement/items/raw/main/__textures__/ExecutableItems_Pack.zip # Only for 1.20.5+ servers
+enableTexturesPack: true #Only for 1.20.5+ servers
+texturesPackUrl: "https://github.com/Ssomar-Developement/items/raw/main/__textures__/ExecutableItems_Pack.zip" #Only for 1.20.5+ servers
 logs:
   dropped: true
   spawned: true
 debugOnlyRun: false # /ei debug will only display the run debug message
-config_12_04_2024: true
-silentGive: false
-
+itemCheckWithNBTAPI: false #Enabling this setting should result better performance when ExecutableItems checks if the item is an EI or not.
 ```
 {% endcode %}
 

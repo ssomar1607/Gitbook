@@ -189,8 +189,6 @@ You can see how function works here [https://www.geogebra.org/calculator](https:
 
 * This command will deal 25% of the player's hp
 
-
-
 {% hint style="info" %}
 Damage type is ENTITY\_ATTACK if there is a player involved. Otherwise, it's CUSTOM
 {% endhint %}
@@ -198,6 +196,16 @@ Damage type is ENTITY\_ATTACK if there is a player involved. Otherwise, it's CUS
 {% hint style="info" %}
 It triggers the hit/damages activators of EE/EI
 {% endhint %}
+
+{% hint style="info" %}
+To apply real damage you can use:\
+\- 1.20.5++ use /minecraft:damage command, for example\
+minecraft:damage %target% 10 by %player%\
+\
+\- 1.20.5-- use REGAIN HEALTH command, is not the best but its a workaround.
+{% endhint %}
+
+
 
 ### DAMAGE\_NO\_KNOCKBACK
 
@@ -519,12 +527,14 @@ SETHEALTH 10
 ### SETPITCH
 
 * Info: Forces the player to look in a certain pitch position (-90/90 degrees, up down direction)
-* Command: SETPITCH {pitch\_number}
+* Command: SETPITCH {pitch\_number} \[keepVelocity]
+  * {pitch\_number}: The number that you want to input. Placeholders work too
+  * \[keepVelocity]: It allows to keep the velocity of the player
 * Example:
 
 ```
-- SETPITCH 0
-- SETPITCH %target_pitch%
+- SETPITCH 0 false
+- SETPITCH %target_pitch% false
 ```
 
 
@@ -532,12 +542,13 @@ SETHEALTH 10
 ### SETYAW
 
 * Info: Forces the player to look in a certain yaw position (360 degrees, left right direction)
-* Command: SETYAW {yaw\_number}
+* Command: SETYAW {yaw\_number} \[keepVelocity]
   * {yaw\_number}: The number that you want to input. Placeholders work too
+  * \[keepVelocity]: It allows to keep the velocity of the player
 * Example:
 
 ```
-- SETYAW 10
+- SETYAW 10 false
 ```
 
 ### SPIN
@@ -595,6 +606,25 @@ This is not the same as essential's smite command. If you want to smite your tar
 - STUN_ENABLE
 - DELAY 5
 - STUN_DISABLE
+```
+
+
+
+### TELEPORTONCURSOR
+
+* Info: Teleports the player/entity to the location
+* Command: TELEPORT {world} {x} {y} {z} \[pitch] \[yaw] \[keepVelocity]
+  * {world}: The world of the location to teleport
+  * {x}: The coordinate x of the location to teleport.
+  * {y}: The coordinate y of the location to teleport.
+  * {z}: The coordinate z of the location to teleport.
+  * \[pitch]: Optional pitch of the teleport location
+  * \[yaw]: Optional yaw of the teleport location
+  * \[keepVelocity]: Allows to not stop the player velocity.
+* Example:
+
+```
+- TELEPORT ApocalypseWorld 70 70 70
 ```
 
 

@@ -40,6 +40,11 @@ playerConditions:
     ifSneakingCancel: true
     ifSneakingCmds:
     - kill %player%
+
+blockConditions:
+      ifIsPowered: true
+      ifIsPoweredCmds:
+      - test
 ```
 
 <details>
@@ -311,7 +316,7 @@ playerConditions:
 ### ifPlayerMustBeOnHisClaimOrWilderness
 
 * **SUPPORTS THE FOLLOWING PLUGINS:**
-  * GriefPrevention
+  * GriefPrevention (It reurns valid if the player is in public claim of GriefPrevention)
   * Lands
   * GriefDefender
   * Residence
@@ -329,6 +334,8 @@ playerConditions:
   * If the player is on a claim that he/she does not own but has permission, the activator will activate.
   * if the player is on wilderness the activator will activate.
 * Required: NO (Default: false)
+
+
 
 ### ifPlayerMustBeOnHisIsland
 
@@ -349,6 +356,8 @@ playerConditions:
   * If the player is on his island, the activator will activate.
 * Required: NO (Default: false)
 
+
+
 ### ifPlayerMustBeOnHisPlot
 
 * **SUPPORTS THE FOLLOWING PLUGINS:**
@@ -363,6 +372,8 @@ playerConditions:
 ```
 
 * Required: NO (Default: false)
+
+
 
 ### ifCursorDistance
 
