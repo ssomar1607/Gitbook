@@ -60,6 +60,7 @@ If its the case that the activator is **related with an entity** <img src="../..
 ```
 execute at %entity_uuid% run particle flame ~ ~ ~ 1 1 1 50 0
 execute at %player% run setblock %entity_x% %entity_y% %entity_z% stone
+execute run effect give %entity_uuid% strength 10 10
 ```
 {% endtab %}
 
