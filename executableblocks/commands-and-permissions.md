@@ -176,8 +176,8 @@ It supports entities too just use the entity UUID instead of player name
 * Command:&#x20;
   * <mark style="color:blue;">**/eb giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false]**</mark>
   * Examples:&#x20;
-    * <mark style="color:blue;">**/eb giveslot Ssomar test{Variables:(x:"Hey",world:"Island"),Usage:50} 1 0**</mark> &#x20;
-    * <mark style="color:blue;">**/eb giveslot Special70 rum{Usage:69420,Variables:(tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK")} 1 %slot%**</mark>
+    * <mark style="color:blue;">**/eb giveslot Ssomar test{Variables:{x:"Hey",world:"Island"},Usage:50} 1 0**</mark> &#x20;
+    * <mark style="color:blue;">**/eb giveslot Special70 rum{Usage:69420,Variables:{tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK"\}} 1 %slot%**</mark>
     * <mark style="color:blue;">**/eb giveslot Ssomar xyz{Variables:{test:"Hello boss!"},Usage:5} 1 5**</mark>
   * _Default usage : The usage that is in the config of your EB_
   * _Override allow the EB to take that slot, and if there was an item there, it is going to move to another slot or get dropped to the ground._

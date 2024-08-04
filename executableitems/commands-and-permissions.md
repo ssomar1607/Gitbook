@@ -154,8 +154,8 @@ It works even with offline players
 * Command: (The variables and usage part besides the id is optional)
   * <mark style="color:blue;">**/ei giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false]**</mark>
   * Examples:&#x20;
-    * <mark style="color:blue;">**/ei giveslot Ssomar test{Variables:(x:"Hey",world:"Island"),Usage:50} 1 0**</mark> &#x20;
-    * <mark style="color:blue;">**/ei giveslot Special70 rum{Usage:69420,Variables:(tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK")} 1 %slot%**</mark>
+    * <mark style="color:blue;">**/ei giveslot Ssomar test{Variables:{x:"Hey",world:"Island"},Usage:50} 1 0**</mark> &#x20;
+    * <mark style="color:blue;">**/ei giveslot Special70 rum{Usage:69420,Variables:{tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK"\}} 1 %slot%**</mark>
   * _Default usage : The usage that is in the config of your EI_
   * _Override allow the EI to take that slot, and if there was an item there, it is going to move to another slot or get dropped to the ground._
 * Permission: `ei.cmd.giveslot`
@@ -173,7 +173,7 @@ It works even with offline players
   * <mark style="color:blue;">**/ei drop {id}**</mark>** **<mark style="color:purple;">**\[quantity] \[world] \[x] \[y] \[z]**</mark>
     * <mark style="color:blue;">**Example:**</mark>
       * <mark style="color:blue;">**ei drop totemshatter 1 %world% %x% %y% %z%**</mark>
-      * <mark style="color:blue;">**ei drop nuclearWar{Usage:3,Variables:(niconico:"nii")} 25 %block\_world% %block\_x% %block\_y% %block\_z%**</mark>
+      * <mark style="color:blue;">**ei drop nuclearWar{Usage:3,Variables:{niconico:"nii"\}} 25 %block\_world% %block\_x% %block\_y% %block\_z%**</mark>
       * <mark style="color:blue;">**ei drop cybert1\_5{Variables:{eh:5},Usage:5} 1 world 535 74 1329**</mark>
   * _Default quantity : 1_
   * _Default location : The location of the player who has executed this command_
