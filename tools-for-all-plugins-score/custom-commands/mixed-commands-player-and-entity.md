@@ -254,7 +254,9 @@ It can be used as many times as you want, it will get stacked **additively**, th
 8 -> 16 -> 24 -> 32
 {% endhint %}
 
-
+{% hint style="info" %}
+You can easily increase the damage of the ei's sword using this custom command by applying this DAMAGE\_BOOST command in your PLAYER\_HIT\_... activators. Currently doesn't work perfectly with PROJECTILE\_HIT\_... as of writing this message
+{% endhint %}
 
 ### DAMAGE\_RESISTANCE
 
