@@ -9,9 +9,11 @@ If you edit the commands in-game don't add the **-** that is before all examples
   * {amount}: To how long you want commands to be delayed (In seconds)
 * Example:
 
-```
-- DELAY 10
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>#There will be a delay of 10 seconds between the command1 and the command2.
+</strong><strong>- command1
+</strong>- DELAY 10
+- command2
+</code></pre>
 
 
 
