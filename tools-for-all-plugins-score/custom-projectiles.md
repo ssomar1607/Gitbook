@@ -346,6 +346,15 @@ charged: true
 
 ### Fireball
 
+#### Radius
+
+* Radius of explosion
+* Example
+
+```
+radius: 3
+```
+
 #### Incendiary
 
 * Whether the fireball projectile will cause fire or not upon hitting something
