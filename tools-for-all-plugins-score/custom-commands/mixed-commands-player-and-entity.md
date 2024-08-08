@@ -612,7 +612,7 @@ This is not the same as essential's smite command. If you want to smite your tar
 
 
 
-### TELEPORTONCURSOR
+### TELEPORT
 
 * Info: Teleports the player/entity to the location
 * Command: TELEPORT {world} {x} {y} {z} \[pitch] \[yaw] \[keepVelocity]
