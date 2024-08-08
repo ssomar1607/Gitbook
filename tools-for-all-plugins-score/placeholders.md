@@ -143,7 +143,11 @@ Example: `%around_target_x%`
 
 
 
-## Variable Placeholders
+## Variables
+
+Here you can take a look at the internal item/block variable types and their placeholders. This type of variables are not the same as "score variables", these variables are independent for each item/block, and score variables are variables not linked to an item or a block.
+
+### Variable Placeholders - Internal item/block&#x20;
 
 (Placeholders that you can use if you have a variable)
 
@@ -155,13 +159,25 @@ Example: `%around_target_x%`
 | **%var\_X\_int%**   | Value of the variable X cast in an Integer |
 | **%var\_X\_roman%** | Value of the variable X in roman numbers   |
 
-## List Variable Placeholders
+
+
+### List Variable Placeholders - Internal item/block&#x20;
 
 | Placeholder                  | Description                                                      | Usage                                                                                                                                                           |
 | ---------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | %var\_MYVAR%                 | Returns the list with the brackets and commas                    | %var\_testVar%                                                                                                                                                  |
 | %var\_MYVAR\_size%           | Returns how many elements/values that list variable contains     | %var\_testVar\_size%                                                                                                                                            |
 | %var\_MYVAR\_contains\_WHAT% | Returns true/false if the mentioned value is present in the list | <p>%var_testVar_contains_Maximo%<br>%var_testVar_contains_%player%%<br>%var_testVar_contains_%checkitem_mat:stone%%<br>%var_testVar_contains_%var_bomberZ%%</p> |
+
+### Score variables
+
+Take a look here:
+
+{% content-ref url="score-variables.md" %}
+[score-variables.md](score-variables.md)
+{% endcontent-ref %}
+
+
 
 ## ExecutableItems
 

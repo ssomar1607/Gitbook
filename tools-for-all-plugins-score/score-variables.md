@@ -1,4 +1,4 @@
-# 🧮    Variables
+# 🧮   Score Variables
 
 {% hint style="info" %}
 Since SCore variable placeholders are supported by PlaceholderAPI, you can use the SCore variables like this:
@@ -444,12 +444,20 @@ There are ways to change the variable outside the item, using this methods:\
     * /ei modification {set/modification} variable {slot} {variableName} {value}
 {% endhint %}
 
+To check the placeholders of "Internal item variables" check it here
 
-
-
+{% content-ref url="placeholders.md" %}
+[placeholders.md](placeholders.md)
+{% endcontent-ref %}
 
 
 
 ## ExecutableBlocks (Block variables)
 
 ExecutableBlocks has a integration of variables where you can store strings/numbers/list in variables **inside** the block. With them you can create multiple mechanics in your blocks.
+
+To check the placeholders of "Internal item/block variables" check it here
+
+{% content-ref url="placeholders.md" %}
+[placeholders.md](placeholders.md)
+{% endcontent-ref %}

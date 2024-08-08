@@ -21,5 +21,5 @@
 
 #### [run-{}-command](../../)
 
-#### [Variables ](../variables.md#score-global-variables)
+#### [Variables ](../score-variables.md#score-global-variables)
 

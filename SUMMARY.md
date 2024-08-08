@@ -19,7 +19,7 @@
 * [🏹 Custom Projectiles](tools-for-all-plugins-score/custom-projectiles.md)
 * [📚 Placeholders](tools-for-all-plugins-score/placeholders.md)
 * [✨    Score particles](tools-for-all-plugins-score/score-particles.md)
-* [🧮    Variables](tools-for-all-plugins-score/variables.md)
+* [🧮   Score Variables](tools-for-all-plugins-score/score-variables.md)
 * [⛏️   Blocks Hardnesses](tools-for-all-plugins-score/blocks-hardnesses.md)
 * [✔️ Compatible Plugins](tools-for-all-plugins-score/compatible-plugins.md)
 * [🤖 General Questions | Guides](tools-for-all-plugins-score/general-questions-or-guides/README.md)
