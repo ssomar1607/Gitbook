@@ -88,3 +88,30 @@ description: >-
     - part2: 0
 6) add the ei give command in that activator
 ```
+
+
+
+
+
+### Make a loop activator run commands once it has executed x amount of times
+
+```
+For this guide, it will run commands after looping 30 times.
+1) Download PlaceholderAPI plugin
+  - /papi ecloud download Math
+  - /papi reload
+2) create the ei item
+3) create a number item variable
+  - variable name = timer
+  - type = NUMBER
+  - default = 0
+4) create a LOOP activator
+  - detailed slots : all slots enabled
+  - add commands:
+    - Ex: "IF %var_timer%=30 minecraft:give %player% diamond 1"
+  - edit variable modification option
+    - create a new variable modification option
+      - variable name = timer
+      - type = SET
+      - modification : '%math_IF((%var_timer%)<30, (%var_timer%)+1, 1)%'
+```
