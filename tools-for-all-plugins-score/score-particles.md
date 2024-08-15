@@ -85,7 +85,7 @@ To change the parameters of your shape just add into your current command
 You can add as much parameters as you want in the same line
 {% endhint %}
 
-### Target
+## Target&#x20;
 
 Normally the shape is in the player who is running the command, to change this use:
 
@@ -102,6 +102,14 @@ If don't want to target someone but targetting a specific location use:
 ```
 location:{world},{x},{y},{z}
 ```
+
+{% hint style="info" %}
+Example:\
+\
+score particles location:%block\_world%,%block\_x%+0.5,%block\_y%+0.5,%block\_z%+0.5 shape:circularBeam particle:flame color:ORANGE maxRadius:14 rate:500 radiusRate:15 extend:1 time:12\
+\
+The 0.5 is added to make the particles appear on the center of the block
+{% endhint %}
 
 ### Particle type
 
