@@ -567,6 +567,12 @@ SETHEALTH 10
 
 
 
+{% hint style="info" %}
+Q: How to freeze targets/players/mobs ?
+
+A: run <mark style="color:orange;">`SPIN {duration} 0`</mark> for example
+{% endhint %}
+
 ### STEAL
 
 * Info: Steal an item from the target inventory
