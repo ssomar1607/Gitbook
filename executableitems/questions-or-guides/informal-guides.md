@@ -87,6 +87,7 @@ description: >-
     - comparator: EQUALS
     - part2: 0
 6) add the ei give command in that activator
+7) add "score variables set player system-hasGivenPlayersEI-catalyst 1 %player%"
 ```
 
 
