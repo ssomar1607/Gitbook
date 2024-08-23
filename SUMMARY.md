@@ -206,6 +206,7 @@
   * [Activator Configuration](executableevents/configurations/activator-configuration/README.md)
     * [List of the Activators](executableevents/configurations/activator-configuration/list-of-the-activators.md)
 * [🤖 Question | Guides](executableevents/question-or-guides/README.md)
+  * [Informal Guides](executableevents/question-or-guides/informal-guides.md)
   * [Frequently Asked Questions](executableevents/question-or-guides/frequently-asked-questions/README.md)
     * [Install/update/errors](executableevents/question-or-guides/frequently-asked-questions/install-update-errors/README.md)
       * [How to install correctly](executableevents/question-or-guides/frequently-asked-questions/install-update-errors/how-to-install-correctly.md)

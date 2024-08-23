@@ -63,6 +63,45 @@ The formula above ONLY gets the displacement between 2 points but CUSTOMDASH1 re
 
 As to why you have to use the xyz placeholder that gives decimal values instead of non-decimal values, it is to make sure you're landing at the correct location or else you would be flying off somewhere.
 
+### Player-Direction Offset Formula v2
+
+The above formula only deals with the forward/backward offset but doesn't consider the up/down and left/right offsets.
+
+{% code fullWidth="true" %}
+```
+{new_x_long} = {player_x_long} + (^z * cos({player_pitch}*-1) * sin({player_yaw}*-1)) + (^x * cos({player_yaw}*-1))
+{new_y_long} = {player_y_long} + (^z * sin({player_pitch}*-1)) + (^y)
+{new_z_long} = {player_z_long} + (^z * cos({player_pitch}*-1) * cos({player_yaw}*-1)) - (^x * sin({player_yaw}*-1))
+```
+{% endcode %}
+
+Just replace the ^x ^y ^z with offset values. DO NOT KEEP THE ^ SYMBOL
+
+#### Example
+
+Let's say a player is at coordinates `{player_x_long} = 100`, `{player_y_long} = 64`, `{player_z_long} = 100`, facing east (`{player_yaw} = 90°`, `{player_pitch} = 0°`). If you use the command `/tp ^1 ^0 ^1`, the player will be teleported as follows:
+
+* `{player_yaw}` = 90° (east)
+* `{player_pitch}` = 0°
+
+Using the formulas:
+
+* `{new_x_long} = 100 + (1 * cos(0*-1) * sin(90*-1)) + (1 * cos(90*-1))`
+* `{new_y_long} = 64 + (1 * sin(0*-1)) + 0`
+* `{new_z_long} = 100 + (1 * cos(0*-1) * cos(90*-1)) - (1 * sin(90*-1))`
+
+#### Sample Application:
+
+^1 ^2 ^3
+
+{% code fullWidth="true" %}
+```
+- CUSTOMDASH1 %math_{player_x_long} + (3 * cos({player_pitch}*-1) * sin({player_yaw}*-1)) + (1 * cos({player_yaw}*-1))% 
+  %math_{player_y_long} + (3 * sin({player_pitch}*-1)) + (2)%
+  %math_{player_z_long} + (3 * cos({player_pitch}*-1) * cos({player_yaw}*-1)) - (1 * sin({player_yaw}*-1))%
+```
+{% endcode %}
+
 ## Origin-Related Math Formulas
 
 ### Distance from XYZ
