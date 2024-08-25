@@ -634,6 +634,7 @@ MINECART_BOOST 10
 ### MOB\_AROUND
 
 * Info: Targets entities in a specific radius and makes them run commands
+  * Available entities -> [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html)
 * Command: MOB\_AROUND {distance} {mute or not} (command)
   * {distance}: To how far in radius the command will select entities
   * {mute or not}: (true or false) To notify the user of the item if it didn't manage to target any mobs.
