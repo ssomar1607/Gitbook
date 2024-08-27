@@ -137,6 +137,14 @@ First of all, to better understanding this tutorial you must read first [<mark s
 I'll repeat, you have to know basic stuff of retexturing to know what I am talking about, this requires some experience before. I suggest you to read [<mark style="color:blue;">**General Items**</mark>](general-items.md) if you don't understand anything here.
 {% endhint %}
 
+{% hint style="info" %}
+Remember !
+
+The parent handheld is the basic handheld when you hold an item like a diamond, if you want it to hold it normally like a bow you should use item/generated.
+
+As it was said "it requires previous knowledge" -> and don't forget you can use this same tip to apply parents that don't belong here for example using as parent "item/shield"
+{% endhint %}
+
 ### Let's test it
 
 * After doing everything, save the jsons, save the texture in the correct folders, and give it to yourself in game + put the texture pack on.&#x20;
