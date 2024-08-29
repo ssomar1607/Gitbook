@@ -1,5 +1,6 @@
 ---
 description: Share your epic ExecutableItems with the Minecraft community !
+hidden: true
 ---
 
 # Share your ExecutableItems

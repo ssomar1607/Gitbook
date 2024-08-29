@@ -223,6 +223,11 @@
     * [Detect player entry/leave from a worldguard region](executableevents/question-or-guides/tutorials/detect-player-entry-leave-from-a-worldguard-region.md)
 * [⌨️ Commands & Permissions](executableevents/commands-and-permissions.md)
 
+## MyFurniture
+
+* [📌 Information MyFurniture](myfurniture/information-myfurniture.md)
+* [⌨️ Commands & Permissions](myfurniture/commands-and-permissions.md)
+
 ## CustomPiglinsTrades
 
 * [📌 Information CPT](custompiglinstrades/information-cpt.md)
