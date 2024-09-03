@@ -179,10 +179,11 @@ And the slots here
 
 * Info: Targets players in a specific radius and makes them run commands
 * Command:&#x20;
-  * `AROUND {distance} {msgPlayerAffected true/false} {command}`
+  * `AROUND {distance} {msgPlayerAffected true/false} {command} throughBlocks:false`
     * {distance}: To how far in radius the command will select players
     * {msgPlayerAffected true/false}: To notify the affected players that they are tagged by the command and to notify the user of the item if it managed to target players or not
-    * {command}: The command that the targeted players will execute
+    * {command}: The command that the targeted players will execute}
+    * throughBlocks: it will affect or not the players that are behind blocks
 * Example:
 
 This summons lightning at players in a 20 block radius
@@ -528,6 +529,50 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 
 
 
+### HITSCAN\_PLAYERS
+
+* Info: It allows to run a command at certain direction to players
+* Command: HITSCAN\_PLAYERS range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
+  * Range: how far an entity can be to be targetted by the HITSCAN command
+  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
+  * Pitch: What direction to shoot it in, relative to player pitch
+  * Yaw: Same thing as Pitch but with yaw
+  * leftRightShift:
+    * \-5 = the hitscan STARTS from 5 blocks to the left.
+    * 0 = Hitscan is centered where the player is.
+    * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
+  * yShift: Same as left,right, except with a different axis.&#x20;
+  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
+  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
+  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
+* Image to understand:
+  *
+
+      <figure><img src="../../.gitbook/assets/image (442).png" alt=""><figcaption></figcaption></figure>
+
+### HITSCAN\_ENTITIES
+
+* Info: It allows to run a command at certain direction to entities
+* Command: HITSCAN\_ENTITIES range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
+  * Range: how far an entity can be to be targetted by the HITSCAN command
+  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
+  * Pitch: What direction to shoot it in, relative to player pitch
+  * Yaw: Same thing as Pitch but with yaw
+  * leftRightShift:
+    * \-5 = the hitscan STARTS from 5 blocks to the left.
+    * 0 = Hitscan is centered where the player is.
+    * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
+  * yShift: Same as left,right, except with a different axis.&#x20;
+  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
+  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
+  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
+* Image to understand:
+  *
+
+      <figure><img src="../../.gitbook/assets/image (443).png" alt=""><figcaption></figcaption></figure>
+
+
+
 ### JOBS\_MONEY\_BOOST
 
 {% hint style="info" %}
@@ -864,7 +909,21 @@ It supports negative values.
 - REMOVEENCHANTMENT -1 ALL
 ```
 
-###
+
+
+### REMOVELORE
+
+* Info: Remove a lore line
+* Command: REMOVELORE {slot} {line}
+  * {slot}: Slot to remove the lore from
+  * {line}: The line that you want to remove
+* Example:
+
+```
+- REMOVEENCHANTMENT -1 ALL
+```
+
+
 
 ### REPLACEBLOCK
 

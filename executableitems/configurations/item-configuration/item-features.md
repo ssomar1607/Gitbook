@@ -211,6 +211,18 @@ attributes:
 
 * Required: NO
 
+**keepDefaultAttributes: It keeps or not the default attributes**
+
+{% embed url="https://youtu.be/HqyF0QBYIY4" %}
+
+**ignoreKeepDefaultAttributesFeature: It ignores the setting of keep default attributes. (Useful for the third case)**
+
+
+
+<table><thead><tr><th width="355">Before 1.21</th><th width="347">After 1.21</th></tr></thead><tbody><tr><td><p>EI STONE_PICKAXE </p><ul><li>keepDefaultAttributes YES </li><li>No other attributes </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li></ul></li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES</li><li>No other attributes </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li></ul></li></ul></td></tr><tr><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO </li><li>No other attributes </li><li>When in Main Hand</li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO</li><li>No other attributes</li><li>NOTHING</li></ul></td></tr><tr><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>+ 2 attack damage (blue)</li><li>-2.8 attack speed (red)</li><li>1 armor (blue)</li></ul></li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li><li>1 armor (blue)</li></ul></li></ul></td></tr><tr><td><p>EI STONE_PICKAXE </p><ul><li>keepDefaultAttributes NO</li><li>1 armor attribute</li><li><p>When in Main Hand:</p><ul><li>1 armor (blue)</li></ul></li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>1 armor (blue)</li></ul></li></ul></td></tr></tbody></table>
+
+
+
 #### CUSTOM MODEL DATA <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> (1.14+)
 
 * Info: Sets the Custom Model Data of the item

@@ -197,3 +197,10 @@ It supports entities too just use the entity UUID instead of player name
   * _Default quantity : 1_
   * _Default location : The location of the player who has executed this command_
 * Permission: `eb.cmd.drop`
+
+### Custom trigger
+
+Commands:
+
+* /eb run-custom-trigger trigger:{activatorId} // It will execute the activator(s) for all the EB placed that have an activator with the specified ID.
+* /eb run-custom-trigger trigger:{activatorId} block:{world,x,y,z} // It will execute the activator(s) only for the EB placed at the specified location and if it has an activator with the specified ID.

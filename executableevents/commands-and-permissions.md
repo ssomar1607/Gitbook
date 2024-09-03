@@ -60,3 +60,9 @@ It supports entities too just use the entity UUID instead of player name
 
 * Command: <mark style="color:blue;">**/ee actionbar**</mark>** **<mark style="color:orange;">**{on or off}**</mark>
 * Permission: `ee.cmd.actionbar`
+
+### Custom trigger
+
+Commands:
+
+* /ee run-custom-trigger trigger:{activatorId} // It will execute the activator(s) with the specified ID.

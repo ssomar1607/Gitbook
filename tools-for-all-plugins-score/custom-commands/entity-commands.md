@@ -106,6 +106,12 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 - ANGRYAT %player_uuid%
 ```
 
+{% hint style="info" %}
+It supports null to reset the angry
+
+* ANGRYAT null
+{% endhint %}
+
 
 
 ### CHANGETO

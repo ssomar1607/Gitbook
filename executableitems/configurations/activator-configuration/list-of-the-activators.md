@@ -1,5 +1,6 @@
 # List of the Activators
 
+* CUSTOM\_TRIGGER: It can be executed by running a command, or it can be scheduled.
 * [<mark style="color:orange;">**PLAYER\_ENABLE\_FLY**</mark>](list-of-the-activators.md#player\_active\_fly) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts flying.**
 * <mark style="color:orange;">**PLAYER\_ENABLE\_GLIDE**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts gliding.**
 * [<mark style="color:orange;">**PLAYER\_ENABLE\_SNEAK**</mark>](list-of-the-activators.md#player\_active\_sneak) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts sneaking.**
@@ -10,6 +11,9 @@
 * [<mark style="color:blue;">**PLAYER\_BEFORE\_DEATH**</mark>](list-of-the-activators.md#player\_before\_death) : Saves the player from certain death and activates.
 * [<mark style="color:orange;">**PLAYER\_BLOCK\_BREAK**</mark>](list-of-the-activators.md#player\_block\_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player mines/breaks a block.**
 * [<mark style="color:orange;">**PLAYER\_BLOCK\_PLACE**</mark>](list-of-the-activators.md#player\_block\_place) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player places a block.**
+* PLAYER\_BLOCK\_HIT\_OF\_ENTITY: Activates when the player blocks a hit that comes from an entity with the shield.
+* PLAYER\_BLOCK\_HIT\_OF\_PLAYER: Activates when the player blocks a hit that comes from a player with the shield.
+* PLAYER\_BREAK\_SHIELD\_OF\_PLAYER: Activates when the player breaks a shield of a player
 * <mark style="color:orange;">**PLAYER\_BRUSH\_BLOCK**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player brushes a block.**
 * **PLAYER\_BUCKET\_ENTITY**: Activates when the player buckets an entity
 * [<mark style="color:blue;">**PLAYER\_CHANGE\_WORLD**</mark>](list-of-the-activators.md#player\_change\_world) : Activates when the player moves to a different world.
@@ -63,6 +67,7 @@
 * **PLAYER\_PORTAL**: Activates when the player uses a portal
 * **PLAYER\_REGAIN\_HEALTH**: Activates when the player regains health
 * **PLAYER\_RIPTIDE**: Activates when the player riptides
+* PLAYER\_SHIELD\_BREAK\_BY\_PLAYER: Activates when the shield of the player gets broken by someone else.
 * **PLAYER\_SPAWN\_CHANGE**: Activates when the player changes their spawn
 * [<mark style="color:orange;">**PLAYER\_WALK**</mark>](list-of-the-activators.md#player\_walk) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player walks.**
 * [<mark style="color:orange;">**PLAYER\_WRITE\_COMMAND**</mark>](list-of-the-activators.md#player\_write\_command) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player enters commands.**

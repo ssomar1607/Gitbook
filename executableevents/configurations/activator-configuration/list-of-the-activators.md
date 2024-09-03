@@ -1,5 +1,6 @@
 # List of the Activators
 
+* CUSTOM\_TRIGGER: It can be executed by running a command, or it can be scheduled.
 * <mark style="color:orange;">**CROP\_GROW**</mark>**: Activates when a crop grows.**
 * **PLAYER\_CUSTOM\_LAUNCH: Activates when a player launches a custom projectile.**
 * <mark style="color:blue;">**PLAYER\_ENABLE\_FLY**</mark>**  : Activates when a player starts and stops flying.**

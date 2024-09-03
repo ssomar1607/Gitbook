@@ -2,6 +2,7 @@
 
 
 
+* CUSTOM\_TRIGGER: It can be executed by running a command, or it can be scheduled.
 * [<mark style="color:orange;">**CROP\_GROW**</mark>](list-of-the-activators.md#crop\_grow) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop and it grows.**
 * [<mark style="color:orange;">**CROP\_PLACE\_BLOCK**</mark>](list-of-the-activators.md#crop\_place\_block) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop that places block.**
 * DESTROYED\_BY\_LIQUID**: Activates when the Executable Block is destroyed by liquid.**

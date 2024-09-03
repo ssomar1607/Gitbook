@@ -220,3 +220,12 @@ It works even with offline players
 
   * Example: /ei search EternalSword all
 
+### Custom trigger
+
+Commands:
+
+* /ei run-custom-trigger trigger:{activatorId} // It will execute the activator(s) for all the players that have an EI that has an activator with the specified ID.
+* /ei run-custom-trigger trigger:{activatorId} player:{playerName} // It will execute the activator(s) only for the player specified and if he has an EI that has an activator with the specified ID.
+* /ei run-custom-trigger trigger:{activatorId} player:{playerName} slot:{slot, -1 for held item} // It will execute the activator(s) only for the player specified and if he has an EI in the specified slot that has an activator with the specified ID.
+
+\+++ If you type more things in the commands you will be able to retrieve these infos using %arg1% %arg2% ... or %all\_args%
