@@ -14,7 +14,6 @@ The attached link will direct you to the list of all **available particle types*
 * circle
 * diamond
 * circularBeam
-* flower
 * filledCircle
 * chaoticDoublePendulum
 * magicCircles
@@ -27,23 +26,13 @@ The attached link will direct you to the list of all **available particle types*
 * waveFunction
 * vortex
 * cylinder
-* moveRotatingAround
-* guard
 * sphere
 * spikeSphere
 * ring
-* spread
 * heart
 * atomic
 * helix
-* dna
 * dnaReplication
-* rectangle
-* cage
-* filledCube
-* cube
-* structuredCube
-* hypercube
 * tesseract
 * mandelbrot
 * julia
@@ -51,7 +40,6 @@ The attached link will direct you to the list of all **available particle types*
 * eye
 * illuminati
 * polygon
-* atom
 * meguminExplosion
 * explosionWave
 
