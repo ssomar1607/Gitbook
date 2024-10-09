@@ -57,7 +57,7 @@ To give the permissions of all furniture, I advice you to download a permission 
 
 * command: /mf show-placed filter/sort:
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="338"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (439).png" alt="" width="338"><figcaption></figcaption></figure>
 
 #### Reload the plugin
 

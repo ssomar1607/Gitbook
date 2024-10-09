@@ -265,22 +265,6 @@ Placeholder Source: ([https://factions.support/placeholderapi/](https://factions
 
 
 
-### AWARENESS
-
-* Info: Sets to true or false the awareness of a mob.
-* Command: AWARENESS {DEFAULT TRUE}
-* Example:
-
-```
-- AWARENESS true
-```
-
-{% hint style="info" %}
-it only works for 1.16.5+
-{% endhint %}
-
-
-
 ### BOOTS
 
 * Info: Puts the item in your main hand to your boots slot. (Will not work if the item has "Curse of Binding")
@@ -548,7 +532,7 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 * Image to understand:
   *
 
-      <figure><img src="../../.gitbook/assets/image (442).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (443).png" alt=""><figcaption></figcaption></figure>
 
 ### HITSCAN\_ENTITIES
 
@@ -569,7 +553,7 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 * Image to understand:
   *
 
-      <figure><img src="../../.gitbook/assets/image (443).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (444).png" alt=""><figcaption></figcaption></figure>
 
 
 

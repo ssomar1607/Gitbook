@@ -295,3 +295,34 @@ blockConditions:
           - ALL_ORES
 </code></pre>
 
+<pre class="language-yaml"><code class="lang-yaml"><strong>    blockConditions:
+</strong>      requiredItems: {}
+      requiredExecutableItems: {}
+      blockAroundCdts:
+        blockAround0:
+          southValue: 0
+          northValue: 0
+          westValue: 0
+          eastValue: 0
+          aboveValue: 0
+          underValue: 1
+          errorMsg: ''
+          blockTypeMustBe:
+          - stone
+          placeholdersConditions:
+            plchCdt0:
+              type: PLAYER_STRING
+              comparator: EQUALS
+              part1: '%var_x%'
+              part2: '10'
+              cancelEventIfNotValid: false
+              messageIfNotValid: ''
+              messageIfNotValidForTarget: ''
+              stopCheckingOtherConditionsIfNotValid: true
+              placeholderConditionCmds:
+              - say not run
+
+</code></pre>
+
+Q: What exactly is going on in placeholder conditions?\
+A: The placeholder %var\_x% is being parsed according to the block in that position. Meaning, you can use this method to assign a specific number to insane amount of unique EBs without writing each id that may change overtime in blockTypeMustBe

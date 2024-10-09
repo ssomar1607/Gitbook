@@ -114,6 +114,22 @@ It supports null to reset the angry
 
 
 
+### AWARENESS
+
+* Info: Sets to true or false the awareness of a mob.
+* Command: AWARENESS {DEFAULT TRUE}
+* Example:
+
+```
+- AWARENESS true
+```
+
+{% hint style="info" %}
+it only works for 1.16.5+
+{% endhint %}
+
+
+
 ### CHANGETO
 
 * Info: Replaces the mob with a different typ_e_
