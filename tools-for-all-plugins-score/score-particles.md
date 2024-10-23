@@ -1,5 +1,7 @@
 # ✨    Score particles
 
+{% embed url="https://youtu.be/_GavkHnQcvg?si=UaRm9LlUomDzoveQ" %}
+
 Score includes 34 custom pre-made particles shapes from Xparticle library. You can check all the information on their github.&#x20;
 
 The attached link will direct you to the list of all **available particle types**.
