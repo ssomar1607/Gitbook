@@ -1,4 +1,4 @@
-# ⚙ Developer API
+# ⚙️ Developer API
 
 ## Add the dependency
 
@@ -24,7 +24,13 @@ and in maven add:
 </dependency>
 ```
 
-### Configure correctly your plugin.yml
+### Gradle dependency
+
+```
+compileOnly files('src/main/resources/Score.jar')
+```
+
+Configure correctly your plugin.yml
 
 ```yaml
 softdepend: [ExecutableItems, SCore]
