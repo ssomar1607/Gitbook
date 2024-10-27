@@ -38,6 +38,7 @@ CURRENTLY ONLY WORKS IN PLAYER RELATED AND ENTITY RELATED COMMANDS
 * Command: IF {condition\_without\_spaces} {command1} <+> {command2} <+> ...
   * {condition\_without\_spaces}: The condition for the IF to decide whether it runs or not.
     * Symbols: =, !=, >=, <=, >, <
+    * It supports () for priority , && for AND and || for OR
   * {command1},{command2}: The commands that will be executed
 * Example:
 
@@ -47,6 +48,15 @@ IF %player_health%>20 say cool
 
 ```
 IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
+```
+
+```
+IF 1=1||2=3 BACKDASH 1
+1=1 OR 2=3 -> YES because 1=1
+IF 1=1&&2=2||2=3 BACKDASH 1
+1=1 and 2=2 or 2=3 -> YES because 1=1 and 2=2
+IF (1=1&&2=2)||(2=3||3=2) BACKDASH 1
+(1=1 and 2=2) or (2=3 or 3=2) -> YES because 1=1 and 2=2
 ```
 
 ## **WHILE**
