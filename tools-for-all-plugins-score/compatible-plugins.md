@@ -90,11 +90,6 @@ Lm-Items is a bridge resource between LevelledMobs and ExecutableItems
 
 * You can link an ExecutableItems and ExecutableBlocks so the item will have activators as an item and same as a block, the usage will keep the same in both even if the EB is placed and then broke.
 
-### CustomCrafting
-
-* You can have your EI | EB Items as result of a recipe in this plugin.
-* You can enable/disable crafting as restriction of vanilla crafting, or custom crafting.
-
 ### ItemsAdder
 
 * You can link an item/block from ItemsAdder and ExecutableItems (also the item texture & block texture is supported, etc). The method for items can be done with 2 ways:
