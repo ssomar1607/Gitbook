@@ -1,8 +1,10 @@
 # Custom crafting
 
-Commonly we receive questions related to Custom Crafting, ¿Does ExecutableBlocks supports it?, well, the answer first of all is that ExecutableBlocks doesn't have a mechanic inside of it related to CustomCrafting, so you should download another plugin to achieve this.
+Commonly we receive questions related to Custom Crafting, ¿Does Ssomar plugins supports it?, well, the answer first of all is that Ssomar plugins doesn't have a mechanic inside of it related to Custom Crafting, so you should download another plugin to achieve this.
 
-We suggest you to use -> [<mark style="color:blue;">**CustomCrafting | Advanced Custom Recipe Plugin \[1.16 - 1.19 | Free\]**</mark>](https://www.spigotmc.org/resources/customcrafting-advanced-custom-recipe-plugin-1-16-1-19-free.55883/)
+We suggest you to try the most popular Custom crafting plugin. Some will work for some minecraft version some not , so its better if you make your choice yourself, If you know another plugin tell us so we can guide people to use another plugins.
+
+ExecutableCrafting in dev
 
 ## Discord
 
