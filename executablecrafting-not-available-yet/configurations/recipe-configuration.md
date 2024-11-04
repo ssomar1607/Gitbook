@@ -82,3 +82,7 @@ placeholdersConditions:
     comparator: EQUALS
     part2: Vayk_
 ```
+
+{% hint style="info" %}
+Here you can add luck perms conditions and show different results for the same recipe depending on the group they are. For example for default users a normal sword but for vip users a epic sword.
+{% endhint %}
