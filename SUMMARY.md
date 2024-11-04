@@ -224,6 +224,15 @@
     * [Detect player entry/leave from a worldguard region](executableevents/question-or-guides/tutorials/detect-player-entry-leave-from-a-worldguard-region.md)
 * [⌨️ Commands & Permissions](executableevents/commands-and-permissions.md)
 
+## ExecutableCrafting
+
+* [📌 Information EC](executablecrafting/information-ec.md)
+* [📃 Configurations](executablecrafting/configurations/README.md)
+  * [General Configuration](executablecrafting/configurations/general-configuration.md)
+  * [Recipe Configuration](executablecrafting/configurations/recipe-configuration.md)
+  * [Recipe book configuration](executablecrafting/configurations/recipe-book-configuration.md)
+* [⌨️ Commands & Permissions](executablecrafting/commands-and-permissions.md)
+
 ## MyFurniture
 
 * [📌 Information MyFurniture](myfurniture/information-myfurniture.md)
