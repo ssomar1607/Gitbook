@@ -229,7 +229,8 @@
 * [📌 Information EC](executablecrafting-not-available-yet/information-ec.md)
 * [📃 Configurations](executablecrafting-not-available-yet/configurations/README.md)
   * [General Configuration](executablecrafting-not-available-yet/configurations/general-configuration.md)
-  * [Recipe Configuration](executablecrafting-not-available-yet/configurations/recipe-configuration.md)
+  * [Recipe Configuration](executablecrafting-not-available-yet/configurations/recipe-configuration/README.md)
+    * [Configuration per recipe type](executablecrafting-not-available-yet/configurations/recipe-configuration/configuration-per-recipe-type.md)
   * [Recipe book configuration](executablecrafting-not-available-yet/configurations/recipe-book-configuration.md)
 * [⌨️ Commands & Permissions](executablecrafting-not-available-yet/commands-and-permissions.md)
 

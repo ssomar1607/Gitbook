@@ -6,8 +6,8 @@
 [general-configuration.md](general-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="recipe-configuration.md" %}
-[recipe-configuration.md](recipe-configuration.md)
+{% content-ref url="recipe-configuration/" %}
+[recipe-configuration](recipe-configuration/)
 {% endcontent-ref %}
 
 {% content-ref url="recipe-book-configuration.md" %}
