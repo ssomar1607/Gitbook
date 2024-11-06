@@ -18,7 +18,7 @@ Dependencies:
 
 1\) Go to the nbt tags editor and add `STRING::displayversion::0`
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 The "0" part of thenbt will be explained later. But the explanation right now is to give the person trying to update the lore a "version" to make sure that all present copies of the said items that doesn't have the correct version will have the new version.

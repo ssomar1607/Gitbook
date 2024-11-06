@@ -10,6 +10,6 @@
 [recipe-configuration](recipe-configuration/)
 {% endcontent-ref %}
 
-{% content-ref url="recipe-book-configuration.md" %}
-[recipe-book-configuration.md](recipe-book-configuration.md)
+{% content-ref url="recipe-book.md" %}
+[recipe-book.md](recipe-book.md)
 {% endcontent-ref %}

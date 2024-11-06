@@ -20,33 +20,33 @@ description: >-
 
 * Set the `TYPE` to `NUMBER`
 
-![](<../../../.gitbook/assets/image (12).png>)
+![](<../../../.gitbook/assets/image (12) (1).png>)
 
 * Set the `FOR` to `PLAYER`
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13) (1).png>)
 
 * Set the `Default Value` to `0`
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 * Save the settings
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 ## 4) Create the first EE event
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 * This will add value to the KILL-COUNT SCore variable every time we kill a mob
 
 ## 5) Create a PLAYER\_KILL\_ENTITY activator
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### > Set detailed entities
 
@@ -56,7 +56,7 @@ description: >-
 
 ### > Add the command
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 `score variables modification player KILL-COUNT 1 %player%`
 

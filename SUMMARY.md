@@ -231,7 +231,10 @@
   * [General Configuration](executablecrafting-not-available-yet/configurations/general-configuration.md)
   * [Recipe Configuration](executablecrafting-not-available-yet/configurations/recipe-configuration/README.md)
     * [Configuration per recipe type](executablecrafting-not-available-yet/configurations/recipe-configuration/configuration-per-recipe-type.md)
-  * [Recipe book configuration](executablecrafting-not-available-yet/configurations/recipe-book-configuration.md)
+  * [Recipe Book](executablecrafting-not-available-yet/configurations/recipe-book.md)
+  * [EAnvil](executablecrafting-not-available-yet/configurations/eanvil/README.md)
+    * [(1)NonEI + (2)IsEI](executablecrafting-not-available-yet/configurations/eanvil/1-nonei-+-2-isei.md)
+    * [(1)IsEI+(2)IsEI](executablecrafting-not-available-yet/configurations/eanvil/1-isei+-2-isei.md)
 * [⌨️ Commands & Permissions](executablecrafting-not-available-yet/commands-and-permissions.md)
 
 ## MyFurniture
