@@ -22,7 +22,7 @@ For the explanation this information will be used
         <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
         <figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-  * The, we have a NonEI Diamond Sword
+  * And we have a NonEI Diamond Sword
     *
 
         <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
