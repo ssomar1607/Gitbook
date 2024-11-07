@@ -16,7 +16,7 @@ For the explanation this information will be used
 
 ExecutableItem works with a PublicBukkitValue, that is unique and can't be replaced, so "executableitems-id":"\<ID>" can't have two values, so it is not possible to have 2 EI ID(s) in the same EI, so why is this option ? Well, in this option what you can do is apply changes to \<item.1> using commands in \<item.2>, such as the next commands:
 
-
+### Item for test purposes
 
 For all the commands explained we will use as **example** of \<item.1> an EI DiamondSword with:
 
@@ -30,8 +30,6 @@ variables:
     type: NUMBER
     default: 1.0
 </code></pre>
-
-<figure><img src="../../../.gitbook/assets/image (10).png" alt="" width="556"><figcaption></figcaption></figure>
 
 <details>
 
@@ -109,12 +107,14 @@ attributes: {}
 
 </details>
 
+<figure><img src="../../../.gitbook/assets/image (10).png" alt="" width="556"><figcaption></figcaption></figure>
+
 ## Commands
 
 ### Modify the EI Usage
 
 ```
-- EC EANVIL USAGE <SET/MODIFICATION> <VALUE>
+- EC EANVIL USAGE <SET/MODIFICATION> <VALUE> CONDITIONS(%player_name%==Vayk_)
 ```
 
 * Example:
@@ -271,7 +271,7 @@ EC EANVIL VARIABLE:<Name of variable> <SET/MODIFICATION> <VALUE>
       <figure><img src="../../../.gitbook/assets/image (12).png" alt="" width="370"><figcaption></figcaption></figure>
 
       * ```
-        - 'EC EANVIL VARIABLE:level MODIFICATION 1'
+        - 'EC EANVIL VARIABLE:level MODIFICATION 1 CONDITIONS(%player_name%==Vayk_&&%var_level%<10)'
         ```
 
 <details>
