@@ -13,3 +13,7 @@
 {% content-ref url="recipe-book.md" %}
 [recipe-book.md](recipe-book.md)
 {% endcontent-ref %}
+
+{% content-ref url="eanvil/" %}
+[eanvil](eanvil/)
+{% endcontent-ref %}
