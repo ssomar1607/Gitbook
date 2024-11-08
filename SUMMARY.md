@@ -84,6 +84,7 @@
     * [Trident duplication](executableitems/questions-or-guides/frequently-asked-questions/trident-duplication.md)
     * [Custom name feature is not working](executableitems/questions-or-guides/frequently-asked-questions/custom-name-feature-is-not-working.md)
     * [Score database large](executableitems/questions-or-guides/frequently-asked-questions/score-database-large.md)
+  * [Not so frequentlly asked questions](executableitems/questions-or-guides/not-so-frequentlly-asked-questions.md)
   * [Items explanations](executableitems/questions-or-guides/items-explanations/README.md)
     * [Item ideas - How to create...?](executableitems/questions-or-guides/items-explanations/item-ideas-how-to-create....md)
     * [Hight-Powered Grappling Hook](executableitems/questions-or-guides/items-explanations/hight-powered-grappling-hook.md)
