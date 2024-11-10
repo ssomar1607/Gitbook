@@ -50,7 +50,7 @@
 * [<mark style="color:blue;">**PLAYER\_HIT\_PLAYER**</mark>](list-of-the-activators.md#player\_hit\_player) **:** Activates when the player hits a player
 * [<mark style="color:orange;">**PLAYER\_HIT\_ENTITY**</mark>](list-of-the-activators.md#player\_hit\_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: **Activates when the player hits an entity**&#x20;
 * [<mark style="color:orange;">**PLAYER\_ITEM\_BREAK**</mark>](list-of-the-activators.md#player\_item\_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player breaks the item by making it loose all its durability.**
-* [<mark style="color:orange;">**PLAYER\_JUMP**</mark>](list-of-the-activators.md#player\_jump) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player jumps.**
+* [<mark style="color:orange;">**PLAYER\_JUMP**</mark>](list-of-the-activators.md#player\_jump) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player jumps. (In 1.21.2+, it can trigger even if the player is in the air)**
 * **PLAYER\_KICK**: Activates when the player gets kicked
 * [<mark style="color:orange;">**PLAYER\_KILL\_ENTITY**</mark>](list-of-the-activators.md#player\_kill\_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player kills an entity.**
 * [<mark style="color:orange;">**PLAYER\_KILL\_PLAYER**</mark>](list-of-the-activators.md#player\_kill\_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player kills a player.**

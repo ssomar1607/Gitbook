@@ -527,6 +527,10 @@ Not compatible with the 1.12 version
 
 ![](https://media.giphy.com/media/Me4dfTEKd3itkEdtHP/giphy.gif)
 
+{% hint style="info" %}
+In 1.21.2+, it's now possible for it to trigger even if the player attempted to jump mid-air
+{% endhint %}
+
 ### PLAYER\_KILL\_ENTITY <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * Description: Activates when the player kills an entity or a Citizens NPC.
