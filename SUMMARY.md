@@ -30,7 +30,7 @@
 * [📰   Score](tools-for-all-plugins-score/score/README.md)
   * [General config](tools-for-all-plugins-score/score/general-config.md)
   * [Commands](tools-for-all-plugins-score/score/commands.md)
-* [🔘 Custom trigger](tools-for-all-plugins-score/custom-trigger.md)
+* [🔘 Custom triggers](tools-for-all-plugins-score/custom-triggers.md)
 
 ## ExecutableItems
 
