@@ -20,7 +20,7 @@
 * [<mark style="color:blue;">**PLAYER\_JUMP\_ON**</mark>](list-of-the-activators.md#player\_jump\_on) : Activates when a player jumps on the Executable Block.
 * [<mark style="color:blue;">**PLAYER\_LEFT\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_left\_click\_on) : Activates when a player left clicks on the Executable Block.
 * [<mark style="color:blue;">**PLAYER\_PLACE**</mark>](list-of-the-activators.md#player\_place) : Activates when a player places the Executable Block.
-* [<mark style="color:orange;">**PLAYER\_PRESS**</mark>](list-of-the-activators.md#player\_press) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: (Executable Block must be a pressure plate) Activates when a player steps on the Executable Block Pressure Plate.**
+* [<mark style="color:orange;">**PLAYER\_PRESS**</mark>](list-of-the-activators.md#player\_press)<mark style="color:orange;">**\_PLATE**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: (Executable Block must be a pressure plate) Activates when a player steps on the Executable Block Pressure Plate.**
 * [<mark style="color:blue;">**PLAYER\_RIGHT\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_right\_click\_on) : Activates when a player right clicks on the Executable Block.
 * <mark style="color:orange;">**PLAYER\_SCROLL\_DOWN\_BY\_TARGETTING\_THE\_EB**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when the player is looking at the eb and scrolls down**
 * <mark style="color:orange;">**PLAYER\_SCROLL\_UP\_BY\_TARGETTING\_THE\_EB**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **:  Activates when the player is looking at the eb and scrolls up**
@@ -137,7 +137,7 @@ The player must take fall damage to count
 
 
 
-### PLAYER\_PRESS <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">&#x20;
+### PLAYER\_PRESS\_PLATE <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">&#x20;
 
 * Description: Activates when a player steps on the Executable Block Pressure Plate.
 
