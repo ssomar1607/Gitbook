@@ -38,7 +38,7 @@
 * <mark style="color:orange;">**PLAYER\_ENTER\_IN\_HIS\_LAND**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">**: Activates if you enter in your land or a land where you are trusted**
 * [<mark style="color:orange;">**PLAYER\_EQUIP\_THE\_EI**</mark>](list-of-the-activators.md#player\_equip\_the\_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you put the armorpiece in the armor slot.**
   * **The plugin CMI can break** this activator be sure you have the `cmi.inventoryhat` permission set to **false**&#x20;
-* **PLAYER\_EXPERIENCE\_CHANGE: Activates if there are changes in the user's xp bar**
+* **PLAYER\_EXPERIENCE\_CHANGE: Activates when the player experience changes naturally.**
 * [<mark style="color:orange;">**PLAYER\_FERTILIZE\_BLOCK**</mark>](list-of-the-activators.md#player\_fertilize\_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if the player fertilizes blocks with bone meal.**
 * [<mark style="color:blue;">**PLAYER\_FILL\_BUCKET**</mark>](list-of-the-activators.md#player\_fill\_bucket) : Activates when the player attempts to pickup water or lava with a bucket.
 * [<mark style="color:orange;">**PLAYER\_FISH\_BLOCK**</mark>](list-of-the-activators.md#player\_fish\_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber is on a block.**

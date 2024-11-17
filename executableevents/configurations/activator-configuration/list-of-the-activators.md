@@ -31,7 +31,8 @@
 * <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_PLOT**</mark>**  : Activates if you enter a plot from the PlotSquared plugin.**&#x20;
 * <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_LAND**</mark>** : Activates if you enter in your land or a land where you are trusted**&#x20;
 * <mark style="color:blue;">**PLAYER\_ENTITY\_PLACE**</mark>** : Activates when the player places an entity (armor stands, boats, minecarts and end crystal)**&#x20;
-* <mark style="color:blue;">**PLAYER\_EQUIP\_ARMOR**</mark>**: Activates when the player equips an armor.**
+* <mark style="color:blue;">**PLAYER\_EQUIP\_ARMOR**</mark>**: Activates when the player experience change naturally.**
+* <mark style="color:blue;">**PLAYER\_EXPERIENCE\_CHANGE**</mark>**: Activates when the player equips an armor.**
 * <mark style="color:blue;">**PLAYER\_UNEQUIP\_ARMOR**</mark>**: Activates when the player unequips an armor.**
 * <mark style="color:blue;">**PLAYER\_FOOD\_CHANGE**</mark>** : Activates when the player food changes.**
 * <mark style="color:blue;">**PLAYER\_FIRST\_CONNECTION**</mark> : **Activates when the player joins for first time on the server.**

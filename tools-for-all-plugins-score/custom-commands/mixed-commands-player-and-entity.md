@@ -171,10 +171,11 @@ You can see how function works here [https://www.geogebra.org/calculator](https:
 ### DAMAGE
 
 * Info: Damages the player with a specific amount. (Damage dealt with the help of this command is counted as player damage)
-* Command: DAMAGE {amount} {amplified If Strength Effect} {amplified with attack attribute}
+* Command: DAMAGE {amount} {amplified If Strength Effect} {amplified with attack attribute} \[damageType]
   * {amount}: Amount of damage in hitpoints (Not in hearts)
   * {amplified If Strength Effect}: true or false, Strength 1 -> + 1.5 damage, ....
   * {amplified with attack attribute}: true or false, player with 500% bonus damage, the command will do 5 x "\<damage>".
+  * \[damageType]: The type of damage -> [List](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/damage/DamageType.html)
 * Example:
 
 ```

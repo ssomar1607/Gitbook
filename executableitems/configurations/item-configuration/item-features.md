@@ -78,6 +78,23 @@ glow: true
 
 * Required: NO (Default: false)
 
+
+
+#### disableEnchantGlow (1.20.5++)
+
+* Info: Forces the item to not have the glow effect even if it is enchanted.&#x20;
+* Example:&#x20;
+
+```yaml
+disableEnchantGlow : true
+```
+
+{% hint style="info" %}
+You can also remove the vanilla enchant from the nether star for example
+{% endhint %}
+
+
+
 #### GLOW DROP / GLOW DROP COLOR
 
 * Info: When the item is dropped, it has a glow effect
@@ -238,6 +255,78 @@ customModelData: 2232
 {% content-ref url="../../questions-or-guides/premium-custom-textures/" %}
 [premium-custom-textures](../../questions-or-guides/premium-custom-textures/)
 {% endcontent-ref %}
+
+#### Rarity (1.20.5+)
+
+* Info: Sets the rarity of the item
+
+#### Default mining speed (1.20.5+)
+
+* Info: Sets the default mining speed of the item
+
+#### Damage per block break (1.20.5+)
+
+* Info: Add custom rules depending on the block broken, each rule has three settings :&#x20;
+  * Materials
+  * Mining speed
+  * true/false setting to set whether or not this rule is considered the optimal tool for the blocks listed by this rule and will drop items.
+
+#### Equippable
+
+* Info: If enabled, this item can be equipped in the specified slot.
+* Example
+
+```yaml
+equippableFeatures:
+    enable: false
+    slot: BODY
+    enableSound: false
+    sound: ITEM_ARMOR_EQUIP_DIAMOND
+
+    equipModel: "" # "mynamespace:mymodel"
+    cameraOverlay"" # "mynamespace:mymodel"
+
+    isDamageableOnHurt: false
+    isDispensable: true
+    isSwappable: true
+
+    allowedEntities:
+     - PLAYER
+```
+
+#### Repairable
+
+* Info: For repairable tools
+
+```yaml
+repairableFeatures:
+    enable: false
+    repairCost: 2
+```
+
+#### glider
+
+* Info: If enabled , you can glide with the item like the elytras
+
+```yaml
+glider: false
+```
+
+#### itemModel&#x20;
+
+* Info: To customize the item model
+
+```yaml
+itemModel: "" # "mynamespace:mymodel"
+```
+
+#### tooltipModel
+
+* Info: To customize the item tooltip model
+
+```yaml
+tootipModel: "" # "mynamespace:mymodel"
+```
 
 ## NBT Tags
 

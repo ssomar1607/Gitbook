@@ -105,7 +105,14 @@ restrictions:
 * Info: Prevents players from crafting vanilla recipes with the said executable items but can still be used for custom crafting recipes from Wolfy's CustomCrafting plugin
 * Config: `cancel-item-craft-no-custom: true`
 
-####
+
+
+### CANCEL DECORATED POT
+
+* Info: Prevents players from putting executable items in the decorated pots
+* Config: `cancel-decorated-pot: false`
+
+
 
 ### CANCEL DEPOSIT CHEST
 
@@ -191,8 +198,14 @@ restrictions:
 
 * Info: Prevents players from consuming executable items
 * Config: `cancel-consumption: false`
+*
 
-####
+### CANCEL CRAFTER
+
+* Info: Prevents players from putting the executable items into crafter
+* Config: `cancel-crafter: false`
+
+
 
 ### LOCKED IN INVENTORY
 

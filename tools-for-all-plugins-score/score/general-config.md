@@ -27,4 +27,6 @@ silenceOutputs:
 #if an output contains **blacklist** or **Run effect** and if it is from of a command executed in an activator that has the feature silenceOutput it will be hidden
 enableDetectionEntitiesFromSpawner: false
 #(default true) it adds a tag to all entities spawned from a spawner
+disableCustomMetadataOnEntities: false/true
+# to disable the metadata fromSpawner and bowForce to be added to entities
 ```

@@ -184,6 +184,7 @@ And the slots here
     * {msgPlayerAffected true/false}: To notify the affected players that they are tagged by the command and to notify the user of the item if it managed to target players or not
     * {command}: The command that the targeted players will execute}
     * throughBlocks: it will affect or not the players that are behind blocks
+    * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
 * Example:
 
 This summons lightning at players in a 20 block radius
@@ -202,6 +203,12 @@ Damages nearby players by 20 player damage in a 7 block radius
 
 ```
 - AROUND 7 false DAMAGE 20
+```
+
+Send a message to players between 5 and 10 blocks
+
+```
+AROUND distance:10 displayMsgIfNoPlayer:true throughBlocks:true safeDistance:5 SENDMESSAGE &eIt is a test !
 ```
 
 Many around in the same command
@@ -252,6 +259,8 @@ Placeholders that came from plugins like ExecutableItems, ExecutableBlocks will 
 For example, with ExecutableBlocks, CONDITIONS(%var\_faction%=%::factionsuuid\_faction\_name::%) works through checking if the block's factions variable value is equal to the targetted player's faction\
 Placeholder Source: ([https://factions.support/placeholderapi/](https://factions.support/placeholderapi/))
 {% endhint %}
+
+
 
 ### ADDLORE
 
@@ -664,20 +673,22 @@ MINECART_BOOST 10
 
 * Info: Targets entities in a specific radius and makes them run commands
   * Available entities -> [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html)
-* Command: MOB\_AROUND {distance} {mute or not} (command)
+* Command: MOB\_AROUND {distance} {displayMsgIfNoEntity} (command)
   * {distance}: To how far in radius the command will select entities
   * {mute or not}: (true or false) To notify the user of the item if it didn't manage to target any mobs.
     * **Set to true to hide the message**
+  * throughBlocks: it will affect or not the mobs that are behind blocks
+  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
   * You can BLACKLIST or WHITELIST entities adding one of these ones in anyplace of the command:
     * BLACKLIST(ZOMBIE,ARMOR\_STAND)
     * WHITELIST(CHICKEN)
 * Example:
 
 ```
-- MOB_AROUND 3 false BURN 10
+- MOB_AROUND 3 displayMsgIfNoEntity:false BURN 10
 - MOB_AROUND 5 execute at %around_target_uuid% run summon lightning_bolt
 - MOB_AROUND 5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
-- MOB_AROUND 5 true effect give %around_target_uuid% poison 10 10
+- MOB_AROUND 5 displayMsgIfNoEntity:false effect give %around_target_uuid% poison 10 10
 - MOB_AROUND 10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
 ```
 
@@ -904,7 +915,7 @@ It supports negative values.
 * Example:
 
 ```
-- REMOVEENCHANTMENT -1 ALL
+- REMOVELORE slot:1 line:5
 ```
 
 
@@ -1104,16 +1115,20 @@ It supports -1 to mainhand
 
 
 
-### SETMATERIALCOOLDOWN
+### SET\_ITEM\_COOLDOWN
 
 * Gives the player/target cooldown on an item
-* Command: SETMATERIALCOOLDOWN {material} {delay in secs}
-  * {material}: The type of material
+* Command: SETMATERIALCOOLDOWN {material/group} {delay in secs}
+  * {material/group}: The type of material or the group
   * {delay in secs}: Cooldown
 * Example:
 
 ```
-- SETMATERIALCOOLDOWN ENDER_PEARL 10
+- SET_ITEM_COOLDOWN material:ENDER_PEARL cooldown:10
+```
+
+```
+- SET_ITEM_COOLDOWN group:my_cooldown_group cooldown:10
 ```
 
 
