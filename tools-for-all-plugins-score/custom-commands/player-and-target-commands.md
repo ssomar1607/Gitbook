@@ -111,14 +111,13 @@ _Sorted by alphabetical order_
 ### ABSORPTION
 
 * Info: Gives absorption effect to the player
-* Command:
-  * ABSORPTION {amount} \[time in ticks]
-    * {amount}: amount of absorption half hearts. Supports negative values to remove.
-    * \[time in ticks]: time of the effect. Set it empty or "0" if want to be infinite.
+* Command settings:
+  * amount: amount of absorption half hearts. Supports negative values to remove.
+  * time: time of the effect in ticks. Set it empty or "0" if want to be infinite.
 * Example:
 
 ```
-- ABSORPTION 5 20
+- ABSORPTION amount:5 time:200
 ```
 
 
@@ -136,33 +135,18 @@ _Sorted by alphabetical order_
 
 
 
-### ADDENCHANTMENT
-
-* Info: It adds an enchantment on an item on a specific slot with certain level
-* Command: ADDENCHANTMENT {slot} {enchantment} {level}
-  * {slot}: The slot where it will be applied. -1 for mainhand
-  * {enchantment}: The enchantment that you want to be applied, don't use spaces, use the minecraft enchantments not the display ones.
-  * {level}: The level for the enchantment
-* Example:
-
-```
-- ADDENCHANTMENT -1 unbreaking 3
-```
-
-
-
-### ADDITEMATTRIBUTE
+### ADD\_ITEM\_ATTRIBUTE
 
 * Info: It adds an attribute to an item as sum or rest operation.
-* Command: ADDITEMATTRIBUTE {slot} {Attribute} {value} {equipment slot}
-  * {slot}: The slot where it will be applied. -1 for mainhand
-  * {attribute}: The attribute you want to add
-  * {value}: The value for the operation
-  * {equipment slot}: The slot for the attribute
+* Command: settings
+  * slot: The slot where it will be applied. -1 for mainhand
+  * attribute: The attribute you want to add
+  * value: The value for the operation
+  * equipmentSlot: The slot where the attribute will be enabled
 * Example:
 
 ```
-- ADDITEMATTRIBUTE %slot% GENERIC_ATTACK_DAMAGE 1 HAND
+- ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND
 ```
 
 {% hint style="info" %}
@@ -175,34 +159,64 @@ And the slots here
 
 
 
+### ADD\_ITEM\_ENCHANTMENT
+
+* Info: It adds an enchantment on an item on a specific slot with certain level
+* Command: settings
+  * slot: The slot where it will be applied. -1 for mainhand
+  * enchantment: The enchantment that you want to be applied, don't use spaces, use the minecraft enchantments not the display ones.
+  * level: The level for the enchantment
+* Example:
+
+```
+- ADD_ITEM_ENCHANTMENT slot:-1 enchantment:unbreaking level:1
+```
+
+{% hint style="info" %}
+You can find the enchantments here
+
+[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html)
+{% endhint %}
+
+### ADD\_ITEM\_LORE
+
+* Info: Adds a line of lore
+* Command settings
+  * slot: The slot where it will be applied. -1 for mainhand
+  * text: The text for the new lore line
+* Example:
+
+```
+- ADD_ITEM_LORE slot:%slot% text:&7Item of %player%
+```
+
 ### AROUND
 
 * Info: Targets players in a specific radius and makes them run commands
-* Command:&#x20;
-  * `AROUND {distance} {msgPlayerAffected true/false} {command} throughBlocks:false`
-    * {distance}: To how far in radius the command will select players
-    * {msgPlayerAffected true/false}: To notify the affected players that they are tagged by the command and to notify the user of the item if it managed to target players or not
-    * {command}: The command that the targeted players will execute}
-    * throughBlocks: it will affect or not the players that are behind blocks
-    * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
+* Command settings:
+  * distance: To how far in radius the command will select players (Default 3)
+  * displayMsgIfNoPlayer: (true or false) To notify the user of the item if it managed to target players or not (Default true)
+  * throughBlocks: it will affect or not the players that are behind blocks (Default true)
+  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected. (Default 0)
+  * commands: The commands that will be executed for the target players, separate them with <+>
 * Example:
 
 This summons lightning at players in a 20 block radius
 
 ```
-- AROUND 20 false execute at %around_target% run summon lightning_bolt
+- AROUND distance:20 displayMsgIfNoPlayer:false execute at %around_target% run summon lightning_bolt
 ```
 
 This gives players slowness in a 10 block radius
 
 ```
-- AROUND 10 false effect give %around_target% slowness 50 5
+- AROUND distance:10 effect give %around_target% slowness 50 5
 ```
 
-Damages nearby players by 20 player damage in a 7 block radius
+Damages nearby visible players by 20 player damage in a 7 block radius
 
 ```
-- AROUND 7 false DAMAGE 20
+- AROUND distance:7 throughBlocks:false DAMAGE 20
 ```
 
 Send a message to players between 5 and 10 blocks
@@ -214,39 +228,39 @@ AROUND distance:10 displayMsgIfNoPlayer:true throughBlocks:true safeDistance:5 S
 Many around in the same command
 
 ```
-- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND 5 false say &a(2)&e%around_target::step2%
+- AROUND distance:5 displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND distance:5 displayMsgIfNoPlayer:false say &a(2)&e%around_target::step2%
 ```
 
 ```
-- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
+- AROUND say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
 ```
 
 ```
-- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
+- AROUND distance:10 throughBlocks:false displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
 ```
 
 ```
-- AROUND 10 false CONDITIONS(%::parseother_{% raw %}
+- AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_{% raw %}
 {%player%}
 {% endraw %}_{betterteams_name}::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
 ```
 
 #### You can add conditions to AROUND command
 
-* The condition looks like AROUND \<distance> \<msg> CONDITIONS(\<conditions>) \<command>
+* The condition looks like AROUND \<settings> CONDITIONS(\<conditions>) \<command>
 * Conditions works with placeholders but need to be %::\_::% instead of %\_%
   * For example %::player\_health::%
 * To add MORE than 1 condition use "&&" between the conditions
 * Example:
 
 ```
-- AROUND 10 false CONDITIONS(%::player_health::%>10&&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
+- AROUND distance:10 CONDITIONS(%::player_health::%>10&&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
 ```
 
 (Mainly in blockCommands/entityCommands) where you want the owner of the block/projectile won't harm the user of the item (Requires PlaceholderAPI's Player Expansion)
 
 ```
-- AROUND 2 CONDITIONS(%::player_name::%!=%player%) DAMAGE 15
+- AROUND distance:2 CONDITIONS(%::player_name::%!=%player%) DAMAGE 15
 ```
 
 {% hint style="info" %}
@@ -262,22 +276,10 @@ Placeholder Source: ([https://factions.support/placeholderapi/](https://factions
 
 
 
-### ADDLORE
-
-* Info: Adds a line of lore
-* Command: ADDLORE {slot of the player} {text dont need brackets}
-* Example:
-
-```
-- ADDLORE %slot% &7Item of %player%
-```
-
-
-
 ### BOOTS
 
 * Info: Puts the item in your main hand to your boots slot. (Will not work if the item has "Curse of Binding")
-* Command: BOOTS
+* No command setting
 * Example:
 
 ```
@@ -289,33 +291,33 @@ Placeholder Source: ([https://factions.support/placeholderapi/](https://factions
 ### BOSSBAR
 
 * Info: Creates a bossbar text for a certain duration time.
-* Command: {duration} {color} {text}
-  * {duration}: duration of the bossbar text
-  * {color}: Color of bossbar text
-  * {text}: text on the bossbar
+* Command: settings
+  * time: The duration of the bossbar in ticks
+  * color: Color of bossbar text
+  * text: text on the bossbar
 * Example:
 
 ```
-- BOSSBAR 20 RED This is a bossbar text
+- BOSSBAR time:200 color:RED text:This is a bossbar text
 ```
 
 
 
-### CANCELPICKUP
+### CANCEL\_PICKUP
 
 * Info: Disables pickup on a player for a set amount of time
-* Command: CANCELPICKUP {time\_in\_ticks} \[material]
-  * {time\_in\_ticks}: The duration of how long till the player can pickup items again
+* Command: settings
+  * time: The duration in ticks of how long till the player can pickup items again
+  * material: If set the player cant pickup only the material specified, if null he can't pickup everything
 * Example:
 
 ```yaml
-- CANCELPICKUP 600
-#You can also specify a material
-- CANCELPICKUP 600 stone
+- CANCEL_PICKUP time:600
+- CANCEL_PICKUP time:600 material:stone
 ```
 
 {% hint style="info" %}
-The only wait to RESET this command after setting a time in ticks is reloading or restarting the server. If would like a way to reset this suggest it in #suggestion-bugs channel on Discord.
+The only way to RESET this command after setting a time in ticks is reloading or restarting the server. If would like a way to reset this suggest it in the #suggestions channel on Discord.
 {% endhint %}
 
 
@@ -323,12 +325,12 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 ### CHAT
 
 * Info: Send a message from the player to the chat
-* Command: CHAT {text}
-  * {text}: Text to send
+* Command settings
+  * text: Text to send
 * Example:
 
 ```
-- CHAT Hello !!
+- CHAT &6Hello !!
 ```
 
 
@@ -336,7 +338,7 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 ### CHESTPLATE
 
 * Info: Puts the item in your main hand to your chestplate slot. (Will not work if the item has "Curse of Binding")
-* Command: CHESTPLATE
+* No command setting
 * Example:
 
 ```
@@ -348,7 +350,7 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 ### CLOSE\_INVENTORY
 
 * Info: It closes the inventory to the player
-* Command: CLOSE\_INVENTORY
+* No command setting
 * Example:
 
 ```yaml
@@ -360,11 +362,18 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 ### CROPS\_GROWTH\_BOOST
 
 * Info: It boost the growth of the crops around you
-* Command: CROPS\_CROPS\_GROWTH {radius} {delay between two growths in ticks} {total duration in ticks} {chance 0-100}
+* Command settings:
+  * radius: The radius of the boost (Default 5)
+  * delay: The delay in ticks between each growth boost
+  * duration: The duration in ticks of the total boost
+  * chance: The chance of growth the blocks have when the boost is applied
 * Example:
 
-```yaml
-- CROPS_GROWTH_BOOST 5 10 100 50
+The following command will generate 20 growth boost every 10 ticks.\
+All blocks within the radius will have 50% chance to growth when a boost is applied.
+
+```
+- CROPS_GROWTH_BOOST radius:5 delay:10 durations:200 chance:50
 ```
 
 
@@ -372,36 +381,25 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 ### DISABLE\_FLY\_ACTIVATION
 
 * Info: Deny the usage of the fly for a player (Gliding in Elytra is not considered as flying)
-* Command: DISABLE\_FLY\_ACTIVATION {timeinsecs}
-  * {timeinsecs}: The duration of the effect
+* Command settings
+  * time: The duration in seconds of the effect
 * Example: (The command below disable the activation of the fly during 1 minute)
 
 ```
-- DISABLE_FLY_ACTIVATION 60
+- DISABLE_FLY_ACTIVATION time:60
 ```
 
-###
+
 
 ### DISABLE\_GLIDE\_ACTIVATION
 
 * Info: Deny the use of elytra for a period of time
-* Command: DISABLE\_GLIDE\_ACTIVATION {timeinsecs}
+* Command settings:
+  * time: The duration in seconds of the effect
 * Example: (the command below disable the use of elytra for 20 secs)
 
 ```
-- DISABLE_GLIDE_ACTIVATION 20
-```
-
-###
-
-### DROPSPECIFICEI
-
-* Info: It drops all the EI in your inventory with the id specified
-* Command: DROPSPECIFICEI {id}
-* Example:&#x20;
-
-```
-- DROPSPECIFICEI excalibursword
+- DISABLE_GLIDE_ACTIVATION time:20
 ```
 
 
@@ -457,6 +455,42 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 
 
 
+### FLY\_ON
+
+* Info: Gives the player creative flight
+* No command setting
+* Example:
+
+```
+- FLY_ON
+```
+
+### FLY OFF
+
+* Info: Disables creative flight on the player and if the player's flight get's disabled midair, the player will be teleported on the possible block under the player.
+* Command settings:
+  * teleportOnTheGround: (true or false) Whether the player would get teleported to the ground or not (Default true)
+* Example:
+
+```
+- FLY_OFF teleportOnTheGround:true
+```
+
+
+
+### FORCE\_DROP
+
+* Info: It drops all the EI in your inventory with the id specified
+* Command settings
+  * ei\_id: Specify the EI that you want to be force dropped by the player
+* Example:&#x20;
+
+```
+- FORCE_DROP ei_id:excalibursword
+```
+
+
+
 ### FORMAT\_ENCHANTMENTS
 
 * Info: It formats all enchantments in your lore
@@ -472,36 +506,22 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 
 
 
-### FLY
-
-*   FLY ON
-
-    * Info: Gives the player creative flight
-    * Command: FLY ON
-    * Example:
-
-    ```
-    - FLY ON
-    ```
-*   FLY OFF
-
-    * Info: Disables creative flight on the player and if the player's flight get's disabled midair, the player will be teleported on the possible block under the player.
-    * Command: FLY OFF {teleportOnTheGround true or false}
-    * {teleportOnTheGround true or false}: Whether the player would get teleported to the ground or not
-    * Example:
-
-    ```
-    - FLY OFF true
-    ```
-
-
-
-### GRAVITY ENABLE/DISABLE
+### GRAVITY\_DISABLE
 
 * Info: It stops the gravity for the player, stopping the player to "fall" down or going up.
-* Command:&#x20;
-  * GRAVITY\_ENABLE
-  * GRAVITY\_DISABLE
+* No command settings
+* Example:
+
+```
+- GRAVITY_DISABLE
+- DELAY 5
+- GRAVITY_ENABLE
+```
+
+### GRAVITY\_ENABLE
+
+* Info: It enable again the gravity for the player, so the player will fall normally.
+* No command setting
 * Example:
 
 ```
@@ -513,7 +533,7 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 ### HEAD
 
 * Info: Puts the item in your main hand to your head slot. (Will not work if the item has "Curse of Binding")
-* Command: HEAD
+* No command setting
 * Example:
 
 ```
@@ -522,47 +542,32 @@ The only wait to RESET this command after setting a time in ticks is reloading o
 
 
 
-### HITSCAN\_PLAYERS
+### **IF**
 
-* Info: It allows to run a command at certain direction to players
-* Command: HITSCAN\_PLAYERS range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
-  * Range: how far an entity can be to be targetted by the HITSCAN command
-  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
-  * Pitch: What direction to shoot it in, relative to player pitch
-  * Yaw: Same thing as Pitch but with yaw
-  * leftRightShift:
-    * \-5 = the hitscan STARTS from 5 blocks to the left.
-    * 0 = Hitscan is centered where the player is.
-    * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
-  * yShift: Same as left,right, except with a different axis.&#x20;
-  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
-  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
-  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
-* Image to understand:
-  *
+* Info: Executes commands if condition is met
+* Command: IF {condition\_without\_spaces} {command1} <+> {command2} <+> ...
+  * {condition\_without\_spaces}: The condition for the IF to decide whether it runs or not.
+    * Symbols: =, !=, >=, <=, >, <
+    * It supports () for priority , && for AND and || for OR
+  * {command1},{command2}: The commands that will be executed
+* Example:
 
-      <figure><img src="../../.gitbook/assets/image (443).png" alt=""><figcaption></figcaption></figure>
+```
+IF %player_health%>20 say cool
+```
 
-### HITSCAN\_ENTITIES
+```
+IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
+```
 
-* Info: It allows to run a command at certain direction to entities
-* Command: HITSCAN\_ENTITIES range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
-  * Range: how far an entity can be to be targetted by the HITSCAN command
-  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
-  * Pitch: What direction to shoot it in, relative to player pitch
-  * Yaw: Same thing as Pitch but with yaw
-  * leftRightShift:
-    * \-5 = the hitscan STARTS from 5 blocks to the left.
-    * 0 = Hitscan is centered where the player is.
-    * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
-  * yShift: Same as left,right, except with a different axis.&#x20;
-  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
-  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
-  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
-* Image to understand:
-  *
-
-      <figure><img src="../../.gitbook/assets/image (444).png" alt=""><figcaption></figcaption></figure>
+```
+IF 1=1||2=3 BACKDASH 1
+1=1 OR 2=3 -> YES because 1=1
+IF 1=1&&2=2||2=3 BACKDASH 1
+1=1 and 2=2 or 2=3 -> YES because 1=1 and 2=2
+IF (1=1&&2=2)||(2=3||3=2) BACKDASH 1
+(1=1 and 2=2) or (2=3 or 3=2) -> YES because 1=1 and 2=2
+```
 
 
 
@@ -573,11 +578,14 @@ It supports "Jobs reborn"
 {% endhint %}
 
 * Info: Increases the money gained temporarily
-* Command: JOBS\_MONEY\_BOOST {multiplier} {timeinsecs}
-  * {multiplier}: Multiplier value
-  * {timeinsecs}: Duration of the boost in seconds
+* Command settings
+  * multiplier: Multiplier value
+  * time: Duration in seconds of the boost in seconds
+* Example:
 
-
+```
+JOBS_MONEY_BOOST multiplier:2.0 time:10
+```
 
 ### LAUNCH
 
@@ -604,22 +612,23 @@ It supports "Jobs reborn"
 
 </details>
 
-* Command: LAUNCH {projectile} \[angle rotation y] \[angle rotation z]
-  * {projectile}: the type of the projectile
-  * \[angle rotation y]: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
-  * \[angle rotation z]: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
+* Command settings
+  * projectile: the type of the projectile or the custom projectile ID from SCore ( [Reference](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
+  * angleRotationVertical: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
+  * angleRotationHorizontal: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
+  * velocity: To customize the velocity of the projectile
 * Example:
 
 ```
-- LAUNCH DRAGONFIREBALL
+- LAUNCH projectile:My_Custom_Proj velocity:5
 ```
 
 * Example multiple shoots:
 
 ```
-- LAUNCH WITHERSKULL
-- LAUNCH WITHERSKULL 20
-- LAUNCH WITHERSKULL -20
+- LAUNCH projectile:WITHERSKULL
+- LAUNCH projectile:WITHERSKULL angleRotationVertical:20
+- LAUNCH projectile:WITHERSKULL angleRotationVertical:-20
 ```
 
 {% hint style="info" %}
@@ -631,7 +640,7 @@ If you use the LAUNCH COMMAND in the activator PLAYER\_LAUNCH\_PROJECTILE, and t
 ### LEGGINGS
 
 * Info: Puts the item in your main hand to your leggings slot. (Will not work if the item has "Curse of Binding")
-* Command: LEGGINGS
+* No command setting
 * Example:
 
 ```
@@ -643,28 +652,39 @@ If you use the LAUNCH COMMAND in the activator PLAYER\_LAUNCH\_PROJECTILE, and t
 ### LOCATED\_LAUNCH
 
 * Info: Launches a projectile at a specific location
-* Command: LOCATED\_LAUNCH {projectileType} {frontValue positive=front , negative=back} {rightValue right=positive, negative=left} {yValue} {velocity} \[vertical rotation] \[horizontal rotation]
-  * {projectileType}: The id of the projectile that you want to launch
-  * {frontValue positive=front , negative=back}: Front/Back Position. For example, if you want to spawn the projectile 5 blocks far from where you're facing, use a higher positive value
-  * {rightValue right=positive, negative=left}: Right/Left Position. For example, if you want the projectile to spawn to your left, use a higher negative value
-  * {yValue}: To how high up from your Y position will the projectile will spawn.
-  * {velocity}: To how fast will the projectile fly. Set the value to 0 for the projectile to fall downwards upon spawning the projectile.
-  * \[vertical rotation]  (Optional) you can add a vetical rotation for your projectile (in degrees)
-  * \[horizontal rotation]  (Optional) you can add a horizontal rotation for your projectile (in degrees)
+* Command: settings:
+  * projectileType: the type of the projectile or the custom projectile ID from SCore ( [Reference](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
+  * frontValue: positive=front , negative=back - Front/Back Position. For example, if you want to spawn the projectile 5 blocks far from where you're facing, use a higher positive value
+  * rightValue: right=positive, negative=left - Right/Left Position. For example, if you want the projectile to spawn to your left, use a higher negative value
+  * yValue: To how high up from your Y position will the projectile will spawn.
+  * velocity: To how fast will the projectile fly. Set the value to 0 for the projectile to fall downwards upon spawning the projectile.
+  * &#x20;angleRotationVertical: (Optional) you can add a vetical rotation for your projectile (in degrees)
+  * &#x20;angleRotationHorizontal: (Optional) you can add a horizontal rotation for your projectile (in degrees)
 * Example:
 
 ```
-- LOCATED_LAUNCH ARROW 3 0 4 2 45 45
+- LOCATED_LAUNCH projectile:ARROW frontValue=0 rightValue=0 yValue=0 velocity=1 angleRotationVertical:0 angleRotationHorizontal:0
 ```
 
 ### MINECART\_BOOST
 
 * Info: It boost you when riding a minecart (Effect close to when you go up of a powered rail)
-* Command: MINECART\_BOOST {number boost}
+* Command settings:
+  * boost: The boost speed
 * Example:
 
 ```
-MINECART_BOOST 10
+MINECART_BOOST boost:10
+```
+
+### MIX\_HOTBAR
+
+* Info: it mixes the hotbar of the player
+* No command setting
+* Example:
+
+```
+- MIX_HOTBAR
 ```
 
 
@@ -673,9 +693,9 @@ MINECART_BOOST 10
 
 * Info: Targets entities in a specific radius and makes them run commands
   * Available entities -> [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html)
-* Command: MOB\_AROUND {distance} {displayMsgIfNoEntity} (command)
-  * {distance}: To how far in radius the command will select entities
-  * {mute or not}: (true or false) To notify the user of the item if it didn't manage to target any mobs.
+* Command settings:
+  * distance: To how far in radius the command will select entities
+  * displayMsgIfNoEntity: (true or false) To notify the user of the item if it didn't manage to target any mobs.
     * **Set to true to hide the message**
   * throughBlocks: it will affect or not the mobs that are behind blocks
   * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
@@ -685,11 +705,12 @@ MINECART_BOOST 10
 * Example:
 
 ```
-- MOB_AROUND 3 displayMsgIfNoEntity:false BURN 10
-- MOB_AROUND 5 execute at %around_target_uuid% run summon lightning_bolt
-- MOB_AROUND 5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
-- MOB_AROUND 5 displayMsgIfNoEntity:false effect give %around_target_uuid% poison 10 10
-- MOB_AROUND 10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
+- MOB_AROUND distance:3 displayMsgIfNoEntity:true throughBlocks:true safeDistance:0 [conditions] COMMAND1 <+> COMMAND2 <+> ...
+- MOB_AROUND distance:3 displayMsgIfNoEntity:false BURN 10
+- MOB_AROUND distance:5 execute at %around_target_uuid% run summon lightning_bolt
+- MOB_AROUND distance:5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
+- MOB_AROUND distance:5 displayMsgIfNoEntity:false effect give %around_target_uuid% poison 10 10
+- MOB_AROUND distance:10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
 ```
 
 To use entity nbt on the WHITELIST/BLACKLIST field, you need to install NBT API plugin
@@ -701,94 +722,30 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
 {% embed url="https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities" %}
 
 ```
-- MOB_AROUND 7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
-- MOB_AROUND 5 WHITELIST(ZOMBIE{IsBaby:1}) DAMAGE 20
-- MOB_aROUND 9 WHITELIST(WOLF{Owner:"%player%"}) HEAL 5
-- MOB_aROUND 9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
+- MOB_AROUND distance:7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
+- MOB_AROUND distance:5 WHITELIST(ZOMBIE{IsBaby:1}) DAMAGE 20
+- MOB_aROUND distance:9 WHITELIST(WOLF{Owner:"%player%"}) HEAL 5
+- MOB_aROUND distance:9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
 ```
 
 
 
-### MODIFYDURABILITY
+### MODIFY\_DURABILITY
 
 * Modifies the durability of a specific item in a specific slot
-* Command: MODIFYDURABILITY {number} {slot} {supportUnbreaking true or false}
-  * {number}: Positive value to increase the durability. Negative value to decrease the durability
-  * {slot}: The slot number of the item (-1 for the held slot)
-  * {supportUnbreaking true or false}: If it supports the unbreaking enchantment or not
+* Command settings:
+  * modification: Positive value to increase the durability. Negative value to decrease the durability
+  * slot: The slot number of the item (-1 for the held slot)
+  * supportUnbreaking: (true or false) If it supports the unbreaking enchantment or not
 * Example:
 
 ```
-- MODIFYDURABILITY -1 %slot% true
-```
-
-### MIX\_HOTBAR
-
-* Info: it mixes the hotbar of the player
-* Command: MIX\_HOTBAR
-* Example:
-
-```
-- MIX_HOTBAR
-```
-
-###
-
-### MOB\_NEAREST
-
-* Info: Targets the nearest mob from the player/target.
-* Command:&#x20;
-  * `MOB_NEAREST` {max accepted distance} `{command}`
-    * {max accepted distance}:  Max distance accepted that the "entity" can be.
-    * {command}: The command that will be executed
-* Example:
-
-Damages nearest player
-
-```
-- MOB_NEAREST 10 DAMAGE 5
+- MODIFY_DURABILITY modification:-1 slot:%slot% supportUnbreaking:true
 ```
 
 
 
-### NEAREST
-
-* Info: Targets the nearest player from the player/target.
-* Command:&#x20;
-  * `NEAREST` {max accepted distance} `{command}`
-    * {max accepted distance}: Max distance accepted that the "target" can be.
-    * {command}: The command that will be executed
-* Example:
-
-Damages nearest player
-
-```
-- NEAREST 8 DAMAGE 5
-```
-
-### OPEN\_WORKBENCH
-
-* Info: It opens a workbench for the player that runs the activator
-* Command: OPEN\_WORKBENCH
-* Example:
-
-```yaml
-- OPEN_WORKBENCH
-```
-
-### OPEN\_ENDERCHEST
-
-* Info: It opens the ender chest for the player that runs the activator
-* Command: OPEN\_ENDERCHEST
-* Example:
-
-```yaml
-- OPEN_ENDERCHEST
-```
-
-
-
-### OPENCHEST
+### OPEN\_CHEST
 
 * Info: It opens a chest in the selected location
 * Command: OPENCHEST {world} {x} {y} {z} \[bypassProtections]
@@ -803,35 +760,37 @@ Damages nearest player
 It supports barrels
 {% endhint %}
 
+### OPEN\_ENDERCHEST
 
+* Info: It opens the ender chest for the player that runs the activator
+* No command setting
+* Example:
+
+```yaml
+- OPEN_ENDERCHEST
+```
+
+
+
+### OPEN\_WORKBENCH
+
+* Info: It opens a workbench for the player that runs the activator
+* No command setting
+* Example:
+
+```yaml
+- OPEN_WORKBENCH
+```
 
 ### OXYGEN
 
 * Info: It gives oxygen to the target
-* Command: OXYGEN {timeinticks}
+* Command settings:
+  * time: The duration in ticks of oxygen you want to give
 * Example:
 
 ```
-- OXYGEN 100
-```
-
-
-
-### PARTICLE
-
-* Info: Spawns particles in the player/target's location
-
-{% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html" %}
-
-* Command: PARTICLE {type} {quantity} {offset} {speed}
-  * {type}: The type of particle (ALL CAPS)
-  * {quantity}: The amount of particles that will spawn
-  * {offset}: The radius of the area where the particles may spawn in the player/target's location
-  * {speed}: To how fast or how big particles will be
-* Example:
-
-```
-- PARTICLE FIREWORKS_SPARK 10 0.1 0.5
+- OXYGEN time:200
 ```
 
 
@@ -839,39 +798,39 @@ It supports barrels
 ### PROJECTILE\_CUSTOMDASH1
 
 * Info: Similar to CUSTOMDASH1 but the xyz will be replaced with the xyz coords of the nearest projectile from you.
-* Command: PROJECTILE\_CUSTOMDASH1 {fallDamage}
-  * {fallDamage}: Whether you will get fall damage or not (If you forgot to set whether it's true or false, the default will be false. To get fall damage, set this to true)
+* Command settings:
+  * fallDamage: Whether you will get fall damage or not (If you forgot to set whether it's true or false, the default will be false. To get fall damage, set this to true)
 * Example:
 
 ```
-- PROJECTILE_CUSTOMDASH1 false
+- PROJECTILE_CUSTOMDASH1 fallDamage:false
 ```
 
 
 
-### REGAIN FOOD
+### REGAIN\_FOOD
 
 * Info: Gives you a specific amount of food/saturation
-* Command: REGAIN FOOD {amount}
-  * {amount}: The amount of saturation points you want to gain. Use negative values to reduce hunger points
+* Command settings:
+  * amount: The amount of saturation points you want to gain. Use negative values to reduce hunger points
 * Example:
 
 ```
-- REGAIN FOOD 5
+- REGAIN_FOOD amount:5
 ```
 
 
 
-### REGAIN MAGIC
+### REGAIN\_MAGIC
 
 * Info: Gives the player specific values of a specific magic&#x20;
-* Command: REGAIN MAGIC {ecoskills magic ID} {amount}
-  * {ecoskills magic ID}: The ID of the Ecoskills's magic.
-  * {amount}: The amount to get.
+* Command settings:
+  * ecoSkillsMagicID: The ID of the Ecoskills's magic.
+  * amount: The amount to get.
 * Example:
 
 ```
-- REGAIN MAGIC mana 15
+- REGAIN_MAGIC ecoSkillsMagicID:mana amount:15
 ```
 
 {% hint style="info" %}
@@ -880,80 +839,99 @@ It supports negative values.
 
 
 
-### REGAIN SATURATION
+### REGAIN\_SATURATION
 
 * Info: Gives you a specific amount of saturation
-* Command: REGAIN SATURATION \<value>
+* Command settings:
+  * amount: The amount of saturation you can to give
 * Example:
 
 ```
-- REGAIN SATURATION 10
+- REGAIN_SATURATION amount:10
 ```
 
 
 
-### REMOVEENCHANTMENT
+### REMOVE\_ENCHANTMENT
 
 * Info: Remove an enchantment from a slot
-* Command: REMOVEENCHANTMENT {slot} {enchantment}
-  * {slot}: Slot to remove the enchantment from
-  * {enchantment}: Enchantment to remove (ALL for every enchantment)
+* Command settings:
+  * slot: Slot to remove the enchantment from
+  * enchantment: Enchantment to remove (ALL for every enchantment)
 * Example:
 
 ```
-- REMOVEENCHANTMENT -1 ALL
+- REMOVE_ENCHANTMENT slot:-1 enchantment:ALL
 ```
 
 
 
-### REMOVELORE
+### REMOVE\_LORE
 
 * Info: Remove a lore line
-* Command: REMOVELORE {slot} {line}
+* Command settings:
   * {slot}: Slot to remove the lore from
   * {line}: The line that you want to remove
 * Example:
 
 ```
-- REMOVELORE slot:1 line:5
+- REMOVE_LORE slot:1 line:5
 ```
 
 
 
-### REPLACEBLOCK
+### REPLACE\_BLOCK
 
 * Info: Replaces the block the player is looking at into a different one
-* Command: REPLACEBLOCK {material}
-  * {material}: Block ID (Block states are supported) _(ALL CAPS)_
+* Command settings
+  * {material}: Block ID (Block states are supported)&#x20;
 * Example:
 
 ```
-- REPLACEBLOCK STONE_BRICKS
-- REPLACEBLOCK WATER[LEVEL=0]
+- REPLACE_BLOCK STONE_BRICKS
+- REPLACE_BLOCK WATER[LEVEL=0]
 ```
 
 
 
-### SENDBLANKMESSAGE
+### SEND\_BLANK\_MESSAGE
 
 * Info: Sends you a blank message
-* Command: SENDBLANKMESSAGE
+* No command setting
 * Example:
 
 ```
-- SENDBLANKMESSAGE
+- SEND_BLANK_MESSAGE
 ```
 
 
 
-### SENDMESSAGE
+### SEND\_MESSAGE
 
 * Info: Sends you a message
-* Command: SENDMESSAGE (message)
+* Command settings:
+  * message: the message you want to send
 * Example:
 
 ```
-- SENDMESSAGE &fThis is a somewhat random text.
+- SEND_MESSAGE text:&fThis is a somewhat random text.
+```
+
+{% hint style="info" %}
+You can use minimessages color codes, like using gradient and stuff from this site: [https://docs.adventure.kyori.net/minimessage/format.html](https://docs.adventure.kyori.net/minimessage/format.html)\
+\
+You can only use one type of formatting at once in the same SENDMESSAGE command, either the classic color codes format or minimessage format.
+{% endhint %}
+
+### SEND\_CENTERED\_MESSAGE
+
+* Info: Sends you a message centered in the chat
+* Command settings:
+  * message: the message you want to send
+* Example:
+
+```
+- SEND_CENTERED_MESSAGE text:&fThis is a somewhat random text.
 ```
 
 {% hint style="info" %}
@@ -964,58 +942,53 @@ You can only use one type of formatting at once in the same SENDMESSAGE command,
 
 
 
-### SETARMORTRIM
+### SET\_ARMOR\_TRIM
 
 * Info: Set the specific armor trim with the specific pattern for the specified slot
-* Command: SETARMORTRIM {slot} {PATTERN} {MATERIAL OF PATTERN}
-  * {slot}: The slot to apply the command
-  * {PATTERN}: The pattern of the trim
-  * {MATERIAL OF PATTERN}: The material of the pattern
-* Example:
-
-```yaml
-- SETARMORTRIM 38 vex netherite
-- SETARMORTRIM 38 null #to clear the armor trim
-```
-
-
-
-### SETBLOCK
-
-* Info: **(FOR ACTIVATORS THAT INVOLVES TARGETTING BLOCKS) Adds blocks in the block's location. (Only replaces air)**
-* Command: SETBLOCK {material}
-  * {material}: Block ID (Block states are supported) _(ALL CAPS)_
+* Command settings:
+  * slot: The slot to apply the command (slot -1 for main hand)
+  * pattern: The pattern of the trim (if 'null' or 'remove' it will remove the current pattern)
+  * patternMaterial: The material of the pattern
 * Example:
 
 ```
-- SETBLOCK OAK_WOOD
-- SETBLOCK FURNACE[LIT=TRUE]
+- SET_ARMOR_TRIM slot:38 pattern:vex patternMaterial:netherite
+- SET_ARMOR_TRIM slot:38 pattern:null #to clear the armor trim
 ```
 
 
 
-### SETTEMPBLOCKPOS
+{% hint style="info" %}
+You can find all trim pattern here:
 
-* Command: SETTEMPBLOCKPOS {x} {y} {z} {material} {time} \[bypassProtection true or false] \[blocks list]
-  * {material}: Block ID
-  * {time}: Time in ticks
-  * \[bypassProtection true or false]: Whether to ignore 3rd party intervention or not
-  * \[blocks list]: List of blocks to watch out for
-    * Examples:
-    * AIR, WATER
-    * !STONE, !COBBLESTONE
+[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html)
 
-```
- - SETTEMPBLOCKPOS %entity_x% %entity_y% %entity_z% BEDROCK 40 true !AIR,!WATER
-```
+You can find all trim material here:
 
-{% hint style="warning" %}
-It doesn't replace blocks that have extra datas (inventory, rotation, etc)
+[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html)
 {% endhint %}
 
+### SET\_BLOCK
 
+* Info: Place a block on the block targeted by the player
+* Command settings:
+  * blockface: You can specify or not a blockFace to force the placement above for example
+  * material: Block ID (Block states are supported)&#x20;
+  * bypassProtection: Whether or not it will place the block even if the player doesnt have the permission
+* Example:
 
-### SETBLOCKPOS
+```
+- SET_BLOCK blockface:UP material:OAK_WOOD
+- SET_BLOCK material:FURNACE[LIT=TRUE]
+```
+
+{% hint style="info" %}
+You can find all blockface here:
+
+[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/BlockFace.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/BlockFace.html)
+{% endhint %}
+
+### SET\_BLOCK\_POS
 
 * Info: Set a block in a specific position
 * Command: SETBLOCKPOS {x} {y} {z} {material} \[bypassProtection true-false] \[replace true or false]
@@ -1027,46 +1000,50 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 
 
 
-### SETEXECUTABLEBLOCK
+### SET\_EXECUTABLE\_BLOCK
 
 * Info: Setblock but for Executable Blocks. **(EXECUTABLE BLOCKS MUST BE INSTALLED)**
-* Command: SETEXECUTABLEBLOCK {id} {x} {y} {z} {world} {replace true or false} \[ownerUUID]
-  * {id}: ID of the executable block you are trying to place down
-  * {x}: X-Coordinate
-  * {y}: Y-Coordinate
-  * {z}: Z-Coordinate
-  * {world}: Name of the world
-  * {replace true or false}: true or false. Whether it will replace the existing block in the said coordinates or not
-  * \[bypassProtection true or false]: (Optional) if you want bypass the protections like worldguard (default false)
-  * \[ownerUUID]: (Optional) The uuid of the supposed owner of the executable block
+* Command settings:
+  * id: ID of the executable block you are trying to place down
+  * x: X-Coordinate
+  * y: Y-Coordinate
+  * z: Z-Coordinate
+  * world: Name of the world
+  * replace: true or false. Whether it will replace the existing block in the said coordinates or not
+  * bypassProtection: if you want bypass the protections like worldguard (default false)
+  * ownerUUID: (Optional) The uuid of the supposed owner of the executable block
 * Example:
 
 ```
--  SETEXECUTABLEBLOCK Mithril_Ore %block_x_int% %block_y_int% %block_z_int% %block_world% false true %player_uuid%
+-  SET_EXECUTABLE_BLOCK id:Mithril_Ore x:%block_x_int% y:%block_y_int% z:%block_z_int% world:%block_world% replace:false bypassProtection:true ownerUUID:%player_uuid%
 ```
 
 
 
-### SETITEMNAME
+### SET\_ITEM\_NAME
 
 * Info: Sets a custom name for your item in a specific slot
-* Command: SETITEMNAME {slot} {text}
+* Command settings:
+  * slot: The slot where it will be applied. -1 for mainhand
+  * name: the new name of the item
 * Example:
 
 ```
-- SETITEMNAME %slot% This is the new name of the item
+- SET_ITEM_NAME slot:%slot% name:&eThis is the new name of the item
 ```
 
 
 
-### SETITEMCOLOR
+### SET\_ITEM\_COLOR
 
 * Info: Sets a specific color for the item (item colorables as leather armor)
-* &#x20;Command: SETITEMCOLOR {slot} {color in number}
+* &#x20;Command settings:
+  * slot: The slot where it will be applied. -1 for mainhand
+  * color: number value of the color
 * Example:
 
 ```
-- SETITEMCOLOR 1 0
+- SET_ITEM_COLOR slot:1 color:0
 ```
 
 {% hint style="info" %}
@@ -1079,18 +1056,18 @@ It supports FIREWORK\_STAR
 
 
 
-### SETITEMATTRIBUTE
+### SET\_ITEM\_ATTRIBUTE
 
 * Info: It sets an attribute to an item.
-* Command: SETITEMATTRIBUTE {slot} {Attribute} {value} {equipment slot}
-  * {slot}: The slot where it will be applied. -1 for mainhand
-  * {attribute}: The attribute you want to add
-  * {value}: The value for the operation
-  * {equipment slot}: The slot for the attribute
+* Command settings:
+  * slot: The slot where it will be applied. -1 for mainhand
+  * attribute: The attribute you want to add
+  * value: The value for the operation
+  * equipmentSlot: The slot for the attribute
 * Example:
 
 ```
-- SETITEMATTRIBUTE %slot% GENERIC_ARMOR 10 CHEST
+- SET_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ARMOR value:10 equipmentSlot:CHEST
 ```
 
 {% hint style="info" %}
@@ -1099,28 +1076,26 @@ You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/b
 
 
 
-### SETITEMCUSTOMMODELDATA
+### SET\_ITEM\_CUSTOM\_MODEL\_DATA
 
 * Info: Sets a specific custom model data to the specific item
-* Command: SETITEMCUSTOMMODELDATA {slot} {customModelData}
+* Command settings:
+  * slot: The slot where it will be applied. -1 for mainhand
+  * customModelData: value of the customModelData
 * Example:
 
 ```
-- SETITEMCUSTOMMODELDATA 10 10
+- SET_ITEM_CUSTOM_MODEL_DATA slot:10 customModelData:10
 ```
-
-{% hint style="info" %}
-It supports -1 to mainhand
-{% endhint %}
 
 
 
 ### SET\_ITEM\_COOLDOWN
 
 * Gives the player/target cooldown on an item
-* Command: SETMATERIALCOOLDOWN {material/group} {delay in secs}
-  * {material/group}: The type of material or the group
-  * {delay in secs}: Cooldown
+* Command settings:
+  * material or group: The type of material or the group
+  * cooldown:: cooldown in seconds
 * Example:
 
 ```
@@ -1133,49 +1108,76 @@ It supports -1 to mainhand
 
 
 
-### SETITEMMATERIAL&#x20;
+### SET\_ITEM\_MATERIAL&#x20;
 
 {% hint style="info" %}
 Only works at 1.20.5 and above
 {% endhint %}
 
 * Replaces the material of the item with a different material while keeping the nbt of the target item
-* Commands: SETITEMMATERIAL {slot} {material}
-  * {slot}: Slot number&#x20;
-  * {material}: The material you want the item to become into
+* Commands settings:
+  * slot: Slot number (-1 for mainhand)&#x20;
+  * material: The material you want the item to become into
 * Example:
 
 ```
-SETITEMMATERIAL 10 DIAMOND_HOE
+SET_ITEM_MATERIAL slot:10 material:DIAMOND_HOE
 ```
 
 
 
-### SETLORE
+### SET\_ITEM\_LORE
 
 * Info: Sets a line of lore
-* Command: SETLORE {slot of the player} {line} {text}
-  * {line} : If you want to set the lore of the first line, type 0
+* Command settings:
+  * slot: Slot number (-1 for mainhand)&#x20;
+  * line : If you want to set the lore of the first type 1
+  * text: The new line text
 * Example:
 
 ```
-- SETLORE %slot% 3 &6LEGENDARY SWORD
+- SET_ITEM_LORE slot:%slot% line:3 text:&6LEGENDARY SWORD
 ```
 
 
 
-### SPAWNENTITYONCURSOR
+### SET\_TEMP\_BLOCK\_POS
+
+* Info : Set a temporary block
+* Command settings&#x20;
+  * x: X-Coordinate
+  * y: Y-Coordinate
+  * z: Z-Coordinate
+  * world: Name of the world
+  * material: Block ID
+  * time: Time in ticks
+  * bypassProtection: (true or false) Whether to ignore 3rd party intervention or not
+  * whitelistCurrentBlock: List of blocks to watch out for
+    * Examples:
+    * AIR, WATER
+    * !STONE, !COBBLESTONE
+
+```
+ - SET_TEMP_BLOCK_POS x:%entity_x% y:%entity_y% z:%entity_z% world:%entity_world% material:BEDROCK time:40 bypassProtectiontrue whitelistCurrentBlock:!AIR,!WATER
+```
+
+{% hint style="warning" %}
+It doesn't replace blocks that have extra datas (inventory, rotation, etc)
+{% endhint %}
+
+### SPAWN\_ENTITY\_ON\_CURSOR
 
 {% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html" %}
 
 * Info: Spawn entities on your cursor
-* Command: SPAWNENTITYONCURSOR {entityType} {amount}
-  * {entityType}: Mob ID (ALL CAPS)
-  * {amount}: The amount of mobs that will spawn in that spot
+* Command settings:
+  * entity: Mob ID (ALL CAPS)
+  * amount: The amount of mobs that will spawn in that spot
+  * maxRange: The max range of the spawn (Default 200)
 * Example:
 
 ```
-- SPAWNENTITYONCURSOR CREEPER 1
+- SPAWN_ENTITY_ON_CURSOR entity:CREEPER amount:1
 ```
 
 
@@ -1193,18 +1195,18 @@ SETITEMMATERIAL 10 DIAMOND_HOE
 
 
 
-### SUDOOP
+### SUDO\_OP
 
 * Info: Gives the player OP, SUDOs the player and DEOPs it
 * Extra Info: During the OP, the player can only run the specified command after the SUDOOP, all other commands are blocked when the player is OP, and if the server crashes, no problem. The player will be DEOPed when the player reconnects.
-* Command: SUDOOP (command)
+* Command: SUDO\_OP (command)
 * Example:
 
 ```
-- SUDOOP summon zombie
-- SUDOOP fly
-- SUDOOP god
-- SUDOOP /replacenear 20 tnt
+- SUDO_OP summon zombie
+- SUDO_OP fly
+- SUDO_OP god
+- SUDO_OP /replacenear 20 tnt
 ```
 
 {% hint style="danger" %}
@@ -1215,10 +1217,10 @@ If have another way to achieve what you want use it.
 And if you have no other way but using SUDOOP, then use this command. This shouldn't be your first option.
 {% endhint %}
 
-### SWAPHAND
+### SWAP\_HAND
 
 * Info: Swaps the current item with your offhand item
-* Command: SWAPHAND
+* No command setting
 * Example:
 
 ```

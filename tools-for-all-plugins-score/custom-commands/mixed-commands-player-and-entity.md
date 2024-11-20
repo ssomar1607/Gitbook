@@ -373,6 +373,50 @@ You can easily increase the damage of the ei's sword using this custom command b
 
 
 
+### HITSCAN\_PLAYERS
+
+* Info: It allows to run a command at certain direction to players
+* Command: HITSCAN\_PLAYERS range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
+  * Range: how far an entity can be to be targetted by the HITSCAN command
+  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
+  * Pitch: What direction to shoot it in, relative to player pitch
+  * Yaw: Same thing as Pitch but with yaw
+  * leftRightShift:
+    * \-5 = the hitscan STARTS from 5 blocks to the left.
+    * 0 = Hitscan is centered where the player is.
+    * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
+  * yShift: Same as left,right, except with a different axis.&#x20;
+  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
+  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
+  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
+* Image to understand:
+  *
+
+      <figure><img src="../../.gitbook/assets/image (443).png" alt=""><figcaption></figcaption></figure>
+
+### HITSCAN\_ENTITIES
+
+* Info: It allows to run a command at certain direction to entities
+* Command: HITSCAN\_ENTITIES range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
+  * Range: how far an entity can be to be targetted by the HITSCAN command
+  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
+  * Pitch: What direction to shoot it in, relative to player pitch
+  * Yaw: Same thing as Pitch but with yaw
+  * leftRightShift:
+    * \-5 = the hitscan STARTS from 5 blocks to the left.
+    * 0 = Hitscan is centered where the player is.
+    * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
+  * yShift: Same as left,right, except with a different axis.&#x20;
+  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
+  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
+  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
+* Image to understand:
+  *
+
+      <figure><img src="../../.gitbook/assets/image (444).png" alt=""><figcaption></figcaption></figure>
+
+
+
 ### INVULNERABILITY
 
 * Info: Sets the player invulnerable for a certain amount of time
@@ -442,6 +486,38 @@ You can easily increase the damage of the ei's sword using this custom command b
 - MLIB_DAMAGE 10 PHYSICAL false FIRE
 ```
 
+### MOB\_NEAREST
+
+* Info: Targets the nearest mob from the player/target.
+* Command:&#x20;
+  * `MOB_NEAREST` {max accepted distance} `{command}`
+    * {max accepted distance}:  Max distance accepted that the "entity" can be.
+    * {command}: The command that will be executed
+* Example:
+
+Damages nearest player
+
+```
+- MOB_NEAREST 10 DAMAGE 5
+```
+
+
+
+### NEAREST
+
+* Info: Targets the nearest player from the player/target.
+* Command:&#x20;
+  * `NEAREST` {max accepted distance} `{command}`
+    * {max accepted distance}: Max distance accepted that the "target" can be.
+    * {command}: The command that will be executed
+* Example:
+
+Damages nearest player
+
+```
+- NEAREST 8 DAMAGE 5
+```
+
 ### OPMESSAGE
 
 * Info: It sends a message to OP online players and the console
@@ -451,6 +527,25 @@ You can easily increase the damage of the ei's sword using this custom command b
 
 ```
 - OPMESSAGE This is my debug message
+```
+
+
+
+### PARTICLE
+
+* Info: Spawns particles in the player/target's location
+
+{% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html" %}
+
+* Command: PARTICLE {type} {quantity} {offset} {speed}
+  * {type}: The type of particle (ALL CAPS)
+  * {quantity}: The amount of particles that will spawn
+  * {offset}: The radius of the area where the particles may spawn in the player/target's location
+  * {speed}: To how fast or how big particles will be
+* Example:
+
+```
+- PARTICLE FIREWORKS_SPARK 10 0.1 0.5
 ```
 
 
