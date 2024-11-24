@@ -241,7 +241,7 @@ It triggers the hit/damages activators of EE/EI
 * Command: DAMAGE\_BOOST {modification in percentage example 100} {timeinticks}
   * {modification in percentage example 100}: Amount of the boost. Example below:
     * 50 = Makes you deal +50% damage\
-      \-80 = Makes you deal -80% damage
+      -80 = Makes you deal -80% damage
   * {timeinticks}: The duration of the custom damage boost
 * Example: (The command below gives you +50% damage dealen for 10s)
 
@@ -265,7 +265,7 @@ You can easily increase the damage of the ei's sword using this custom command b
 * Command: DAMAGE\_RESISTANCE {modification in percentage example 100} {timeinticks}
   * {modification in percentage example 100}: Amount of the magnification. Example below:
     * 50 = Makes you take +50% damage\
-      \-80 = Makes you take -80% damage
+      -80 = Makes you take -80% damage
   * {timeinticks}: The duration of the custom damage resistance
 * Example: (The command below gives you +50% damage taken for 10s)
 
@@ -281,7 +281,7 @@ You can easily increase the damage of the ei's sword using this custom command b
 * Command: EQUIPMENT\_VISUAL\_REPLACE {EquipmentSlot} {material or EI:} {amount} {timeinticks}
   * {EquipmentSlot}: The slot
     * Options:
-      * \-1
+      * -1
       * 40
       * 36
       * 37
@@ -382,7 +382,7 @@ You can easily increase the damage of the ei's sword using this custom command b
   * Pitch: What direction to shoot it in, relative to player pitch
   * Yaw: Same thing as Pitch but with yaw
   * leftRightShift:
-    * \-5 = the hitscan STARTS from 5 blocks to the left.
+    * -5 = the hitscan STARTS from 5 blocks to the left.
     * 0 = Hitscan is centered where the player is.
     * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
   * yShift: Same as left,right, except with a different axis.&#x20;
@@ -403,7 +403,7 @@ You can easily increase the damage of the ei's sword using this custom command b
   * Pitch: What direction to shoot it in, relative to player pitch
   * Yaw: Same thing as Pitch but with yaw
   * leftRightShift:
-    * \-5 = the hitscan STARTS from 5 blocks to the left.
+    * -5 = the hitscan STARTS from 5 blocks to the left.
     * 0 = Hitscan is centered where the player is.
     * 5 = hitscan STARTS from 5 blocks to the right of the player.&#x20;
   * yShift: Same as left,right, except with a different axis.&#x20;
@@ -479,7 +479,7 @@ You can easily increase the damage of the ei's sword using this custom command b
     * Example: MAGIC, PHYSICAL, WEAPON, SKILL, PROJECTILE, UNARMED, ON\_HIT, MINION, DOT;
   * {knockback}: true/false whether it knocks back the target
   * \[element]: Specified what kind of element the attack is
-    * Reference: [https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref\_type=heads](https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref\_type=heads)
+    * Reference: [https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref\_type=heads](https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref_type=heads)
 * Example:
 
 ```
@@ -693,7 +693,7 @@ A: run <mark style="color:orange;">`SPIN {duration} 0`</mark> for example
 ```
 
 {% hint style="info" %}
-This is not the same as essential's smite command. If you want to smite your targets, put it on target commands or entity commands along with the proper activators like `PLAYER_CLICK_ON_PLAYER` for example**.**
+This is not the same as essential's smite command. If you want to smite your targets, put it on target commands or entity commands along with the proper activators like `PLAYER_CLICK_ON_PLAYER` for exampl&#x65;**.**
 {% endhint %}
 
 
@@ -760,7 +760,7 @@ This is not the same as essential's smite command. If you want to smite your tar
 ```
 
 {% hint style="info" %}
-\-1 to mainhand
+-1 to mainhand
 {% endhint %}
 
 

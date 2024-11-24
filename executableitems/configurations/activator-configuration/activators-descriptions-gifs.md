@@ -112,7 +112,7 @@ This activator does not check armor protection so if your target's HP is 20 and 
 {% endhint %}
 
 {% hint style="info" %}
-This activator is useless when using PaperSpigot (You can directly use PLAYER\_DEATH_)_
+This activator is useless when using PaperSpigot (You can directly use PLAYER\_DEAT&#x48;_)_
 {% endhint %}
 
 {% hint style="warning" %}
@@ -254,9 +254,7 @@ In this activator you will have access to features:
 
 * **targetCommands**, it will allow you to run command for the clicked player.
 
-<!---->
-
-* **detailedClick,** Chose the click accepted for this activator
+- **detailedClick,** Chose the click accepted for this activator
   * RIGHT
   * LEFT
   * RIGHTORLEFT

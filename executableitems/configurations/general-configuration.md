@@ -52,7 +52,7 @@ disable-world:
 - ofthedisableworld
 ```
 
-#### Premium-enable-cooldown-for-op**:** <img src="../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+#### Premium-enable-cooldown-for-o&#x70;**:** <img src="../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * description: For EI premium, Enable or disable cool-down for Oped player.
 * required: NO, (Default true)

@@ -132,7 +132,7 @@ it only works for 1.16.5+
 
 ### CHANGETO
 
-* Info: Replaces the mob with a different typ_e_
+* Info: Replaces the mob with a different ty&#x70;_&#x65;_
 
 {% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html" %}
 

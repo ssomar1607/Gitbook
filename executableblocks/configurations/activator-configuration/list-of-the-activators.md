@@ -3,31 +3,31 @@
 
 
 * CUSTOM\_TRIGGER: It can be executed by running a command, or it can be scheduled.
-* [<mark style="color:orange;">**CROP\_GROW**</mark>](list-of-the-activators.md#crop\_grow) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop and it grows.**
-* [<mark style="color:orange;">**CROP\_PLACE\_BLOCK**</mark>](list-of-the-activators.md#crop\_place\_block) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop that places block.**
-* DESTROYED\_BY\_LIQUID**: Activates when the Executable Block is destroyed by liquid.**
-* DESTROYED\_BY\_PISTON**: Activates when the Executable Block is destroyed by a piston.**
-* [<mark style="color:orange;">**ENTITY\_WALK\_ON**</mark>](list-of-the-activators.md#entity\_walk\_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> : **Activates when an entity walks on the Executable Block.**
-* [<mark style="color:orange;">**EXPLOSION\_HIT**</mark>](list-of-the-activators.md#explosion\_hit) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when the Executable block is affected by an explosion.**
+* [<mark style="color:orange;">**CROP\_GROW**</mark>](list-of-the-activators.md#crop_grow) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop and it grows.**
+* [<mark style="color:orange;">**CROP\_PLACE\_BLOCK**</mark>](list-of-the-activators.md#crop_place_block) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when Executable Block is a crop that places block.**
+* DESTROYED\_BY\_LIQUI&#x44;**: Activates when the Executable Block is destroyed by liquid.**
+* DESTROYED\_BY\_PISTO&#x4E;**: Activates when the Executable Block is destroyed by a piston.**
+* [<mark style="color:orange;">**ENTITY\_WALK\_ON**</mark>](list-of-the-activators.md#entity_walk_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> : **Activates when an entity walks on the Executable Block.**
+* [<mark style="color:orange;">**EXPLOSION\_HIT**</mark>](list-of-the-activators.md#explosion_hit) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when the Executable block is affected by an explosion.**
 * [<mark style="color:orange;">**LOOP**</mark>](list-of-the-activators.md#undefined) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates in repeat as long as the block is placed.**
-* [<mark style="color:blue;">**PLAYER\_ALL\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_all\_click\_on) : Activates when a player clicks on the Executable Block.
-* [<mark style="color:blue;">**PLAYER\_BREAK**</mark>](list-of-the-activators.md#player\_break) : Activates when a player breaks the Executable Block.
+* [<mark style="color:blue;">**PLAYER\_ALL\_CLICK\_ON**</mark>](list-of-the-activators.md#player_all_click_on) : Activates when a player clicks on the Executable Block.
+* [<mark style="color:blue;">**PLAYER\_BREAK**</mark>](list-of-the-activators.md#player_break) : Activates when a player breaks the Executable Block.
 * <mark style="color:blue;">**PLAYER\_BREAK\_BLOCK\_ABOVE\_THE\_EB**</mark>**: Activates when the block above the eb is broken by a player.**
 * <mark style="color:blue;">**PLAYER\_BREAK\_BLOCK\_UNDER\_THE\_EB**</mark> : Activates when a player breaks a block under the ExecutableBlock.
-* [<mark style="color:orange;">**PLAYER\_DEATH\_ON**</mark>](list-of-the-activators.md#player\_death\_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a player dies on that Executable Block.**
-* [<mark style="color:blue;">**PLAYER\_EAT\_ON**</mark>](list-of-the-activators.md#player\_eat\_on) : Activates when a player eats while in an Executable Block.
-* [<mark style="color:blue;">**PLAYER\_FALL\_ON**</mark>](list-of-the-activators.md#player\_fall\_on) : Activates when a player falls on the Executable Block. (must take fall damage to count)
-* [<mark style="color:blue;">**PLAYER\_JUMP\_ON**</mark>](list-of-the-activators.md#player\_jump\_on) : Activates when a player jumps on the Executable Block.
-* [<mark style="color:blue;">**PLAYER\_LEFT\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_left\_click\_on) : Activates when a player left clicks on the Executable Block.
-* [<mark style="color:blue;">**PLAYER\_PLACE**</mark>](list-of-the-activators.md#player\_place) : Activates when a player places the Executable Block.
-* [<mark style="color:orange;">**PLAYER\_PRESS**</mark>](list-of-the-activators.md#player\_press)<mark style="color:orange;">**\_PLATE**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: (Executable Block must be a pressure plate) Activates when a player steps on the Executable Block Pressure Plate.**
-* [<mark style="color:blue;">**PLAYER\_RIGHT\_CLICK\_ON**</mark>](list-of-the-activators.md#player\_right\_click\_on) : Activates when a player right clicks on the Executable Block.
+* [<mark style="color:orange;">**PLAYER\_DEATH\_ON**</mark>](list-of-the-activators.md#player_death_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a player dies on that Executable Block.**
+* [<mark style="color:blue;">**PLAYER\_EAT\_ON**</mark>](list-of-the-activators.md#player_eat_on) : Activates when a player eats while in an Executable Block.
+* [<mark style="color:blue;">**PLAYER\_FALL\_ON**</mark>](list-of-the-activators.md#player_fall_on) : Activates when a player falls on the Executable Block. (must take fall damage to count)
+* [<mark style="color:blue;">**PLAYER\_JUMP\_ON**</mark>](list-of-the-activators.md#player_jump_on) : Activates when a player jumps on the Executable Block.
+* [<mark style="color:blue;">**PLAYER\_LEFT\_CLICK\_ON**</mark>](list-of-the-activators.md#player_left_click_on) : Activates when a player left clicks on the Executable Block.
+* [<mark style="color:blue;">**PLAYER\_PLACE**</mark>](list-of-the-activators.md#player_place) : Activates when a player places the Executable Block.
+* [<mark style="color:orange;">**PLAYER\_PRESS**</mark>](list-of-the-activators.md#player_press)<mark style="color:orange;">**\_PLATE**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: (Executable Block must be a pressure plate) Activates when a player steps on the Executable Block Pressure Plate.**
+* [<mark style="color:blue;">**PLAYER\_RIGHT\_CLICK\_ON**</mark>](list-of-the-activators.md#player_right_click_on) : Activates when a player right clicks on the Executable Block.
 * <mark style="color:orange;">**PLAYER\_SCROLL\_DOWN\_BY\_TARGETTING\_THE\_EB**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when the player is looking at the eb and scrolls down**
 * <mark style="color:orange;">**PLAYER\_SCROLL\_UP\_BY\_TARGETTING\_THE\_EB**</mark> <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **:  Activates when the player is looking at the eb and scrolls up**
-* [<mark style="color:blue;">**PLAYER\_SNEAK\_ON**</mark>](list-of-the-activators.md#player\_sneak\_on) : Activates when a player "sneak" on the Executable Block.
-* [<mark style="color:orange;">**PLAYER\_SPRINT\_ON**</mark>](list-of-the-activators.md#player\_sprint\_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a player sprint on the Executable Block.**
-* [<mark style="color:blue;">**PLAYER\_WALK\_ON**</mark>](list-of-the-activators.md#player\_walk\_on) : Activates when a player walks on the Executable Block.
-* [<mark style="color:orange;">**PROJECTILE\_HIT**</mark>](list-of-the-activators.md#projectile\_hit) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a projectile hit the Executable Block.**
+* [<mark style="color:blue;">**PLAYER\_SNEAK\_ON**</mark>](list-of-the-activators.md#player_sneak_on) : Activates when a player "sneak" on the Executable Block.
+* [<mark style="color:orange;">**PLAYER\_SPRINT\_ON**</mark>](list-of-the-activators.md#player_sprint_on) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a player sprint on the Executable Block.**
+* [<mark style="color:blue;">**PLAYER\_WALK\_ON**</mark>](list-of-the-activators.md#player_walk_on) : Activates when a player walks on the Executable Block.
+* [<mark style="color:orange;">**PROJECTILE\_HIT**</mark>](list-of-the-activators.md#projectile_hit) <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line"> **: Activates when a projectile hit the Executable Block.**
 * <mark style="color:orange;">**REDSTONE\_SIGNAL\_ENABLE**</mark><img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**:** Activates when the EB is a block that can receive power (redstone tripwire, trapdoor, button, lever, etc) and receives signal.
 * <mark style="color:orange;">**REDSTONE\_SIGNAL\_DISABLE**</mark><img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**:** Activates when the EB is a block that can create / store power (redstone tripwire, trapdoor, button, lever, etc) and stop receiving signal.
 * <mark style="color:orange;">**BLOCK\_DRY**</mark><img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">**: Activates when corals or farmlands got dried.**

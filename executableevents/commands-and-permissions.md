@@ -49,7 +49,7 @@
 
 #### Clear all cooldowns and delayed commands of EE
 
-* Command: <mark style="color:blue;">**/ee clear**</mark>** **<mark style="color:purple;">**\[playerName]**</mark>
+* Command: <mark style="color:blue;">**/ee clear**</mark>**&#x20;**<mark style="color:purple;">**\[playerName]**</mark>
 * Permission: `ee.cmd.clear`
 
 {% hint style="info" %}
@@ -58,7 +58,7 @@ It supports entities too just use the entity UUID instead of player name
 
 #### Enable / Disable actionbar of EE
 
-* Command: <mark style="color:blue;">**/ee actionbar**</mark>** **<mark style="color:orange;">**{on or off}**</mark>
+* Command: <mark style="color:blue;">**/ee actionbar**</mark>**&#x20;**<mark style="color:orange;">**{on or off}**</mark>
 * Permission: `ee.cmd.actionbar`
 
 ### Custom trigger

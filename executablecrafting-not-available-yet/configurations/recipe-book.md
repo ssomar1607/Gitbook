@@ -2,7 +2,7 @@
 description: Here you can learn how to create your own recipe book configuration
 ---
 
-# Recipe book configuration
+# Recipe Book
 
 ### Why would you like different recipe books ?
 
@@ -15,7 +15,11 @@ If you would like to only show some recipes to some players and some to others, 
 
 ### How ?
 
-To create your own recipe book the format is
+To create your own recipe book you have to edit recipeBooks.yml
+
+![](<../../.gitbook/assets/image (445).png>)
+
+The format this file works is:
 
 ```yaml
 recipeBooks: #This goes by default

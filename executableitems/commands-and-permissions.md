@@ -75,7 +75,7 @@ To give the permissions of all items, I advice you to download a permission plug
 
 #### Clear all cooldowns and delayed commands of EI
 
-* Command: <mark style="color:blue;">**/ei clear**</mark>** **<mark style="color:purple;">**\[playerName] \[ALL/DELAYED\_COMMANDS/COOLDOWNS/ACTIONBARS]**</mark>
+* Command: <mark style="color:blue;">**/ei clear**</mark>**&#x20;**<mark style="color:purple;">**\[playerName] \[ALL/DELAYED\_COMMANDS/COOLDOWNS/ACTIONBARS]**</mark>
   * ALL - Resets the player's delayed commands, cooldowns and actionbars
   * DELAYED\_COMMANDS - Resets all delayed commands caused by DELAY and DELAYTICK
   * COOLDOWNS - Resets all player's cooldowns across all items
@@ -88,7 +88,7 @@ It supports entities too just use the entity UUID instead of player name
 
 #### Enable / Disable actionbar of EI
 
-* Command: <mark style="color:blue;">**/ei actionbar**</mark>** **<mark style="color:orange;">**{on or off}**</mark>
+* Command: <mark style="color:blue;">**/ei actionbar**</mark>**&#x20;**<mark style="color:orange;">**{on or off}**</mark>
 * Permission: `ei.cmd.actionbar`
 
 #### Inspect the ExecutableItem that is in your main hand
@@ -111,7 +111,7 @@ It supports entities too just use the entity UUID instead of player name
 
 #### Refresh the ExecutableItems of your players with the last version of the lore , name, attributes... (The players must have the EIs in their inventory)
 
-* command: <mark style="color:blue;">**/ei refresh**</mark>** **<mark style="color:orange;">**{playername or all} {ExecutableItemID or all}**</mark>** **<mark style="color:blue;">**{resetUsage} {resetDurability}**</mark>
+* command: <mark style="color:blue;">**/ei refresh**</mark>**&#x20;**<mark style="color:orange;">**{playername or all} {ExecutableItemID or all}**</mark>**&#x20;**<mark style="color:blue;">**{resetUsage} {resetDurability}**</mark>
 * Permission: `ei.cmd.refresh`
 
 #### **Modify the owner of the EI that is in your hand**
@@ -145,14 +145,14 @@ It works even with offline players
 #### GiveAll command
 
 * Command:&#x20;
-  * <mark style="color:blue;">**/ei giveall {id} {quantity}**</mark>** **<mark style="color:purple;">**\[world]**</mark> \[giveOfflinePlayer default false]
+  * <mark style="color:blue;">**/ei giveall {id} {quantity}**</mark>**&#x20;**<mark style="color:purple;">**\[world]**</mark> \[giveOfflinePlayer default false]
 * Permission: `ei.cmd.giveall`
 * Does not work for offline players
 
 #### Give an EI in a specific slot of a player  <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * Command: (The variables and usage part besides the id is optional)
-  * <mark style="color:blue;">**/ei giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false]**</mark>
+  * <mark style="color:blue;">**/ei giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**&#x20;&#x20;**<mark style="color:purple;">**\[override true or false]**</mark>
   * Examples:&#x20;
     * <mark style="color:blue;">**/ei giveslot Ssomar test{Variables:{x:"Hey",world:"Island"},Usage:50} 1 0**</mark> &#x20;
     * <mark style="color:blue;">**/ei giveslot Special70 rum{Usage:69420,Variables:{tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK"\}} 1 %slot%**</mark>
@@ -170,7 +170,7 @@ It works even with offline players
 #### Drop an EI at a specific location / position <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * Command:&#x20;
-  * <mark style="color:blue;">**/ei drop {id}**</mark>** **<mark style="color:purple;">**\[quantity] \[world] \[x] \[y] \[z]**</mark>
+  * <mark style="color:blue;">**/ei drop {id}**</mark>**&#x20;**<mark style="color:purple;">**\[quantity] \[world] \[x] \[y] \[z]**</mark>
     * <mark style="color:blue;">**Example:**</mark>
       * <mark style="color:blue;">**ei drop totemshatter 1 %world% %x% %y% %z%**</mark>
       * <mark style="color:blue;">**ei drop nuclearWar{Usage:3,Variables:{niconico:"nii"\}} 25 %block\_world% %block\_x% %block\_y% %block\_z%**</mark>
@@ -228,4 +228,4 @@ Commands:
 * /ei run-custom-trigger trigger:{activatorId} player:{playerName} // It will execute the activator(s) only for the player specified and if he has an EI that has an activator with the specified ID.
 * /ei run-custom-trigger trigger:{activatorId} player:{playerName} slot:{slot, -1 for held item} // It will execute the activator(s) only for the player specified and if he has an EI in the specified slot that has an activator with the specified ID.
 
-\+++ If you type more things in the commands you will be able to retrieve these infos using %arg1% %arg2% ... or %all\_args%
++++ If you type more things in the commands you will be able to retrieve these infos using %arg1% %arg2% ... or %all\_args%

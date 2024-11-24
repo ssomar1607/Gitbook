@@ -95,7 +95,7 @@ To give the permissions of all items, I advice you to download a permission plug
 
 #### Clear all cooldowns and delayed commands of EB
 
-* Command: <mark style="color:blue;">**/eb clear**</mark>** **<mark style="color:purple;">**\[playerName]**</mark>
+* Command: <mark style="color:blue;">**/eb clear**</mark>**&#x20;**<mark style="color:purple;">**\[playerName]**</mark>
 * Permission: `eb.cmd.clear`
 
 {% hint style="info" %}
@@ -104,7 +104,7 @@ It supports entities too just use the entity UUID instead of player name
 
 #### Enable / Disable actionbar of EB
 
-* Command: <mark style="color:blue;">**/eb actionbar**</mark>** **<mark style="color:orange;">**{on or off}**</mark>
+* Command: <mark style="color:blue;">**/eb actionbar**</mark>**&#x20;**<mark style="color:orange;">**{on or off}**</mark>
 * Permission: `eb.cmd.actionbar`
 
 #### Place an EB at a specific position
@@ -168,13 +168,13 @@ It supports entities too just use the entity UUID instead of player name
 #### GiveAll command
 
 * Command:&#x20;
-  * <mark style="color:blue;">**/eb giveall {id} {quantity}**</mark>** **<mark style="color:purple;">**\[world]**</mark>
+  * <mark style="color:blue;">**/eb giveall {id} {quantity}**</mark>**&#x20;**<mark style="color:purple;">**\[world]**</mark>
 * Permission: `eb.cmd.giveall`
 
 #### Give an EB in a specific slot of a player&#x20;
 
 * Command:&#x20;
-  * <mark style="color:blue;">**/eb giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**  **<mark style="color:purple;">**\[override true or false]**</mark>
+  * <mark style="color:blue;">**/eb giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**&#x20;&#x20;**<mark style="color:purple;">**\[override true or false]**</mark>
   * Examples:&#x20;
     * <mark style="color:blue;">**/eb giveslot Ssomar test{Variables:{x:"Hey",world:"Island"},Usage:50} 1 0**</mark> &#x20;
     * <mark style="color:blue;">**/eb giveslot Special70 rum{Usage:69420,Variables:{tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK"\}} 1 %slot%**</mark>
@@ -193,7 +193,7 @@ It supports entities too just use the entity UUID instead of player name
 #### Drop an EB at aspecific location / position <img src="../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">
 
 * Command:&#x20;
-  * <mark style="color:blue;">**/eb drop {id}**</mark>** **<mark style="color:purple;">**\[quantity] \[world] \[x] \[y] \[z]**</mark>
+  * <mark style="color:blue;">**/eb drop {id}**</mark>**&#x20;**<mark style="color:purple;">**\[quantity] \[world] \[x] \[y] \[z]**</mark>
   * _Default quantity : 1_
   * _Default location : The location of the player who has executed this command_
 * Permission: `eb.cmd.drop`

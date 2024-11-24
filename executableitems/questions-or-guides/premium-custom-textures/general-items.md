@@ -75,7 +75,7 @@ Once you have it, we are ready to create the texture pack
 {% hint style="info" %}
 The pack\_format means the version of the Minecraft it will have, 8 means 1.18, 7 means 1.17, 6 -> 1.16, and so on. \
 \
-More info -> [https://minecraft.fandom.com/wiki/Pack\_format](https://minecraft.fandom.com/wiki/Pack\_format)
+More info -> [https://minecraft.fandom.com/wiki/Pack\_format](https://minecraft.fandom.com/wiki/Pack_format)
 {% endhint %}
 
 So checking what we have, should be this:
@@ -100,7 +100,7 @@ So checking what we have, should be this:
                 - 📁item
 ```
 
-* So, in the folder of 📁custom_\__textures we will save all the custom textures that we have, in this case, the pickaxe photo we made before. (the file will be -> "pickaxeimage.png")
+* So, in the folder of 📁custo&#x6D;_\__&#x74;extures we will save all the custom textures that we have, in this case, the pickaxe photo we made before. (the file will be -> "pickaxeimage.png")
 
 ```
 📁ExecutableItemsTexturePack

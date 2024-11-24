@@ -67,7 +67,7 @@ Examples:
 
 (The activator must have a target player)
 
-Its the same placeholders that the **PLAYER PLACEHOLDERS** above**,** just replace "player" by "target".
+Its the same placeholders that the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "target".
 
 Example:
 
@@ -92,7 +92,7 @@ Example:
 
 (The activator must have a target entity)
 
-Its the same placeholders that the **ENTITY PLACEHOLDERS** above**,** just replace "entity" by "target".
+Its the same placeholders that the **ENTITY PLACEHOLDERS** abov&#x65;**,** just replace "entity" by "target".
 
 Example: `%target_x%`
 
@@ -109,7 +109,7 @@ Example: `%target_x%`
 
 (The activator must have a target block)
 
-Its the same placeholders that the **BLOCK PLACEHOLDERS** above**,** just replace "block" by "target\_block".
+Its the same placeholders that the **BLOCK PLACEHOLDERS** abov&#x65;**,** just replace "block" by "target\_block".
 
 Example: `%target_block_x%`
 
@@ -123,7 +123,7 @@ Example: `%target_block_x%`
 
 (Will work only if an owner is set for the block / item)
 
-Its the same placeholders that the **PLAYER PLACEHOLDERS** above**,** just replace "player" by "owner".
+Its the same placeholders that the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "owner".
 
 Example: `%owner_health%`
 
@@ -131,7 +131,7 @@ Example: `%owner_health%`
 
 (Placeholders to use in the custom commands AROUND)
 
-Its the same placeholders that the **PLAYER PLACEHOLDERS** above**,** just replace "player" by "around\_target".
+Its the same placeholders that the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "around\_target".
 
 Example: `%around_target_direction%`
 
@@ -139,7 +139,7 @@ Example: `%around_target_direction%`
 
 (Placeholders to use in the custom commands MOB\_AROUND)
 
-Its the same placeholders that the **ENTITY PLACEHOLDERS** above**,** just replace "entity" by "around\_target".
+Its the same placeholders that the **ENTITY PLACEHOLDERS** abov&#x65;**,** just replace "entity" by "around\_target".
 
 Example: `%around_target_health%`
 

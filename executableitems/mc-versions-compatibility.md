@@ -18,7 +18,7 @@ All features available !
 
 Custom textures not available
 
-Activator PLAYER\_FISH_\__NOTHING _not available_
+Activator PLAYER\_FIS&#x48;_\__&#x4E;OTHING _not available_
 
 Custom commands not available:
 
@@ -117,7 +117,7 @@ potionEffects:
     hasParticles: false
 ```
 
-Disable drops for activator like PLAYER\_KILL_\__ENTITY
+Disable drops for activator like PLAYER\_KIL&#x4C;_\__&#x45;NTITY
 
 Restrictions:
 
@@ -129,9 +129,9 @@ Custom conditions:
 
 Activators:
 
-* PROJECTILE\_HIT_\__BLOCK (Potential problems)
-* PROJECTILE\_HIT_\__ENTITY (Potential problems)
-* PROJECTILE\_HIT_\__PLAYER (Potential problems)
+* PROJECTILE\_HI&#x54;_\__&#x42;LOCK (Potential problems)
+* PROJECTILE\_HI&#x54;_\__&#x45;NTITY (Potential problems)
+* PROJECTILE\_HI&#x54;_\__&#x50;LAYER (Potential problems)
 * PROJECTILE\_ENTER\_IN\_LIQUID
 
 Features of custom projectile
