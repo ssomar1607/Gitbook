@@ -77,4 +77,13 @@ With this you could create for example:
 
 **Explanation in todo list, but its the same idea than the previous commands, I will try to add the explanation with photos in the next days**
 
+### Modify the lore
+
+* Info: It modifies the usage of the EI in (1) slot (\<item.1>)
+* Command: EC EANVIL LORE \<ADD/REMOVE> \<VALUES>
+* Example:
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>- EC EANVIL LORE ADD This is my lore XD
+</strong></code></pre>
+
 &#x20;

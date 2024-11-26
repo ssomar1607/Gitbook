@@ -9,4 +9,9 @@ castResultAsMaxAmount: false
 EAnvilGlobal: false
 #If the anvil should add "&fForged with <item2.name>" to item1 on anvil forge. 
 EAnvilForgeLore: false
+#In case some plugin is causing problems you can set this to NORMAL, HIGH or HIGHEST
+eventsPriority: NORMAL
+#If you want inside the recipe book the name of the items to be the ID
+#otherwise it will be the result name
+recipeBookNameOfID: true
 ```
