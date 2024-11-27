@@ -14,4 +14,6 @@ eventsPriority: NORMAL
 #If you want inside the recipe book the name of the items to be the ID
 #otherwise it will be the result name
 recipeBookNameOfID: true
+#If you want to disable the restrictions of furnace.
+furnaceRestrictions: true
 ```
