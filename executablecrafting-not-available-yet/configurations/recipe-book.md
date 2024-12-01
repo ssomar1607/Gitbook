@@ -31,6 +31,9 @@ recipeBooks: #This goes by default
       carpeta1: #And here you create the folders with each recipe you want inside
         - asd
         - archivo2
+      color:&d&lcarpeta2: #and with color: you can add colors to your folders
+        - asd
+        - archivo2
 ```
 
 Then you can open the recipe book using the command
