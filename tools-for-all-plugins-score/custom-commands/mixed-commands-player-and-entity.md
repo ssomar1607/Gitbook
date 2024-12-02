@@ -388,7 +388,7 @@ You can easily increase the damage of the ei's sword using this custom command b
   * yShift: Same as left,right, except with a different axis.&#x20;
   * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
   * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
-  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
+  * Commands: The same than AROUND commands, you can type command1 <+> command2 ... and use the placeholder %around\_target%
 * Image to understand:
   *
 
@@ -409,7 +409,7 @@ You can easily increase the damage of the ei's sword using this custom command b
   * yShift: Same as left,right, except with a different axis.&#x20;
   * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
   * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks.&#x20;
-  * Commands: The same than AROUND commands, cou can type command1 <+> command2 ... and use the placeholder %around\_target%
+  * Commands: The same than AROUND commands, you can type command1 <+> command2 ... and use the placeholder %around\_target%
 * Image to understand:
   *
 
