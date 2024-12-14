@@ -118,17 +118,11 @@ desactiveDrops: false
 
 * **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* **PLAYER\_FISH** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_FISH** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * **PLAYER\_KILL\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* **PLAYER\_KILL\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+- **PLAYER\_KILL\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 </details>
 
@@ -152,11 +146,7 @@ onlyAirClick: false
 
 * PLAYER\_ALL\_CLICK
 
-<!---->
-
-* PLAYER\_LEFT\_CLICK
-
-<!---->
+- PLAYER\_LEFT\_CLICK
 
 * PLAYER\_RIGHT\_CLICK
 
@@ -180,11 +170,7 @@ onlyBlockClick: false
 
 * PLAYER\_ALL\_CLICK
 
-<!---->
-
-* PLAYER\_LEFT\_CLICK
-
-<!---->
+- PLAYER\_LEFT\_CLICK
 
 * PLAYER\_RIGHT\_CLICK
 
@@ -208,11 +194,7 @@ detailedClick: LEFT
 
 * PLAYER\_ALL\_CLICK
 
-<!---->
-
-* **PLAYER\_CLICK\_ON\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_CLICK\_ON\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * PLAYER\_CLICK\_ON\_PLAYER
 
@@ -360,56 +342,32 @@ otherEICooldowns:
 * Example:
 
 ```yaml
-requiredExecutableItems: 
-  requiredEI1:
-   id: EXECUTABLEITEMS_ID_HERE
-   amount: 3
-   consume: true/false
-   validUsages: #OPTIONAL DELETE THIS OPTION IF YOU DONT WANT A VERIFICATION OF USAGE
-   - 1
-   - 3
-   - 4
-requiredExecutableItemsMsg: '&e'  #<- Here is where you will add the custom message.
+   requiredExecutableItems: 
+     requiredEI1:
+      executableItem: EXECUTABLEITEMS_ID_HERE
+      amount: 3
+      usageConditions: CONDITION>2
+     errorMsg: '' #<- Here is where you will add the custom message.
 ```
 
 * Description: This attribute searches for the required executable items in the player's inventory in order to activate.
 * Required: NO, (Default: No EI is required)
-* More Info: You can edit the message in locale or directly by adding this in the file:&#x20;
-
-```yaml
-requiredExecutableItemsMsg: "&4&lError you need...."
-```
-
-* If you don't want any messages to appear, add this in the file:&#x20;
-
-```yaml
-requiredExecutableItemsMsg: '&e'
-```
 
 ### requiredItems<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * Example:
 
 ```yaml
-requiredItems: 
-  - DIAMOND:5
-  - EMERALD:3
-requiredItemsMsg: '&e'  #<- Here is where you will add the custom message.
+    requiredItems:
+      requiredItem0:
+        material: STONECUTTER
+        amount: 1
+        notExecutableItem: false
+      errorMessage: kamehameha
 ```
 
 * Description: This attribute searches for the required vanilla items in the player's inventory in order to activate. This does not consume Executable Items.
 * Required: NO, (Default: No item is required)
-* More info: You can edit the message in locale or directly by adding this in the file:&#x20;
-
-```yaml
-requiredItemsMsg: "&4&lError you need...."
-```
-
-* If you don't want any messages to appear, add this in the file:&#x20;
-
-```yaml
-requiredItemsMsg: '&e'
-```
 
 ### requiredMoney<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">&#x20;
 
@@ -417,8 +375,10 @@ requiredItemsMsg: '&e'
 * Example:
 
 ```yaml
-requiredMoney: 500
-requiredMoneyMsg: '&e'  #<- Here is where you will add the custom message.
+    requiredMoney:
+      requiredMoney: 1200.0
+      errorMessage: apt
+      cancelEventIfError: true
 ```
 
 * Description: This attribute checks if you have the required amount of money or more in order to activate. If the player has enough money, the value under requiredMoney will take away that amount from your current money.
@@ -426,25 +386,14 @@ requiredMoneyMsg: '&e'  #<- Here is where you will add the custom message.
     * `If you have 150k money and the amount is 'requiredMoney: 100000', the attribute will take away 100k from your 150k leaving 50k money left in you and the activator will run.`
     * `If you have 70k money and the amount is 'requiredMoney: 200000', the attribute will reject the player and the activator will not run.`
 * Required: NO, (Default: No money is required)
-* More Info: You can edit the message in locale or directly by adding this in the file:&#x20;
-
-```yaml
-requiredMoneyMsg: "&4&lError you need...."
-```
-
-* If you don't want any messages to appear, add this in the file:&#x20;
-
-```yaml
-requiredMoneyMsg: '&e'
-```
 
 ### requiredLevel<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * Example:
 
 ```yaml
-requiredLevel: 1
-requiredLevelMsg: '&e'  #<- Here is where you will add the custom message.
+    requiredLevel:
+      requiredLevel: 10
 ```
 
 * Description: This attribute checks if the player has the required amount of Experience Levels or more in order to activate. If the player has the right amount of Experience Levels or more, this activator will take away the required amount of Experience Levels.
@@ -452,21 +401,16 @@ requiredLevelMsg: '&e'  #<- Here is where you will add the custom message.
     * `If you have 216 Levels and the amount is 'requiredLevel: 99', the attribute will take away 99 levels from your 216 levels leaving 117 levels left in you and the activator will run.`
     * `If you have 60 levels and the amount is 'requiredLevel: 400', the attribute will reject the player and the activator will not run.`
 * Required: NO, (Default: No level is required)
-* More Info: You can edit the message in locale or directly by adding this in the file:&#x20;
-
-```yaml
-requiredLevelMsg: "&4&lError you need...."
-```
-
-* If you don't want any messages to appear, add this in the file:&#x20;
-
-```yaml
-requiredLevelMsg: '&e'
-```
 
 ### requiredExperience
 
 * Description: This attribute checks if the player has the required amount of Experience or more in order to activate. If the player has the right amount of Experience or more, this activator will take away the required amount of Experience.
+
+```yaml
+    requiredExperience:
+      requiredExperience: 20
+      errorMessage: wawa
+```
 
 ### RequiredMana
 
@@ -476,6 +420,7 @@ requiredLevelMsg: '&e'
 ```yaml
     requiredMana:
       requiredMana: 10
+      errorMessage: ''
 ```
 
 {% hint style="info" %}
@@ -527,19 +472,11 @@ blockCommands:
 
 * PLAYER\_ALL\_CLICK
 
-<!---->
-
-* **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * PLAYER\_LEFT\_CLICK
 
-<!---->
-
-* PLAYER\_RIGHT\_CLICK
-
-<!---->
+- PLAYER\_RIGHT\_CLICK
 
 * **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
@@ -566,17 +503,11 @@ entityCommands:
 
 * **PLAYER\_CLICK\_ON\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* **PLAYER\_KILL\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_KILL\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * **PLAYER\_RECEIVE\_HIT\_BY\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* **PROJECTILE\_HIT\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+- **PROJECTILE\_HIT\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 </details>
 
@@ -601,17 +532,11 @@ targetCommands:
 
 * PLAYER\_CLICK\_ON\_PLAYER
 
-<!---->
-
-* **PLAYER\_KILL\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_KILL\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * **PLAYER\_RECEIVE\_HIT\_BY\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* **PROJECTILE\_HIT\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+- **PROJECTILE\_HIT\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 </details>
 
@@ -684,19 +609,11 @@ And you can blacklist all things by adding a ! before, example:
 
 * PLAYER\_ALL\_CLICK
 
-<!---->
-
-* **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * PLAYER\_LEFT\_CLICK
 
-<!---->
-
-* PLAYER\_RIGHT\_CLICK
-
-<!---->
+- PLAYER\_RIGHT\_CLICK
 
 * **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
@@ -777,11 +694,7 @@ detailedEntities:
 
 * **PLAYER\_KILL\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* **PLAYER\_RECEIVE\_HIT\_BY\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_RECEIVE\_HIT\_BY\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * **PROJECTILE\_HIT\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
@@ -836,17 +749,11 @@ detailedDamageCauses:
 
 * **PLAYER\_RECEIVE\_HIT\_BY\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* **PLAYER\_RECEIVE\_HIT\_BY\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_RECEIVE\_HIT\_BY\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * **PLAYER\_RECEIVE\_HIT\_GLOBAL** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* PLAYER\_DEATH
+- PLAYER\_DEATH
 
 </details>
 
@@ -1003,24 +910,14 @@ cancelEventIfNotDetailedBlocks: true
 
 * PLAYER\_ALL\_CLICK
 
-<!---->
-
-* **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-<!---->
+- **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 * **PLAYER\_BLOCK\_PLACE** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-<!---->
-
-* PLAYER\_LEFT\_CLICK
-
-<!---->
+- PLAYER\_LEFT\_CLICK
 
 * PLAYER\_RIGHT\_CLICK
 
-<!---->
-
-* **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+- **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 </details>
