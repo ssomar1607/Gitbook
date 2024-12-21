@@ -5,25 +5,25 @@
 * [<mark style="color:orange;">**PLAYER\_BED\_LEAVE**</mark>](list-of-the-activators.md#player_bed_leave) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player leaves the bed.**
 * [<mark style="color:blue;">**PLAYER\_BEFORE\_DEATH**</mark>](list-of-the-activators.md#player_before_death) : Saves the player from certain death and activates.
 * [<mark style="color:orange;">**PLAYER\_BLOCK\_BREAK**</mark>](list-of-the-activators.md#player_block_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player mines/breaks a block.**
-* PLAYER\_BLOCK\_HIT\_OF\_ENTITY: Activates when the player blocks a hit that comes from an entity with the shield.
-* PLAYER\_BLOCK\_HIT\_OF\_PLAYER: Activates when the player blocks a hit that comes from a player with the shield.
+* <mark style="color:orange;">**PLAYER\_BLOCK\_HIT\_OF\_ENTITY**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player blocks a hit that comes from an entity with the shield.
+* <mark style="color:orange;">**PLAYER\_BLOCK\_HIT\_OF\_PLAYER**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player blocks a hit that comes from a player with the shield.
 * [<mark style="color:orange;">**PLAYER\_BLOCK\_PLACE**</mark>](list-of-the-activators.md#player_block_place) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player places a block.**
-* PLAYER\_BREAK\_SHIELD\_OF\_PLAYER: Activates when the player breaks a shield of a player
+* <mark style="color:orange;">**PLAYER\_BREAK\_SHIELD\_OF\_PLAYER**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player breaks a shield of a player
 * <mark style="color:orange;">**PLAYER\_BRUSH\_BLOCK**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player brushes a block.**
-* **PLAYER\_BUCKET\_ENTITY**: Activates when the player buckets an entity
+* <mark style="color:blue;">**PLAYER\_BUCKET\_ENTITY**</mark>: Activates when the player buckets an entity
 * [<mark style="color:blue;">**PLAYER\_CHANGE\_WORLD**</mark>](list-of-the-activators.md#player_change_world) : Activates when the player moves to a different world.
 * [<mark style="color:orange;">**PLAYER\_CLICK\_ON\_ENTITY**</mark>](list-of-the-activators.md#player_click_on_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player click on an entity.**
 * [<mark style="color:blue;">**PLAYER\_CLICK\_ON\_PLAYER**</mark>](list-of-the-activators.md#player_click_on_player) : Activates when the player click on a player.
 * [<mark style="color:orange;">**PLAYER\_CONNECTION**</mark>](list-of-the-activators.md#player_connection) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player log into the server. (Does not activate when you log out)**
 * [<mark style="color:blue;">**PLAYER\_CONSUME**</mark>](list-of-the-activators.md#player_consume) : Activates when the player successfully eat/consume the item.
-* <mark style="color:orange;">**PLAYER\_CONSUME\_THE\_EI**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> : Activates when the player successfully eat/consume the EI itself
+* <mark style="color:blue;">**PLAYER\_CONSUME\_THE\_EI**</mark>  : Activates when the player successfully eat/consume the EI itself
 * <mark style="color:blue;">**PLAYER\_CUSTOM\_LAUNCH**</mark> : Activates when the player launch a projectile with the commands: LAUNCH, LOCATEDLAUNCH and LAUNCHENTITY.
 * [<mark style="color:blue;">**PLAYER\_DEATH**</mark>](list-of-the-activators.md#player_death) : Activates when the player dies.
 * [<mark style="color:orange;">**PLAYER\_DESELECT\_THE\_EI**</mark>](list-of-the-activators.md#player_deselect_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you deselect the EI item in the hotbar.**
-* <mark style="color:orange;">**PLAYER\_DISABLE\_FLY**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops flying.**
-* <mark style="color:orange;">**PLAYER\_DISABLE\_GLIDE**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops gliding.**
-* [<mark style="color:orange;">**PLAYER\_DESACTIVE\_SNEAK**</mark>](list-of-the-activators.md#player_desactive_sneak) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops from sneaking.**&#x20;
-* [<mark style="color:orange;">**PLAYER\_DESACTIVE\_SPRINT**</mark>](list-of-the-activators.md#player_desactive_sprint)<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops from sprinting**
+* <mark style="color:blue;">**PLAYER\_DISABLE\_FLY**</mark>**&#x20; : Activates when the player stops flying.**
+* <mark style="color:blue;">**PLAYER\_DISABLE\_GLIDE**</mark>**&#x20; : Activates when the player stops gliding.**
+* [<mark style="color:orange;">**PLAYER\_DISABLE\_SNEAK**</mark>](list-of-the-activators.md#player_desactive_sneak) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops from sneaking.**&#x20;
+* [<mark style="color:orange;">**PLAYER\_DISABLE\_SPRINT**</mark>](list-of-the-activators.md#player_desactive_sprint)<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops from sprinting**
 * [<mark style="color:blue;">**PLAYER\_DISCONNECTION**</mark>](list-of-the-activators.md#player_deconnection) **: Activates when the player logs out from the server.**&#x20;
 * [<mark style="color:blue;">**PLAYER\_DISMOUNT**</mark>](list-of-the-activators.md#player_dismount) **: Activates when the player steps out from riding an entity.**&#x20;
 * [<mark style="color:blue;">**PLAYER\_DROP\_ITEM**</mark>](list-of-the-activators.md#player_drop_item) : Activates when the player drops an item.
@@ -31,14 +31,14 @@
 * [<mark style="color:orange;">**PLAYER\_EDIT\_BOOK**</mark>](list-of-the-activators.md#player_edit_book) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player made changes to the book and quill and pressed done or sign the book.**
 * [<mark style="color:orange;">**PLAYER\_EI\_BREAK**</mark>](list-of-the-activators.md#player_item_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player breaks the ExecutableItem.**
 * [<mark style="color:orange;">**PLAYER\_ENABLE\_FLY**</mark>](list-of-the-activators.md#player_active_fly) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts flying.**
-* <mark style="color:orange;">**PLAYER\_ENABLE\_GLIDE**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts gliding.**
+* <mark style="color:blue;">**PLAYER\_ENABLE\_GLIDE**</mark>**: Activates when the player starts gliding.**
 * [<mark style="color:orange;">**PLAYER\_ENABLE\_SNEAK**</mark>](list-of-the-activators.md#player_active_sneak) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts sneaking.**
 * [<mark style="color:orange;">**PLAYER\_ENABLE\_SPRINT**</mark>](list-of-the-activators.md#player_active_sprint) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts sprinting**
-* [<mark style="color:orange;">**PLAYER\_ENTER\_IN\_HIS\_PLOT**</mark>](list-of-the-activators.md#player_enter_in_his_plot) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you enter a plot from the PlotSquared plugin.**
-* <mark style="color:orange;">**PLAYER\_ENTER\_IN\_HIS\_LAND**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">**: Activates if you enter in your land or a land where you are trusted**
+* <mark style="color:orange;">**PLAYER\_ENTER\_IN\_THEIR\_LAND**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">**: Activates if you enter in your land or a land where you are trusted**
+* [<mark style="color:orange;">**PLAYER\_ENTER\_IN\_THEIR\_PLOT**</mark>](list-of-the-activators.md#player_enter_in_his_plot) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you enter a plot from the PlotSquared plugin.**
 * [<mark style="color:orange;">**PLAYER\_EQUIP\_THE\_EI**</mark>](list-of-the-activators.md#player_equip_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you put the armorpiece in the armor slot.**
   * **The plugin CMI can break** this activator be sure you have the `cmi.inventoryhat` permission set to **false**&#x20;
-* **PLAYER\_EXPERIENCE\_CHANGE: Activates when the player experience changes naturally.**
+* <mark style="color:blue;">**PLAYER\_EXPERIENCE\_CHANGE**</mark>**: Activates when the player experience changes naturally.**
 * [<mark style="color:orange;">**PLAYER\_FERTILIZE\_BLOCK**</mark>](list-of-the-activators.md#player_fertilize_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if the player fertilizes blocks with bone meal.**
 * [<mark style="color:blue;">**PLAYER\_FILL\_BUCKET**</mark>](list-of-the-activators.md#player_fill_bucket) : Activates when the player attempts to pickup water or lava with a bucket.
 * [<mark style="color:orange;">**PLAYER\_FISH\_BLOCK**</mark>](list-of-the-activators.md#player_fish_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber is on a block.**
@@ -46,35 +46,35 @@
 * [<mark style="color:orange;">**PLAYER\_FISH\_FISH**</mark>](list-of-the-activators.md#player_fish_fish) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber catches something.**
 * [<mark style="color:orange;">**PLAYER\_FISH\_NOTHING**</mark>](list-of-the-activators.md#player_fish_nothing) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player fishes nothing.**
 * [<mark style="color:orange;">**PLAYER\_FISH\_PLAYER**</mark>](list-of-the-activators.md#player_fish_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber catches a player.**
-* **PLAYER\_HARVEST\_BLOCK**: Activates when the player harvests a block (Example: Activator runs if the player right clicks a sweet berry bush that contains berries that can be harvested upon right-click)
-* [<mark style="color:blue;">**PLAYER\_HIT\_PLAYER**</mark>](list-of-the-activators.md#player_hit_player) **:** Activates when the player hits a player
+* <mark style="color:blue;">**PLAYER\_HARVEST\_BLOCK**</mark>: Activates when the player harvests a block (Example: Activator runs if the player right clicks a sweet berry bush that contains berries that can be harvested upon right-click)
 * [<mark style="color:orange;">**PLAYER\_HIT\_ENTITY**</mark>](list-of-the-activators.md#player_hit_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: **Activates when the player hits an entity**&#x20;
+* [<mark style="color:blue;">**PLAYER\_HIT\_PLAYER**</mark>](list-of-the-activators.md#player_hit_player) **:** Activates when the player hits a player
 * [<mark style="color:orange;">**PLAYER\_ITEM\_BREAK**</mark>](list-of-the-activators.md#player_item_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player breaks the item by making it loose all its durability.**
 * [<mark style="color:orange;">**PLAYER\_JUMP**</mark>](list-of-the-activators.md#player_jump) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player jumps. (In 1.21.2+, it can trigger even if the player is in the air)**
-* **PLAYER\_KICK**: Activates when the player gets kicked
+* <mark style="color:blue;">**PLAYER\_KICK**</mark>: Activates when the player gets kicked
 * [<mark style="color:orange;">**PLAYER\_KILL\_ENTITY**</mark>](list-of-the-activators.md#player_kill_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player kills an entity.**
 * [<mark style="color:orange;">**PLAYER\_KILL\_PLAYER**</mark>](list-of-the-activators.md#player_kill_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player kills a player.**
 * [<mark style="color:blue;">**PLAYER\_LAUNCH\_PROJECTILE**</mark>](list-of-the-activators.md#player_launch_projectile): Activates when the player shoots a projectile.
-* [<mark style="color:orange;">**PLAYER\_LEAVE\_HIS\_PLOT**</mark>](list-of-the-activators.md#player_leave_his_plot) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you leave a plot from the PlotSquared plugin.**
-* <mark style="color:orange;">**PLAYER\_LEAVE\_HIS\_LAND**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">**: Activates if you leave your land or a land where you are trusted**
+* <mark style="color:blue;">**PLAYER\_LEAVE\_THEIR\_LAND**</mark>**&#x20;: Activates if you leave your land or a land where you are trusted**
+* [<mark style="color:orange;">**PLAYER\_LEAVE\_THEIR\_PLOT**</mark>](list-of-the-activators.md#player_leave_his_plot) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you leave a plot from the PlotSquared plugin.**
 * [<mark style="color:blue;">**PLAYER\_LEFT\_CLICK**</mark>](list-of-the-activators.md#player_left_click) : Activates when the player left-clicks the item.
-* **PLAYER\_MEND\_THE\_EI**: Activates when the player mends the EI
-* **PLAYER\_OPEN\_INVENTORY**: Activates when the player opens inventory
-* **PLAYER\_PICKUP\_THE\_EI** : Activates when the player pick ups the ExecutableItem.
-* **PLAYER\_PORTAL**: Activates when the player uses a portal
-* **PLAYER\_RECEIVE\_EFFECT**: Activates when the player receives an effect
+* <mark style="color:blue;">**PLAYER\_MEND\_THE\_EI**</mark>: Activates when the player mends the EI
+* <mark style="color:blue;">**PLAYER\_OPEN\_INVENTORY**</mark>: Activates when the player opens inventory
+* <mark style="color:orange;">**PLAYER\_PICKUP\_THE\_EI**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> : Activates when the player pick ups the ExecutableItem.
+* <mark style="color:blue;">**PLAYER\_PORTAL**</mark>: Activates when the player uses a portal
+* <mark style="color:orange;">**PLAYER\_RECEIVE\_EFFECT**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player receives an effect
 * [<mark style="color:orange;">**PLAYER\_RECEIVE\_HIT\_BY\_ENTITY**</mark>](list-of-the-activators.md#player_receive_hit_by_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when you get hit by anything from an entity.**
 * [<mark style="color:orange;">**PLAYER\_RECEIVE\_HIT\_BY\_PLAYER**</mark>](list-of-the-activators.md#player_receive_hit_by_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when you get hit by anything from a player.**
 * [<mark style="color:orange;">**PLAYER\_RECEIVE\_HIT\_GLOBAL**</mark>](list-of-the-activators.md#player_receive_hit_global) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when you get hit by anything.**
-* **PLAYER\_REGAIN\_HEALTH**: Activates when the player regains health
+* <mark style="color:blue;">**PLAYER\_REGAIN\_HEALTH**</mark>: Activates when the player regains health
 * [<mark style="color:orange;">**PLAYER\_RESPAWN**</mark>](list-of-the-activators.md#player_respawn) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player re-spawns.**
 * [<mark style="color:blue;">**PLAYER\_RIGHT\_CLICK**</mark>](list-of-the-activators.md#player_right_click) : Activates when the player right-clicks the item. (IT REQUIRES EITHER HAVE AN ITEM IN THE HAND OR TARGET AT A BLOCK TO BE TRIGGERED, THIS IS A SPIGOT LIMITATION)
-* **PLAYER\_RIPTIDE**: Activates when the player riptides
+* <mark style="color:blue;">**PLAYER\_RIPTIDE**</mark>: Activates when the player riptides
 * [<mark style="color:orange;">**PLAYER\_SELECT\_THE\_EI**</mark>](list-of-the-activators.md#player_select_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player selects the EI item in the hotbar.**
 * [<mark style="color:orange;">**PLAYER\_SHEAR\_ENTITY**</mark>](list-of-the-activators.md#player_shear_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player shears an entity.**
-* PLAYER\_SHIELD\_BREAK\_BY\_PLAYER: Activates when the shield of the player gets broken by someone else.
-* **PLAYER\_SPAWN\_CHANGE**: Activates when the player changes their spawn
-* PLAYER\_SWAPHAND\_THE\_EI: Activates when the player swaphand the EI.
+* <mark style="color:orange;">**PLAYER\_SHIELD\_BREAK\_BY\_PLAYER**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the shield of the player gets broken by someone else.
+* <mark style="color:blue;">**PLAYER\_SPAWN\_CHANGE**</mark>: Activates when the player changes their spawn
+* <mark style="color:blue;">PLAYER\_SWAPHAND\_THE\_EI</mark>: Activates when the player swaphand the EI.
 * [<mark style="color:orange;">**PLAYER\_TARGETED\_BY\_AN\_ENTITY**</mark>](list-of-the-activators.md#player_targeted_by_an_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when an entity targets the player.
 * <mark style="color:blue;">**PLAYER\_TRAMPLE\_CROP**</mark> : Activates when the player tramples a crop.
 * [<mark style="color:orange;">**PLAYER\_UNEQUIP\_THE\_EI**</mark>](list-of-the-activators.md#player_unequip_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you unequip the EI.**
@@ -84,8 +84,8 @@
 * [<mark style="color:orange;">**PROJECTILE\_ENTER\_LIQUID**</mark>](list-of-the-activators.md#projectile_enter_liquid) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">**: Activates if the launched projectile enters and stays long enough in water**
 * [<mark style="color:orange;">**PROJECTILE\_HIT\_BLOCK**</mark>](list-of-the-activators.md#projectile_hit_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the projectile of the player hits a block.**
 * [<mark style="color:orange;">**PROJECTILE\_HIT\_ENTITY**</mark>](list-of-the-activators.md#projectile_hit_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the projectile of the player hits an entity.**
-* CUSTOM\_TRIGGER: It can be executed by running a command, or it can be scheduled.
 * [<mark style="color:blue;">**PROJECTILE\_HIT\_PLAYER**</mark>](list-of-the-activators.md#projectile_hit_player) : Activates when the projectile of the player hits a player.
+* <mark style="color:blue;">**CUSTOM\_TRIGGER**</mark>: It can be executed by running a command, or it can be scheduled.
 * <mark style="color:orange;">**EI\_ENTER\_IN\_THE\_PLAYER\_INVENTORY**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the item enters to the player's inventory. (**&#x49;f when a plugin gives an ExecutableItem to a player it doesn't trigger this activator, you should go on their support and ask them to call this method: [CLICK HERE](https://docs.ssomar.com/executableitems/developer-api#event-to-call-when-you-add-an-executableitem-in-a-player-inventory))
 * <mark style="color:orange;">**EI\_LEAVE\_THE\_PLAYER\_INVENTORY**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the item leaves the player's inventory. (** Require ProtocolLib to make this activator works properly **)**
 * [<mark style="color:orange;">**INVENTORY\_CLICK**</mark>](list-of-the-activators.md#inventory_click) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player clicks the item in its inventory.**&#x20;
