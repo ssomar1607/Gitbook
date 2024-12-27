@@ -69,7 +69,7 @@ recipeBooks:
       - pepe
       - royal_*
     folders:
-      carpeta1:
+      color:&d&lcarpeta1:
         - asd
         - archivo2
   2:

@@ -1,5 +1,9 @@
 # General Configuration
 
+
+
+## Configuration of the plugin
+
 ```yaml
 # ----------------------------------
 # -
@@ -25,6 +29,11 @@ recipeConfig:
 #Configuration related to recipe books
 recipeBook:
   recipeBookNameOfID: true #If you want inside the recipe book the name of the items to be the ID, otherwise it will be the result name
+  recipesInternal: true #If you want to be able to check the recipes inside recipes.
+  recipesInternal_ShiftClickToRecipesInternal: true #If you want to only click the items inside of recipes to get the recipe then disable this.
+  recipesInternal_checkRecipesFromInventory: false #If you want to also be able to check the recipes of the items in your inventory then enable this
+  plchdLore: true #If you want to be shown if the player can craft the item or not if the plchd doesn't match
+  plchdShowAll: true #If you want to be shown all conditions, or only the first one that doesn't match
 #Configuration related to eAnvil
 eAnvil:
   EAnvilGlobal: false #If the EAnvil can work on global anvils or can only work if its added manually
@@ -32,4 +41,66 @@ eAnvil:
 
 
 
+```
+
+## Visual configuration of recipeBook
+
+
+
+```yaml
+#Customization of the messages that the plugin send
+message:
+  command:
+    reloadMessage: "Recipes reloaded successfully!"
+    debugActivated: "You activated the debug mode"
+    debugDeactivated: "You deactivated the debug mode"
+#Customization of the aspects of the recipe book
+recipeBook:
+  title:
+    recipe: "Recipe book: %bookID% - Recipe: %recipe%"
+    mainGUI: "Recipe book: %bookID% - %page%"
+    folder: "Recipe book: %bookID% - %folder% - %page%"
+  item:
+    craftingStations:
+      craftingTable:
+        name: "Crafting Table"
+        lore: ";;;You need this crafting;;;station to craft this;;;recipe :D"
+        customModelData: "0"
+        playerHead: ""
+      furnace:
+        name: "Furnace"
+        lore: "You need this crafting;;;station to craft this;;;recipe :D"
+        customModelData: "0"
+        playerHead: ""
+    nextPage:
+      name: "Next page TEST"
+      material: "ANVIL"
+      customModelData: "0"
+      playerHead: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdhZWU5YTc1YmYwZGY3ODk3MTgzMDE1Y2NhMGIyYTdkNzU1YzYzMzg4ZmYwMTc1MmQ1ZjQ0MTlmYzY0NSJ9fX0"
+    previousPage:
+      name: "Previous page TEST"
+      material: "ANVIL"
+      customModelData: "0"
+      playerHead: ""
+    noMorePages:
+      name: "No more pages TEST"
+      material: "PLAYER_HEAD"
+      customModelData: "0"
+      playerHead: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdhZWU5YTc1YmYwZGY3ODk3MTgzMDE1Y2NhMGIyYTdkNzU1YzYzMzg4ZmYwMTc1MmQ1ZjQ0MTlmYzY0NSJ9fX0"
+    noPreviousPages:
+      name: "No previous pages TEST"
+      material: "RED_STAINED_GLASS_PANE"
+      customModelData: "0"
+      playerHead: ""
+    goBack:
+      name: "Go Back TEST"
+      material: "ANVIL"
+      customModelData: "0"
+      playerHead: ""
+    default:
+      name: ""
+      material: "BLACK_STAINED_GLASS_PANE"
+      customModelData: "0"
+      playerHead: ""
+  plchdPositive: ";;;&eYou can craft this item ^^;;;multiple lines;;;bomb"
 ```
