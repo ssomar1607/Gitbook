@@ -4,13 +4,13 @@ Here we will leave some stuff that may be useful when developing anything.
 
 ### Colors
 
-<figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
 
 ### Slots
 
 * This is a photo of the slots ID of the latest versions
 
-![](<../../.gitbook/assets/image (215).png>)
+![](<../../../.gitbook/assets/image (215).png>)
 
 ### More placeholders
 
@@ -27,18 +27,18 @@ Here we will leave some stuff that may be useful when developing anything.
 ### Effect cmd
 
 * If have no idea how the effect cmd works, take a look at this page:
-  * [https://www.digminecraft.com/game\_commands/effect\_command.php](https://www.digminecraft.com/game\_commands/effect\_command.php)
+  * [https://www.digminecraft.com/game\_commands/effect\_command.php](https://www.digminecraft.com/game_commands/effect_command.php)
 
 ### Playsound cmd
 
 * If have no idea how the playsound cmd works you should take a look here:
-  * [https://www.digminecraft.com/game\_commands/playsound\_command.php](https://www.digminecraft.com/game\_commands/playsound\_command.php)
+  * [https://www.digminecraft.com/game\_commands/playsound\_command.php](https://www.digminecraft.com/game_commands/playsound_command.php)
 
 ### (General) Particle cmd
 
 * If have no idea how the particle cmd works you should take a look at this links:
   * [https://imgur.com/gallery/tVfks](https://imgur.com/gallery/tVfks)
-  * [https://www.digminecraft.com/game\_commands/particle\_command.php](https://www.digminecraft.com/game\_commands/particle\_command.php)
+  * [https://www.digminecraft.com/game\_commands/particle\_command.php](https://www.digminecraft.com/game_commands/particle_command.php)
 
 ### (Dust) particle cmd
 
@@ -56,13 +56,13 @@ Here we will leave some stuff that may be useful when developing anything.
 ### Tellraw cmd
 
 * Normally you would use the SENDMESSAGE command, but sometimes, old commands as tellraw is useful, if don't know how to use it take a look here:
-  * [https://www.digminecraft.com/game\_commands/tellraw\_command.php](https://www.digminecraft.com/game\_commands/tellraw\_command.php)
+  * [https://www.digminecraft.com/game\_commands/tellraw\_command.php](https://www.digminecraft.com/game_commands/tellraw_command.php)
 
 ### NBT Tags
 
 *   When developing items, specially in the premium version, you maybe would like to edit some nbt tags to take control of every aspect of minecraft, to know them read this:
 
-    * [https://minecraft.fandom.com/wiki/Tutorials/Command\_NBT\_tags](https://minecraft.fandom.com/wiki/Tutorials/Command\_NBT\_tags)
+    * [https://minecraft.fandom.com/wiki/Tutorials/Command\_NBT\_tags](https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags)
 
 
 

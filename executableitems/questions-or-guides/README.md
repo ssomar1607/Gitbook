@@ -22,8 +22,8 @@
 [premium-custom-textures](premium-custom-textures/)
 {% endcontent-ref %}
 
-{% content-ref url="../../tools-for-all-plugins-score/general-questions-or-guides/utilities.md" %}
-[utilities.md](../../tools-for-all-plugins-score/general-questions-or-guides/utilities.md)
+{% content-ref url="../../tools-for-all-plugins-score/general-questions-or-guides/utilities/" %}
+[utilities](../../tools-for-all-plugins-score/general-questions-or-guides/utilities/)
 {% endcontent-ref %}
 
 ![](<../../.gitbook/assets/Executable Items Color3.png>)
