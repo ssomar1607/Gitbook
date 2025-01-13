@@ -233,6 +233,7 @@
   * [General Configuration](executablecrafting-not-available-yet/configurations/general-configuration.md)
   * [Recipe Configuration](executablecrafting-not-available-yet/configurations/recipe-configuration/README.md)
     * [Features per recipe type](executablecrafting-not-available-yet/configurations/recipe-configuration/features-per-recipe-type.md)
+    * [Recipe groups](executablecrafting-not-available-yet/configurations/recipe-configuration/recipe-groups.md)
   * [Recipe Book](executablecrafting-not-available-yet/configurations/recipe-book.md)
   * [EAnvil](executablecrafting-not-available-yet/configurations/eanvil/README.md)
     * [(1)NonEI + (2)IsEI](executablecrafting-not-available-yet/configurations/eanvil/1-nonei-+-2-isei.md)

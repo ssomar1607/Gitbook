@@ -9,6 +9,18 @@
 Type: FURNACE
 ```
 
+### typeOfBlock
+
+* Its the configuration for the type of block that the recipe block must be
+
+
+
+| typeOfBlock | Description                                                                                                                                                                           | Example                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| all         | If you want the recipe to work on all possible recipe stations.                                                                                                                       | My crafting recipe will work on all crafting tables.                                               |
+| vanilla     | If you want the recipe to only work on vanilla crafting tables.                                                                                                                       | My crafting recipe will only work on vanilla crafting table and not in EB blocks.                  |
+| EB:\<ID>    | <p>If you want the recipe to work on a specific EB <br><br>If you want to add more than one EB id instead of using this you can use placeholders conditions and use %block_eb_id%</p> | My crafting recipe will only work on the EB called "epicCrafting" so I will write EB:epicCrafting. |
+
 ### Recipe
 
 * Its the configuration of each item of the recipe, it divides up to 9 items depending on the crafting station
@@ -76,11 +88,38 @@ For example ! If you just want the recipe to match the ExecutableItem ID of the 
 
 ```yaml
 placeholdersConditions:
-  '0':
+  '0': #The condition that the recipe will only work with low health
+    Type: NUMBER
+    part1: '%player_health%'
+    comparator: INFERIOR
+    part2: '10'
+    recipeBook:
+      itemNameIfNotMet: ''
+      itemLoreIfNotMet: 'you dont know what its like to suffer'
+      itemMaterialIfNotMet: 'REDSTONE_BLOCK'
+      itemCustomModelDataIfNotMet: 0
+      itemPlayerHeadIfNotMet: ''
+      recipeStationNameIfNotMet: ''
+      recipeStationLoreIfNotMet: ''
+      recipeStationMaterialIfNotMet: ''
+      recipeStationCustomModelDataIfNotMet: 0
+      recipeStationPlayerHeadIfNotMet: ''
+  '1': #The condition that this recipe will only work in those specifics EB(s)
     Type: STRING
-    part1: '%player_name%'
+    part1: '%block_eb_id%'
     comparator: EQUALS
-    part2: Vayk_
+    part2: 'furnaceCommon<OR>furnaceEpic<OR>furnaceLegendary'
+    recipeBook:
+      itemNameIfNotMet: ''
+      itemLoreIfNotMet: ''
+      itemMaterialIfNotMet: ''
+      itemCustomModelDataIfNotMet: 0
+      itemPlayerHeadIfNotMet: ''
+      recipeStationNameIfNotMet: ''
+      recipeStationLoreIfNotMet: 'It will work on all types;;;of recipe stations'
+      recipeStationMaterialIfNotMet: ''
+      recipeStationCustomModelDataIfNotMet: 0
+      recipeStationPlayerHeadIfNotMet: ''
 ```
 
 {% hint style="info" %}
@@ -93,3 +132,4 @@ Here you can add luck perms conditions and show different results for the same r
 | %block\_eb\_id% | <p>It checks if the current block of the recipe is an ExecutableBlock and it returns the id of it.<br><br>If the block is not an eb it will return "null"</p> | Having a tier of furnaces, you only want the recipe to work on the EB furnace called "LegendaryFurnace" then you use PLAYER\_STRING to achieve this. |
 |                 |                                                                                                                                                               |                                                                                                                                                      |
 |                 |                                                                                                                                                               |                                                                                                                                                      |
+
