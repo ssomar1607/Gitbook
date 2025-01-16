@@ -1157,9 +1157,11 @@ SET_ITEM_MATERIAL slot:10 material:DIAMOND_HOE
     * AIR, WATER
     * !STONE, !COBBLESTONE
 
+{% code overflow="wrap" %}
 ```
  - SET_TEMP_BLOCK_POS x:%entity_x% y:%entity_y% z:%entity_z% world:%entity_world% material:BEDROCK time:40 bypassProtectiontrue whitelistCurrentBlock:!AIR,!WATER
 ```
+{% endcode %}
 
 {% hint style="warning" %}
 It doesn't replace blocks that have extra datas (inventory, rotation, etc)
