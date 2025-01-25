@@ -32,7 +32,7 @@ Hello, I am Special70
 
 I mainly specialize in custom item creations that can have multiple functions and features. I am open for custom item commissions so if you want to contact me, just dm me on discord (Special70#7668). I am mostly active in discord so if you have questions, I will do my best to answer those questions as soon as possible.
 
-If you want to donate me to support my service here as a plugin support, feel free to send a donation via paypal at **jeourquico@gmail.com**
+If you want to donate me to support my service here as a plugin support, feel free to send a donation via paypal at **josef.urquico@gmail.com**
 
 </details>
 
