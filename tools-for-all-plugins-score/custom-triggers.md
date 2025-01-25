@@ -33,6 +33,10 @@ If you want to trigger your custom trigger using a command it's very easy !
 The trigger ID is equals to the activator ID, you can customize your activator ID by manually editing your config file.
 {% endhint %}
 
+{% hint style="warning" %}
+**Be sure your activator id is unique**, if they are all named activator0 they will be triggered at the same time when one will be triggered.
+{% endhint %}
+
 For EI&#x20;
 
 <pre><code><strong># For all holder of the EI that has the trigger
@@ -73,7 +77,7 @@ editorIcon: LEVER
 name: '&eDefault name'
 disabledWorlds: []
 activators:
-  activator2:
+  my_happy_new_year_trigger:
     name: '&eActivator'
     option: CUSTOM_TRIGGER
     scheduleFeatures:
@@ -95,7 +99,7 @@ lore:
 - '&b&oand hold this stick to gain &6500$'
 material: STICK
 activators:
-  activator0:
+  my_money_give_trigger:
     name: '&eActivator'
     option: CUSTOM_TRIGGER
     scheduleFeatures:
@@ -122,7 +126,7 @@ lore:
 material: STONE
 dropType: IN_THE_INVENTORY
 activators:
-  activator0:
+  my_drop_ei_trigger:
     name: '&eActivator'
     option: CUSTOM_TRIGGER
     commands:
