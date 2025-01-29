@@ -1,9 +1,9 @@
 # Player & Target Commands
 
 {% hint style="warning" %}
-You need to know that by default all commands are run by the console, so if you want that the player run the command add [**SUDO**](player-and-target-commands.md#sudo) or [**SUDOOP**](player-and-target-commands.md#sudoop) before.&#x20;
+You need to know that by default all commands are run by the console, so if you want that the player run the command add [**SUDO**](player-and-target-commands.md#sudo) or [**SUDO\_OP**](player-and-target-commands.md#sudo_op) before.&#x20;
 
-_(Click on SUDO or SUDOOP for more infos)_
+_(Click on SUDO or SUDO\_OP for more infos)_
 
 \
 **Don't use this option for vanilla commands and CUSTOM COMMANDS, to use vanilla commands properly go to FAQ and "How to use vanilla commands",**
