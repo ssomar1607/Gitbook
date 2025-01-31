@@ -10,8 +10,8 @@
 [items-explanations](items-explanations/)
 {% endcontent-ref %}
 
-{% content-ref url="methods/" %}
-[methods](methods/)
+{% content-ref url="methods-or-template/" %}
+[methods-or-template](methods-or-template/)
 {% endcontent-ref %}
 
 {% content-ref url="custom-projectiles-implementation/" %}
