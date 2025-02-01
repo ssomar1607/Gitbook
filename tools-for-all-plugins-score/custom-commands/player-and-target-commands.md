@@ -1106,7 +1106,11 @@ You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/b
 - SET_ITEM_COOLDOWN group:my_cooldown_group cooldown:10
 ```
 
+more info for the group arg:
 
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+{% embed url="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-2" %}
 
 ### SET\_ITEM\_MATERIAL&#x20;
 
