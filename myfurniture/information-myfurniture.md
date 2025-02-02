@@ -2,9 +2,21 @@
 
 ## Description
 
-MyFurniture is a plugin currently in development. I wanted to add Furniture in Minecraft for fun so I developed this small plugin to see what is it possible to do. I just want to have feedbacks on this first version.
+MyFurniture allows you to add a bunch of Furniture to your server, and adding unique activators on them! With MyFurniture, the possibilities are truly endless.&#x20;
 
-{% embed url="https://www.spigotmc.org/resources/screenshop.116669/" %}
+Your furniture will have a perfect hit and bounding box. MyFurniture is not like all other simple plugin that create 1\*1 bounding box. With MF the furniture bounding box match with the your custom texture ! Normally you only see that in custom mod ! But now its possible without client edits with MyFurniture.
+
+### Free version
+
+{% embed url="https://www.spigotmc.org/resources/79024" %}
+
+{% embed url="https://modrinth.com/plugin/myfurniture" %}
+
+### Premium version
+
+To access to the premium version you can subscribe on the discord into the channel subscription.
+
+{% embed url="https://discord.com/channels/701066025516531753/1333041782010937385" %}
 
 ## Support
 
@@ -15,5 +27,3 @@ MyFurniture is a plugin currently in development. I wanted to add Furniture in M
 ### Something is not in the wiki or poorly explained ?
 
 {% embed url="https://discord.com/invite/TRmSwJaYNv" %}
-
-### [Support the development](https://buy.stripe.com/aEU7sX66l3O82MUdQT)

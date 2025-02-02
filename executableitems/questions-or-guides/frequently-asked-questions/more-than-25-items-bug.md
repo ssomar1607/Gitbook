@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # More than 25 items bug ??
 
 _Hey !! I installed the plugin a while ago, I have created like 6 items, when I try to add another one a message of error pops up saying_

@@ -227,6 +227,23 @@
     * [Detect player entry/leave from a worldguard region](executableevents/question-or-guides/tutorials/detect-player-entry-leave-from-a-worldguard-region.md)
 * [⌨️ Commands & Permissions](executableevents/commands-and-permissions.md)
 
+## MyFurniture
+
+* [📌 Information MyFurniture](myfurniture/information-myfurniture.md)
+* [🤖 Question | Guides](myfurniture/question-or-guides/README.md)
+  * [Frequently Asked Questions](myfurniture/question-or-guides/frequently-asked-questions/README.md)
+    * [Install/update/errors](myfurniture/question-or-guides/frequently-asked-questions/install-update-errors/README.md)
+      * [How to install correctly](myfurniture/question-or-guides/frequently-asked-questions/install-update-errors/how-to-install-correctly.md)
+      * [How to update correctly](myfurniture/question-or-guides/frequently-asked-questions/install-update-errors/how-to-update-correctly.md)
+      * [Installation errors \[logs\]](myfurniture/question-or-guides/frequently-asked-questions/install-update-errors/installation-errors-logs.md)
+      * [Plugin doesn't work 😡😡](myfurniture/question-or-guides/frequently-asked-questions/install-update-errors/plugin-doesnt-work.md)
+    * [Import your own Furniture](myfurniture/question-or-guides/frequently-asked-questions/import-your-own-furniture.md)
+    * [How to use vanilla commands](myfurniture/question-or-guides/frequently-asked-questions/how-to-use-vanilla-commands.md)
+    * [Server chat spamming](myfurniture/question-or-guides/frequently-asked-questions/server-chat-spamming.md)
+  * [Tutorials](myfurniture/question-or-guides/tutorials/README.md)
+    * [Custom enchants by lore](myfurniture/question-or-guides/tutorials/custom-enchants-by-lore.md)
+* [⌨️ Commands & Permissions](myfurniture/commands-and-permissions.md)
+
 ## ExecutableCrafting - NOT AVAILABLE YET
 
 * [📌 Information EC](executablecrafting-not-available-yet/information-ec.md)
@@ -240,11 +257,6 @@
     * [(1)NonEI + (2)IsEI](executablecrafting-not-available-yet/configurations/eanvil/1-nonei-+-2-isei.md)
     * [(1)IsEI+(2)IsEI](executablecrafting-not-available-yet/configurations/eanvil/1-isei+-2-isei.md)
 * [⌨️ Commands & Permissions](executablecrafting-not-available-yet/commands-and-permissions.md)
-
-## MyFurniture
-
-* [📌 Information MyFurniture](myfurniture/information-myfurniture.md)
-* [⌨️ Commands & Permissions](myfurniture/commands-and-permissions.md)
 
 ## CustomPiglinsTrades
 

@@ -6,7 +6,7 @@ The free version of ExecutableItems is like a free-trial of it, to know how it w
 
 ### Amount of items
 
-* Tired of creating items and receiving that message of "hey, you have reached your limit, in the free version you can only have 25 items max.." ? Well, in the premium version you can create as many items as you want, there is no limit, and also.. as a tip, since you will have a lot of items, wouldn't be a bad idea organizing them in folders. 😎
+* Tired of creating items and receiving that message of "hey, you have reached your limit, in the free version you can only have 500 items max.." ? Well, in the premium version you can create as many items as you want, there is no limit, and also.. as a tip, since you will have a lot of items, wouldn't be a bad idea organizing them in folders. 😎
 
 ### Activators
 

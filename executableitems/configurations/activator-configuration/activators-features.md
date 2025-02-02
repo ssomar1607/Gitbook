@@ -628,6 +628,8 @@ And you can blacklist all things by adding a ! before, example:
     ALL_FURNACES,
     ALL_PLANKS,
     ALL_LOGS,
+    ALL_STRIPPED_LOGS,
+    ALL_STRIPPED_WOODS,
     ALL_WOODS,
     ALL_ORES,
     ALL_WOOLS,
@@ -643,9 +645,11 @@ And you can blacklist all things by adding a ! before, example:
     ALL_NORMAL_TERRACOTTA,
     ALL_GLAZED_TERRACOTTA,
     ALL_CONCRETE,
+    ALL_CONCRETE_POWDERS,
     ALL_GLASS,
     ALL_STAINED_GLASS,
-    ALL_SHULKER_BOXES
+    ALL_SHULKER_BOXES,
+    ALL_LEAVES,
     ALL_CARPETS;
 ```
 

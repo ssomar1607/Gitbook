@@ -1,7 +1,5 @@
 # ⌨️ Commands & Permissions
 
-
-
 ## Permissions
 
 **TIP for beginners:**
@@ -36,12 +34,12 @@ To give the permissions of all furniture, I advice you to download a permission 
 #### Download the default furniture
 
 * Command: <mark style="color:blue;">**/mf download-defaukt-pack**</mark>
-* Permission: `eb.cmd.download-default-pack`
+* Permission: `mf.cmd.download-default-pack`
 
 #### Load the furniture from the textures pack that you placed in \_\_textures\_\_
 
 * Command: <mark style="color:blue;">**/mf pack**</mark>
-* Permission: `eb.cmd.pack`
+* Permission: `mf.cmd.pack`
 
 #### Open the editor / menu
 
@@ -51,7 +49,7 @@ To give the permissions of all furniture, I advice you to download a permission 
 #### Open the editor to edit a specific MF
 
 * Command: <mark style="color:blue;">**/mf edit {FurnitureID}**</mark>
-* Permission: mf`.cmd.edit`
+* Permission: `mf.cmd.edit`
 
 #### Open the a gui with the MF(s) placed
 
