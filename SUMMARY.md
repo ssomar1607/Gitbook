@@ -240,8 +240,7 @@
     * [Import your own Furniture](myfurniture/question-or-guides/frequently-asked-questions/import-your-own-furniture.md)
     * [How to use vanilla commands](myfurniture/question-or-guides/frequently-asked-questions/how-to-use-vanilla-commands.md)
     * [Server chat spamming](myfurniture/question-or-guides/frequently-asked-questions/server-chat-spamming.md)
-  * [Tutorials](myfurniture/question-or-guides/tutorials/README.md)
-    * [Custom enchants by lore](myfurniture/question-or-guides/tutorials/custom-enchants-by-lore.md)
+  * [Tutorials](myfurniture/question-or-guides/tutorials.md)
 * [⌨️ Commands & Permissions](myfurniture/commands-and-permissions.md)
 
 ## ExecutableCrafting - NOT AVAILABLE YET
