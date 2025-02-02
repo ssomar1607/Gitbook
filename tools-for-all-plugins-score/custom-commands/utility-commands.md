@@ -96,13 +96,13 @@ The command will be stopped if the player is offline
 
 ```
 - 'RANDOM RUN: 1'
-- 'LOOP START: 5'
+- 'LOOP START: 5' # (50%)
 - SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
 - LOOP END
-- 'LOOP START: 3'
+- 'LOOP START: 3' # (30%)
 - SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
 - LOOP END
-- 'LOOP START: 2'
+- 'LOOP START: 2' # (20%)
 - SENDMESSAGE &aYOU GOT DIAMOND! +++ give %player% diamond 1
 - LOOP END
 - RANDOM END
@@ -301,25 +301,25 @@ The (5%) percentage stuff is not part of the command. It's written here in the w
 
 ```yaml
 - 'RANDOM RUN: 1'
-- give %player% dirt #(50%)
-- give %player% diamond #(50%)
+- give %player% dirt #(1/2 = 50%)
+- give %player% diamond #(1/2 = 50%)
 - RANDOM END
 ```
 
 ```yaml
 - 'RANDOM RUN: 1'
-- give %player% dirt #(33%)
-- give %player% diamond #(33%)
-- give %player% diamond #(33%)
+- give %player% dirt #(1/3 = 33%)
+- give %player% diamond #(1/3 = 33%)
+- give %player% diamond #(1/3 = 33%)
 - RANDOM END
 ```
 
 ```yaml
 - 'RANDOM RUN: 1'
-- give %player% dirt #(25%)
-- give %player% dirt #(25%)
-- give %player% diamond #(25%)
-- give %player% diamond #(25%)
+- give %player% dirt #(1/4 = 25%)
+- give %player% dirt #(1/4 = 25%)
+- give %player% diamond #(1/4 = 25%)
+- NOTHING*1 #(1/4 = 25%)
 - RANDOM END
 ```
 
@@ -327,10 +327,10 @@ The (5%) percentage stuff is not part of the command. It's written here in the w
 
 ```yaml
 - 'RANDOM RUN: 1'
-- 'LOOP START: 99' #(99%)
-- give %player% dirt 1
+- 'LOOP START: 99' 
+- give %player% dirt 1  #(99/100 = 99%)
 - LOOP END
-- give %player% diamond 1 #(1%)
+- give %player% diamond 1 #(1/100 = 1%)
 - RANDOM END
 ```
 
@@ -348,5 +348,5 @@ It supports placeholders
 
 {% embed url="https://replit.com/@Vayk1/Score-or-RANDOM-RUN-generator?v=1" %}
 
-Or you could visit ([https://special70.github.io/item%20config%20editors/executableitems\_editor.html](https://special70.github.io/item%20config%20editors/executableitems\_editor.html)) where you can adjust the rates and have a button that evens out the rates across all of your commands. \
+Or you could visit ([https://special70.github.io/item%20config%20editors/executableitems\_editor.html](https://special70.github.io/item%20config%20editors/executableitems_editor.html)) where you can adjust the rates and have a button that evens out the rates across all of your commands. \
 Just click the RANDOM RUN button in that website
