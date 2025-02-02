@@ -4,7 +4,7 @@
 * [<mark style="color:orange;">**PLAYER\_BED\_ENTER**</mark>](list-of-the-activators.md#player_bed_enter) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-clicks a bed.**
 * [<mark style="color:orange;">**PLAYER\_BED\_LEAVE**</mark>](list-of-the-activators.md#player_bed_leave) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player leaves the bed.**
 * [<mark style="color:blue;">**PLAYER\_BEFORE\_DEATH**</mark>](list-of-the-activators.md#player_before_death) : Saves the player from certain death and activates.
-* [<mark style="color:orange;">**PLAYER\_BLOCK\_BREAK**</mark>](list-of-the-activators.md#player_block_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player mines/breaks a block.**
+* [<mark style="color:orange;">**PLAYER\_BLOCK\_BREAK**</mark>](list-of-the-activators.md#player_block_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player mines / breaks a block.**
 * <mark style="color:orange;">**PLAYER\_BLOCK\_HIT\_OF\_ENTITY**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player blocks a hit that comes from an entity with the shield.
 * <mark style="color:orange;">**PLAYER\_BLOCK\_HIT\_OF\_PLAYER**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player blocks a hit that comes from a player with the shield.
 * [<mark style="color:orange;">**PLAYER\_BLOCK\_PLACE**</mark>](list-of-the-activators.md#player_block_place) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player places a block.**
@@ -15,7 +15,7 @@
 * [<mark style="color:orange;">**PLAYER\_CLICK\_ON\_ENTITY**</mark>](list-of-the-activators.md#player_click_on_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player click on an entity.**
 * [<mark style="color:blue;">**PLAYER\_CLICK\_ON\_PLAYER**</mark>](list-of-the-activators.md#player_click_on_player) : Activates when the player click on a player.
 * [<mark style="color:orange;">**PLAYER\_CONNECTION**</mark>](list-of-the-activators.md#player_connection) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player log into the server. (Does not activate when you log out)**
-* [<mark style="color:blue;">**PLAYER\_CONSUME**</mark>](list-of-the-activators.md#player_consume) : Activates when the player successfully eat/consume the item.
+* [<mark style="color:blue;">**PLAYER\_CONSUME**</mark>](list-of-the-activators.md#player_consume) : Activates when the player successfully eat / consume the item.
 * <mark style="color:blue;">**PLAYER\_CONSUME\_THE\_EI**</mark>  : Activates when the player successfully eat/consume the EI itself
 * <mark style="color:blue;">**PLAYER\_CUSTOM\_LAUNCH**</mark> : Activates when the player launch a projectile with the commands: LAUNCH, LOCATEDLAUNCH and LAUNCHENTITY.
 * [<mark style="color:blue;">**PLAYER\_DEATH**</mark>](list-of-the-activators.md#player_death) : Activates when the player dies.
