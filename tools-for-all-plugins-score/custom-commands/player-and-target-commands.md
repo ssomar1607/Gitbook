@@ -120,7 +120,21 @@ _Sorted by alphabetical order_
 - ABSORPTION amount:5 time:200
 ```
 
+{% hint style="warning" %}
+Your MAX\_ABSORPTION attribute value must be above 0 !
 
+Check the value by typing : /attribute PLAYER\_NAME minecraft:max\_absorption base get
+
+And you can increase it by typing: /attribute PLAYER\_NAME minecraft:max\_absorption base set 20
+{% endhint %}
+
+```
+# You can do that to temporary up the max_absorption value of the player
+- attribute %player% minecraft:max_absorption base set 5
+- ABSORPTION amount:5 time:200
+- DELAYTICK 200
+- attribute PLAYER_NAME minecraft:max_absorption base set 0
+```
 
 ### ACTIONBAR
 
