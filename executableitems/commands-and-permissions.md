@@ -133,6 +133,16 @@ It works even with offline players
 
 #### Give command
 
+
+
+{% hint style="danger" %}
+As much as possible, in the bracket besides the id field, do not leave whitespaces unattended
+
+Correct: /ei give Special70 kamote{Variables:{a:"1",b:"2",c:"3"\}}
+
+Wrong: /ei give Special70 kamote{Variables:{a:"1", b:"2", c:"3"\}}
+{% endhint %}
+
 * Command: (The variables and usage part besides the id is optional)
   * <mark style="color:blue;">**/ei give {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity}**</mark> \[giveOfflinePlayer default true]
   * Examples:&#x20;
