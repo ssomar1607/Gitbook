@@ -1,46 +1,41 @@
 # Item Features
 
-{% hint style="info" %}
-**Usage of HEX Colors in 1.16**
-
-* Instructions:
-  * Go to a site where it can help you choose a color of your choice for the hex color code. I recommend [this.](https://htmlcolorcodes.com/)
-  * Pick a color of your choice and note down the hex color of it. [Reference](https://imgur.com/a/tNWtA0a)
-  * Add # on the beginning of the hex code and this is what you will type in-game (`#DB6725`)
-  * **`#DB6725&lPractice`** [ingame](https://imgur.com/a/7umxduF) look
-{% endhint %}
-
 ## Basic Settings
 
-#### MATERIAL
+Here you will learn about the basic features of the item.
 
-* Info: The base Minecraft item of the executable item
-* Example:&#x20;
+### Material of the item
+
+* Info: The material of the Minecraft item of the Executable Item
+* Example: If I want the ExecutableItem to have a base item as DIAMOND then it would be
 
 ```yaml
 material: DIAMOND
 ```
 
-{% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html" %}
+* You can check the material list information on this link: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
+* If you want to setup as material of the item a custom head check this link [https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings).
+* Required for the item to work: YES
 
-* For the head settings [**Refer to here**](item-features.md#head-settings).
-* Required: YES
+### Name or DisplayName of the item
 
-#### NAME
-
-* Info: The name of the item
-* Example:&#x20;
+* Info: The display name of the item. Its the visible name.
+* Example: If I would like my item to have as display name a red title "Epic Sword" then it would be
 
 ```yaml
 name: '&cEpic Sword'
 ```
 
-* For 1.16 HEX, refer to the information at the top of this page.
-* Required: YES
+* If you want to use on your display name HEX Colors you can do this:
+  * You have to go to a site where it can help you to choose a color of your choice to get the hex color code. We recommend [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
+  * Then pick the color of your choice and note down / copy the hex color of it. [Reference](https://imgur.com/a/tNWtA0a)
+  * With that hex color code you have to add "#" at the beginning and that is what will be before what you want to color. #\<HEX\_COLOR\_CODE>\<What you want to color>
+  * Finally you will have something like **`#DB6725&lPractice`** and it will look with the color you selected [in game](https://imgur.com/a/7umxduF).
+* Required for the item to work: YES
 
-#### LORE
+### Lore or description of the item
 
-* Info: The lore of the item
+* Info: The lore or description of the item
 * Example:
 
 ```yaml
@@ -56,20 +51,16 @@ lore:
 - '&fthat you clicked and sometimes the blocks around it.'
 ```
 
-
-
 * Required: YES
-* Placeholders that you can use in the lore, %player%, [%usage%](item-features.md#hide-usage-1.14+), and the placeholders of your custom variables.\
-  (EXCEPTION) If you allow your player to add some new contents to the lore like custom enchants, custom text. If I refresh it will delete it. So to not delete it, I will not refresh the lore. But, If I don't refresh the lore, it means that the custom placeholders in lore (%usage% and variables placeholders) will not be updated.\
-  To conclude: EXTRA THINGS IN THE LORE = NO REFRESH = NO custom placeholders of EI in the lore please.
+* You can use placeholders in the lore. Just keep in mind if you use placeholders outside the plugin and then you add some new contents to the lore like custom enchants, custom text. If one of the placeholders refreshes then everything added outside Ssomar plugins will be deleted. To avoid this you will need not to refresh the lore, but that means that the placeholders will not be updated. You have to choose the one you prefer. To conclude: EXTRA THINGS IN THE LORE means NO REFRESH means NO custom placeholders of EI in the lore please.
 
 {% hint style="info" %}
-As a pro tip you can leave an empty space using the GUI tiping "\&f" without the "".
+To leave an empty space between lore lines you can add '' in the config file. If you are editing the lore inside Minecraft using the custom GUI you would need to use '\&f' then.
 {% endhint %}
 
-#### GLOW
+### Glowing effect (enchanted glowing)
 
-* Info: Gives the executable item a glow/enchanted look.
+* Info: Boolean value that selects if gives the executable item a glow/enchanted effect look.
 * Example:&#x20;
 
 ```yaml
@@ -78,11 +69,9 @@ glow: true
 
 * Required: NO (Default: false)
 
+### Disable the enchant glowing
 
-
-#### disableEnchantGlow (1.20.5++)
-
-* Info: Forces the item to not have the glow effect even if it is enchanted.&#x20;
+* Info: Its only available in 1.20.5 and above. Boolean value that forces the item to not have the glow effect even if it is enchanted.&#x20;
 * Example:&#x20;
 
 ```yaml
@@ -90,46 +79,14 @@ disableEnchantGlow : true
 ```
 
 {% hint style="info" %}
-You can also remove the vanilla enchant from the nether star for example
+TIP: You can also remove the glowing effect from some vanilla items such as the nether star for example.
 {% endhint %}
 
 
 
-#### GLOW DROP / GLOW DROP COLOR
+### Display conditions on the lore of the item
 
-* Info: When the item is dropped, it has a glow effect
-* Possible colours:
-
-{% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html" %}
-
-* Example:&#x20;
-
-```yaml
-glowEffect: true
-glowDropColor: DARK_BLUE
-```
-
-* Required: NO (Default: false)
-
-#### DISPLAY NAME ON DROP
-
-* Info: Displays the custom name of the item when it is dropped.
-
-![](https://media.discordapp.net/attachments/922829586427957298/976411048498307072/unknown.png)
-
-* Example:&#x20;
-
-```yaml
-displayNameOnDrop: true
-```
-
-* Required: NO (Default: false)
-
-
-
-#### DISPLAY CONDITIONS
-
-* Info: Allows you to display conditions on the lore.
+* Info: It allows you to display conditions on the lore of the item.
 * Example:&#x20;
 
 <figure><img src="../../../.gitbook/assets/Minecraft__1.19.4_-_Multiplayer_3rd-party_Server_2023-07-01_16-33-17.gif" alt=""><figcaption></figcaption></figure>
@@ -146,42 +103,39 @@ displayConditions:
 
 * Required: NO&#x20;
 
-#### DURABILITY (1.20.5 --)
+### Durability of the item
 
-* Info: Allows you to customize the durability of the EI item equal or below it's maximum vanilla durability
-* Example:&#x20;
-
-```yaml
-durability: 150
-```
-
+* Info: Select the durability value of the item.
+  * For versions 1.20.5— The durability value must be  equal or below the maximum vanilla durability for the item selected.
+  * Example:&#x20;
+    * <pre class="language-yaml"><code class="lang-yaml"><strong>durability: 150   
+      </strong></code></pre>
+  * For versions 1.20.5++ The durability option can be customized, enabling new features such as the sync of usage and the durability value. And allow to select custom max durability.
+  * Example:
+    * ```yaml
+      isDurabilityBasedOnUsage: true
+      maxDurability: 20 
+      durability: 19
+      ```
 * Required: NO (Default: Max Durability of the Material
 
-#### DURABILITY (1.20.5 ++)
+### Enchantments of the item
 
-```yaml
-isDurabilityBasedOnUsage: true
-maxDurability: 20 
-durability: 19
-```
-
-#### ENCHANTMENTS
-
-* Info: Sets the enchantments the executable item will have
+* Info: Sets the initial enchantments the executable item will have when given.
 * Example:
 
 ```yaml
 enchantments:
-  enchantment1:
+  enchantment1: #ID Of this enchantment, you can add as many as you want
     enchantment: sharpness
     level: 1
 ```
 
 * Required: NO
 
-#### UNBREAKABLE
+### Unbreakable
 
-* Info: Whether the executable item will be unbreakable or not
+* Info: Boolean value that selects if the executable item will be unbreakable or not
 * Example:&#x20;
 
 ```yaml
@@ -190,59 +144,67 @@ unbreakable: true
 
 * Required: NO (Default: false)
 
-#### ATTRIBUTES (1.12+)
+### Atributtes of the item feature (1.12++)
 
-{% hint style="info" %}
-**(For 1.12 ONLY)** (Other versions : check below :smile:)
+* Info: You can select the attributes of the ExecutableItem.
+  * Attribute: The type of attribute. List here [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/attribute/Attribute.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/attribute/Attribute.html)
+  * UUID: Its a code that minecraft needs to assign the attribute modifiers. You can ignore it.
+  * Name: Its the display name of the Attribute Modifier. Its useful for you to write what it does. It doesn't affect in anything more than visualizing it in the GUI.
+  * Operation: Type of operation that the AttributeModifier will do. List here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html)
+  * Amount: The value for the AttributeModifier, it will be applied to the attribute using the operation selected.
+  * Slot: The slot that the AttributeModifier will work on.
+  * Example:
 
-**Attributes** are now available in **1.12** ! (<mark style="color:orange;">**It requires the premium version**</mark>)
-
-Generate your item with attributes on a website like that **https://mapmaking.fr/give1.12/** then give you the item to you, take it in your hand and do **/ei create** it will import them automatically.
-{% endhint %}
-
-* Info: Sets the item's vanilla attributes
-  * Attribute: To what kind of vanilla attribute it will be. [Reference](https://minecraft.fandom.com/wiki/Attribute#Vanilla\_modifiers)
-
-{% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/attribute/Attribute.html" %}
-
-* UUID: "Code" For the Attribute Modifiers (IGNORE THIS)
-* Name: Name of the modifier (Doesn't do anything new)
-* Operation:&#x20;
-
-{% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html" %}
-
-* Amount: The value for the attribute. Negative value can be used.
-* Slot: To which slot the attribute will work
-* Example:
-
-```yaml
-attributes:
-  attribute1:
+<pre class="language-yaml"><code class="lang-yaml"><strong>attributes:
+</strong>  attribute1: #Id of this attribute, you can add as many as you want
     attribute: GENERIC_ARMOR
-    name: '&eDefault name'
+    name: '&#x26;eDefault name'
     uuid: 8d6b9b6a-c84d-4c76-9b4d-81a1f44a04a0
     amount: 1.0
     operation: ADD_NUMBER
     slot: HAND
-```
+</code></pre>
+
+{% hint style="info" %}
+**If you are using 1.12 version you will need to follow these steps:**
+
+* This process requires the premium version of EI.
+* Generate your item with attributes on a website. We suggest [https://mapmaking.fr/give1.12/](https://mapmaking.fr/give1.12/)
+* Then give the item to yourself inside Minecraft
+* While holding it on your hand run the /ei create \<id> command
+* And that's it ! Now your EI has the attributes imported automatically.
+{% endhint %}
 
 * Required: NO
 
-**keepDefaultAttributes: It keeps or not the default attributes**
+### **Keep default attributes**
+
+* Info: Boolean value for keeping or not the default attribute of the item.
+* Example:
+
+```yaml
+keepDefaultAttributes: false
+```
+
+* On this link there is a tutorial for attributes, and its features.
 
 {% embed url="https://youtu.be/HqyF0QBYIY4" %}
 
-**ignoreKeepDefaultAttributesFeature: It ignores the setting of keep default attributes. (Useful for the third case)**
+### **ignoreKeepDefaultAttributesFeature:**&#x20;
 
-
+* **In**fo: It ignores the setting of keep default attributes. Its useful for the third case in this table explanation:
 
 <table><thead><tr><th width="355">Before 1.21</th><th width="347">After 1.21</th></tr></thead><tbody><tr><td><p>EI STONE_PICKAXE </p><ul><li>keepDefaultAttributes YES </li><li>No other attributes </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li></ul></li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES</li><li>No other attributes </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li></ul></li></ul></td></tr><tr><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO </li><li>No other attributes </li><li>When in Main Hand</li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO</li><li>No other attributes</li><li>NOTHING</li></ul></td></tr><tr><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>+ 2 attack damage (blue)</li><li>-2.8 attack speed (red)</li><li>1 armor (blue)</li></ul></li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li><li>1 armor (blue)</li></ul></li></ul></td></tr><tr><td><p>EI STONE_PICKAXE </p><ul><li>keepDefaultAttributes NO</li><li>1 armor attribute</li><li><p>When in Main Hand:</p><ul><li>1 armor (blue)</li></ul></li></ul></td><td><p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>1 armor (blue)</li></ul></li></ul></td></tr></tbody></table>
 
+* Example:
 
+```yaml
+ignoreKeepDefaultAttributesFeature: true
+```
 
-#### CUSTOM MODEL DATA <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> (1.14+)
+### <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> Custom model data (1.14++)
 
-* Info: Sets the Custom Model Data of the item
+* Info: Integer to set the value of the customModelData feature of the item. Useful to create different textures for an item.
 * Example:&#x20;
 
 ```yaml
@@ -250,31 +212,35 @@ customModelData: 2232
 ```
 
 * Required: NO
-* Tutorial:
+* Tutorial: [https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures](https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures)
 
-{% content-ref url="../../questions-or-guides/premium-custom-textures/" %}
-[premium-custom-textures](../../questions-or-guides/premium-custom-textures/)
-{% endcontent-ref %}
+### Item Rarity features (1.20.5+)
 
-#### Rarity (1.20.5+)
+* Info: Rarity is a vanilla statistic applied to items and blocks to signify their value and ease in obtaining. It has no effect on gameplay whatsoever. There are four rarity tiers: Common, Uncommon, Rare, and Epic.
+  * enableRarity: Boolean that represents if the feature is enabled or not
+  * rarity: Type of rarity
+* Example:
 
-* Info: Sets the rarity of the item
+```yaml
+itemRarity:
+  enableRarity: false
+  rarity: COMMON
+```
 
-#### Default mining speed (1.20.5+)
+### Equippable features
 
-* Info: Sets the default mining speed of the item
-
-#### Damage per block break (1.20.5+)
-
-* Info: Add custom rules depending on the block broken, each rule has three settings :&#x20;
-  * Materials
-  * Mining speed
-  * true/false setting to set whether or not this rule is considered the optimal tool for the blocks listed by this rule and will drop items.
-
-#### Equippable
-
-* Info: If enabled, this item can be equipped in the specified slot.
-* Example
+* Info: This section configures the behavior of an equippable item. When enabled, the item can be equipped into a designated slot, optionally triggering a sound effect. You can also specify a custom model for the equipped item, define whether it takes damage when the wearer is hurt, and set flags to allow or restrict swapping and disposal. Additionally, you can restrict which entities are allowed to equip the item.
+  * enable: Set to true to enable equipping for this item
+  * slot: The equipment slot (e.g., BODY, HEAD) where the item is equipped
+  * enableSound: Boolean to play a sound when the item is equipped
+  * sound: Sound effect to play when equipped
+  * equipModel: Optional custom model for the equipped item (e.g., "mynamespace:mymodel")
+  * cameraOverlay: Optional custom camera overlay when the item is equipped
+  * isDamageableOnHurt: Boolean that selects if the item loses durability when the wearer is hurt
+  * isDispensable: Boolean that selects if the item can be disposed of (removed/dropped)
+  * isSwappable: Boolean that selects if the item can be swapped with another item
+  * allowedEntities: List of entities permitted to equip this item
+* Example:
 
 ```yaml
 equippableFeatures:
@@ -283,8 +249,8 @@ equippableFeatures:
     enableSound: false
     sound: ITEM_ARMOR_EQUIP_DIAMOND
 
-    equipModel: "" # "mynamespace:mymodel"
-    cameraOverlay"" # "mynamespace:mymodel"
+    equipModel: "" # Example: "mynamespace:mymodel"
+    cameraOverlay: "" # Example: "mynamespace:mymodel"
 
     isDamageableOnHurt: false
     isDispensable: true
@@ -294,19 +260,23 @@ equippableFeatures:
      - PLAYER
 ```
 
-#### Repairable
+### Repairable features
 
-* Info: For repairable tools
+* Info: Features related to when the ExecutableItem is reppaired.
+  * enable: Boolean value that selects if the feature is enabled or not
+  * repairCost: Integer value that represents the cost of repairing it on the Anvil
+* Example:
 
 ```yaml
 repairableFeatures:
     enable: false
-    repairCost: 2
+    repairCost: 2 
 ```
 
-#### glider
+### Glider
 
-* Info: If enabled , you can glide with the item like the elytras
+* Info: Feature to allow gliding with the item as you would normally do with the vanilla item "elytra".
+* Example:
 
 ```yaml
 glider: false
@@ -327,6 +297,102 @@ itemModel: "" # "mynamespace:mymodel"
 ```yaml
 tootipModel: "" # "mynamespace:mymodel"
 ```
+
+### Tool Rules (1.20.5++)
+
+Info: Here you can select the rules of the tools.
+
+#### Enable
+
+* Info: Boolean value to select if the Tool Rules are enabled or not.
+* Example:
+
+```yaml
+toolRules:
+  enable: true
+```
+
+#### Default mining speed
+
+* Info: Float value to set the default mining speed of the ExecutableItem.
+* Example:
+
+```yaml
+toolRules:
+  enable: true
+  defaultMiningSpeed: 1.0
+```
+
+#### Damage per block break
+
+* Info: Integer value to set as the durability value which will be taken after the ExecutableItem breaks a block.&#x20;
+* Example:
+
+```yaml
+toolRules:
+  enable: false
+  damagePerBlock: 1
+```
+
+#### Specific tool rules
+
+* Info: You can select the mining speed, droppable for certain blocks with the ExecutableItem, in order of tool customization.
+  * miningSpeed: Float value to set the minig speed of the ExecutableItem for the selected blocks on the tool rule.
+  * correctForDrops: Boolean value that represents if the block will be dropped or not using the ExecutableItems.
+  * blocks: List of BLOCKS to apply the tool rules to.
+* Example:
+
+```yaml
+toolRules:
+  toolRule0: #ID Of this tool rule, you can add as many as you want
+    miningSpeed: 1.0
+    correctForDrops: true
+    blocks:
+    - STONE
+  enable: true
+```
+
+### Features related to the item dropped
+
+Here you will learn about features that are only visible when the item is dropped on the ground.
+
+#### Glowing on drop
+
+* Info: When the item is dropped, it has a glow effect
+* Example:&#x20;
+
+```yaml
+dropOptions:
+  glowDrop: false
+```
+
+* Required: NO (Default: false)
+
+#### Glowing color when dropped
+
+* Info: If the item has glowEffect enabled then its possible to select the color of the glowing effect when dropped.
+* Possible colours: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)
+* Example:
+
+```yaml
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+```
+
+#### Display name when the item is dropped
+
+* Info: Select if the item will show the display name displayed as a floating text when it is dropped.
+* Example:&#x20;
+
+```yaml
+dropOptions:
+  displayNameDrop: true
+```
+
+* Required: NO (Default: false)
+
+
 
 ## NBT Tags
 
@@ -616,10 +682,8 @@ The without plugin method requires to edit direclty your item FILE, it's not pos
 
 * Instructions:
 
-<!---->
-
-* [ ] Set the `material: PLAYER_HEAD`
-* [ ] Visit a custom heads site similar this one
+- [ ] Set the `material: PLAYER_HEAD`
+- [ ] Visit a custom heads site similar this one
 
 {% embed url="https://minecraft-heads.com/custom-heads" %}
 
@@ -811,3 +875,9 @@ recognitions:
 * If the item recognition's option is set to **material only**, **only use it on one EI item.**
 * Because for example, if there are 2 EI items with the material of a diamond block and the item recognition is both material only, the first one in the alphabetic order will be the one who will have the most priority.
 {% endhint %}
+
+## Container Features
+
+### isLocked <a href="#islocked" id="islocked"></a>
+
+* If the container is locked or not
