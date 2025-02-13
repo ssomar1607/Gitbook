@@ -41,7 +41,6 @@
   * [Item Configuration](executableitems/configurations/item-configuration/README.md)
     * [Item Features](executableitems/configurations/item-configuration/item-features.md)
     * [Item Restrictions/Resistances](executableitems/configurations/item-configuration/item-restrictions-resistances.md)
-    * [Item Examples](executableitems/configurations/item-configuration/item-examples.md)
   * [Activator Configuration](executableitems/configurations/activator-configuration/README.md)
     * [List of the Activators](executableitems/configurations/activator-configuration/list-of-the-activators.md)
     * [Activators Descriptions / GIFs](executableitems/configurations/activator-configuration/activators-descriptions-gifs.md)

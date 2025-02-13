@@ -11,7 +11,6 @@ material: DIAMOND
 
 * You can check the material list information on this link: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
 * If you want to setup as material of the item a custom head check this link [https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings).
-* Required for the item to work: YES
 
 ### Name or DisplayName of the item
 
@@ -27,7 +26,6 @@ name: '&cEpic Sword'
   * Then pick the color of your choice and note down / copy the hex color of it. [Reference](https://imgur.com/a/tNWtA0a)
   * With that hex color code you have to add "#" at the beginning and that is what will be before what you want to color. #\<HEX\_COLOR\_CODE>\<What you want to color>
   * Finally you will have something like **`#DB6725&lPractice`** and it will look with the color you selected [in game](https://imgur.com/a/7umxduF).
-* Required for the item to work: YES
 
 ### Lore or description of the item
 
@@ -47,7 +45,6 @@ lore:
 - '&fthat you clicked and sometimes the blocks around it.'
 ```
 
-* Required: YES
 * You can use placeholders in the lore. Just keep in mind if you use placeholders outside the plugin and then you add some new contents to the lore like custom enchants, custom text. If one of the placeholders refreshes then everything added outside Ssomar plugins will be deleted. To avoid this you will need not to refresh the lore, but that means that the placeholders will not be updated. You have to choose the one you prefer. To conclude: EXTRA THINGS IN THE LORE means NO REFRESH means NO custom placeholders of EI in the lore please.
 
 {% hint style="info" %}
@@ -62,8 +59,6 @@ To leave an empty space between lore lines you can add '' in the config file. If
 ```yaml
 glow: true
 ```
-
-* Required: NO (Default: false)
 
 ### Disable the enchant glowing
 
@@ -97,8 +92,6 @@ displayConditions:
   enableFeature: true
 ```
 
-* Required: NO&#x20;
-
 ### Durability of the item
 
 * Info: Select the durability value of the item.
@@ -113,7 +106,6 @@ displayConditions:
       maxDurability: 20 
       durability: 19
       ```
-* Required: NO (Default: Max Durability of the Material
 
 ### Enchantments of the item
 
@@ -127,8 +119,6 @@ enchantments:
     level: 1
 ```
 
-* Required: NO
-
 ### Unbreakable
 
 * Info: Boolean value that selects if the executable item will be unbreakable or not
@@ -137,8 +127,6 @@ enchantments:
 ```yaml
 unbreakable: true
 ```
-
-* Required: NO (Default: false)
 
 ### Atributtes of the item feature (1.12++)
 
@@ -170,8 +158,6 @@ unbreakable: true
 * While holding it on your hand run the /ei create \<id> command
 * And that's it ! Now your EI has the attributes imported automatically.
 {% endhint %}
-
-* Required: NO
 
 #### **Keep default attributes**
 
@@ -207,7 +193,6 @@ ignoreKeepDefaultAttributesFeature: true
 customModelData: 2232
 ```
 
-* Required: NO
 * Tutorial: [https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures](https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures)
 
 ### Item Rarity features (1.20.5+)
@@ -364,8 +349,6 @@ dropOptions:
   glowDrop: false
 ```
 
-* Required: NO (Default: false)
-
 #### Glowing color when dropped
 
 * Info: If the item has glowEffect enabled then its possible to select the color of the glowing effect when dropped.
@@ -387,10 +370,6 @@ dropOptions:
 dropOptions:
   displayNameDrop: true
 ```
-
-* Required: NO (Default: false)
-
-
 
 ### &#x20;<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> NBT Tags
 
@@ -443,9 +422,7 @@ nbt:
     - minecraft:stone
 ```
 
-* Required: NO
-
-### BUKKIT TAGS
+### Bukkit tags
 
 * Info: You can add bukkit tag values to your ExecutableItem.
 * Example:
@@ -515,10 +492,8 @@ This section will explain what usage is and its features.
 * Example:&#x20;
 
 ```yaml
-usageLimit: 600 #Usage will not be able to go up more than this value
+usageLimit: 600 #Usage will not be able to go up more than this value, -1 to don't take it into account
 ```
-
-* Required: NO (Default: -1 , it means there is no upper limit)
 
 #### Uses per day
 
@@ -526,10 +501,8 @@ usageLimit: 600 #Usage will not be able to go up more than this value
 * Example:&#x20;
 
 ```yaml
-usePerDay: 200
+usePerDay: 200 # -1 to ignore it
 ```
-
-* Required: NO (Default: -1)
 
 
 
@@ -671,7 +644,7 @@ whitelistedWorlds:
 - '!ApocalypseWorld' # Using ! Disables the use of the EI in that world
 ```
 
-### STORE ITEM INFO
+### Store item info
 
 * Info: Boolean value that represents if it stores or not the information in the item itself. Currently it stores the feature of "owner". So if you want to use the placeholder of %owner% or the conditions related to owner you must have it enabled.
 * Example:
@@ -689,7 +662,7 @@ storeItemInfo: false
 canBeUsedOnlyByTheOwner: false
 ```
 
-### KEEP ITEM ON DEATH
+### Keep item on death
 
 * Info: Boolean value that represents if the player will keep the item after the death or not.
 * Example:&#x20;
@@ -702,7 +675,7 @@ keepItemOnDeath: true
 Its compatible with WorldGuard keepInventory feature and Vanilla keepInventory gamerule
 {% endhint %}
 
-### DISABLE STACK <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+### &#x20;<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">Disable stack
 
 * Info: Boolean value that represents preventing or not for the ExecutableItem to be stacked. Setting this feature to true will make the customStackSize of this item to be 1.
 * Example:&#x20;
@@ -711,7 +684,7 @@ Its compatible with WorldGuard keepInventory feature and Vanilla keepInventory g
 disableStack: true
 ```
 
-### customStackSize<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> (1.20.5 ++)
+### <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> customStackSize (1.20.5 ++)
 
 * Info: Integer value to set the size of the stack of this item. It will override the current stack amount.
 * To understand it better, the vanilla diamond\_sword has a stack size of 1, since it can't be stacked, with this feature you can increase this value. On other side, dirt has a stack size of 64, but with this you can decrease it, to for example, stack size of 20.

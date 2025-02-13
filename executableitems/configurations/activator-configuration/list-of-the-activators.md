@@ -1,5 +1,18 @@
 # List of the Activators
 
+## Activators
+
+Here you have the list of activators available with their description and some examples. Remember as previous knowledge activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
+
+### PLAYER\_ALL\_CLICK
+
+* Info: Activator that gets triggered when the player either left or right click with the item. You can't differentiate the clicks, for that use different activators !
+* Examples:&#x20;
+  * Warping Stone – Instantly teleports the player 5 blocks in the direction they are facing. Cooldown: 10 seconds.
+  * Healing Totem – When clicked, heals the player for 4 hearts and grants Regeneration I for 5 seconds.
+  * Thunder Rod – Strikes a lightning bolt at the nearest enemy within 10 blocks.
+  * Gravity Boots – Launches the player 3 blocks into the air and negates fall damage for 5 seconds.
+  * Explosive Rune – Creates a small explosion at the player's location that knocks back nearby mobs but does not damage terrain.
 * [<mark style="color:blue;">**PLAYER\_ALL\_CLICK**</mark>](list-of-the-activators.md#player_all_click) : Activates when the player left-clicks or right-clicks the item.
 * [<mark style="color:orange;">**PLAYER\_BED\_ENTER**</mark>](list-of-the-activators.md#player_bed_enter) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-clicks a bed.**
 * [<mark style="color:orange;">**PLAYER\_BED\_LEAVE**</mark>](list-of-the-activators.md#player_bed_leave) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player leaves the bed.**

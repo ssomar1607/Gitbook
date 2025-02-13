@@ -6,297 +6,196 @@ description: >-
 
 # Activators features
 
-## General features
+All this features are inside the activator, as reminder activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown,&#x20;
 
-### displayName
+## General features of an activator
 
+### Display name of the activator
+
+* Info: String value of the display name of the activator, it doesn't have much use, its used for the developer to recognize one activator from another. It also appears on the default message "timeLeft" inside the locale.yml file.
 * Example:&#x20;
 
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activators on the activators list
+    name: '&#x26;eThor activator'
+</code></pre>
+
+### Usage modification of the activator<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+
+* Info: Very important feature, the value of the usage of the item will be modified by this integer value. That means, if this value is positive then usage will increase and if this value is negative then the usage will decrease.
+* Example: (Increasing the value of the usage by 1 each time this activator is triggered)
+
 ```yaml
-displayName: "&eThor activator"
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    usageModification: 1
 ```
 
-* Description: It appears on the default `timeLeft:` message in the locale and on the default condition message.
-* Required: NO, (Default "an activator")
+### Variables modification
 
-
-
-### usageModification<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
+* Info: Its a list of variables modification to apply to the variables inside your item. Its useful for example, for increase the value of a variable, for overriding an old value of a variable to another value, etc.
+  * variableName: Name of the variable the variableModification is targetting
+  * type: Type of variableModification you are using
+    * SET: Override the old value of the variable and sets the modification value.
+    * ADD: Apply math to the current value of the variable using the modification value. It needs the variable to be type of NUMBER. If the modification value is positive then it will increase, if its negative then it will decrease.
+    * LIST\_ADD: Applied to variable type LIST, it appens the modification value to the variable list.
+    * LIST\_CLEAR: Applied to variable type LIST, it clears the variable list.
+    * LIST\_REMOVE: Applied to variable type LIST, it removes the modification value from the variable list.
+  * modification: Value of modification. Its applied to the variable using the types of modifications.
 * Example:
 
 ```yaml
-usageModification: 1
-```
-
-* Description: Increase or Decrease the current amount of usage of the item.
-* Required: NO, (Default -1)
-
-
-
-### variablesModification
-
-* Description: This is where you can modify the variables into your item.
-* [Link to how to setup the variables modification to your activator](https://github.com/ssomar1607/ExecutableItems/wiki/Variables#how-to-setup-variables-in-the-activator-editor)
-* Example:
-
-```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
     variablesModification:
-      varUpdt0:
-        variableName: targethp
+      varUpdt0: # Variable modification ID, you can create as many variable modifications on the activator as you want  
+        # This variable modification updates the value of targethp to 20
+        variableName: targethp 
         type: SET
         modification: 20
+      varUpdt1: # Variable modification ID, you can create as many variable modifications on the activator as you want 
+        # This variable modification updates the value of hit by increasing it on 1
+        variableName: hit
+        type: MODIFICATION
+        modification: 1
+      varUpdt1: # Variable modification ID, you can create as many variable modifications on the activator as you want 
+        # This variable modification updates the value of hit by decreasing it on 1
+        variableName: durability
+        type: MODIFICATION
+        modification: -1
 ```
 
-* Required: NO (Default: no modification)
+* Be careful when using placeholders here ! There is no problem with that, just make sure the returning output is a NUMBER, otherwise you will need to use STRING features. For example, let's update a variableModification by another variable that we know it returns a NUMBER.
 
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    variablesModification:
+      varUpdt0: # Variable modification ID, you can create as many variable modifications on the activator as you want  
+        # This variable modification updates the value of the bullets to the value of the variable max bullets, as if I was reloading a gun
+        variableName: currentBullets
+        type: SET
+        modification: '%var_maxbullets_int%'
+```
 
+```yaml
+activators:
+  activator1: # Activator ID, you can create as many activators on the activators list
+    variablesModification:
+      varUpdt0: # Variable modification ID, you can create as many variable modifications on the activator as you want  
+        # This variable modification updates the value of the current bullets by the variable bullets per shot, so its decreasing our bullets depending on the amount of bullets we are firing
+        variableName: currentBullets
+        type: MODIFICATION
+        modification: '-%var_bulletspershot%'
+```
 
-{% hint style="danger" %}
-IF YOU'RE USING PLACEHOLDERS LIKE `%parseother_{%target%}_{player_health}%` AND THE TYPE OF THE SAID VARIABLE IS A NUMBER, USE STRING INSTEAD OR ISSUES WILL OCCUR
-{% endhint %}
+### Detailed slots
 
-### detailedSlots
-
-* Description: This makes it so the EI item will only work on specific slots.
+* Info: List of integer values that represents slots of the inventory where the activator will be able to work. This means, if the event occurs in one slot that is not from here then the activator won't be triggered.
 * Example:
 
 ```yaml
-detailedSlots:
-- -1
-- 40
-# THIS MEANS THAT IT WILL ONLY WORK IF THE ITEM IS AT THE OFFHAND OR AT YOUR MAIN HAND.
-# BEST TO AVOID ENABLING ALL SLOTS FOR BETTER PERFORMANCE
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    detailedSlots:
+  - -1 # Slot for mainhand, this is not a static slot but having it on mainhand
+  - 40 # This is a static slot, it represents the offhand slot.
 ```
 
-* More Information:
-  * Choose slot 0-41 for the slots
-  * If you select -1, it will only activate if you are holding it at your main hand.
-* Required: NO (Default: -1)
+### Auto update item
 
-### autoUpdateItem
-
-* Description: Update specific things on the item when that activator gets triggered.
-
-{% hint style="info" %}
-Keep in mind that normally, if you change a feature in an activator of "x" item it will change on every "x" Item in your server, but, if the change is a visual related change, as a display name change, or lore change, it won't get updated, in the case you want it to get updated too this feature will be useful for you.
-{% endhint %}
-
+* Info: This feature of the activator makes that the item is updated in one of the features of the list. Be careful ! This may not be necessary depending on what you want. There are things that are updated automatically, for example, commands on the activator, conditions, cooldown, etc are updated automatically without this feature.&#x20;
+* This feature targets most the visual aspects of the item, so if you created once a ExecutableItem with id:ex\_sword with a display name of "\&dExcalibur" and you distributed this item to all players and now you would like all the ExecutableItems "ex\_sword" to have the new display name of "\&eEpic Sword" then you would need to enable this feature on one of the activators of the item. Enabling the feature (autoUpdateItem) + the feature of update name (updateName).
+* To make sure its correctly explained, this feature will override the current value depending on the options you enabled with the current option of the config file, and its only used for visual features. Its not necessary for common changes that don't involve the options of this feature.
+  * autoUpdateItem: Boolean value that represents if this feature is enabled or not for the activator.
+  * updateName: Boolean value to update the display name of the ExecutableItem. If its true, it will override the current display name of the item with the current/updated item name set on the config file of the ExecutableItem.
+  * updateLore: Boolean value to update the lore of the ExecutableItem. If its true, it will override the current lore of the item with the current/updated lore set on the config file of the ExecutableItem.
+  * updateDurability: Boolean value to update the current durability of the ExecutableItem. If its true, it will override the current durability of the item with the current/updated durability set on the config file of the ExecutableItem.
+  * updateAttributes: Boolean value to update all the attributes of the ExecutableItem. If its true, it will override the current attributes of the item with the current/updated attributes set on the config file of the ExecutableItem.
+  * updateEnchants: Boolean value to update the enchantments of the ExecutableItem. If its true, it will override the current enchantments of the item with the current/updated enchantments set on the config file of the ExecutableItem.
+  * updateCustomModelData: Boolean value to update the custom model data value of the ExecutableItem. If its true, it will override the current custom model data of the item with the current/updated customModelData value set on the config file of the ExecutableItem.
+  * updateArmorSettings: Boolean value to update the armor settings of the ExecutableItem. If its true, it will override the current armor settings of the item with the current/updated armor settings set on the config file of the ExecutableItem. e.g. (Armor color)
 * Example:
 
 ```yaml
-    autoUpdateItem: true
-    updateName: true
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    autoUpdateItem: false
+    updateName: false
     updateLore: false
-    updateDurability: true
+    updateDurability: false
     updateAttributes: false
-    updateEnchants: true
-    updateCustomModelData: true
-    updateArmorSettings: true/false
+    updateEnchants: false
+    updateCustomModelData: false
+    updateArmorSettings: false
 ```
-
-## Specifics features
-
-These features doesn't work for all activators
-
-### desactiveDrops
-
-* Description: This makes it so vanilla loot will not be obtained from breaking blocks or killing mobs.
-  * **NOTE: CUSTOM DROPS FROM CUSTOM MOBS PLUGIN LIKE MYTHIC MOBS WILL NOT GET AFFECTED BY THIS.**
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-desactiveDrops: false
-```
-
-* Required: NO (Default: false)
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- **PLAYER\_FISH** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* **PLAYER\_KILL\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- **PLAYER\_KILL\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-
-
-### onlyAirClick
-
-* Description: This attribute makes it so it will only activate if you only clicked air.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-onlyAirClick: false
-```
-
-* Required: NO (Default: false)
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* PLAYER\_ALL\_CLICK
-
-- PLAYER\_LEFT\_CLICK
-
-* PLAYER\_RIGHT\_CLICK
-
-</details>
-
-### onlyBlockClick
-
-* Description: This attribute makes it so it will only activate if you click blocks.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-onlyBlockClick: false
-```
-
-* Required: NO (Default: false)
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* PLAYER\_ALL\_CLICK
-
-- PLAYER\_LEFT\_CLICK
-
-* PLAYER\_RIGHT\_CLICK
-
-</details>
-
-### detailedClick
-
-* Description: This makes it so it will only activate if you are right-clicking, left-clicking or both.
-* Options: RIGHT, LEFT, RIGHTORLEFT
-* Example:&#x20;
-
-```yaml
-detailedClick: LEFT
-```
-
-* Required: YES (Default: RIGHT)
-
-<details>
-
-<summary><strong>Only for those activators</strong></summary>
-
-* PLAYER\_ALL\_CLICK
-
-- **PLAYER\_CLICK\_ON\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* PLAYER\_CLICK\_ON\_PLAYER
-
-</details>
-
-### delay
-
-* Description: This delays the repetition of the LOOP activator.
-* Example:&#x20;
-
-```yaml
-delay: 30 #IN SECONDS
-```
-
-* Required: YES (Default: 30)
-
-{% hint style="danger" %}
-Only for the premium activator LOOP
-{% endhint %}
-
-### delayTick
-
-* Description: This makes it so the value under the delay attribute will be counted in game ticks instead of seconds.
-* Example: `delayTick: true`
-* Required: NO (Default: false)
-
-{% hint style="danger" %}
-Only for the premium activator LOOP
-{% endhint %}
 
 ## Cooldown
 
-### cooldown
+### Player cooldown
 
+* Info: Cooldown options its the cooldown applied to the player who triggered this activator for this activator.
+* If the activator is PLAYER\_RIGHT\_CLICK, it has some commands \[] and the cooldown is 30 seconds, if the player triggers this activator he will need to wait 30 seconds in order to make it trigger again. This doesn't prevent other player from running it between those 30 seconds as long as that player is not on cooldown too. This is a feature per player
+  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
+  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
+  * cooldownMsg: String value to be displayed when the player try to trigger the activator when its on cooldown
+  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
+    * Placeholders that can be used:
+      * %time% -> the entire cooldown in seconds
+      * %time\_H% -> the hours part of the cooldown
+      * %time\_M% -> the minutes part of the cooldown
+      * %time\_S% -> the seconds part of the cooldown&#x20;
+  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
+  * pauseWhenOffline: Boolean value that pauses the cooldown if the player is offline. To better understanding, if its false, the cooldown time doesn't stop so he can leave the server, wait the cooldown and join again and he will be able to trigger the activator again. But if this feature is enabled and he left the server while on cooldown, when he joins again he will have the same remaining cooldown time that he had when he left.
+  * pausePlaceholdersConditions: Its similar to pauseWhenOffline but it only pauses depending on certain placeholdersConditions. Example of usages would be pausing the cooldown if the player is VIP rank. So VIP rank has access to that feature.
+  * enableVisualCooldown: Enables a visual cooldown for the item.
 * Example:&#x20;
 
 ```yaml
-cooldown: 30
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    cooldownOptions:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+      enableVisualCooldown: false
 ```
 
-* Description: Cooldown for activating an activator (in seconds)
-* Required: NO, (Default 30)
+### Global cooldown
 
-
-
-{% hint style="info" %}
-Custom cooldown features:
-
-* pauseWhenOffline : It pauses the cooldown when the player disconnect
-* pausePlaceholdersConditions : It pauses the cooldown when the placeholderConditions set is valid
-{% endhint %}
-
-### isCooldownInTicks
-
-* Example:&#x20;
+* Info: Its the same idea as cooldown but instead of being the cooldown applied to the player its a global cooldown that is applied to all players. That means, if someone triggers the activator and it has 30 seconds of global cooldown, then no one will be able to use it after those 30 seconds  has gone. It has the same features as cooldown.
+  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
+  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
+  * cooldownMsg: String value to be displayed when a player try to trigger this activator when its on cooldown
+  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
+    * Placeholders that can be used:
+      * %time% -> the entire cooldown in seconds
+      * %time\_H% -> the hours part of the cooldown
+      * %time\_M% -> the minutes part of the cooldown
+      * %time\_S% -> the seconds part of the cooldown&#x20;
+  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
+  * pauseWhenOffline: \<TODO IF I FORGOT PLS PING VAYK>
+  * pausePlaceholdersConditions: \<TODO IF I FORGOT PLS PING VAYK>
+  * enableVisualCooldown: Enables a visual cooldown for the item.
+* Example:
 
 ```yaml
-isCooldownInTicks: true
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    globalCooldownOptions:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+      enableVisualCooldown: false
 ```
-
-* Description: If the cooldown value will be counted by ticks
-* Required: NO, (Default false)
-
-### cooldownMsg
-
-* Example:&#x20;
-
-```yaml
-cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-```
-
-* Placeholders available in this message:
-  * %time% -> the entire cooldown in seconds
-  * %time\_H% -> the hours part of the cooldown
-  * %time\_M% -> the minutes part of the cooldown
-  * %time\_S% -> the seconds part of the cooldown&#x20;
-* Description: Cooldown message
-* Required: NO
-
-### displayCooldownMessage
-
-* Example:&#x20;
-
-```yaml
-displayCooldownMessage: true
-```
-
-* Options: true or false
-* Description: Enable/disable the display of the cooldown message.
-* Required: NO, (Default false)
-
-### cancelEventIfInCooldown
-
-* Description: This attribute prevents vanilla events from happening on the EI item if you are in cooldown.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEventIfInCooldown: true
-```
-
-* Required: NO (Default: false)
 
 ### otherEICooldowns
 
@@ -321,21 +220,7 @@ otherEICooldowns:
   * It can add cooldown to a specific activator of an EI Item
 * Required: NO
 
-### Global Cooldown
-
-* Description: Add cooldown to the activator in a global way, so if one player use the activator, all players will be in cooldown for this same activator.
-* Example:
-
-```yaml
-    globalCooldownOptions:
-      cooldown: 100
-      isCooldownInTicks: false
-      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-      displayCooldownMessage: true
-      cancelEventIfInCooldown: false
-```
-
-## Required Things
+## Required features
 
 ### requiredExecutableItems<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
@@ -925,3 +810,89 @@ cancelEventIfNotDetailedBlocks: true
 - **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 </details>
+
+
+
+## Specifics features depending on the type of activator
+
+The next features only works on specific activators, depending on the feature. For example if the feature requires a block then the activator must be involved with a block. e.g. (PLAYER\_HIT\_ENTITY its not involved with a block, but PLAYER\_BLOCK\_BREAK involved with a block). The same idea with different features, such as for blocks, targets (enemy players), entities, etc.
+
+### Desactive the drops when the activator is triggered.
+
+* Type of activators where the feature works: This feature works on activators that have involved drops, for example:
+  * PLAYER\_KILL\_ENTITY
+  * PLAYER\_BLOCK\_BREAK
+  * PLAYER\_KILL\_PLAYER
+  * PLAYER\_FISH
+* Info: Boolean value that allows or prevents the vanilla loot to be dropped when breaking blocks or killing mobs. Since its vanilla drops, custom drops from custom mobs e.g. (MythicMobs) will not get affected by this.
+* Example:&#x20;
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    desactiveDrops: false
+```
+
+### onlyAirClick
+
+* Type of activators where the feature works: This feature works on activators that have involved clicks. Not the action of clicking, which could happen when hitting an entity, or breaking a block, but the event of clicking. For example:
+  * PLAYER\_ALL\_CLICK
+  * PLAYER\_RIGHT\_CLICK
+  * PLAYER\_LEFT\_CLICK
+* Description: Boolean feature that restricts the activator so it will only get activated/triggered when the event occurred with clicking only on the air. This means if you clicked on a block the activator won't get triggered. Don't get confuse ! You may think, what happens if I click on a player ? well, its not an event instance of PLAYER\_(CLICK) but that event is instance of PLAYER\_CLICK\_ON\_PLAYER.
+* Example:&#x20;
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activators on the activators list
+    onlyAirClick: false
+</code></pre>
+
+### onlyBlockClick
+
+* Type of activators where the feature works: This feature works on activators that have involved clicks. Not the action of clicking, which could happen when hitting an entity, or breaking a block, but the event of clicking. For example:
+  * PLAYER\_ALL\_CLICK
+  * PLAYER\_RIGHT\_CLICK
+  * PLAYER\_LEFT\_CLICK
+* Description: Boolean feature that restricts the activator so it will only get activated/triggered when the event occurred with clicking only in a block. This means if you clicked on the air the activator won't get triggered.
+* Example:&#x20;
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    onlyBlockClick: false
+```
+
+### detailedClick
+
+* Type of activators where the feature works: This feature works on activators that have involved more than one click, this means PLAYER\_LEFT\_CLICK doesn't enter in this category due its restricted only to one click. For example:
+  * PLAYER\_ALL\_CLICK
+  * PLAYER\_CLICK\_ON\_ENTITY
+  * PLAYER\_CLICK\_ON\_PLAYER
+* Info: Type of click restriction to make the activator only work/trigger/activate when the correct click is involved.
+  * detailedClick
+    * RIGHT: Right click
+    * LEFT: Left click
+    * RIGHTORLEFT: Right or left click.
+* Example:&#x20;
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    detailedClick: LEFT
+```
+
+### delay and delayTick
+
+* Type of activators where these features works: This features are exclusive for LOOP activator.
+* Info: Delay and delayTick manage sthe behavior of the loop repetitions of the activator.
+  * delay: Integer value that represents how many seconds will the loop be. This means, each \<delay> \[time] the loop will trigger again. e.g. (If the delay is 30 seconds then each 30 seconds the activator will trigger)
+  * delayTick: Boolean value to set the delay time in ticks, otherwise it is in seconds. (20 ticks = 1 second)
+* Example:&#x20;
+
+```yaml
+activators:
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: LOOP
+    delay: 30 #IN SECONDS
+    delayInTick: false
+```

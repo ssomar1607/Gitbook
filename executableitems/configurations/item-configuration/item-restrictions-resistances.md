@@ -1,12 +1,11 @@
 # Item Restrictions/Resistances
 
+On this page you will learn about item restrictions and some resistances, this will allow you to customize the behavior on certain cases of the item.
 
+## Global restrictions
 
-{% hint style="info" %}
-This page will teach you about item restrictions. All restrictions are set to false by default.
-{% endhint %}
-
-* If you want to apply a certain restriction across all items, manually add the restriction in your `config.yml`.
+* Info: If you would like to add one of item restrictions to all the items you have made on the plugin you can add the restriction config of the restriction(s) you want inside the config.yml file of the plugin.
+* Example: I would like to add the restrictions of not using anvil and grind stone to all ExecutableItems created and to be created
 
 {% code title="config.yml" %}
 ```yaml
@@ -21,6 +20,8 @@ This page will teach you about item restrictions. All restrictions are set to fa
 # WIKI HERE : https://docs.ssomar.com/executableitems/information-ei
 # DISCORD HERE : https://discord.com/invite/TRmSwJaYNv
 # -
+
+## Start of default config features
 pickup-limit: -1
 disable-world: [ ]
 premium-enable-cooldown-for-op: true #Premium only
@@ -30,318 +31,374 @@ silentEIGive: false
 silentMessagePreventionErrorHeadDBError: false
 disableBackup: false #<- Backup your items config at each start / reload of the server
 deleteBackupsAfterDays: 7 #<- It will deletes backups older than this number of days
+## End of default config features
+## 
+## Start for manually added restrictions to apply on all ExecutableItems
 restrictions:
-  cancel-deposit-in-furnace: true
-  cancel-item-frame: true
-  cancel-rename-anvil: true
   cancel-anvil: true
   cancel-grind-stone: true
-  cancel-item-delete-by-lightning: true
-  cancel-item-place: true
+## End for manually added restrictions to apply on all ExecutableItems
 ```
 {% endcode %}
 
-* Brute-forcing items with container restrictions such as `cancel-deposit-chest` using hoppers would have the EI item stuck in that container and can only be removed via creative mode or by destroying the container holding the item.
+## Individual restrictions
+
+On this section you will learn how to add an individual restriction only for the ExecutableItem you are currently editing.
+
+### Cancel the drop of the item
+
+* Info: Boolean value that prevents the player from dropping the executable item.
+* Example:
 
 ```yaml
 restrictions:
-  cancel-deposit-in-furnace: true
-  cancel-item-frame: true
-  cancel-rename-anvil: true
-  cancel-anvil: true
-  cancel-grind-stone: true
-  cancel-item-delete-by-lightning: true
-  cancel-item-place: true
-  cancel-hopper: true
-  cancel-enchant: true
-  cancel-merchant: true
-  cancel-cartography: true
-  cancel-brewing: true
-  cancel-item-delete-by-cactus: true
-  cancel-lectern: true
-  cancel-composter: true
-  cancel-consumption: true
   cancel-item-drop: true
-  cancel-dropper: true
-  cancel-item-craft: true
-  cancel-smithing-table: true
-  locked-in-inventory: true
-  cancel-tool-interactions: true
-  cancel-dispenser: true
-  cancel-item-burn: true
-  cancel-item-craft-no-custom: true
-  cancel-enchant-anvil: true
-  cancel-swap-hand: true
-  cancel-beacon: true
-  cancel-loom: true
-  cancel-deposit-in-chest: true
-  cancel-stone-cutter: true
 ```
 
-### CANCEL DROP
+### Cancel placing the block into the ground.
 
-* Info: Prevents players from dropping the executable item
-* Config: `cancel-item-drop: false`
-* Default: true
+* Info: Boolean value that prevents the player from placing the Executable Items in case of the item is an instance of block into the ground.
+* Example:
 
-####
+```yaml
+restrictions:
+  cancel-item-place: true
+```
 
-### CANCEL PLACE
+### Cancel the use of the item in any recipes on the crafting table
 
-* Info: Prevents players from placing executable items into the ground
-* Config: `cancel-item-place: true`
+* Info: Boolean value that prevents the player from crafting vanilla recipes with the ExecutableItem.
+* Example:
 
-####
+```yaml
+restrictions:
+  cancel-item-craft: true
+```
 
-### CANCEL CRAFT
+### Cancel the use of the item in only vanilla recipes, not affecting the custom ones
 
-* Info: Prevents players from crafting vanilla recipes with the said executable items (including custom crafting recipes from Wolfy's CustomCrafting plugin)
-* Config: `cancel-item-craft: true`
+* Info: Boolean value that prevents the player from crafting vanilla recipes with the Executableitem but can still be used for custom crafting recipes.
+* Example:
 
-####
+```yaml
+restrictions:
+  cancel-item-craft-no-custom: true
+```
 
-### CANCEL CRAFT NO CUSTOM
+### Cancel interaction to decorate minecraft pots
 
-* Info: Prevents players from crafting vanilla recipes with the said executable items but can still be used for custom crafting recipes from Wolfy's CustomCrafting plugin
-* Config: `cancel-item-craft-no-custom: true`
+* Info: Boolean value that prevents the player from putting the ExecutableItems in the decorated pots
+* Example:
 
+```yaml
+restrictions:
+  cancel-decorated-pot: true
+```
 
+### Cancel depositing the item into a storage
 
-### CANCEL DECORATED POT
-
-* Info: Prevents players from putting executable items in the decorated pots
-* Config: `cancel-decorated-pot: false`
-
-
-
-### CANCEL DEPOSIT CHEST
-
-* Info: Prevents players from putting executable items in the following,
+* Info: Boolean value that prevents the player from putting the ExecutableItem in the following list:
   * Chest
   * Ender Chest
   * Trapped Chest
   * Barrel
   * Shulker Box
-* Config: `cancel-deposit-in-chest: false`
-* **NOTE: THIS WILL NOT WORK ON CREATIVE**
+* Example: (This feature doesn't work on creative)
 
-####
+```yaml
+restrictions:
+  cancel-deposit-in-chest: true
+```
 
-### CANCEL DEPOSIT FURNACE
+### Cancel depositing the item into a furnace
 
-* Info: Prevents players from putting executable items in the following,
+* Info: Boolean value that prevents the player from putting the ExecutableItem in the following list:
   * Furnace
   * Blast Furnace
   * Smoker
-* Config: `cancel-deposit-in-furnace: false`
-* **NOTE: THIS WILL NOT WORK ON CREATIVE**
+* Example: (This feature doesn't work on creative)
 
-####
+```yaml
+restrictions:
+  cancel-deposit-in-furnace: true
+```
 
-### CANCEL ITEM BURN (IN FIRE/LAVA)
+### Cancel the burn of the item in fire and lava
 
-* Info: Prevents the item to get burn in fire or lava
-* Config: `cancel-item-burn: true`
+* Info: Boolean value that prevents the ExecutableItem to get burn in fire or lava.
+* Example:
 
+```yaml
+restrictions:
+  cancel-item-burn: true
+```
 
+### Cancel item delete because of cactus interaction
 
-### CANCEL ITEM DELETE BY CACTUS
+* Info: Boolean value that prevents the ExecutableItem to get deleted when touching a cactus block.
+* Example:
 
-* Info: Prevents the item to get deleted when touching a cactus
-* Config: `cancel-item-delete-by-cactus: true`
+```yaml
+restrictions:
+  cancel-item-delete-by-cactus: true
+```
 
+### Cancel item delete when strike by a lightning
 
-
-### CANCEL ITEM DELETE BY LIGHTNING
-
-* Info: Prevents the item to get deleted when a lightning strikes it.
+* Info: Boolean value that prevents the ExecutableItem to get deleted when a lightning strikes it.
 * Config: `cancel-item-delete-by-lightning: true`
+* Example:
 
+```yaml
+restrictions:
+  cancel-item-delete-by-lightning: true
+```
 
+### Cancel enchanting the item
 
-### CANCEL ENCHANT
+* Info: Boolean value that prevents the item from getting enchanted&#x20;
+* Example:
 
-* Info: Prevents players from enchanting this item in any way
-* Config: `cancel-enchant: false`
+```yaml
+restrictions:
+  cancel-enchant: true
+```
 
-####
+### Cancel item placement inside an anvil&#x20;
 
-### CANCEL ANVIL
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside an anvil. This finally prevents from placing it so it prevents rename and enchant too.
+* Example:
 
-* Info: Prevents players from putting executable items in anvils
-* Config: `cancel-anvil: true`
+```yaml
+restrictions:
+  cancel-anvil: true
+```
 
-####
+### Cancel rename action using an anvil
 
-### CANCEL HORSE
+* Info: Boolean value that prevents  the player from renaming the ExecutableItem using an anvil.
+* Example:
 
-* Info: Prevents the EI placing on horses/mules/llamas
-* Config: `cancel-horse: true`
+```yaml
+restrictions:
+  cancel-rename-anvil: true
+```
 
+### Cancel enchant action using an anvil
 
+* Info: Boolean value that prevents the player from enchanting the ExecutableItem using an anvil.
+* Example:
 
-### CANCEL ACTION RENAME IN ANVIL
+```yaml
+restrictions:
+  cancel-enchant-anvil: true
+```
 
-* Info: Prevents players from renaming EI items in the anvil
-* Config: `cancel-rename-anvil: true`
+### Cancel item interaction with horse/mule/llama
 
-####
+* Info: Boolean value that prevents the ExecutableItems for interaction with horses/mules/llamas. This disable the storage too.
+* Example:
 
-### CANCEL ACTION ENCHANT IN ANVIL
+<pre class="language-yaml"><code class="lang-yaml"><strong>restrictions:
+</strong>  cancel-horse: true
+</code></pre>
 
-* Info: Prevents players from enchanting EI items in the anvil
-* Config: `cancel-enchant-anvil: true`
+### Cancel the consumption/eat of the item
 
-####
+* Info: Boolean value that prevents the player from consuming or eat the ExecutableItem.
+* Example:
 
-### CANCEL CONSUMPTION
+```yaml
+restrictions:
+  cancel-consumption: true
+```
 
-* Info: Prevents players from consuming executable items
-* Config: `cancel-consumption: false`
-*
+### Cancel use of the item inside the crafter block
 
-### CANCEL CRAFTER
-
-* Info: Prevents players from putting the executable items into crafter
+* Info: Boolean value that prevents the player from putting the ExecutableItems inside a crafter block.
 * Config: `cancel-crafter: false`
 
+```yaml
+restrictions:
+  cancel-crafter: true
+```
 
+### Restriction of locked in the inventory
 
-### LOCKED IN INVENTORY
+* Info: Boolean value that makes the ExecutableItem stay in the slot where it is and prevents the player from moving it in any possible way.
+* Example (This feature doesn't work on creative)
 
-* Info: Makes the executable item stay in that slot number and prevents players from moving it in any way possible
-* Config: `locked-in-inventory: false`
-* **NOTE: THIS WILL NOT WORK ON CREATIVE**
+```yaml
+restrictions:
+  locked-in-inventory: true
+```
 
-####
+### Cancel tool interactions
 
-### CANCEL TOOL INTERACTIONS
+* Info: Boolean value that prevents the player from using the ExecutableItem trigger tool interactions. e.g. (Right click a block using an axe to strip it, Using a hoe to farm a grass block)
+* Example:
 
-* Info: Prevents players from using executable items to do tool interactions
-* Config: `cancel-tool-interactions: false`
+```yaml
+restrictions:
+  cancel-tool-interactions: true
+```
 
-####
+### Cancel placing the item inside an item frame
 
-### CANCEL ITEM FRAME
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside anitem frame.
+* Example:
 
-* Info: Prevents players from putting executable items in item frames
-* Config: `cancel-item-frame: false`
+```yaml
+restrictions:
+  cancel-item-frame: true
+```
 
-####
+### Cancel the interaction with an smithing table
 
-### CANCEL SMITHING TABLE
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside an smithing table.
+* Example:
 
-* Info: Prevents players from putting executable items in smithing tables
-* Config: `cancel-smithing-table: false`
+```yaml
+restrictions:
+  cancel-smithing-table: true
+```
 
-####
+### Cancel the interaction with a grind stone
 
-### CANCEL GRIND STONE
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside a grindstone.
+* Example:
 
-* Info: Prevents players from putting executable items in grindstones
-* Config: `cancel-grind-stone: true`
+```yaml
+restrictions:
+  cancel-grind-stone: true
+```
 
-####
+### Cancel the interaction with a stone cutter
 
-### CANCEL STONE CUTTER
+* Info: Boolean value that prevents the player from putting ExecutableItem inside a stone cutter.
+* Example:
 
-* Info: Prevents players from putting executable items in stonecutters
-* Config: `cancel-grind-stone: true`
+```yaml
+restrictions:
+  cancel-stone-cutter: true
+```
 
-####
+### Cancel the interaction with a brewing stand&#x20;
 
-### CANCEL EVENT IF NO PERM
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside a brewing stand.
+* Example:
 
-* Info: Prevents players from using executable items if he hasn't the permission (example if player has a pickaxe executable item, if he hasn't the perm of this executable item, he can't mine with it)
-* Config: `cancelEventIfNoPerm: true`
+```yaml
+restrictions:
+  cancel-brewing: true
+```
 
-####
+### Cancel the interaction with a beacon
 
-### CANCEL EVENT IF NOT OWNER
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside a beacon.
+* Example:
 
-* Info: Prevents players from using executable items if he isn't the owner of this EI (example if player has a pickaxe EI, if isn't the owner, he can't mien with it)
-* Config: `cancelEventIfNotOwner: true`
+```yaml
+restrictions:
+  cancel-beacon: true
+```
 
-####
+### Cancel the interaction with a cartography block
 
-### CANCEL BREWING
+* Info: Prevents the player from putting the ExecutableItem inside a cartography block.
+* Example:
 
-* Info: Prevents players from putting EI items into brewing stands
-* Config: `cancel-brewing: false`
+```yaml
+restrictions:
+  cancel-cartography: true
+```
 
-####
+### Cancel the interaction with a composter block
 
-### CANCEL BEACON
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside a composter.
+* Example:
 
-* Info: Prevents players from putting EI items into beaconds
-* Config: `cancel-beacon: false`
+```yaml
+restrictions:
+  cancel-composter: true
+```
 
-####
+### Cancel the interaction with a dispenser block.
 
-### CANCEL CARTOGRAPHY
+* Info: Boolean value that prevents player from putting the ExecutableItem into a dispenser block.
+* Example:
 
-* Info: Prevents players from putting EI items into cartographies
-* Config: `cancel-cartography: false`
+```yaml
+restrictions:
+  cancel-dispenser: true
+```
 
-####
+### Cancel the interaction with a dropper block
 
-### CANCEL COMPOSTER
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside a dropper block.
+* Example:
 
-* Info: Prevents players from putting EI items into composters
-* Config: `cancel-composter: false`
+```yaml
+restrictions:
+  cancel-dropper: true
+```
 
-####
+### Cancel the interaction with a hopper block
 
-### CANCEL DISPENSER
+* Info: Boolean value that prevents the player from putting the ExecutableItem items inside a hopper. This means leaving the item inside the container of the hopper. This does not prevent the item entering the hopper via dropped item on top of the hopper.
+* Example:
 
-* Info: Prevents players from putting EI items into dispensers
-* Config: `cancel-dispenser: false`
+```yaml
+restrictions:
+  cancel-hopper: true
+```
 
-####
+### Cancel the interaction with a lectern block
 
-### CANCEL DROPPER
+* Info: Boolean value that prevents the player from putting the ExecutableItem inside a lectern block.
+* Example:
 
-* Info: Prevents players from putting EI items into droppers
-* Config: `cancel-dropper: false`
+```yaml
+restrictions:
+  cancel-lectern: true
+```
 
-####
+### Cancel the interaction with a villager trader/merchant
 
-### CANCEL HOPPER
+* Info: Boolean value that prevents player from putting the ExecutableItem inside a villager/merchant trade.
+* Example:
 
-* Info: Prevents players from putting EI items into dispensers. (Not to be confused with putting items to hoppers via dropping them on top of hoppers
-* Config: `cancel-hopper: false`
+```yaml
+restrictions:
+  cancel-merchant: true
+```
 
-####
+### Cancel item hand swapping
 
-### CANCEL LECTERN
+* Info: Boolean value that prevents the player from swapping the items from one hand to the another. Generally using F on the keyboard for "Swap items with offhand"
+* Example:
 
-* Info: Prevents players from putting EI items into lecterns
-* Config: `cancel-lectern: false`
+```yaml
+restrictions:
+  cancel-swap-hand: true
+```
 
-####
+### Cancel the interaction of a horn
 
-### CANCEL MERCHANT
+* Info: Boolean value that prevents the player from playing the horn in case the ExecutableItem is a horn.
+* Example:
 
-* Info: Prevents players from putting EI items into villager trades
-* Config: `cancel-merchant: false`
-
-
-
-### CANCEL SWAP HAND
-
-* Info: Prevents players from swapping hand with the item
-* Config: `cancel-swaphand: false`
-
-
-
-### CANCEL HORN
-
-* Info: Prevents players from playing the horns
-* Config: `cancel-horn: false`
-
-
+```yaml
+restrictions:
+  cancel-horn: true
+```
 
 ### CANCEL ARMOR STAND
 
-* Info: Prevents players from placing the item on an armor stand
-* Config: `cancel-armorstand: true`
+* Info: Prevents the player from putting the ExecutableItem on an armor stand.
+* Example:
+
+```yaml
+restrictions:
+  cancel-armorstand: true
+```
