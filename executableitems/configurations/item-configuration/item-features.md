@@ -1,9 +1,5 @@
 # Item Features
 
-## Basic Settings
-
-Here you will learn about the basic features of the item.
-
 ### Material of the item
 
 * Info: The material of the Minecraft item of the Executable Item
@@ -177,7 +173,7 @@ unbreakable: true
 
 * Required: NO
 
-### **Keep default attributes**
+#### **Keep default attributes**
 
 * Info: Boolean value for keeping or not the default attribute of the item.
 * Example:
@@ -190,7 +186,7 @@ keepDefaultAttributes: false
 
 {% embed url="https://youtu.be/HqyF0QBYIY4" %}
 
-### **ignoreKeepDefaultAttributesFeature:**&#x20;
+#### **ignoreKeepDefaultAttributesFeature:**&#x20;
 
 * **In**fo: It ignores the setting of keep default attributes. Its useful for the third case in this table explanation:
 
@@ -282,17 +278,19 @@ repairableFeatures:
 glider: false
 ```
 
-#### itemModel&#x20;
+### itemModel&#x20;
 
-* Info: To customize the item model
+* Info: Path of a custom item model on texture pack in the format of \<mynamespace:model\_id> that will target inside assets/\<mynamespace>/models/item/\<model\_id>.
+* Example:
 
 ```yaml
 itemModel: "" # "mynamespace:mymodel"
 ```
 
-#### tooltipModel
+### tooltipModel
 
-* Info: To customize the item tooltip model
+* Info: Path of a custom tooltip model on texture pack in the format of \<mynamespace:model\_id> that will target inside assets/\<mynamespace>/models/item/\<model\_id>.
+* Example:
 
 ```yaml
 tootipModel: "" # "mynamespace:mymodel"
@@ -394,38 +392,42 @@ dropOptions:
 
 
 
-## NBT Tags
+### &#x20;<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> NBT Tags
 
-#### NBT TAGS SUPPORT <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-Require this plugin [**NBTAPI**](https://www.spigotmc.org/resources/nbt-api.7939/)
-
-* Info: Insert your custom nbt tags in your ExecutableItem
+* Info: Requires the plugin [**NBTAPI**](https://www.spigotmc.org/resources/nbt-api.7939/) available on Spigo&#x74;**.** This features allows you to add your custom nbt tags inside your ExecutableItem.
+  * type: The type of value you are storing e.g:
+    * BOOLEAN: true | false
+    * STRING: car
+    * INTEGER: 6
+    * DOUBLE: 17.6
+    * COMPOUND: Example below, it will depend on your needs and what you want to add.
+  * key: The string key that represents that nbt storage
+  * value: Value of the NBT Tag you are adding
 * Example:
 
 ```yaml
 nbt:
- '1':
+ '1': #Id of this nbt, you can add as many as you want
     type: INT
     key: 'MyKeyTag'
     value: 3
- '2':
+ '2': #Id of this nbt, you can add as many as you want
     type: STRING
     key: 'MyOtherKey'
     value: 'myValue'
- '3':
+ '3': #Id of this nbt, you can add as many as you want
     type: BOOLEAN
     key: 'KeyKeyKeykey'
     value: true
- '4':
+ '4': #Id of this nbt, you can add as many as you want
     type: DOUBLE
     key: 'KeyKeyKeykeykeykey'
     value: 0.5
- '5':
+ '5': #Id of this nbt, you can add as many as you want
     type: BYTE
     key: 'IsCustom'
     value: 1
- '6':
+ '6': #Id of this nbt, you can add as many as you want
     key: ExtraAttributes
     type: COMPOUND
     value:
@@ -434,22 +436,19 @@ nbt:
           key: id
           type: STRING
           value: TRIAL_OF_THE_SUN_GOD
- '7':
+ '7': #Id of this nbt, you can add as many as you want
     key: CanDestroy
     type: STRING_LIST
     value:
     - minecraft:stone
 ```
 
-* Different Type: `BOOLEAN`, `BOOL` | `STRING`, `STR` | `INTEGER`, `INT` | `DOUBLE |` `COUMPOUND`
-* Example value: `true`, `false` | `blabblabla`, `mystringhere` | `4`, `2000` | `0.25`, `0.6`
-* Required: NO (Default: false)
+* Required: NO
 
+### BUKKIT TAGS
 
-
-#### BUKKIT TAGS
-
-* This is what it will look like in the item's config
+* Info: You can add bukkit tag values to your ExecutableItem.
+* Example:
 
 ```yaml
 tags:
@@ -457,14 +456,26 @@ tags:
  - myothertag:blabla2
 ```
 
-In game it will be represented in PublicBukkitValues, like that
+In game it will be represented in PublicBukkitValues, like this
 
-```yaml
-executableitems:mytag:blabla1
-executableitems:myothertag:blabla2
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>executableitems:mytag:blabla1
+</strong>executableitems:myothertag:blabla2
+</code></pre>
 
-## Hiders Settings
+### Hiders Settings
+
+* Info: Settings related to hiding features that are normally shown on your ExecutableItem. All features even though they are hide will still be functional.
+  * hideEnchantments: Boolean value that represents if the enchantments on the ExecutableItem will be displayed in the lore or not.
+  * hideUnbreakable: Boolean value that represents if the unbreakable description will be shown in the lore or not.
+  * hideAttributes: Boolean value that represents if the attributes of the ExecutableItem will be displayed in the lore or not.
+  * hidePotionEffects: Boolean value that represents if the potion effects of the ExecutableItem will be displayed in the lore or not.
+  * hideUsage: Boolean value that represents if the Usage custom feature from ExecutableItem plugin of the item itself will be displayed in the lore or not.
+    * You can display manually the usage using %usage% placeholder adding it when editing your lore.
+  * hideDye: Boolean value that represents if the dye color (#\<color>) of the ExecutableItem will be displayed in the lore or not.
+  * hideArmorTrim: Boolean value that represents if the armor trim of the ExecutableItem will be displayed in the lore or not.
+  * hidePlacedOn: Boolean value that represents if the NBT Tag of "Can be placed on: \[...]" of the ExecutableItem will be displayed in the lore or not.
+  * hideDestroys: Boolean value that represents if the NBT Tag of "Can destroy: \[...]" of the ExecutableItem will be displayed in the lore or not.
+* Example:
 
 ```yaml
 hiders:
@@ -479,78 +490,39 @@ hiders:
   hideDestroys: false
 ```
 
-#### HIDE ENCHANTMENTS
+### Usage Settings
 
-* Info: Hides the enchantments on the executable item in the lore while still being functional
-* Required: NO (Default: false)
+This section will explain what usage is and its features.
 
-#### HIDE ATTRIBUTES
+#### Usage
 
-* Info: Hides the attributes on the executable item in the lore while still being functional
-* Required: NO (Default: false)
+* Info: Usage is a integer value stored inside your ExecutableItem, it can be modified through usageModification inside an activator or commands. But its not just a value stored, this was made to represent the "custom durability system" of your ExecutableItem, that means if somehow the usage gets to 0, your item is deleted.
+* Example:&#x20;
+  * An usage of 1 doesn't mean the item has one of durability, as we explained previously, its a custom system of durability. It will last as long as the usage doesn't reach 0. For example, if you add an activator to your item that has usageModification feature with value "-1" once the activator triggers one time, your item is gone.
+  * Following up the same idea, we have usage 1, if we don't have activators that changes the usage of the item, our item will last infinitely, until again.. somehow either a command or a new activator added to the item, modifies the usage to a value equal or less than 0, then the item will be deleted.
+    * ```yaml
+      usage: 1
+      ```
+  * Usage as we said, don't think like its just a durability system, because it can go up too ! .  For example if we have an activator that instead of having a negative value on usageModification it has a positive value, then our usage will increase once the activator is triggered ^^
+  * Now, if you want your item neither increase nor decrease, basically don't use this custom value storage. You can set the usage to -1.
+    * ```yaml
+      usage: -1
+      ```
 
-#### HIDE UNBREAKABLE
+#### <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">Usage limit
 
-* Info: Hides the unbreakable attribute on the lore of the Executable Item
-* Required: NO (Default: false)
-
-#### HIDE POTION/BANNER TAGS
-
-* Info: Hides potion and banner descriptions in their lore
-* Required: NO (Default: false)
-
-#### HIDE USAGE
-
-* Info: Hides the usage of the item
-* Required: NO
-
-{% hint style="success" %}
-It will hide the text "Remaining usage: ..." from the lore, but if you want you can set the usage again in the lore with the placeholder **%usage%**
-{% endhint %}
-
-## Custom usage Settings
-
-
-
-#### USAGE
-
-* Info: The value of how many times you can use it. Mostly used for the usage modification function of activators.
+* Info: Integer value that limits the upper amount the usage can reach. (Value cannot be 0)
 * Example:&#x20;
 
 ```yaml
-usage: 1
+usageLimit: 600 #Usage will not be able to go up more than this value
 ```
 
-For infinite items use:
+* Required: NO (Default: -1 , it means there is no upper limit)
 
-```yaml
-usage: -1
-```
+#### Uses per day
 
-* Required: NO (Default: 0)
-
-{% hint style="info" %}
-usage: 0 -> equals usage: 1 + the option hideUsage turn on true
-{% endhint %}
-
-{% hint style="success" %}
-You are able to hide the usage text : "Remaining use: ..." from the lore, check the setting [hideUsage](item-features.md#hide-usage-1.14+).
-{% endhint %}
-
-#### USAGE LIMIT <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* Info: The value to how large the usage can only be. (Value cannot be 0)
-* Example:&#x20;
-
-```yaml
-usageLimit: 600
-```
-
-* Required: NO (Default: -1)
-
-#### USE PER DAY
-
-* Info: The limit to how many times you can use the item each day (In real life)
+* Info: Integer value that limits how many times you can use the item each day In real life
 * Example:&#x20;
 
 ```yaml
@@ -561,270 +533,232 @@ usePerDay: 200
 
 
 
-## Food Settings (1.20.5++)
+### Food Settings (1.20.5++)
 
-```
+* Info: This feature allows you to customize food settings related to your ExecutableItem
+  * nutrition: Integer value that represent amount of "half-food" it will fill the player once the item is eaten
+    * For better understanding the player has 20 of nutrition max, and it is shown in-game as 10 hunger icons wich each icon able to split in 2.
+  * saturation: Integer value that represents the saturation that the player will receive once the item is eaten.
+  * isMeat: Boolean value that will make the item to be considered as food. This will be forced applied, that means, if you set this value to true, any item even the ones that can't be eaten will be considered as food, and so they will be consumable.
+  * canAlwaysEat: Boolean value that represents if the item can always be eaten even when the player has his food bar full filled.
+* &#x20;Example:
+
+```yaml
 food:
   nutrition: 1
   saturation: 1
   isMeat: false
-  canAlwaysEat: false
-  eatSeconds: 
+  canAlwaysEat: true
 ```
 
-#### Nutrition
+### consumableFeatures
 
-* Info: Set the nutriniotal value of the item
+* Info: Features related to consumable, it allows you to customize the consumable options, is closer to the food feature.
+  * enable: Boolean that represents enabling or disabling the consumable features
+  * animation: ANIMATION\_TYPE that will be reproduced when eating/consuming the ExecutableItem
+  * sound: SOUND that will be played when the item is being eaten/consumed
+  * hasConsumeParticles: Boolean value that represents if the item will drop particles of being eaten
+  * consumeSeconds: Amount of seconds the item gets to be eaten/consumed.
+* Example:
 
-#### Saturation
+```yaml
+consumableFeatures:
+  enable: true
+  animation: SPYGLASS
+  sound: ITEM.ARMOR.EQUIP_DIAMOND
+  hasConsumeParticles: false
+  consumeSeconds: 3
+```
 
-* Info: The saturation level that the item gives
+### Potion Settings
 
-#### isMeat
+Here you can customize the potion settings of your ExecutableItem if the material of the item is a potion.
 
-* Info: If you can eat the item
+#### Potion color
 
-#### canAlwaysEat
-
-* Info: If you can always eat the item or only when hunger
-
-#### eatSeconds
-
-* Info: The amount of seconds it takes to eat the item
-
-
-
-
-
-## Potion Settings
-
-#### POTION SETTINGS
-
-*   Info: Options for the potion effects
-
-    * color: Pick a color on the website below and copy/paste the **MapInfo Color**&#x20;
-
-
-
-{% embed url="https://www.tydac.ch/color" %}
-
-* potionType:
-
-{% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html" %}
-
-* potionEffectType:&#x20;
-
-{% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html" %}
-
-* potionExtended: Boost of time (generally from 3m to 8m on vanilla potions)
-* potionUpgrade: Boost of level (generally from level I to level II on vanilla potions)
-* duration: Duration of the effect in seconds.
+* Info: Integer of MapInfo Color that represents a color. Use a page like [https://www.tydac.ch/color/](https://www.tydac.ch/color/) to get the value of MapInfo from a color.
 * Example:
 
 ```yaml
 potionSettings:
-  potionColor: 56575
-  potionType: WATER
-  potionExtended: false
-  potionUpgraded: false
+  potionColor: 10265481
+```
+
+#### Potion type
+
+* Info: Potion Type  you want the potion item to be. Its only visibility feature, it doesn't affect the real behavior of the potion. The list is available here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html)
+* Example:
+
+```yaml
+potionSettings:
+  potionType: WIND_CHARGED
+```
+
+#### Potion effects
+
+* Info: Here you can create the potion effects your option will have
+  * potionEffectType: PotionEffectType selected, list available here [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)
+  * isAmbient: Boolean value that makes the potion to be ambient, that makes potion effect produce more, translucent, particles.
+  * duration: Integer value of ticks (20 ticks = 1 second) which represents the duration of the potion effect.
+  * amplifier: Integer value that represents the level/grade/strength of the potion effect. Amplifier 0 means level 1, amplifier 1 means level 2 and so on.
+  * hasParticles: Boolean value that enables or disables showing effect particles around the player.
+  * hasIcon: Boolean value that enables or disables showing the icon effect on the top right of the player screen.
+* Example:
+
+```yaml
+potionSettings:
+  potionColor: 10265481
+  potionType: FIRE_RESISTANCE
   potionEffects:
-    pEffect1:
+    pEffect0:
       isAmbient: false
-      duration: 200
-      potionEffectType: REGENERATION
-      amplifier: 2
+      duration: 30
+      potionEffectType: HEALTH_BOOST
+      amplifier: 0
       hasParticles: false
       hasIcon: false
-    pEffect0:
-      isAmbient: true
-      duration: 30
-      potionEffectType: HEAL
-      amplifier: 1
-      hasParticles: true
-      hasIcon: true
 ```
 
-* **NOTE: IF YOU ARE TRYING TO CREATE AN ITEM THAT GIVES EFFECTS TO THE USER OF THE ITEM, DON'T USE THIS.** [**USE THE LOOP ACTIVATOR INSTEAD.**](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Activators#loop--premium-)
+### Leather armor color
 
-## Armor Settings
-
-#### ARMOR SETTINGS
-
-*   Info: Options for the color of the leather armor executable items.
-
-    * color: Pick a color on the website below and copy/paste the **MapInfo Color**&#x20;
-
-
-
-{% embed url="https://www.tydac.ch/color" %}
-
+* Info: If your ExecutableItem its an instance of leathers armors then here you can select a value of MapInfo Color that you can get from this website [https://www.tydac.ch/color/](https://www.tydac.ch/color/) to change the color.
 * Example:
 
 ```yaml
-armorColor: 56575
+armorColor: 7702341
 ```
 
-* Then put this at the bottom of the item config, save and reload the plugin
+### Head Settings
 
-## Head Settings
+Here you can select configuration for the head settings, that means the custom head from a player head value or from a database.
 
-{% hint style="success" %}
-If you want use Head material for your ExecutableItem, you are in the good part !
-{% endhint %}
+#### If you don't have a plugin for head database (1.13++)
 
-### Without plugin ?
-
-{% hint style="danger" %}
-The without plugin method requires to edit direclty your item FILE, it's not possible IN-GAME !
-{% endhint %}
-
-#### Custom Head Texture (Only at version 1.13+)
-
-* Instructions:
-
-- [ ] Set the `material: PLAYER_HEAD`
-- [ ] Visit a custom heads site similar this one
-
-{% embed url="https://minecraft-heads.com/custom-heads" %}
-
-* [ ] Select an HEAD
-* [ ] Get the "Value" of the head. [Reference](https://imgur.com/a/VJuFzpv)
-* [ ] Put the value like that :  `headValue: VALUE`
-* [ ] Then you can save (CTRL + S) your file and reload the plugin
-
-Example:
-
-```yaml
-headValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTk4ZGY0MmY0NzdmMjEzZmY1ZTlkN2ZhNWE0Y2M0YTY5ZjIwZDljZWYyYjkwYzRhZTRmMjliZDE3Mjg3YjUifX19
-```
-
-### With a Head plugin ? <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-#### HEAD DATABASE  (1.12+)
-
-* Info: Option to use head database custom heads (No need to modify the material with this method)
-  * `headDBID:` The id of the head. [Reference](https://imgur.com/a/FhywTlS)
-* Example:
-
-```yaml
-headDBID: 44328
-```
-
-{% hint style="info" %}
-**You need to have one of theses plugins below**
-{% endhint %}
-
-* **Premium** [**Head Database**](https://www.spigotmc.org/resources/head-database.14280/) **plugin**
-* **Free** [**Head database**](https://www.spigotmc.org/resources/headdb-head-menu-auto-update-free.84967/) **plugin**
+* If you want to add a custom head for 1.13++ without having a plugin data base you can follow the next steps:
+  * Set the material of the ExecutableItem to PLAYER\_HEAD
+  * Visit a custom head page, like this one [https://minecraft-heads.com/custom-heads](https://minecraft-heads.com/custom-heads)
+  *   Then get the Value of the head\
 
 
+      <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+  * Now copy that value and paste it inside the headValue feature of ExecutableItems
+  * Example:
+  * ```yaml
+    headValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTk4ZGY0MmY0NzdmMjEzZmY1ZTlkN2ZhNWE0Y2M0YTY5ZjIwZDljZWYyYjkwYzRhZTRmMjliZDE3Mjg3YjUifX19
+    ```
 
+#### If you have the plugin Head Database (1.12++)
 
+* If you want to add a custom head for 1.12++ and you have the plugin head databases you can follow the next steps:
+  * Open the GUI of your plugin and get the ID of the head you want
+  * Then paste it inside the head features on headDBID
+  * Example:
+  * ```yaml
+    headDBID: 44328
+    ```
+* Here you have the links in case you don't have it and you want it.
+  * Premium version: [https://www.spigotmc.org/resources/head-database.14280/](https://www.spigotmc.org/resources/head-database.14280/)
+  * Free version: [https://www.spigotmc.org/resources/headdb-head-menu-auto-update-free.84967/](https://www.spigotmc.org/resources/headdb-head-menu-auto-update-free.84967/)
 
-## Custom Settings
+### whitelistedWorlds
 
-#### whitelistedWorlds
-
-* Info: Prevents or allow the players from using the EI in certain worlds
+* Info: List of String of the names of the worlds you want to prevent or allow the players from using the ExecutableItem.
 * Example:
 
 ```yaml
 whitelistedWorlds:
-- ZombieSurvivalWorld_the_end
-- '!ApocalypseWorld'
+- ZombieSurvivalWorld_the_end # This allows the use of the EI in that world
+- '!ApocalypseWorld' # Using ! Disables the use of the EI in that world
 ```
 
-#### STORE ITEM INFO
+### STORE ITEM INFO
 
-* Info: Stores information in the item itself like Owner of the item and many more in the future. Also needed for the ifOwnerOfTheEI condition to work properly.
+* Info: Boolean value that represents if it stores or not the information in the item itself. Currently it stores the feature of "owner". So if you want to use the placeholder of %owner% or the conditions related to owner you must have it enabled.
 * Example:
 
 ```yaml
 storeItemInfo: false
 ```
 
-* Required: NO (Default: true)
-
 #### CAN BE USED ONLY BY THE OWNER
 
-* Info: The player who first got the item is the only one who can use it
+* Info: Boolean value that represents if the item can only be used by the owner or not. This only works if the store item info is turned on in order for the item to have an owner.
 * Example:&#x20;
 
 ```yaml
 canBeUsedOnlyByTheOwner: false
 ```
 
-* Required: NO (Default: false)
+### KEEP ITEM ON DEATH
 
-#### KEEP ITEM ON DEATH
-
-* Info: Keeps the item on the player's inventory even after death
+* Info: Boolean value that represents if the player will keep the item after the death or not.
 * Example:&#x20;
 
 ```yaml
 keepItemOnDeath: true
 ```
 
-* Required: NO (Default: false)
-
 {% hint style="info" %}
-Its compatible with worldguard keepInventory and vanilla keepInventory gamerule
+Its compatible with WorldGuard keepInventory feature and Vanilla keepInventory gamerule
 {% endhint %}
 
-#### DISABLE STACK <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+### DISABLE STACK <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
-* Info: Prevents EI items from stacking
+* Info: Boolean value that represents preventing or not for the ExecutableItem to be stacked. Setting this feature to true will make the customStackSize of this item to be 1.
 * Example:&#x20;
 
 ```yaml
 disableStack: true
 ```
 
-* Required: NO (Default: false)
+### customStackSize<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> (1.20.5 ++)
 
-
-
-#### customStackSize<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> (1.20.5 ++)
-
-* Info: Set the max of stacking of an item
+* Info: Integer value to set the size of the stack of this item. It will override the current stack amount.
+* To understand it better, the vanilla diamond\_sword has a stack size of 1, since it can't be stacked, with this feature you can increase this value. On other side, dirt has a stack size of 64, but with this you can decrease it, to for example, stack size of 20.
 * Example:&#x20;
 
 ```yaml
 customStackSize: 32
 ```
 
-* Required: NO (Default: 0)
+### Variables Settings
 
+* Info: Variables are a way to store information inside your ExecutableItem. This allows to track amount, store positions, actually, you can store whatever you want. They help to create dynamic and customizable item behaviors, by that we mean that variables allow you to create unique behaviors for each item by storing and tracking data specific to that item. For example, you can track how many times a player has used a particular item or how many players they have killed with it.
+  * variableName: Name of the variable, it will be used as reference with %var\_\<name>% to use it in the lore, inside commands, etc. This name can't be "id" or "usage" or have spaces.
+  * type: VariableType of the variable, it can be the next types within examples of uses:
+    * STRING: With this variable type you can store STRING values, such as words, numbers, letters, characters, etc. For example you can store the name of the last player hit. This type of variable doesn't support variableModification(type:MODIFICATION) increasing or decreasing the value. Its static unless its replaced with a variableModification(type:SET) which will override the old value.
+    * NUMBER: With this variable type you can store FLOAT values, such as numbers. For example if you want to store the amount of blocks broken, the amount of kills, track the seconds before something happens, etc. This type of variable support variableModification(type:MODIFICATION) and variableModification(type:SET).
+    * LIST: This variable is a list type variable that stores STRING values. Its useful to store a list of things, for example, have track of the clicked blocks and append them to this list, or append the killed players here, etc.
+  * Example
+  * ```yaml
+    variables:
+      var2:
+        variableName: ThisVariableIsTypeIntegerAndICanDoModifications
+        type: NUMBER
+        default: 10.0
+      var1:
+        variableName: anotherVariable # This variable is type string
+        type: STRING
+        default: '' #It starts with no value, we can then change it from an activator or using commands
+      var0:
+        variableName: nameOfVariable
+        type: LIST
+        default:
+        - value1
+        - value2
+        - '1'
+        - '2'
+    ```
+* You can check more information on the next pages:
+  * \<TODO IF FORGOT PLS PING VAYK>
 
+### Custom give first join Settings
 
-## Variables Settings
-
-{% hint style="danger" %}
-<mark style="color:red;background-color:red;">**NEVER TYPE "id" or "usage" IN THE ID OF A VARIABLE AS IT MAY CAUSE ISSUES AND BREAK THE EI ITEM**</mark>
-{% endhint %}
-
-#### ITEM VARIABLES&#x20;
-
-* Info: Defines what variables are inside your item. (Number or String)
-* [Link to how to setup variables in-game](https://github.com/ssomar1607/ExecutableItems/wiki/Variables#how-to-setup-variables-ingame)
+* Info: Here you can customize the feature of giving the item when the player join for the first time on the server.
+  * giveFirstJoin: Boolean value that represents if the feature is enabled or not
+  * giveFirstJoinAmount: Integer value that represents how many items will be given to the player of this ExecutableItem.
+  * giveFirstJoinSlot: Slot where the ExecutableItem will be given to the player.
 * Example:
-
-```yaml
-variables:
-  var0:
-    variableName: x
-    type: NUMBER
-    default: 0.0
-  var1:
-    variableName: myVar
-    default: hello
-    type: STRING
-```
-
-* Required: NO
-* [Link to how to create an example item that uses variables](https://docs.ssomar.com/executableitems/tutorials/items/delayed-teleport-towards-saved-location)
-
-## Custom give first join Settings
 
 ```yaml
 giveFirstJoin:
@@ -833,51 +767,38 @@ giveFirstJoin:
   giveFirstJoinSlot: 0
 ```
 
-#### GIVE FIRST JOIN
+### Item Recognition Settings
 
-* Info: Gives the players that has joined the server for the first time the executable item
-* Required: NO (Default: false)
-
-#### GIVE SLOT
-
-* Info: (GIVE FIRST JOIN MUST BE SET TO TRUE) Sets the slot number of where the ei item will be given when a new player joins.&#x20;
-* Required: NO (Default: 0)
-
-## Item Recognition Settings
-
-
-
-#### ITEM RECOGNITION <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> (1.14+)
-
-* Info: Considers anything that isn't EI as EI
-* Example:
+* Info: This features allows to make other items that are not the ExecutableItem as they were the ExecutableItem you are editing. Basically the idea is to work with recognitions, its a list of type of recognitions that if one of them matches between your ExecutableItem and another item (even if its not ExecutableItem) the features that the ExecutableItem has will be on the another item too. This works as long as its recognized following the recognitions requirements.
+* For example, if you create a diamond pickaxe ExecutableItem, that has an activator PLAYER\_RIGHT\_CLICK and on commands "SEND\_MESSAGE I am a pickaxe" every time you right click it will send that message to the minecraft chat. Now, if you enable item recognition, let's say, for the material, now ALL diamond pickaxes on the server will trigger that activator and so the message will be displayed.
+* Example:&#x20;
 
 ```yaml
 recognitions:
-- NAME
-- MATERIAL
-- LORE
+- NAME # This enable the recognition for all items that matches the custom name of the ExecutableItem
+- MATERIAL  # This enable the recognition for all items that matches the material of the ExecutableItem
+- LORE # This enable the recognition for all items that matches the lore of the ExecutableItem
 ```
 
-* `HIDE_ATTRIBUTE` : (By default), The items are recognize with an hide attribute (injected on the item when you give it)
-* `NAME`: Checks if the item's name is exactly the same as the EI item's name
-* `MATERIAL`: Checks if the item's material type is exactly the same as the EI's material
-* `LORE`: Check if the item's lore is exactly the same as the EI's lore
 * Example Scenarios:
-  * If an EI item only has the item recognition of `MATERIAL` and is a DIAMOND, all the diamonds that exist in the server will be an EI item
-  * If an EI item only has the item recognition of `NAME` and is named "\&dAngle", if you attempt to use any item with the name, "\&dAngle", it will be considered as an EI item. BUT if the name was "\&eAngle", it will not work.
-  * If an EI item only has the item recognition of `LORE`, an item will only be considered as an EI if the item EXACTLY has the same color codes on lore lines and every bit of capitalizing and lowercasing of letters and characters.
+  * If an EI item only has the item recognition of `MATERIAL` and is a DIAMOND, all the diamonds that exist in the server will behave as that EI item
+  * If an EI item only has the item recognition of `NAME` and is named "\&dAngle", if you attempt to use any item with the name, "\&dAngle", it will behave as the original EI item. BUT if the name was "\&eAngle" or another name it will not work.
+  * If an EI item only has the item recognition of `LORE`, an item will only behave as the EI if the item EXACTLY has the same color codes on lore lines and every bit of capitalizing and lowercasing of letters and characters.
   * If an EI item only has the item recognition of `MATERIAL` and `NAME`, the items must have the EXACT NAME and MATERIAL of the EI item for the item to be considered as an EI item.
+* Keep in mind that if one of your ExecutableItems has item recognitions enabled on MATERIAL, then you shouldn't use more item recognitions based on MATERIAL for another ExecutableItem with the same MATERIAL. The reason is because if there are 2 ExecutableItems items with the recognition of MATERIAL enabled and both are DIAMOND\_BLOCK, only the first one in the alphabetic order will be the one who will have the most priority in case someone triggers a DIAMOND\_BLOCK.
 
-{% hint style="warning" %}
-**KEEP IN MIND:**
+### Container Features
 
-* If the item recognition's option is set to **material only**, **only use it on one EI item.**
-* Because for example, if there are 2 EI items with the material of a diamond block and the item recognition is both material only, the first one in the alphabetic order will be the one who will have the most priority.
-{% endhint %}
+* Info: Here you can customize the container features if the block is an instance of container such as the chest and the barrel.
+  * isLocked: Boolean value that represents if the container is locked or not
+  * lockedName: String value that represents the key name if the container is locked. Its a feature of minecraft, if you have an item with the same name as the lockedName then you will be able to open the chest, otherwise not.
+  * containerContent: List of materials inside the container when placed using the format of slot:\<slot>;\<material>
+* Example:
 
-## Container Features
-
-### isLocked <a href="#islocked" id="islocked"></a>
-
-* If the container is locked or not
+```yaml
+containerFeatures:
+  isLocked: true
+  lockedName: thisIsTheKey
+  containerContent:
+  - slot:0;minecraft:loom
+```

@@ -327,7 +327,7 @@ Example: INLINE\_MINEINCUBE 1 1 true true %player\_direction\_xz%
 {% hint style="info" %}
 The block must be directional to LAUNCH the projectile properly.
 
-Example: Banner, Bed, Button, Chest, CocoaPlant, Comparator, Diode, DirectionalContainer, Dispenser, Door, EnderChest, Furnace, FurnaceAndDispenser, Gate, Hopper, Ladder, Lever, Observer, PistonBaseMaterial, PistonExtensionMaterial, Pumpkin, RedstoneTorch, Sign, SimpleAttachableMaterialData, Skull, Stairs, Torch, TrapDoor, TripwireHook
+Example: AmethystCluster, Barrel, Bed, Beehive, Bell, BigDripleaf, CalibratedSculkSensor, Campfire, Chest, ChiseledBookshelf, Cocoa, CommandBlock, Comparator, CoralWallFan, DecoratedPot, Dispenser, Door, Dripleaf, EnderChest, EndPortalFrame, Furnace, Gate, Grindstone, Hopper, Ladder, Lectern, LightningRod, Observer, PinkPetals, Piston, PistonHead, RedstoneWallTorch, Repeater, SmallDripleaf, Stairs, Switch, TechnicalPiston, TrapDoor, TripwireHook, Vault, WallHangingSign, WallSign, WallSkull
 {% endhint %}
 
 
@@ -399,7 +399,7 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
 - MOB_aROUND 9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
 ```
 
-###
+
 
 ### MOVE
 

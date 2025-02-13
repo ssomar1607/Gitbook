@@ -18,7 +18,7 @@ description: >-
 
 ## How does YML Format Work Exactly
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In this picture, here is an example of a broken item config.
 
@@ -26,11 +26,11 @@ Why? Because YML heavily relies on indention when grouping attributes unlike JSO
 
 To analyze how it normally works, I will give you simple examples
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 a, c, b belong in the same "group" because they belong in the same line spacing
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can see that line 4 starts with 2 more spaces than line 3. Which means that the next following lines, line 5 and line 6, belong to the "group" which is line 4
 

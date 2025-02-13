@@ -1122,7 +1122,7 @@ You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/b
 
 more info for the group arg:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-2" %}
 
