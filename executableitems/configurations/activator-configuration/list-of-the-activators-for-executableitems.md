@@ -13,8 +13,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player either left or right click with the item.&#x20;
   * You can't differentiate the clicks, for that use different activators such as PLAYER\_RIGHT\_CLICK or PLAYER\_LEFT\_CLICK.
-* activatarFeatures
-  * \<IF I FORGOT PLS PING VAYK>
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-typetarget](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
 * Examples:&#x20;
   * Warping Stone – Instantly teleports the player 5 blocks in the direction they are facing. Cooldown: 10 seconds.
   * Healing Totem – When clicked, heals the player for 4 hearts and grants Regeneration I for 5 seconds.
@@ -54,36 +54,140 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_BLOCK\_BREAK
 
 * Info: Activator that gets triggered when the player breaks a block.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples:
+  * Ore Booster Pickaxe – When breaking an ore block, there is a 20% chance to double the drop.
+  * Nature’s Wrath Axe – Breaking a log has a 10% chance to summon a hostile tree spirit (custom mob).
+  * Cursed Excavation – When breaking stone, there is a 5% chance to spawn silverfish or apply Mining Fatigue for 5 seconds.
+  * Explosive Demolition Hammer – When breaking blocks the surrounding blocks will be broken too, being able to break in 3x3.
+
+### ⭐PLAYER\_BLOCK\_HIT\_OF\_ENTITY
+
+* Info: Activator that gets triggered when the player blocks a hit that comes from an entity with the shield.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.ve.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+* Examples:
+  * Thorned Shield – When blocking an attack, the attacker takes 3 hearts of damage.
+  * Shockwave Defense – Successfully blocking an attack knocks back all nearby enemies within 5 blocks.
+  * Energy Absorption – When blocking an attack, the player regenerates 1 heart and gains Resistance I for 3 seconds.
+  * Frozen Guard – If an attack is blocked, the attacker is frozen in place (Slowness IV) for 2 seconds.
+  * Blazing Counter – Blocking an attack sets the attacker on fire for 4 seconds.
+
+### ⭐PLAYER\_BLOCK\_HIT\_OF\_PLAYER
+
+* Info: Activator that gets triggered when the player blocks a hit that comes from a player with the shield.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+* Examples:
+  * Retribution Shield – When blocking an attack from a player, the attacker is instantly disarmed, dropping their weapon on the ground.
+  * Vampiric Guard – When successfully blocking an attack, the player absorbs a portion of the attacker's health (healing 2 hearts).
+  * Dimensional Rift – If a player’s attack is blocked, there is a 20% chance they are teleported 10 blocks away in a random direction.
+  * Adrenaline Block – When blocking an attack, the player instantly gains Speed II and Strength I for 5 seconds, allowing for a quick counterattack.
+
+### ⭐PLAYER\_BLOCK\_PLACE
+
+* Info: Activator that gets triggered when the player places a block.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+* Examples:
+  * Living Roots – When placing a sapling, there is a 10% chance for it to instantly grow into a tree.
+  * Runic Inscription – Placing a stone block has a 5% chance to turn it into a Runed Stone, emitting particles and providing nearby players Haste I for 10 seconds.
+  * When placing TNT, there’s a small chance (5%) for it to immediately ignite, creating an unexpected explosion.
+
+### ⭐PLAYER\_BREAK\_SHIELD\_OF\_PLAYER
+
+* Info: Activator that gets triggered when the player breaks a shield of another player (usually called target).
 
 
 
-* [<mark style="color:orange;">**PLAYER\_BLOCK\_BREAK**</mark>](list-of-the-activators-for-executableitems.md#player_block_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player mines / breaks a block.**
-* <mark style="color:orange;">**PLAYER\_BLOCK\_HIT\_OF\_ENTITY**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player blocks a hit that comes from an entity with the shield.
-* <mark style="color:orange;">**PLAYER\_BLOCK\_HIT\_OF\_PLAYER**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player blocks a hit that comes from a player with the shield.
-* [<mark style="color:orange;">**PLAYER\_BLOCK\_PLACE**</mark>](list-of-the-activators-for-executableitems.md#player_block_place) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player places a block.**
-* <mark style="color:orange;">**PLAYER\_BREAK\_SHIELD\_OF\_PLAYER**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player breaks a shield of a player
-* <mark style="color:orange;">**PLAYER\_BRUSH\_BLOCK**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player brushes a block.**
-* <mark style="color:blue;">**PLAYER\_BUCKET\_ENTITY**</mark>: Activates when the player buckets an entity
-* [<mark style="color:blue;">**PLAYER\_CHANGE\_WORLD**</mark>](list-of-the-activators-for-executableitems.md#player_change_world) : Activates when the player moves to a different world.
-* [<mark style="color:orange;">**PLAYER\_CLICK\_ON\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#player_click_on_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player click on an entity.**
-* [<mark style="color:blue;">**PLAYER\_CLICK\_ON\_PLAYER**</mark>](list-of-the-activators-for-executableitems.md#player_click_on_player) : Activates when the player click on a player.
-* [<mark style="color:orange;">**PLAYER\_CONNECTION**</mark>](list-of-the-activators-for-executableitems.md#player_connection) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player log into the server. (Does not activate when you log out)**
-* [<mark style="color:blue;">**PLAYER\_CONSUME**</mark>](list-of-the-activators-for-executableitems.md#player_consume) : Activates when the player successfully eat / consume the item.
-* <mark style="color:blue;">**PLAYER\_CONSUME\_THE\_EI**</mark>  : Activates when the player successfully eat/consume the EI itself
-* <mark style="color:blue;">**PLAYER\_CUSTOM\_LAUNCH**</mark> : Activates when the player launch a projectile with the commands: LAUNCH, LOCATEDLAUNCH and LAUNCHENTITY.
-* [<mark style="color:blue;">**PLAYER\_DEATH**</mark>](list-of-the-activators-for-executableitems.md#player_death) : Activates when the player dies.
-* [<mark style="color:orange;">**PLAYER\_DESELECT\_THE\_EI**</mark>](list-of-the-activators-for-executableitems.md#player_deselect_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you deselect the EI item in the hotbar.**
-* <mark style="color:blue;">**PLAYER\_DISABLE\_FLY**</mark>**&#x20; : Activates when the player stops flying.**
-* <mark style="color:blue;">**PLAYER\_DISABLE\_GLIDE**</mark>**&#x20; : Activates when the player stops gliding.**
-* [<mark style="color:orange;">**PLAYER\_DISABLE\_SNEAK**</mark>](list-of-the-activators-for-executableitems.md#player_desactive_sneak) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops from sneaking.**&#x20;
-* [<mark style="color:orange;">**PLAYER\_DISABLE\_SPRINT**</mark>](list-of-the-activators-for-executableitems.md#player_desactive_sprint)<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player stops from sprinting**
-* [<mark style="color:blue;">**PLAYER\_DISCONNECTION**</mark>](list-of-the-activators-for-executableitems.md#player_deconnection) **: Activates when the player logs out from the server.**&#x20;
-* [<mark style="color:blue;">**PLAYER\_DISMOUNT**</mark>](list-of-the-activators-for-executableitems.md#player_dismount) **: Activates when the player steps out from riding an entity.**&#x20;
-* [<mark style="color:blue;">**PLAYER\_DROP\_ITEM**</mark>](list-of-the-activators-for-executableitems.md#player_drop_item) : Activates when the player drops an item.
-* [<mark style="color:orange;">**PLAYER\_DROP\_THE\_EI**</mark>](list-of-the-activators-for-executableitems.md#player_drop_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player drops the EI item.**
-* [<mark style="color:orange;">**PLAYER\_EDIT\_BOOK**</mark>](list-of-the-activators-for-executableitems.md#player_edit_book) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player made changes to the book and quill and pressed done or sign the book.**
-* [<mark style="color:orange;">**PLAYER\_EI\_BREAK**</mark>](list-of-the-activators-for-executableitems.md#player_item_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player breaks the ExecutableItem.**
+<figure><img src="../../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
+
+
+
+### ⭐PLAYER\_BRUSH\_BLOCK
+
+* Info: Activator that gets triggered when the player brushes a block.
+
+### 🔹PLAYER\_BUCKET\_ENTITY
+
+* Info: Activator that gets triggered when the player buckets an entity
+
+### 🔹PLAYER\_CHANGE\_WORLD
+
+* Info: Activator that gets triggered when the player moves to a different world.
+
+### ⭐PLAYER\_CLICK\_ON\_ENTITY
+
+* Info: Activator that gets triggered when the player click on an entity
+
+### 🔹PLAYER\_CLICK\_ON\_PLAYER
+
+* Info: Activator that gets triggered when the player click on a player
+
+### ⭐PLAYER\_CONNECTION
+
+* Info: Activator that gets triggered  when the player log into the server. (Does not activate when you log out)
+
+### 🔹PLAYER\_CONSUME
+
+* Info: Activator that gets triggered when the player successfully eat / consume the item.
+
+### 🔹PLAYER\_CONSUME\_THE\_EI
+
+* Info: Activator that gets triggered when the player successfully eat/consume the EI itself
+
+### 🔹PLAYER\_CUSTOM\_LAUNCH
+
+* Info: Activator that gets triggered when the player launch a projectile with the commands: LAUNCH, LOCATEDLAUNCH and LAUNCHENTITY.
+
+### 🔹PLAYER\_DEATH
+
+* Info: Activator that gets triggered when the player dies.&#x20;
+
+### ⭐PLAYER\_DESELECT\_THE\_EI
+
+* Info: Activator that gets triggered if you deselect the EI item in the hotbar.&#x20;
+
+### 🔹PLAYER\_DISABLE\_FLY
+
+* Info: Activator that gets triggered when the player stops flying.&#x20;
+
+### 🔹PLAYER\_DISABLE\_GLIDE
+
+* Info: Activator that gets triggered when the player stops gliding.&#x20;
+
+### ⭐PLAYER\_DISABLE\_SNEAK
+
+* Info: Activator that gets triggered when the player stops from sneaking.&#x20;
+
+### ⭐PLAYER\_DISABLE\_SPRINT
+
+* Info: Activator that gets triggered when the player stops from sprinting&#x20;
+
+### 🔹PLAYER\_DISCONNECTION
+
+* Info: Activator that gets triggered when the player logs out from the server.
+
+### 🔹PLAYER\_DISMOUNT
+
+* Info: Activator that gets triggered when the player steps out from riding an entity.&#x20;
+
+### 🔹PLAYER\_DROP\_ITEM
+
+* Info: Activator that gets triggered when the player drops an item.&#x20;
+
+### ⭐PLAYER\_DROP\_THE\_EI
+
+* Info: Activator that gets triggered when the player drops the EI item.&#x20;
+
+### ⭐PLAYER\_EDIT\_BOOK
+
+* Info: Activator that gets triggered when the player made changes to the book and quill and pressed done or sign the book.&#x20;
+
+### ⭐PLAYER\_EI\_BREAK
+
+* Info: Activator that gets triggered when the player breaks the ExecutableItem.
 
 ### ⭐PLAYER\_ENABLE\_FLY
 
@@ -93,62 +197,233 @@ Activator features are features that are exclusive to that activator.
   * Lightning Takeoff – When flight is activated, a small lightning bolt with no damage strikes the player’s position for dramatic effect.
   * Aerial Boost – Upon starting flight, the player gets a temporary Speed III effect for 5 seconds to simulate a powerful lift-off.
   * Gale Force Wings – When starts flying, a strong wind effect pushes all entities around the player.
-* <mark style="color:blue;">**PLAYER\_ENABLE\_GLIDE**</mark>**: Activates when the player starts gliding.**
-* [<mark style="color:orange;">**PLAYER\_ENABLE\_SNEAK**</mark>](list-of-the-activators-for-executableitems.md#player_active_sneak) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts sneaking.**
-* [<mark style="color:orange;">**PLAYER\_ENABLE\_SPRINT**</mark>](list-of-the-activators-for-executableitems.md#player_active_sprint) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player starts sprinting**
-* <mark style="color:orange;">**PLAYER\_ENTER\_IN\_THEIR\_LAND**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">**: Activates if you enter in your land or a land where you are trusted**
-* [<mark style="color:orange;">**PLAYER\_ENTER\_IN\_THEIR\_PLOT**</mark>](list-of-the-activators-for-executableitems.md#player_enter_in_his_plot) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you enter a plot from the PlotSquared plugin.**
-* [<mark style="color:orange;">**PLAYER\_EQUIP\_THE\_EI**</mark>](list-of-the-activators-for-executableitems.md#player_equip_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you put the armorpiece in the armor slot.**
-  * **The plugin CMI can break** this activator be sure you have the `cmi.inventoryhat` permission set to **false**&#x20;
-* <mark style="color:blue;">**PLAYER\_EXPERIENCE\_CHANGE**</mark>**: Activates when the player experience changes naturally.**
-* [<mark style="color:orange;">**PLAYER\_FERTILIZE\_BLOCK**</mark>](list-of-the-activators-for-executableitems.md#player_fertilize_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if the player fertilizes blocks with bone meal.**
-* [<mark style="color:blue;">**PLAYER\_FILL\_BUCKET**</mark>](list-of-the-activators-for-executableitems.md#player_fill_bucket) : Activates when the player attempts to pickup water or lava with a bucket.
-* [<mark style="color:orange;">**PLAYER\_FISH\_BLOCK**</mark>](list-of-the-activators-for-executableitems.md#player_fish_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber is on a block.**
-* [<mark style="color:orange;">**PLAYER\_FISH\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#player_fish_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber catches an entity.**
-* [<mark style="color:orange;">**PLAYER\_FISH\_FISH**</mark>](list-of-the-activators-for-executableitems.md#player_fish_fish) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber catches something.**
-* [<mark style="color:orange;">**PLAYER\_FISH\_NOTHING**</mark>](list-of-the-activators-for-executableitems.md#player_fish_nothing) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player fishes nothing.**
-* [<mark style="color:orange;">**PLAYER\_FISH\_PLAYER**</mark>](list-of-the-activators-for-executableitems.md#player_fish_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player right-click the fishing rod when the fishing rod bobber catches a player.**
-* <mark style="color:blue;">**PLAYER\_HARVEST\_BLOCK**</mark>: Activates when the player harvests a block (Example: Activator runs if the player right clicks a sweet berry bush that contains berries that can be harvested upon right-click)
-* [<mark style="color:orange;">**PLAYER\_HIT\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#player_hit_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: **Activates when the player hits an entity**&#x20;
-* [<mark style="color:blue;">**PLAYER\_HIT\_PLAYER**</mark>](list-of-the-activators-for-executableitems.md#player_hit_player) **:** Activates when the player hits a player
-* [<mark style="color:orange;">**PLAYER\_ITEM\_BREAK**</mark>](list-of-the-activators-for-executableitems.md#player_item_break) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player breaks the item by making it loose all its durability.**
-* [<mark style="color:orange;">**PLAYER\_JUMP**</mark>](list-of-the-activators-for-executableitems.md#player_jump) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player jumps. (In 1.21.2+, it can trigger even if the player is in the air)**
-* <mark style="color:blue;">**PLAYER\_KICK**</mark>: Activates when the player gets kicked
-* [<mark style="color:orange;">**PLAYER\_KILL\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#player_kill_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player kills an entity.**
-* [<mark style="color:orange;">**PLAYER\_KILL\_PLAYER**</mark>](list-of-the-activators-for-executableitems.md#player_kill_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player kills a player.**
-* [<mark style="color:blue;">**PLAYER\_LAUNCH\_PROJECTILE**</mark>](list-of-the-activators-for-executableitems.md#player_launch_projectile): Activates when the player shoots a projectile.
-* <mark style="color:blue;">**PLAYER\_LEAVE\_THEIR\_LAND**</mark>**&#x20;: Activates if you leave your land or a land where you are trusted**
-* [<mark style="color:orange;">**PLAYER\_LEAVE\_THEIR\_PLOT**</mark>](list-of-the-activators-for-executableitems.md#player_leave_his_plot) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you leave a plot from the PlotSquared plugin.**
-* [<mark style="color:blue;">**PLAYER\_LEFT\_CLICK**</mark>](list-of-the-activators-for-executableitems.md#player_left_click) : Activates when the player left-clicks the item.
-* <mark style="color:blue;">**PLAYER\_MEND\_THE\_EI**</mark>: Activates when the player mends the EI
-* <mark style="color:blue;">**PLAYER\_OPEN\_INVENTORY**</mark>: Activates when the player opens inventory
-* <mark style="color:orange;">**PLAYER\_PICKUP\_THE\_EI**</mark> <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> : Activates when the player pick ups the ExecutableItem.
-* <mark style="color:blue;">**PLAYER\_PORTAL**</mark>: Activates when the player uses a portal
-* <mark style="color:orange;">**PLAYER\_RECEIVE\_EFFECT**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the player receives an effect
-* [<mark style="color:orange;">**PLAYER\_RECEIVE\_HIT\_BY\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#player_receive_hit_by_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when you get hit by anything from an entity.**
-* [<mark style="color:orange;">**PLAYER\_RECEIVE\_HIT\_BY\_PLAYER**</mark>](list-of-the-activators-for-executableitems.md#player_receive_hit_by_player) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when you get hit by anything from a player.**
-* [<mark style="color:orange;">**PLAYER\_RECEIVE\_HIT\_GLOBAL**</mark>](list-of-the-activators-for-executableitems.md#player_receive_hit_global) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when you get hit by anything.**
-* <mark style="color:blue;">**PLAYER\_REGAIN\_HEALTH**</mark>: Activates when the player regains health
-* [<mark style="color:orange;">**PLAYER\_RESPAWN**</mark>](list-of-the-activators-for-executableitems.md#player_respawn) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player re-spawns.**
-* [<mark style="color:blue;">**PLAYER\_RIGHT\_CLICK**</mark>](list-of-the-activators-for-executableitems.md#player_right_click) : Activates when the player right-clicks the item. (IT REQUIRES EITHER HAVE AN ITEM IN THE HAND OR TARGET AT A BLOCK TO BE TRIGGERED, THIS IS A SPIGOT LIMITATION)
-* <mark style="color:blue;">**PLAYER\_RIPTIDE**</mark>: Activates when the player riptides
-* [<mark style="color:orange;">**PLAYER\_SELECT\_THE\_EI**</mark>](list-of-the-activators-for-executableitems.md#player_select_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player selects the EI item in the hotbar.**
-* [<mark style="color:orange;">**PLAYER\_SHEAR\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#player_shear_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player shears an entity.**
-* <mark style="color:orange;">**PLAYER\_SHIELD\_BREAK\_BY\_PLAYER**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when the shield of the player gets broken by someone else.
-* <mark style="color:blue;">**PLAYER\_SPAWN\_CHANGE**</mark>: Activates when the player changes their spawn
-* <mark style="color:blue;">PLAYER\_SWAPHAND\_THE\_EI</mark>: Activates when the player swaphand the EI.
-* [<mark style="color:orange;">**PLAYER\_TARGETED\_BY\_AN\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#player_targeted_by_an_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">: Activates when an entity targets the player.
-* <mark style="color:blue;">**PLAYER\_TRAMPLE\_CROP**</mark> : Activates when the player tramples a crop.
-* [<mark style="color:orange;">**PLAYER\_UNEQUIP\_THE\_EI**</mark>](list-of-the-activators-for-executableitems.md#player_unequip_the_ei) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates if you unequip the EI.**
-  * **The plugin CMI can break** this activator be sure you have the `cmi.inventoryhat` permission set to **false**&#x20;
-* [<mark style="color:orange;">**PLAYER\_WALK**</mark>](list-of-the-activators-for-executableitems.md#player_walk) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player walks.**
-* [<mark style="color:orange;">**PLAYER\_WRITE\_COMMAND**</mark>](list-of-the-activators-for-executableitems.md#player_write_command) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player enters commands.**
-* [<mark style="color:orange;">**PROJECTILE\_ENTER\_LIQUID**</mark>](list-of-the-activators-for-executableitems.md#projectile_enter_liquid) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">**: Activates if the launched projectile enters and stays long enough in water**
-* [<mark style="color:orange;">**PROJECTILE\_HIT\_BLOCK**</mark>](list-of-the-activators-for-executableitems.md#projectile_hit_block) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the projectile of the player hits a block.**
-* [<mark style="color:orange;">**PROJECTILE\_HIT\_ENTITY**</mark>](list-of-the-activators-for-executableitems.md#projectile_hit_entity) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the projectile of the player hits an entity.**
-* [<mark style="color:blue;">**PROJECTILE\_HIT\_PLAYER**</mark>](list-of-the-activators-for-executableitems.md#projectile_hit_player) : Activates when the projectile of the player hits a player.
-* <mark style="color:blue;">**CUSTOM\_TRIGGER**</mark>: It can be executed by running a command, or it can be scheduled.
-* <mark style="color:orange;">**EI\_ENTER\_IN\_THE\_PLAYER\_INVENTORY**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the item enters to the player's inventory. (**&#x49;f when a plugin gives an ExecutableItem to a player it doesn't trigger this activator, you should go on their support and ask them to call this method: [CLICK HERE](https://docs.ssomar.com/executableitems/developer-api#event-to-call-when-you-add-an-executableitem-in-a-player-inventory))
-* <mark style="color:orange;">**EI\_LEAVE\_THE\_PLAYER\_INVENTORY**</mark><img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the item leaves the player's inventory. (** Require ProtocolLib to make this activator works properly **)**
-* [<mark style="color:orange;">**INVENTORY\_CLICK**</mark>](list-of-the-activators-for-executableitems.md#inventory_click) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates when the player clicks the item in its inventory.**&#x20;
-* [<mark style="color:orange;">**LOOP**</mark>](list-of-the-activators-for-executableitems.md#loop) <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> **: Activates in repeat as long as the item is in the player's inventor**
+
+
+
+### 🔹PLAYER\_ENABLE\_GLIDE
+
+* Info: Activator that gets triggered when the player starts gliding.&#x20;
+
+### ⭐PLAYER\_ENABLE\_SNEAK
+
+* Info: Activator that gets triggered when the player starts sneaking.&#x20;
+
+### ⭐PLAYER\_ENABLE\_SPRINT
+
+* Info: Activator that gets triggered when the player starts sprinting&#x20;
+
+### ⭐PLAYER\_ENTER\_IN\_THEIR\_LAND
+
+* Info: Activator that gets triggered if you enter in your land or a land where you are trusted&#x20;
+
+### ⭐PLAYER\_ENTER\_IN\_THEIR\_PLOT
+
+* Info: Activator that gets triggered if you enter a plot from the PlotSquared plugin.&#x20;
+
+### ⭐PLAYER\_EQUIP\_THE\_EI
+
+* Info: Activator that gets triggered if you put the armorpiece in the armor slot. The plugin CMI can break this activator be sure you have the cmi.inventoryhat permission set to false&#x20;
+
+### 🔹PLAYER\_EXPERIENCE\_CHANGE
+
+* Info: Activator that gets triggered when the player experience changes naturally.&#x20;
+
+### ⭐PLAYER\_FERTILIZE\_BLOCK
+
+* Info: Activator that gets triggered if the player fertilizes blocks with bone meal.&#x20;
+
+### 🔹PLAYER\_FILL\_BUCKET
+
+* Info: Activator that gets triggered when the player attempts to pickup water or lava with a bucket.&#x20;
+
+### ⭐PLAYER\_FISH\_BLOCK
+
+* Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber is on a block.&#x20;
+
+### ⭐PLAYER\_FISH\_ENTITY
+
+* Activates when the player right-click the fishing rod when the fishing rod bobber catches an entity.&#x20;
+
+### ⭐PLAYER\_FISH\_FISH
+
+* Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber catches something.&#x20;
+
+### ⭐PLAYER\_FISH\_NOTHING
+
+* Info: Activator that gets triggered when the player fishes nothing.&#x20;
+
+### ⭐PLAYER\_FISH\_PLAYER
+
+* Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber catches a player.&#x20;
+
+### 🔹PLAYER\_HARVEST\_BLOCK
+
+* Info: Activator that gets triggered when the player harvests a block (Example: Activator runs if the player right clicks a sweet berry bush that contains berries that can be harvested upon right-click)&#x20;
+
+### ⭐PLAYER\_HIT\_ENTITY
+
+* Info: Activator that gets triggered when the player hits an entity&#x20;
+
+### 🔹PLAYER\_HIT\_PLAYER
+
+* Info: Activator that gets triggered when the player hits a player&#x20;
+
+### ⭐PLAYER\_ITEM\_BREAK
+
+* Info: Activator that gets triggered when the player breaks the item by making it loose all its durability.&#x20;
+
+### ⭐PLAYER\_JUMP
+
+* Info: Activator that gets triggered when the player jumps. (In 1.21.2+, it can trigger even if the player is in the air)&#x20;
+
+### 🔹PLAYER\_KICK
+
+* Info: Activator that gets triggered when the player gets kicked&#x20;
+
+### ⭐PLAYER\_KILL\_ENTITY
+
+* Info: Activator that gets triggered when the player kills an entity.&#x20;
+
+### ⭐PLAYER\_KILL\_PLAYER
+
+* Info: Activator that gets triggered when the player kills a player.&#x20;
+
+### 🔹PLAYER\_LAUNCH\_PROJECTILE
+
+* Info: Activator that gets triggered when the player shoots a projectile.&#x20;
+
+### 🔹PLAYER\_LEAVE\_THEIR\_LAND
+
+* Info: Activator that gets triggered if you leave your land or a land where you are trusted&#x20;
+
+### ⭐PLAYER\_LEAVE\_THEIR\_PLOT
+
+* Info: Activator that gets triggered if you leave a plot from the PlotSquared plugin.&#x20;
+
+### 🔹PLAYER\_LEFT\_CLICK
+
+* Info: Activator that gets triggered when the player left-clicks the item.&#x20;
+
+### 🔹PLAYER\_MEND\_THE\_EI
+
+* Info: Activator that gets triggered  when the player mends the EI&#x20;
+
+### 🔹PLAYER\_OPEN\_INVENTORY
+
+* Info: Activator that gets triggered when the player opens inventory&#x20;
+
+### ⭐PLAYER\_PICKUP\_THE\_EI
+
+* Info: Activator that gets triggered when the player pick ups the ExecutableItem.&#x20;
+
+### 🔹PLAYER\_PORTAL
+
+* Info: Activator that gets triggered when the player uses a portal&#x20;
+
+### ⭐PLAYER\_RECEIVE\_EFFECT
+
+* Info: Activator that gets triggered when the player receives an effect&#x20;
+
+### ⭐PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
+
+* Info: Activator that gets triggered when you get hit by anything from an entity.&#x20;
+
+### ⭐PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
+
+* Info: Activator that gets triggered when you get hit by anything from a player.&#x20;
+
+### ⭐PLAYER\_RECEIVE\_HIT\_GLOBAL
+
+* Info: Activator that gets triggered when you get hit by anything.&#x20;
+
+### 🔹PLAYER\_REGAIN\_HEALTH
+
+* Info: Activator that gets triggered when the player regains health
+
+### ⭐PLAYER\_RESPAWN
+
+* Info: Activator that gets triggered when the player re-spawns.&#x20;
+
+### 🔹PLAYER\_RIGHT\_CLICK
+
+* Info: Activator that gets triggered when the player right-clicks the item. (IT REQUIRES EITHER HAVE AN ITEM IN THE HAND OR TARGET AT A BLOCK TO BE TRIGGERED, THIS IS A SPIGOT LIMITATION)&#x20;
+
+### 🔹PLAYER\_RIPTIDE
+
+* Info: Activator that gets triggered when the player riptides&#x20;
+
+### ⭐PLAYER\_SELECT\_THE\_EI
+
+* Info: Activator that gets triggered when the player selects the EI item in the hotbar.&#x20;
+
+### ⭐PLAYER\_SHEAR\_ENTITY
+
+* Info: Activator that gets triggered when the player shears an entity.&#x20;
+
+### ⭐PLAYER\_SHIELD\_BREAK\_BY\_PLAYER
+
+* Info: Activator that gets triggered when the shield of the player gets broken by someone else.&#x20;
+
+### 🔹PLAYER\_SPAWN\_CHANGE
+
+* Info: Activator that gets triggered when the player changes their spawn&#x20;
+
+### 🔹PLAYER\_SWAPHAND\_THE\_EI
+
+* Info: Activator that gets triggered when the player swaphand the EI.&#x20;
+
+### ⭐PLAYER\_TARGETED\_BY\_AN\_ENTITY
+
+* Info: Activator that gets triggered when an entity targets the player.&#x20;
+
+### 🔹PLAYER\_TRAMPLE\_CROP
+
+* Info: Activator that gets triggered when the player tramples a crop.&#x20;
+
+### ⭐PLAYER\_UNEQUIP\_THE\_EI
+
+* Info: Activator that gets triggered if you unequip the EI. The plugin CMI can break this activator be sure you have the cmi.inventoryhat permission set to false&#x20;
+
+### ⭐PLAYER\_WALK
+
+* Info: Activator that gets triggered when the player walks.&#x20;
+
+### ⭐PLAYER\_WRITE\_COMMAND
+
+* Info: Activator that gets triggered when the player enters commands.&#x20;
+
+### ⭐PROJECTILE\_ENTER\_LIQUID
+
+* Info: Activator that gets triggered if the launched projectile enters and stays long enough in water&#x20;
+
+### ⭐PROJECTILE\_HIT\_BLOCK
+
+* Info: Activator that gets triggered when the projectile of the player hits a block.&#x20;
+
+### ⭐PROJECTILE\_HIT\_ENTITY
+
+* Info: Activator that gets triggered when the projectile of the player hits an entity.&#x20;
+
+### 🔹PROJECTILE\_HIT\_PLAYER
+
+* Info: Activator that gets triggered when the projectile of the player hits a player.&#x20;
+
+### 🔹CUSTOM\_TRIGGER
+
+* Info: Activator that can be executed by running a command, or it can be scheduled.&#x20;
+
+### ⭐EI\_ENTER\_IN\_THE\_PLAYER\_INVENTORY
+
+* Info: Activator that gets triggered when the item enters to the player's inventory. (If when a plugin gives an ExecutableItem to a player it doesn't trigger this activator, you should go on their support and ask them to call this method: CLICK HERE)&#x20;
+
+### ⭐EI\_LEAVE\_THE\_PLAYER\_INVENTORY
+
+* Info: Activator that gets triggered  when the item leaves the player's inventory. ( Require ProtocolLib to make this activator works properly )&#x20;
+
+### ⭐INVENTORY\_CLICK
+
+* Info: Activator that gets triggered when the player clicks the item in its inventory.&#x20;
+
+### ⭐LOOP
+
+* Info: Activator that gets triggered in repeat as long as the item is in the player's inventor
