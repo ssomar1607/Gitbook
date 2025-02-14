@@ -1,5 +1,7 @@
 # General Configuration
 
+On this page you will learn the configuration of ExecutableItems that is on config.yml locaeted in plugins/ExecutableItems/config.yml
+
 {% code title="config.yml" %}
 ```yaml
 pickupLimit: -1

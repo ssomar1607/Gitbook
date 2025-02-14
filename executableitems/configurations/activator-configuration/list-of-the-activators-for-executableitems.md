@@ -55,6 +55,7 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player breaks a block.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples:
   * Ore Booster Pickaxe – When breaking an ore block, there is a 20% chance to double the drop.
@@ -66,6 +67,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player blocks a hit that comes from an entity with the shield.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.ve.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 * Examples:
   * Thorned Shield – When blocking an attack, the attacker takes 3 hearts of damage.
@@ -78,6 +81,7 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player blocks a hit that comes from a player with the shield.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 * Examples:
   * Retribution Shield – When blocking an attack from a player, the attacker is instantly disarmed, dropping their weapon on the ground.
@@ -89,6 +93,7 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player places a block.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples:
   * Living Roots – When placing a sapling, there is a 10% chance for it to instantly grow into a tree.
@@ -98,6 +103,7 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_BREAK\_SHIELD\_OF\_PLAYER
 
 * Info: Activator that gets triggered when the player breaks a shield of another player (usually called target).
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 
 
@@ -108,86 +114,107 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_BRUSH\_BLOCK
 
 * Info: Activator that gets triggered when the player brushes a block.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_BUCKET\_ENTITY
 
 * Info: Activator that gets triggered when the player buckets an entity
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CHANGE\_WORLD
 
 * Info: Activator that gets triggered when the player moves to a different world.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_CLICK\_ON\_ENTITY
 
 * Info: Activator that gets triggered when the player click on an entity
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CLICK\_ON\_PLAYER
 
 * Info: Activator that gets triggered when the player click on a player
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_CONNECTION
 
 * Info: Activator that gets triggered  when the player log into the server. (Does not activate when you log out)
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CONSUME
 
 * Info: Activator that gets triggered when the player successfully eat / consume the item.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CONSUME\_THE\_EI
 
 * Info: Activator that gets triggered when the player successfully eat/consume the EI itself
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CUSTOM\_LAUNCH
 
 * Info: Activator that gets triggered when the player launch a projectile with the commands: LAUNCH, LOCATEDLAUNCH and LAUNCHENTITY.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DEATH
 
-* Info: Activator that gets triggered when the player dies.&#x20;
+* Info: Activator that gets triggered when the player dies.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.&#x20;
 
 ### ⭐PLAYER\_DESELECT\_THE\_EI
 
 * Info: Activator that gets triggered if you deselect the EI item in the hotbar.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DISABLE\_FLY
 
 * Info: Activator that gets triggered when the player stops flying.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DISABLE\_GLIDE
 
 * Info: Activator that gets triggered when the player stops gliding.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_DISABLE\_SNEAK
 
 * Info: Activator that gets triggered when the player stops from sneaking.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_DISABLE\_SPRINT
 
 * Info: Activator that gets triggered when the player stops from sprinting&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DISCONNECTION
 
 * Info: Activator that gets triggered when the player logs out from the server.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DISMOUNT
 
 * Info: Activator that gets triggered when the player steps out from riding an entity.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DROP\_ITEM
 
 * Info: Activator that gets triggered when the player drops an item.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_DROP\_THE\_EI
 
 * Info: Activator that gets triggered when the player drops the EI item.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_EDIT\_BOOK
 
 * Info: Activator that gets triggered when the player made changes to the book and quill and pressed done or sign the book.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_EI\_BREAK
 
 * Info: Activator that gets triggered when the player breaks the ExecutableItem.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_ENABLE\_FLY
 
