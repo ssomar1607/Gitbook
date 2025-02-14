@@ -146,6 +146,36 @@ activators:
     cancelEvent: true
 </code></pre>
 
+### playerCommands
+
+Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
+
+* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
+  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+* There are three type of entity targets on commands
+  * Player: Its the player/user who triggered the activator on the ExecutableItem
+  * Target: Its the player targeted/enemy involved in an activator.
+  * Entity: Its the entity/mob/enemy involved in an activator.
+
+Its important to know that even if there are different categories for activators this feature appears on every one/each one of them due on all activators is present the player who triggers the event for the ExecutableItem activator.
+
+* Info: Player commands is a list commands that are normally run against the player when the activator triggers.
+  * This means if it has an SCore command of DAMAGE 5, if its on playerCommands then the damage will be applied to the user of the ExecutableItem.
+  * Its "normally run against the player" because this works for SCore commands, remember you can use another plugin commands or vanilla commands, so if you add "minecraft:say hi" its a minecraft command which will broadcast the message of "hi".&#x20;
+  * You can check the list of playerCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
+* Example:
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_RIGHT_CLICK
+    commands:
+    - SEND_MESSAGE &eHey ! I am a message and the player who triggered this activator
+      can see it ^^
+    - effect give %player% regeneration 5 5 true
+    - SEND_MESSAGE &dYou received regeneration :P
+```
+
 ## Cooldown
 
 ### Player cooldown
@@ -237,36 +267,6 @@ activators:
         activators: [] 
         cooldown: 10
         isCooldownInTicks: false
-```
-
-### playerCommands
-
-Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
-
-* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
-  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
-* There are three type of entity targets on commands
-  * Player: Its the player/user who triggered the activator on the ExecutableItem
-  * Target: Its the player targeted/enemy involved in an activator.
-  * Entity: Its the entity/mob/enemy involved in an activator.
-
-Its important to know that even if there are different categories for activators this feature appears on every one/each one of them due on all activators is present the player who triggers the event for the ExecutableItem activator.
-
-* Info: Player commands is a list commands that are normally run against the player when the activator triggers.
-  * This means if it has an SCore command of DAMAGE 5, if its on playerCommands then the damage will be applied to the user of the ExecutableItem.
-  * Its "normally run against the player" because this works for SCore commands, remember you can use another plugin commands or vanilla commands, so if you add "minecraft:say hi" its a minecraft command which will broadcast the message of "hi".&#x20;
-  * You can check the list of playerCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
-* Example:
-
-```yaml
-activators:  
-  activator1: # Activator ID, you can create as many activators on the activator    
-    option: PLAYER_RIGHT_CLICK
-    commands:
-    - SEND_MESSAGE &eHey ! I am a message and the player who triggered this activator
-      can see it ^^
-    - effect give %player% regeneration 5 5 true
-    - SEND_MESSAGE &dYou received regeneration :P
 ```
 
 ### silenceOutput
@@ -780,76 +780,77 @@ activators:
     - REGAIN HEALTH 10
 ```
 
-## ========== TODO, IF FORGOT PLS PING VAYK RN ITS 14/02/25
+### \[S\_A\_L] desactiveDrops
 
-### Desactive the drops when the activator is triggered.
-
-* Type of activators where the feature works: This feature works on activators that have involved drops, for example:
-  * PLAYER\_KILL\_ENTITY
-  * PLAYER\_BLOCK\_BREAK
-  * PLAYER\_KILL\_PLAYER
-  * PLAYER\_FISH
+* Type of activator category: Specific Activator List
+  * ⭐PLAYER\_KILL\_ENTITY
+  * ⭐PLAYER\_BLOCK\_BREAK
+  * ⭐PLAYER\_KILL\_PLAYER
+  * ⭐PLAYER\_FISH\_FISH
 * Info: Boolean value that allows or prevents the vanilla loot to be dropped when breaking blocks or killing mobs. Since its vanilla drops, custom drops from custom mobs e.g. (MythicMobs) will not get affected by this.
 * Example:&#x20;
 
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
-    desactiveDrops: false
+    option: PLAYER_BLOCK_BREAK
+    desactiveDrops: true
 ```
 
-### onlyAirClick
+### \[S\_A\_L] typeTarget
 
-* Type of activators where the feature works: This feature works on activators that have involved clicks. Not the action of clicking, which could happen when hitting an entity, or breaking a block, but the event of clicking. For example:
-  * PLAYER\_ALL\_CLICK
-  * PLAYER\_RIGHT\_CLICK
-  * PLAYER\_LEFT\_CLICK
-* Description: Boolean feature that restricts the activator so it will only get activated/triggered when the event occurred with clicking only on the air. This means if you clicked on a block the activator won't get triggered. Don't get confuse ! You may think, what happens if I click on a player ? well, its not an event instance of PLAYER\_(CLICK) but that event is instance of PLAYER\_CLICK\_ON\_PLAYER.
+* Type of activator category: Specific Activator List
+  * 🔹PLAYER\_ALL\_CLICK
+  * 🔹PLAYER\_RIGHT\_CLICK
+  * 🔹PLAYER\_LEFT\_CLICK
+* Info: Feature that restricts the activator so it will only get activated/triggered when the event occurred with certain type of clicking
+  * typeTarget
+    * ONLY\_AIR: Restricts the activator so it will only get activated/triggered when the event occurred when clicking only in the air, it means if you clicked on a block the activator won't get triggered. Don't get confuse ! You may think, what happens if I click on a player ? which will not be a block so its on the "air" well.. that even is outside the instance of PLAYER\_(CLICK) type activators, that event is instance of PLAYER\_CLICK\_ON\_PLAYER so the activator won't trigger too, it must be instance of PLAYER\_(CLICK).
+    * ONLY\_BLOCK: Restricts the activator so it will only get activated/triggered when the event occurred with clicking only in a block. This means if you clicked on the air the activator won't get triggered.
+      * This feature makes the activator a block instance activator so it will have blockCommands.
+    * NO\_TYPE\_TARGET: Doesn't restrict the activator on the type of click, both type will be accepted, air clicks and block clicks.
 * Example:&#x20;
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>activators:
 </strong>  activator0: # Activator ID, you can create as many activators on the activators list
-    onlyAirClick: false
+    option: PLAYER_ALL_CLICK
+    typeTarget: NO_TYPE_TARGET
+    commands: []
 </code></pre>
 
-### onlyBlockClick
-
-* Type of activators where the feature works: This feature works on activators that have involved clicks. Not the action of clicking, which could happen when hitting an entity, or breaking a block, but the event of clicking. For example:
-  * PLAYER\_ALL\_CLICK
-  * PLAYER\_RIGHT\_CLICK
-  * PLAYER\_LEFT\_CLICK
-* Description: Boolean feature that restricts the activator so it will only get activated/triggered when the event occurred with clicking only in a block. This means if you clicked on the air the activator won't get triggered.
-* Example:&#x20;
-
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
-    onlyBlockClick: false
+    option: PLAYER_ALL_CLICK
+    typeTarget: ONLY_BLOCK
+    commands: []
+    blockCommands: [] # Added because of typeTarget: ONLY_BLOCK which enables the instance of the activator to block instance
 ```
 
-### detailedClick
+### \[S\_A\_L] detailedClick
 
-* Type of activators where the feature works: This feature works on activators that have involved more than one click, this means PLAYER\_LEFT\_CLICK doesn't enter in this category due its restricted only to one click. For example:
-  * PLAYER\_ALL\_CLICK
-  * PLAYER\_CLICK\_ON\_ENTITY
-  * PLAYER\_CLICK\_ON\_PLAYER
-* Info: Type of click restriction to make the activator only work/trigger/activate when the correct click is involved.
+* Type of activator category: Specific Activator List
+  * ⭐PLAYER\_CLICK\_ON\_ENTITY
+  * 🔹PLAYER\_CLICK\_ON\_PLAYER
+* Info: Feature that restricts the activator triggers only if the correct click is involved in the event.
   * detailedClick
-    * RIGHT: Right click
-    * LEFT: Left click
-    * RIGHTORLEFT: Right or left click.
+    * RIGHT: Restricts the activator only work when the even occurred with the right click
+    * LEFT: Restricts the activator only work when the even occurred with the left click
+    * RIGHTORLEFT: Doesn't restrict the type of click for this activator, it will allow right and left click.
 * Example:&#x20;
 
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
+    option: PLAYER_CLICK_ON_ENTITY
     detailedClick: LEFT
 ```
 
-### delay and delayTick
+### \[S\_A\_L] delay and delayTick
 
-* Type of activators where these features works: This features are exclusive for LOOP activator.
-* Info: Delay and delayTick manage sthe behavior of the loop repetitions of the activator.
+* Type of activator category: Specific Activator List
+  * ⭐LOOP
+* Info: Features of the activator that changes the interval time where this activator triggers, it affects the behavior of the loop repetitions of the activator.
   * delay: Integer value that represents how many seconds will the loop be. This means, each \<delay> \[time] the loop will trigger again. e.g. (If the delay is 30 seconds then each 30 seconds the activator will trigger)
   * delayTick: Boolean value to set the delay time in ticks, otherwise it is in seconds. (20 ticks = 1 second)
 * Example:&#x20;
@@ -858,6 +859,6 @@ activators:
 activators:
   activator1: # Activator ID, you can create as many activators on the activators list
     option: LOOP
-    delay: 30 #IN SECONDS
+    delay: 30 # Value in seconds due delayInTick its false
     delayInTick: false
 ```

@@ -16,6 +16,6 @@ As previous knowledge activators are different ways you have to trigger features
 [activators-features.md](activators-features.md)
 {% endcontent-ref %}
 
-{% content-ref url="activator-examples.md" %}
-[activator-examples.md](activator-examples.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

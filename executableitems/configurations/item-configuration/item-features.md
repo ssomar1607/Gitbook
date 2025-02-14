@@ -103,7 +103,7 @@ displayConditions:
   * Example:&#x20;
     * <pre class="language-yaml"><code class="lang-yaml"><strong>durability: 150   
       </strong></code></pre>
-  * For versions 1.20.5++ The durability option can be customized, enabling new features such as the sync of usage and the durability value. And allow to select custom max durability.
+  * For versions 1.20.5++ The durability option can be customized, enabling new features such as the sync of the usage of the ExecutableItem and the durability value. And allow to select custom max durability.
   * Example:
     * ```yaml
       isDurabilityBasedOnUsage: true
@@ -657,13 +657,46 @@ whitelistedWorlds:
 storeItemInfo: false
 ```
 
-#### CAN BE USED ONLY BY THE OWNER
+### Owner features
 
-* Info: Boolean value that represents if the item can only be used by the owner or not. This only works if the store item info is turned on in order for the item to have an owner.
+#### canBeUsedOnlyByTheOwner
+
+* Info: Boolean value that represents if the item can only be used by the owner or not.
+  * This only works if the store item info is turned on in order for the item to have an owner.
 * Example:&#x20;
 
 ```yaml
 canBeUsedOnlyByTheOwner: false
+```
+
+#### cancelEventIfNotOwner
+
+* Info: Boolean value that represents if the item is not used by the owner then all events are cancelled. This means, if the activator is, for example, PLAYER\_BREAK\_BLOCK if someone that is not the owner tries to use this item, he won't be able to break any block due all events will be cancelled.
+  * This only works if the store item info is turned on in order for the item to have an owner.
+* Example:&#x20;
+
+```yaml
+cancelEventIfNotOwner: false
+```
+
+#### onlyOwnerBlackListedActivators
+
+* Info: List of activators ID of your ExecutableItem, this is a blacklist list which disables the features enabled of canBeUsedOnlyByTheOwner, this means, all activators ID here that targets an activator of the ExecutableItem will be able to be used by everyone even if canBeUsedOnlyByTheOwner is on true.
+  * This only works if the store item info is turned on in order for the item to have an owner.
+* Example:&#x20;
+
+```yaml
+onlyOwnerBlackListedActivators:
+- activator0
+- activator1
+```
+
+### cancelEventIfNoPermission
+
+* Info: Boolean value that represents if the player doesn't have the permission (ei.item.\<id>) to use the item then all events are cancelled. This means, if the activator is, for example, PLAYER\_BREAK\_BLOCK if someone that doesn't have the permission to use this item to use this item, he won't be able to break any block due all events will be cancelled.
+
+```yaml
+cancelEventIfNoPermission: true
 ```
 
 ### Keep item on death

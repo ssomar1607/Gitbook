@@ -45,7 +45,7 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player deaths, now, the difference between this activator and PLAYER\_DEATH activator is that this activator gets triggered first in order offering the feature of being able to save the player before he dies.
   * To understand it better vanilla totems of undying gets triggered by this activator to apply the features it does.
-* Example:
+* Examples:
   * Soulbound Amulet – When the player is about to die, they are instead teleported to their spawn point with 2 hearts and temporary Regeneration II.
   * Last Stand Shield – Upon near death, the player gains Resistance III and Absorption for 5 seconds, giving them a chance to fight back.
   * Phoenix Blessing – When death is imminent, the player explodes in flames, dealing fire damage to enemies and reviving with half health.
@@ -54,6 +54,7 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_BLOCK\_BREAK
 
 * Info: Activator that gets triggered when the player breaks a block.
+* Examples:
 
 
 

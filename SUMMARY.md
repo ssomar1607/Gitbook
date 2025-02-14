@@ -45,7 +45,6 @@
     * [List of the Activators for ExecutableItems](executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems.md)
     * [Activators Descriptions / GIFs](executableitems/configurations/activator-configuration/activators-descriptions-gifs.md)
     * [Activators features](executableitems/configurations/activator-configuration/activators-features.md)
-    * [Activator Examples](executableitems/configurations/activator-configuration/activator-examples.md)
 * [⌨️ Commands & Permissions](executableitems/commands-and-permissions.md)
 * [🤖 Questions | Guides](executableitems/questions-or-guides/README.md)
   * [Informal Guides](executableitems/questions-or-guides/informal-guides.md)
