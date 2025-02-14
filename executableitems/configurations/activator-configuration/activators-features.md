@@ -6,7 +6,9 @@ description: >-
 
 # Activators features
 
-All this features are inside the activator, as reminder activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown,&#x20;
+All this features are inside the activator, as reminder activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
+
+Starred features ⭐ are for premium version.
 
 ## General features of an activator
 
@@ -16,18 +18,18 @@ All this features are inside the activator, as reminder activators are different
 * Example:&#x20;
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>activators:
-</strong>  activator0: # Activator ID, you can create as many activators on the activators list
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
     name: '&#x26;eThor activator'
 </code></pre>
 
-### Usage modification of the activator<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+### ⭐Usage modification of the activator
 
 * Info: Very important feature, the value of the usage of the item will be modified by this integer value. That means, if this value is positive then usage will increase and if this value is negative then the usage will decrease.
 * Example: (Increasing the value of the usage by 1 each time this activator is triggered)
 
 ```yaml
 activators:
-  activator0: # Activator ID, you can create as many activators on the activators list
+  activator0: # Activator ID, you can create as many activator on the activators list
     usageModification: 1
 ```
 
@@ -130,6 +132,20 @@ activators:
     updateArmorSettings: false
 ```
 
+### cancelEvent
+
+* Info: Boolean value that represents if the event related to the activator is going to be cancelled or not.
+  * This can be hard to understand, I think its one of the things that most people don't understand but to explain it you must know that each ACTIVATOR is related to a Minecraft event, following the idea this event occur and then the ACTIVATOR is triggered. if we enabling cancelEvent which is a feature from the activator, that means the event occur, then at almost the same time the activator gets triggered and it cancels the event, so the activator keeps running all its enabled features but the event didn't happen, cancelling it. For example:
+    * If the activator is PLAYER\_HIT\_PLAYER and we enable cancelEvent then the player won't be able to hit the player due all hits are cancelled/ignored.
+    * If the activator is PLAYER\_BLOCK\_BREAK and we enable cancelEvent then the player won't  be able to break blocks due the event is cancelled/ignored.&#x20;
+* Example:&#x20;
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activators on the activators list
+    option: PLAYER_BLOCK_BREAK
+    cancelEvent: true
+</code></pre>
+
 ## Cooldown
 
 ### Player cooldown
@@ -178,8 +194,6 @@ activators:
       * %time\_M% -> the minutes part of the cooldown
       * %time\_S% -> the seconds part of the cooldown&#x20;
   * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
-  * pauseWhenOffline: \<TODO IF I FORGOT PLS PING VAYK>
-  * pausePlaceholdersConditions: \<TODO IF I FORGOT PLS PING VAYK>
   * enableVisualCooldown: Enables a visual cooldown for the item.
 * Example:
 
@@ -192,321 +206,343 @@ activators:
       cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
       displayCooldownMessage: true
       cancelEventIfInCooldown: false
-      pauseWhenOffline: false
-      pausePlaceholdersConditions: {}
       enableVisualCooldown: false
 ```
 
 ### otherEICooldowns
 
+* Info: This feature allows to apply player cooldown to specific ExecutableItems and optional specific activators.&#x20;
+  * executableItem: ID of the ExecutableItem you want to apply cooldown to.
+  * activators: List of strings which are the ID of the activators you want to affect for the ExecutableItem specified with cooldown. If none are selected then the cooldown will be applied to all activators of the ExecutableItem specified.
+  * cooldown: Integer value that will be the amount of time of cooldown will be applied.
+  * isCooldownInTicks: Boolean value that represents if the cooldown value will be on seconds or ticks. (20 ticks = 1 second)
+* Tips:
+  * You can specify the ExecutableItem who run this feature itself. For example if you want from one activator to apply cooldown to another activator in the same item.
+  * Another idea can be applying cooldown to all damage related items if you use one of them.
+  * Another example would be using this feature to allow the player to choose one of different ExecutableItems, when they choose one and triggers it, then they can't use neither the chosen one because its on cooldown nor the another ones because they are on cooldown too.
 * Example:
 
 ```yaml
-otherEICooldowns:
-      cd1:
-        executableItem: Free_Fly
-        activators:
-        - activator1
-        cooldown: 10
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    otherEICooldowns:
+      cd1: # otherEICooldown ID, you can create as many otherEICooldown on the otherEICooldowns list
+        executableItem: test 
+        activators: 
+        - activator0 
+        cooldown: 20 
         isCooldownInTicks: false
-      cd0:
-        executableItem: Free_Custom_Crate
-        activators: []
+      cd0: # otherEICooldown ID, you can create as many otherEICooldown on the otherEICooldowns
+        executableItem: swordSharpness
+        activators: [] 
         cooldown: 10
         isCooldownInTicks: false
 ```
 
-* Description: Add cooldown for another Executable item (in seconds)
-  * It can add cooldown to a specific activator of an EI Item
-* Required: NO
+### playerCommands
 
-## Required features
+Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
-### requiredExecutableItems<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
+  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+* There are three type of entity targets on commands
+  * Player: Its the player/user who triggered the activator on the ExecutableItem
+  * Target: Its the player targeted/enemy involved in an activator.
+  * Entity: Its the entity/mob/enemy involved in an activator.
 
+Its important to know that even if there are different categories for activators this feature appears on every one/each one of them due on all activators is present the player who triggers the event for the ExecutableItem activator.
+
+* Info: Player commands is a list commands that are normally run against the player when the activator triggers.
+  * This means if it has an SCore command of DAMAGE 5, if its on playerCommands then the damage will be applied to the user of the ExecutableItem.
+  * Its "normally run against the player" because this works for SCore commands, remember you can use another plugin commands or vanilla commands, so if you add "minecraft:say hi" its a minecraft command which will broadcast the message of "hi".&#x20;
+  * You can check the list of playerCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
 * Example:
 
 ```yaml
-   requiredExecutableItems: 
-     requiredEI1:
-      executableItem: EXECUTABLEITEMS_ID_HERE
-      amount: 3
-      usageConditions: CONDITION>2
-     errorMsg: '' #<- Here is where you will add the custom message.
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_RIGHT_CLICK
+    commands:
+    - SEND_MESSAGE &eHey ! I am a message and the player who triggered this activator
+      can see it ^^
+    - effect give %player% regeneration 5 5 true
+    - SEND_MESSAGE &dYou received regeneration :P
 ```
 
-* Description: This attribute searches for the required executable items in the player's inventory in order to activate.
-* Required: NO, (Default: No EI is required)
+### silenceOutput
 
-### requiredItems<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+* Info: Boolean value that makes all commands run from commands features such as (playerCommands, blockCommands, entityCommands and targetCommands) will not have an output on the **console**.
+  * For example, using the minecraft vanilla command effect give \[...] normally has an output on the console with this format: "Applied effect strength to \<playerName>", well, to disable this output you can enable this feature
+    *
 
+        <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+* Example:&#x20;
+
+```yaml
+activators:
+  activator1: # Activator ID, you can create as many activators on the activator    
+    commands:
+    - effect give %player% strength 5 5
+    silenceOutput: true
+```
+
+* Its important to understand that this feature is made to disable vanilla commands output, if you use another plugin command and it has a console output, its not our side who should fix it, the other plugin should provide you a way to hide those messages. Anyways, because we are gentle you have a way to customize messages from being hidden so you can have the default messages silenced by silenceOutput + custom messages you would like to add. This process is handled by Score config file more information here and how to do it here [https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config](https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config) .
+
+## ⭐Required features
+
+This section is for setting up features related to required things in order to be able to trigger the activator. This means that if the event happens, the activator will only run if the player matches this required setup. The items will be consumed in the process.
+
+* If you would like the items not to get consumed then not use "required" feature but use conditions which are just conditions and doesn't consume.
+
+### ⭐requiredExecutableItems
+
+* Info: This feature allows the activator to have as requirement an ExecutableItem(s). If the player meets this requirement the requirement will be consumed and the activator will run.
+  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+    * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
+  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
+  * executableItem: ExecutableItem ID that is needed as requiremennt
+  * amount: Integer of amount of items that are needed as requirement.
+  * usageConditions: Optional string condition in format of (==,!=,>,<,>=,<=){number} to the usage condition of the ExecutableItem.&#x20;
+    * This means, if the condition is >=5 then the requirement is that the Executableitem chosen must be on the player inventory as its a requirement but also needs to have usage over or equal a value of 5.
 * Example:
 
 ```yaml
-    requiredItems:
-      requiredItem0:
-        material: STONECUTTER
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator
+    requiredExecutableItems:
+      requiredEI0: # requiredEI ID, you can create as many requiredEI on the requiredExecutableItems
+        executableItem: moon
         amount: 1
-        notExecutableItem: false
-      errorMessage: kamehameha
+        usageConditions: '>=5'
+      requiredEI1: # requiredEI ID, you can create as many requiredEI on the requiredExecutableItems
+        executableItem: sun
+        amount: 1
+      cancelEventIfError: true
+      errorMessage: '&c You dont meet the requirement'
 ```
 
-* Description: This attribute searches for the required vanilla items in the player's inventory in order to activate. This does not consume Executable Items.
-* Required: NO, (Default: No item is required)
+### ⭐requiredItems
 
-### requiredMoney<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">&#x20;
-
-* (Requires Vault)
+* Info: This feature allows the activator to have as requirement vanilla item(s). If the player meets this requirement the requirement will be consumed and the activator will run.
+  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+    * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
+  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
+  * material: Vanilla MATERIAL that is needed as requirement.
+  * amount: Integer of amount of items that are needed as requirement.
+  * notExecutableItem: Boolean value to make the requirement able to be a ExecutableItem or not.
+    * This means, if the requirement is STONE, and this feature is not enabled, then the requirement will meet with vanilla STONE(s) and ExecutableItem(s) with material of STONE and so will be consumed. If you don't want this to happen then enable this feature.
 * Example:
 
 ```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator
+    requiredItems:
+      requiredItem0: # requiredItem ID, you can create as many requiredItem on the requiredItems
+        material: STONE
+        amount: 1
+        notExecutableItem: true
+      cancelEventIfError: true
+      errorMessage: '&c You dont meet the requirement'
+```
+
+### ⭐requiredMoney&#x20;
+
+* Info: This feature needs the plugin called "Vault". This feature allows the activator to have as requirement money from Vault. If the player meets this requirement the requirement will be consumed and the activator will run.
+  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+    * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
+  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
+  * requiredMoney: Float value that represents the amount of money needed as requirement.
+* Example:
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator
     requiredMoney:
       requiredMoney: 1200.0
-      errorMessage: apt
+      cancelEventIfError: true
+      errorMessage: '&c You dont meet the requirement'
+```
+
+### ⭐requiredLevel
+
+* Info: This feature allows the activator to have as requirement vanilla experience levels. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience levels with experience, more info here [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
+  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+    * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
+  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
+  * requiredLevel: Integer value that represents the amount of Minecraft vanilla experience level(s) needed as requirement.
+* Example:
+
+```yaml
+ activators:  
+  activator1: # Activator ID, you can create as many activators on the activator
+     requiredLevel:
+      requiredLevel: 50
+      errorMessage: '&c You dont meet the requirement'
       cancelEventIfError: true
 ```
 
-* Description: This attribute checks if you have the required amount of money or more in order to activate. If the player has enough money, the value under requiredMoney will take away that amount from your current money.
-  * Example:
-    * `If you have 150k money and the amount is 'requiredMoney: 100000', the attribute will take away 100k from your 150k leaving 50k money left in you and the activator will run.`
-    * `If you have 70k money and the amount is 'requiredMoney: 200000', the attribute will reject the player and the activator will not run.`
-* Required: NO, (Default: No money is required)
+### ⭐requiredExperience
 
-### requiredLevel<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
+* Info: This feature allows the activator to have as requirement minecraft vanilla experiencei. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience with experience levels, they are different things, more info at [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
+  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+    * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
+  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
+  * requiredExperience: Integer value that represents the amount of experience needed as requirement.
 * Example:
 
 ```yaml
-    requiredLevel:
-      requiredLevel: 10
-```
-
-* Description: This attribute checks if the player has the required amount of Experience Levels or more in order to activate. If the player has the right amount of Experience Levels or more, this activator will take away the required amount of Experience Levels.
-  * Example:
-    * `If you have 216 Levels and the amount is 'requiredLevel: 99', the attribute will take away 99 levels from your 216 levels leaving 117 levels left in you and the activator will run.`
-    * `If you have 60 levels and the amount is 'requiredLevel: 400', the attribute will reject the player and the activator will not run.`
-* Required: NO, (Default: No level is required)
-
-### requiredExperience
-
-* Description: This attribute checks if the player has the required amount of Experience or more in order to activate. If the player has the right amount of Experience or more, this activator will take away the required amount of Experience.
-
-```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator
     requiredExperience:
       requiredExperience: 20
-      errorMessage: wawa
+      errorMessage: '&c You dont meet the requirement'
+      cancelEventIfError: true
 ```
 
-### RequiredMana
+### ⭐RequiredMana
 
-* Description: Checks if the player has the required amount of mana or more in order to activate.
-  * If this condition match, the mana will be consumed, if you don't want this to happen use a condition placeholder.
+* Info: This feature allows the activator to have as requirement mana from **AureliumSkills**, **MMOCore** and **AuraSkills**. If the player meets this requirement the requirement will be consumed and the activator will run.
+  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+    * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
+  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
+  * requiredMana: Integer value that represents the amount of mana needed as requirement.
+* Example:
 
 ```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator
     requiredMana:
       requiredMana: 10
-      errorMessage: ''
+      errorMessage: '&c You dont meet the requirement'
 ```
 
 {% hint style="info" %}
 Compatible with AureliumSkills, MMOCore and AuraSkills
 {% endhint %}
 
-### RequiredMagic (EcoSkills)
+### ⭐RequiredMagic (EcoSkills)
 
-* Description: Checks if the player has the required amount of magic or more in order to activate.
+* Info: This feature allows the activator to have as requirement magic from **EcoSkills**. If the player meets this requirement the requirement will be consumed and the activator will run.
+  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+    * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
+  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
+  * magicID: The ID of the magic in EcoSkills.
+  * amount: Amount of magic of the magicID needed as requirement.
 
 ```yaml
-   requiredMagics:
-      requiredMagic_0:
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator
+    requiredMagics:
+      requiredMagic_0: # requiredMagic ID, you can create as many requiredMagic on the requiredMagics
         magicID: mana
         amount: 70
+      errorMessage: '&c You dont meet the requirement'
 ```
 
-## Commands&#x20;
+## Features exclusive depending on type of activator
 
-### commands
+To make the features more understandable on where activators do they work, we will create 5 types of categories to group activators, so if one of the features say one of this categories then you'll know the feature works for all the activators on that category. &#x20;
 
-* More information: **➤** [**Player commands**](../../../tools-for-all-plugins-score/custom-commands/player-and-target-commands.md)
+* PLAYER\_NONE: This type of activators are exclusive to the player who triggered the activator of the ExecutableItem and don't involve anything else. Abbreviaton \[P\_N]
+* PLAYER\_BLOCK: This type of activators are involved with the player who triggered the activator of the ExecutableItem and the block involved in the activator. Abbreviaton \[P\_B]
+  * 🔹PLAYER\_ALL\_CLICK (with feature typeTarget: ONLY\_BLOCK)
+  * ⭐PLAYER\_BLOCK\_BREAK
+  * ⭐PLAYER\_BLOCK\_PLACE
+  * ⭐PLAYER\_BRUSH\_BLOCK
+  * ⭐PLAYER\_FERTILIZE\_BLOCK
+  * ⭐PLAYER\_FISH\_BLOCK
+  * 🔹PLAYER\_HARVEST\_BLOCK
+  * 🔹PLAYER\_LEFT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
+  * 🔹PLAYER\_RIGHT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
+  * ⭐PROJECTILE\_HIT\_BLOCK
+  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
+* PLAYER\_ENTITY: This type of activators are involved with the player who triggered the activator of the ExecutableItem and an entity involved in the activator. Abbreviaton \[P\_E]
+  * ⭐PLAYER\_BLOCK\_HIT\_OF\_ENTITY
+  * 🔹PLAYER\_BUCKET\_ENTITY
+  * ⭐PLAYER\_CLICK\_ON\_ENTITY
+  * ⭐PLAYER\_CUSTOM\_LAUNCH (The entity is the projectile that is being launched)
+  * ⭐PLAYER\_DISMOUNT
+  * ⭐PLAYER\_FISH\_ENTITY
+  * ⭐PLAYER\_HIT\_ENTITY
+  * ⭐PLAYER\_KILL\_ENTITY
+  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
+  * ⭐PLAYER\_SHEAR\_ENTITY
+  * ⭐PLAYER\_TARGETED\_BY\_AN\_ENTITY
+  * ⭐PROJECTILE\_HIT\_ENTITY
+  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
+* PLAYER\_TARGET: This type of activators are involved with the player who triggered the activator of the ExecutableItem and another player called "target" which is considered as target/enemy. Abbreviation \[P\_T]
+  * ⭐PLAYER\_BLOCK\_HIT\_OF\_PLAYER
+  * ⭐PLAYER\_BREAK\_SHIELD\_OF\_PLAYER
+  * 🔹🔹PLAYER\_CLICK\_ON\_PLAYER
+  * ⭐PLAYER\_FISH\_PLAYER
+  * PLAYER\_HIT\_PLAYER
+  * ⭐PLAYER\_KILL\_PLAYER
+  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
+  * ⭐PLAYER\_SHIELD\_BREAK\_BY\_PLAYER
+  * 🔹PROJECTILE\_HIT\_PLAYER
+  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
+* Specific activator list: If there is a feature that contains different activators across the  categories then its better for understanding creating a new temporal list, which will be mentioned on the feature. Abbreviation \[S\_A\_L] &#x20;
+
+
+
+### \[P\_B] blockCommands
+
+Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
+
+* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
+  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+* There are three type of entity targets on commands
+  * Player: Its the player/user who triggered the activator on the ExecutableItem
+  * Target: Its the player targeted/enemy involved in an activator.
+  * Entity: Its the entity/mob/enemy involved in an activator.
+* Type of activator category: PLAYER\_BLOCK
+* Info: List of commands that are normally run against the block when the activator triggers.
+  * This means, the activator must have involved with a block, for example PLAYER\_HIT\_PLAYER is an activator, but it doesn't involve a block, so blockCommands are not available here. With the activator PLAYER\_BLOCK\_BREAK there is a block involved so blockCommands are available here.
+  * Another example PLAYER\_RIGHT\_CLICK has an activatorFeature called typeTarget, by default its ONLY\_AIR so blockCommands are not available due the activator is not involved with a block, but, typeTarget can be changed to ONLY\_BLOCK and then the activator will have as available features blockCommands, more info here -> \<IF I FORGOT PLS PING VAYK>
+  * You can check the list of blockCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands)
 * Example:
 
-```yaml
-commands:
-- "COMMAND1"
-- "COMMAND2"
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_BLOCK_BREAK
+    blockCommands:
+    - EXPLODE
+</code></pre>
 
-* Required: NO
+* Its important to understand that having blockCommands doesn't mean don't having player commands, on the activator PLAYER\_BLOCK\_BREAK there is two target involved, the player and the block, so we can have for example:
 
-### blockCommands
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_BLOCK_BREAK
+    commands:
+    - SEND_MESSAGE &#x26;eYou have broken a block, it will explode in 5 seconds !
+    blockCommands:
+    - DELAY 5
+    - EXPLODE
+</code></pre>
 
-* More information: **➤**[ **Block commands**](../../../tools-for-all-plugins-score/custom-commands/block-commands.md)
-* Example:
+### \[P\_B] detailedBlocks
 
-```yaml
-blockCommands:
-- "EXPLODE"
-- "SETBLOCK STONE"
-```
-
-* Required: NO
+* Type of activator category: PLAYER\_BLOCK
+* Info: Feature for activators that involves a block, here you can select as condition the type of block(s) where this activator will trigger by using this feature.
+  * You can select blocks from Minecraft Vanilla like:
+    * "STONE"
+  * ⭐You can select blocks from Minecraft Vanilla with NBT (info: [https://minecraft.fandom.com/wiki/Block\_states](https://minecraft.fandom.com/wiki/Block_states)) like:&#x20;
+    * "FURNACE{lit:true}"
+  * You can select blocks from ItemsAdder like:
+    * "ITEMSADDER:\<id>"
+  * You can select blocks from ExecutableBlocks like:
+    * "EXECUTABLEBLOCKS:\<id>"
+  * You can blacklist certain blocks adding ! at the beginning like:
+    * "!DIRT"
+  * You can add Block Tags like:&#x20;
+    * "#MINECRAFT:MINEABLE/PICKAXE"
+  * You can add group of blocks like
+    * "ALL\_ORES"
 
 <details>
 
-<summary>Only for those activators</summary>
-
-* PLAYER\_ALL\_CLICK
-
-- **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* PLAYER\_LEFT\_CLICK
-
-- PLAYER\_RIGHT\_CLICK
-
-* **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-### entityCommands
-
-* More information: **➤** [**Entity commands**](../../../tools-for-all-plugins-score/custom-commands/entity-commands.md)
-* Example:
-
-```yaml
-entityCommands:
-- "BURN"
-- "HEAL"
-```
-
-* Required: NO
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* **PLAYER\_HIT\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">\
-
-* **PLAYER\_CLICK\_ON\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- **PLAYER\_KILL\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* **PLAYER\_RECEIVE\_HIT\_BY\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- **PROJECTILE\_HIT\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-### targetCommands
-
-* More information: **➤** [**Target commands**](../../../tools-for-all-plugins-score/custom-commands/player-and-target-commands.md)
-* Example:
-
-```yaml
-targetCommands:
-- "SUDOOP effect give %player% slowness 10 10"
-- "BURN 10"
-```
-
-* Required: NO
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* PLAYER\_HIT\_PLAYER\
-
-* PLAYER\_CLICK\_ON\_PLAYER
-
-- **PLAYER\_KILL\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* **PLAYER\_RECEIVE\_HIT\_BY\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- **PROJECTILE\_HIT\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-### silenceOutput
-
-* Description: This makes it so any commands done by EI will not relay anything on the console panel.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-silenceOutput: true
-```
-
-* Required: NO (Default: false)
-
-{% hint style="info" %}
-This command will hide only the outputs of the vanilla commands of Minecraft, like /effect
-
-/give, ...
-{% endhint %}
-
-{% hint style="info" %}
-You can add custom messages to silence on the Score config&#x20;
-{% endhint %}
-
-## Select only certain types
-
-### detailedBlocks
-
-* Description: This attribute serves as a whitelisting to what blocks would trigger the activator
-* Example:
-
-```yaml
-detailedBlocks:
-- STONE
-- COBBLESTONE
-- ANDESITE
-- FURNACE{lit:true} (🎇 **BLOCK STATE FEATURE IS PREMIUM EXCLUSIVE ONLY AND FOR 1.13+** 🎇)
-- ITEMSADDER:turquoise_block
-- EXECUTABLEBLOCKS:CUSTOMDIRT
-- !DIRT
-- ALL_ORES
-- '#MINECRAFT:MINEABLE/PICKAXE'
-```
-
-* Required: NO (Default: false)
-
-{% hint style="info" %}
-It supports ItemsAdder blocks, example:
-
-detailedBlocks:
-
-* ITEMSADDER:turquoise\_block
-
-It supports ExecutableBlocks blocks example:
-
-* EXECUTABLEBLOCKS:MYBLOCK
-
-And you can blacklist all things by adding a ! before, example:
-
-* !DIRT
-* !ALL\_ORES
-{% endhint %}
-
-{% embed url="https://minecraft.fandom.com/wiki/Block_states" %}
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* PLAYER\_ALL\_CLICK
-
-- **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* PLAYER\_LEFT\_CLICK
-
-- PLAYER\_RIGHT\_CLICK
-
-* **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-<details>
-
-<summary>You can add a group of blocks, these are the groups:</summary>
+<summary>List of group of blocks</summary>
 
 ```
     ALL_CHESTS,
@@ -540,62 +576,147 @@ And you can blacklist all things by adding a ! before, example:
 
 </details>
 
-### detailedEntities
-
-* Description: This attribute serves as a whitelisting to what entities would trigger the activator
-* It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1}`
-* To blacklist mobs, add a "!" symbol beside the entity type.
-  * Ex: `!CREEPER`
-* It supports MythicMobs adding like this:
-
-```yaml
-detailedEntities:
- - MM-Giant
- - MM-MyMob
- - '!SKELETON' #this blacklist
- - ZOMBIE{CustomName:"*"}
-```
-
-{% embed url="https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities" %}
-
-NBT Tags require the plugin:
-
-{% embed url="https://www.spigotmc.org/resources/nbt-api.7939/" %}
-
 * Example:
 
 ```yaml
-detailedEntities:
-- ZOMBIE{IsBaby:1}
-- ZOMBIE{IsBaby:0}
-- CREEPER
-- PIGLIN
+activators:  
+  activator0: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_BLOCK_BREAK
+    detailedBlocks:
+    - STONE
+    - COBBLESTONE
+    - ANDESITE
+    - FURNACE{lit:true} (🎇 **BLOCK STATE FEATURE IS PREMIUM EXCLUSIVE ONLY AND FOR 1.13+** 🎇)
+    - ITEMSADDER:turquoise_block
+    - EXECUTABLEBLOCKS:CUSTOMDIRT
+    - !DIRT
+    - ALL_ORES
+    - '#MINECRAFT:MINEABLE/PICKAXE'
 ```
 
-* Required: NO (Default: false)
-* Mob Type List:&#x20;
+### \[P\_E] entityCommands
 
-{% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html" %}
+Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
-<details>
+* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
+  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+* There are three type of entity targets on commands
+  * Player: Its the player/user who triggered the activator on the ExecutableItem
+  * Target: Its the player targeted/enemy involved in an activator.
+  * Entity: Its the entity/mob/enemy involved in an activator.
+* Type of activator category: PLAYER\_ENTITY
+* Info: List of commands that are normally run agaisnt the entity when the activator triggers.
+  * By entity it means entity/mob/enemy involved in an activator.
+  * We know the player is considered as entity, but the entity involved in activators is only the mob/enemy involved in the event.
+  * You can check the list of entity commands here [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands)
+* Example:
 
-<summary>Only for those activators</summary>
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
+</strong>  activator1: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_HIT_ENTITY
+    entityCommands:
+    - DAMAGE 10
+    - BURN 5
+</code></pre>
 
-* **PLAYER\_KILL\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+* Its important to understand that having entityCommands doesn't mean don't having player commands, on the activator PLAYER\_HIT\_ENTITY there is two target involved, the player and the entity, so we can have for example:&#x20;
 
-- **PLAYER\_RECEIVE\_HIT\_BY\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
+</strong>  activator1: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_HIT_ENTITY
+    commands:
+    - SEND_MESSAGE &#x26;cThe power of the fire will rise in 5 seconds on the entity
+    entityCommands:
+    - DELAY 5
+    - DAMAGE 10
+    - BURN 2
+</code></pre>
 
-* **PROJECTILE\_HIT\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+### \[P\_E] detailedEntities
 
-</details>
+* Type of activator category: PLAYER\_ENTITY
+* Info:  For activators that involves an entity you can select as condition the type of entity(es) where this activator will trigger by using this feature.
+  * You can select a vanilla Minecraft entity (info: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)) like:
+    * "ZOMBIE"
+  * ⭐\[Requires NBTAPI Plugin] You can select a vanilla Minecraft mob with NBT (info: [https://minecraft.fandom.com/wiki/Tutorials/Command\_NBT\_tags#Entities](https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities)) like:
+    * "ZOMBIE{isBaby:1}"
+    * "ZOMBIE{CustomName:"\*"}"
+  * You can select a MythicMob mob like:
+    * "MM-\<ID>"
+  * You can blacklist a mob by usinig ! like
+    * !SKELETON
 
-### detailedItems
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_HIT_ENTITY
+    detailedEntities:
+    - MM-Giant
+    - MM-MyMob
+    - '!SKELETON'
+    - ZOMBIE{CustomName:"*"}
+    - ZOMBIE{IsBaby:1}
+```
 
-* Description: Checks the item related to the activator
+### \[P\_T] targetCommands
+
+Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
+
+* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
+  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+* There are three type of entity targets on commands
+  * Player: Its the player/user who triggered the activator on the ExecutableItem
+  * Target: Its the player targeted/enemy involved in an activator.
+  * Entity: Its the entity/mob/enemy involved in an activator.
+* Type of activator category: PLAYER\_TARGET
+* Info: Target commands is a list commands that are normally run against the target when the activator triggers.
+  * This means if it has an SCore command of DAMAGE 5, if its on targetCommands then the damage will be applied to the target/enemy involved in the activator.
+  * Its "normally run against the player" because this works for SCore commands, remember you can use another plugin commands or vanilla commands, so if you add "effect give %player% strength 5 5" even though its on targetCommands, the parse of placeholders will apply the cooldown to %player%. If you would like to apply this command to target then use %target%. More information on [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders)
+  * You can check the list of targetCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
 * Example:
 
 ```yaml
-detailedItems:
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_HIT_PLAYER
+    targetCommands:
+    - SEND_MESSAGE &eHey %target% you have been hit by %player%
+    - effect give %target% slowness 5 5 true
+    - SEND_MESSAGE &7Your feets are heavier than before, eh ?
+```
+
+* Its important to understand that having targetCommands doesn't mean don't having player commands, on the activator PLAYER\_HIT\_PLAYER there is two target involved, the player and the target, so we can have for example:&#x20;
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_HIT_PLAYER
+    commands:
+    - SEND_MESSAGE &eYou have hit %target%, he cant pick up items in 5 seconds
+    targetCommands:
+    - SEND_MESSAGE &eHey %target% you have been hit by %player%, in 5 seconds you can't pick up items
+    -CANCEL_PICKUP time:100
+```
+
+### \[S\_A\_L] detailedItems
+
+* Type of activator category: Specific activator list
+  * 🔹PLAYER\_DROP\_ITEM
+  * 🔹PLAYER\_CONSUME
+* Info: For activators that involves an item you can select as condition the type of item(s) where this activator will trigger by using this feature.
+  * You can select a Minecraft vanilla item like:
+    * "STONE"
+  * You can select a Minecraft vanilla item with NBT like:
+    * "DIRT{CUSTOMMODELDATA:5}"
+  * You can blacklist items using ! like:
+    * "!TORCH"
+* Example:
+
+```yaml
+activators:
+  activator3: # Activator ID, you can create as many activator on the activators list  
+    option: PLAYER_DROP_ITEM
+    detailedItems:
       items:
       - DIRT{CUSTOMMODELDATA:5}
       - !TORCH
@@ -603,219 +724,63 @@ detailedItems:
       messageIfNotValid: '&4&l[Error] &cthe item is not correct !'
 ```
 
+### \[S\_A\_L] detailedDamageCauses
 
-
-<details>
-
-<summary>Only for these activators (For now it only works with EE)</summary>
-
-PLAYER\_PICKUP\_ITEM
-
-PLAYER\_DROP\_ITEM
-
-PLAYER\_CONSUME
-
-</details>
-
-### detailedDamageCauses
-
-* Description: Checks the damage cause that you recieved
+* Type of activator category: Specific Activator List
+  * ⭐PLAYER\_BLOCK\_HIT\_OF\_ENTITY
+  * ⭐PLAYER\_BLOCK\_HIT\_OF\_PLAYER
+  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
+  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
+  * ⭐PLAYER\_RECEIVE\_HIT\_GLOBAL
+  * 🔹PLAYER\_DEATH
+  * 🔹PLAYER\_HIT\_PLAYER
+* Info: Feature for activators that involves damage, here you can select as condition the type of damage that is either received or dealt depending on the activator you are using.
 * Example:
 
-```yaml
-detailedDamageCauses:
-- ENTITY_EXPLOSION
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
+</strong>  activator1: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_DEATH
+    detailedDamageCauses:
+    - ENTITY_EXPLOSION
+</code></pre>
 
-* Required: NO
-* More Info:&#x20;
+### \[S\_A\_L] detailedEffects
 
-{% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html" %}
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* **PLAYER\_RECEIVE\_HIT\_BY\_ENTITY** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- **PLAYER\_RECEIVE\_HIT\_BY\_PLAYER** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* **PLAYER\_RECEIVE\_HIT\_GLOBAL** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- PLAYER\_DEATH
-
-</details>
-
-### detailedEffects
-
-* Description: Checks if the effect received matches the ones in the list
+* Type of activator category: Specific Activator List
+  * ⭐PLAYER\_RECEIVE\_EFFECT
+* Info: Feature for activators that involves effects, here you can select as condition the type of effect involved to trigger the activator.
 * Example:
 
-```yaml
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
+</strong>  activator1: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_RECEIVE_EFFECT
     detailedEffects:
       effects:
       - SPEED
-      cancelEventIfNotValid: false
+      cancelEventIfNotValid: true
+      messageIfNotValid: '&#x26;cYou cant use the activator since you dont meet the effect
+        condition'
+</code></pre>
 
-```
+### \[S\_A\_L] detailedCommands
 
-<details>
-
-<summary>Only for those activators</summary>
-
-**PLAYER\_RECEIVE\_EFFECT** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-### detailedCommands
-
-* Description: Checks if the executed command matches the ones in the list
+* Type of activator category: Specific Activator List
+  * ⭐PLAYER\_WRITE\_COMMAND
+* Info: Feature for activators that involves commands, here you can select as condition the command the activator should run with.
 * Example:
 
 ```yaml
-detailedCommands:
-- test
-- about
+activators:  
+  activator1: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_WRITE_COMMAND
+    detailedCommands:
+    - customHealCommand
+    commands:
+    - SEND_MESSAGE &dYou have been healed !
+    - REGAIN HEALTH 10
 ```
 
-* Required: YES
-
-<details>
-
-<summary>Only for those activators</summary>
-
-**PLAYER\_WRITE\_COMMAND** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-
-
-## CancelEvent
-
-### cancelEvent
-
-* Description: This attribute prevents vanilla events from happening on the ei item.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEvent: false
-```
-
-* Required: NO (Default: false)
-
-### cancelEventIfInvalidRequiredExecutableItems
-
-* Description: This attribute prevents vanilla events from happening on the ei item if you don't have the required executable items.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEventIfInvalidRequiredExecutableItems: false
-```
-
-* Required: NO (Default: false)
-* **NOTE: YOU NEED TO HAVE A REQUIRED EXECUTABLE ITEM ATTRIBUTE FIRST IN ORDER TO USE THIS ATTRIBUTE.**
-
-### cancelEventIfInvalidRequiredLevel
-
-* Description: This attribute prevents vanilla events from happening on the ei item if you don't have the required experience levels.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEventIfInvalidRequiredLevel: false
-```
-
-* Required: NO (Default: false)
-* **NOTE: YOU NEED TO HAVE A REQUIRED LEVEL ATTRIBUTE FIRST IN ORDER TO USE THIS ATTRIBUTE.**
-
-### cancelEventIfInvalidRequiredItems
-
-* Description: This attribute prevents vanilla events from happening on the ei item if you don't have the required items.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEventIfInvalidRequiredItems: false
-```
-
-* Required: NO (Default: false)
-* **NOTE: YOU NEED TO HAVE A REQUIRED ITEMS ATTRIBUTE FIRST IN ORDER TO USE THIS ATTRIBUTE.**
-
-### cancelEventIfInvalidRequiredMoney
-
-* Description: This attribute prevents vanilla events from happening on the ei item if you don't have the required money.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEventIfInvalidRequiredMoney: false
-```
-
-* Required: NO (Default: false)
-* **NOTE: YOU NEED TO HAVE A REQUIRED MONEY ATTRIBUTE FIRST IN ORDER TO USE THIS ATTRIBUTE.**
-
-### cancelEventIfMaxUsePerDay
-
-* Description: This attribute prevents vanilla events from happening on the ei item if the player reaches the max usage per day of the item
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEventIfMaxUsePerDay: true
-```
-
-* Required: NO (Default: false)
-
-### cancelEventIfInCooldown
-
-* Description: This attribute prevents vanilla events from happening on the ei item if the activator is in cooldown.
-* Options: true or false
-* Example:&#x20;
-
-```yaml
-cancelEventIfInCooldown: false
-```
-
-* Required: NO (Default: false)
-
-
-
-### cancelEventIfNotDetailedBlocks
-
-* Description: Cancels the event if the target block is not in the list of detailed blocks
-* Example:
-
-```yaml
-cancelEventIfNotDetailedBlocks: true
-```
-
-* Required: NO
-
-<details>
-
-<summary>Only for those activators</summary>
-
-* PLAYER\_ALL\_CLICK
-
-- **PLAYER\_BLOCK\_BREAK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-* **PLAYER\_BLOCK\_PLACE** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-- PLAYER\_LEFT\_CLICK
-
-* PLAYER\_RIGHT\_CLICK
-
-- **PROJECTILE\_HIT\_BLOCK** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-
-</details>
-
-
-
-## Specifics features depending on the type of activator
-
-The next features only works on specific activators, depending on the feature. For example if the feature requires a block then the activator must be involved with a block. e.g. (PLAYER\_HIT\_ENTITY its not involved with a block, but PLAYER\_BLOCK\_BREAK involved with a block). The same idea with different features, such as for blocks, targets (enemy players), entities, etc.
+## ========== TODO, IF FORGOT PLS PING VAYK RN ITS 14/02/25
 
 ### Desactive the drops when the activator is triggered.
 

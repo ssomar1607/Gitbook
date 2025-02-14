@@ -1,5 +1,9 @@
 # Item Features
 
+List of item features, these are the first thing you should set up on your item.
+
+* Starred features ⭐ are for premium version.
+
 ### Material of the item
 
 * Info: The material of the Minecraft item of the Executable Item
@@ -152,7 +156,7 @@ unbreakable: true
 {% hint style="info" %}
 **If you are using 1.12 version you will need to follow these steps:**
 
-* This process requires the premium version of EI.
+* This process requires the premium version of EI ⭐
 * Generate your item with attributes on a website. We suggest [https://mapmaking.fr/give1.12/](https://mapmaking.fr/give1.12/)
 * Then give the item to yourself inside Minecraft
 * While holding it on your hand run the /ei create \<id> command
@@ -184,7 +188,7 @@ keepDefaultAttributes: false
 ignoreKeepDefaultAttributesFeature: true
 ```
 
-### <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> Custom model data (1.14++)
+### ⭐Custom model data (1.14++)
 
 * Info: Integer to set the value of the customModelData feature of the item. Useful to create different textures for an item.
 * Example:&#x20;
@@ -263,7 +267,7 @@ repairableFeatures:
 glider: false
 ```
 
-### itemModel&#x20;
+### ⭐itemModel&#x20;
 
 * Info: Path of a custom item model on texture pack in the format of \<mynamespace:model\_id> that will target inside assets/\<mynamespace>/models/item/\<model\_id>.
 * Example:
@@ -272,7 +276,7 @@ glider: false
 itemModel: "" # "mynamespace:mymodel"
 ```
 
-### tooltipModel
+### ⭐tooltipModel
 
 * Info: Path of a custom tooltip model on texture pack in the format of \<mynamespace:model\_id> that will target inside assets/\<mynamespace>/models/item/\<model\_id>.
 * Example:
@@ -371,7 +375,7 @@ dropOptions:
   displayNameDrop: true
 ```
 
-### &#x20;<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> NBT Tags
+### &#x20;⭐ NBT Tags
 
 * Info: Requires the plugin [**NBTAPI**](https://www.spigotmc.org/resources/nbt-api.7939/) available on Spigo&#x74;**.** This features allows you to add your custom nbt tags inside your ExecutableItem.
   * type: The type of value you are storing e.g:
@@ -486,7 +490,7 @@ This section will explain what usage is and its features.
       usage: -1
       ```
 
-#### <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">Usage limit
+#### ⭐Usage limit
 
 * Info: Integer value that limits the upper amount the usage can reach. (Value cannot be 0)
 * Example:&#x20;
@@ -613,7 +617,7 @@ Here you can select configuration for the head settings, that means the custom h
   *   Then get the Value of the head\
 
 
-      <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
   * Now copy that value and paste it inside the headValue feature of ExecutableItems
   * Example:
   * ```yaml
@@ -675,7 +679,7 @@ keepItemOnDeath: true
 Its compatible with WorldGuard keepInventory feature and Vanilla keepInventory gamerule
 {% endhint %}
 
-### &#x20;<img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">Disable stack
+### &#x20;⭐Disable stack
 
 * Info: Boolean value that represents preventing or not for the ExecutableItem to be stacked. Setting this feature to true will make the customStackSize of this item to be 1.
 * Example:&#x20;
@@ -684,7 +688,7 @@ Its compatible with WorldGuard keepInventory feature and Vanilla keepInventory g
 disableStack: true
 ```
 
-### <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line"> customStackSize (1.20.5 ++)
+### ⭐customStackSize (1.20.5 ++)
 
 * Info: Integer value to set the size of the stack of this item. It will override the current stack amount.
 * To understand it better, the vanilla diamond\_sword has a stack size of 1, since it can't be stacked, with this feature you can increase this value. On other side, dirt has a stack size of 64, but with this you can decrease it, to for example, stack size of 20.
@@ -740,7 +744,7 @@ giveFirstJoin:
   giveFirstJoinSlot: 0
 ```
 
-### Item Recognition Settings
+### ⭐Item Recognition Settings
 
 * Info: This features allows to make other items that are not the ExecutableItem as they were the ExecutableItem you are editing. Basically the idea is to work with recognitions, its a list of type of recognitions that if one of them matches between your ExecutableItem and another item (even if its not ExecutableItem) the features that the ExecutableItem has will be on the another item too. This works as long as its recognized following the recognitions requirements.
 * For example, if you create a diamond pickaxe ExecutableItem, that has an activator PLAYER\_RIGHT\_CLICK and on commands "SEND\_MESSAGE I am a pickaxe" every time you right click it will send that message to the minecraft chat. Now, if you enable item recognition, let's say, for the material, now ALL diamond pickaxes on the server will trigger that activator and so the message will be displayed.

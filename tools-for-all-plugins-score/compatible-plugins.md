@@ -72,6 +72,7 @@ This brings you the idea that MM spawners are possible, but would need premium v
 
 
 * Also using the skills from MythicMobs, you could either combine the ExecutableItem with MythicCrucible or just add the command `SUDOOP mm test cast <skill>` (it isn't a good way, but here is explained just in case you want this 100%)
+* #### detailedEntities
 
 ### **LevelledMobs**
 
@@ -85,6 +86,7 @@ Lm-Items is a bridge resource between LevelledMobs and ExecutableItems
 
 * You can make a system of mana related with skills inside EI | EB | EE, so, some abilities would need mana to be run, or some others give you mana, give mana around you (like supporter idk), etc etc.
   * To make an ExecutableItem that increases the cap of mana with aurelium skills, you first need NBTApi, then use their methods (sk modifier) to add cap to an item, hold it and type /ei create, now the EI has its methods, so the EI increases the cap.
+* RequiredMana
 
 ### ExecutableBlocks & ExecutableItems
 
@@ -199,11 +201,9 @@ And then you can link it to an EB if want the EB to be a head, more info in EB F
 * ![](<../.gitbook/assets/image (256).png>)
 * But it's possible to add their enchants on your ExecutableItems:
 
-<!---->
-
-* [ ] Require ExecutableItems premium to have access to the NBT tags modifications
-* [ ] Require the plugin [NBT- API ](https://www.spigotmc.org/resources/nbt-api.7939/)
-* [ ] Then you have two choices:
+- [ ] Require ExecutableItems premium to have access to the NBT tags modifications
+- [ ] Require the plugin [NBT- API ](https://www.spigotmc.org/resources/nbt-api.7939/)
+- [ ] Then you have two choices:
   * [ ] Create a vanilla item , add the AE on it and then do /ei create, the new EI will automatically have the Advanced enchantments.
   * [ ] Or modify manually the config of your existing ExecutableItem, open the config and add the good NBT tag. Look the example below:
 
@@ -255,6 +255,7 @@ _It will add the Advanced enchantment **Haste** with a level of **1** on your Ex
 
 * You can use conditions to checks if the player has specific magic values.
 * You can use commands to get or remove magic values.
+* RequiredMagic
 
 ### FACTIONS UUID
 
@@ -273,6 +274,10 @@ _It will add the Advanced enchantment **Haste** with a level of **1** on your Ex
 ### AURA SKILLS
 
 * requiredMana features inside the activator supports the mana from this plugin.
+
+### VAULT
+
+* requiredMoney feature works with Vault.
 
 
 
