@@ -18,36 +18,51 @@ Here you have information related to all commands !&#x20;
 [utility-commands.md](tools-for-all-plugins-score/custom-commands/utility-commands.md)
 {% endcontent-ref %}
 
-## You can use all commands from the list above in other plugins !!
+## You can use all commands from the list above outside Ssomar Plugins !!
 
-Score has more than 100 custom commands, that normalyl were able to only run inside your EI/EB/EE, but now, they can be executed from anywhere, let's take a look how this works:
+Score has more than 100 custom commands, that normalyl were able to only run inside your ExecutableItem/ExecutableBlock/ExecutableEvents, but using this feature we could run them outside Ssomar universe, let's take a look how this works.
+
+Before starting, arguments with {} are obligatory to make the command work and \[] are optional. They are colored following the format of the wiki too.
 
 ### Player commands
 
-* Run a custom command from SCore for a specific player
-  * /score run-player-command player:{playername} {command}
-
-```
-Example:
-/score run-player-command player:Ssomar SENDMESSAGE &eHello
-/score run-player-command player:Ssomar SENDMESSAGE &eHello player:Ssomar +++ DELAY 10 +++ SWING_MAIN_HAND
-```
-
-{% hint style="info" %}
-It supports PAPI Placeholders
-{% endhint %}
+* Info: Command that allows outside and inside Ssomar Plugins to run a custom command from SCore to a specific player.
+  * When using this command, all the command line is parsed through PlaceholdersAPI so you add placeholders to it.
+* Command: <mark style="color:blue;">**/score run-player-command player:{player} {command}**</mark>
+  * player: Name of the player targeted
+  * command: SCore player command that will be applied to {player}
+* Examples:
+  * /score run-player-command player:SsomarPluginsPlayer SENDMESSAGE \&eHello
+  * /score run-player-command player:SsomarPluginsPlayer SENDMESSAGE \&eHello player:Ssomar +++ DELAY 10 +++ SWING\_MAIN\_HAND
+  * /score run-player-command player:SsomarPluginsPlayer SENDMESSAGE \&eHello my name is %player% and my life is %player\_health%
 
 ### Block commands
 
-* Run a custom command from SCore for a specific block
-  * /score run-block-command player:Ssomar block:{world},{x},{y},{z} {command}
+* Info: Command that allows outside and inside Ssomar Plugins to run a custom command from SCore for a specific block.
+* Command: <mark style="color:blue;">**/score run-block-command**</mark>**&#x20;**<mark style="color:orange;">**\[player:{player}]**</mark> <mark style="color:blue;">**block:{world},{x},{y},{z} {command}**</mark>
+  * player: Player who is involved in this activator
+    * Its optional due some commands need it, for example
+      * MOB\_AROUND: Who will apply the damage? well, the command applies damage to mob around but the damage will be count dealt as the {player}, so it checks if the player can actually damage the mob, the damage and kills counts for him, etc.
+      * VEIN\_BREAKER: Who broke the blocks ? well, the command breaks block in a vein shape but the blocks will be counted as broken by the {player}, so it checks if the player can actually break the block, the block broken counts for him, etc.
+  * block
+    * world: World where the block is
+    * x: X coordinates of the block
+    * y: Y coordinates of the block
+    * z: Z coordinates of the block
+  * command: Block command who will be run against the block and, if exists, by the player.
+* Examples:
+  * /score run-block-command block:world,-23,-61,27 BREAK
+  * /score run-block-command player:SsomarPluginsPlayer block:world,-23,-61,27 MINEINCUBE 1 false
 
 ### Entity commands
 
-* Run a custom command from SCore for a specific entity
-  * /score run-entity-command entity:{entityUUID} {command}
-
-
+* Info: Command that allows outside and inside Ssomar Plugins to run a custom command from SCore for a specific entity
+* Command: /score run-entity-command entity:{entityUUID} {command}
+  * entityUUID: UUID of the entity targeted
+  * command: Entity command who will be run against the entity.
+* Example:
+  * /score run-entity-command entity:c4d5338b-6f8e-4b97-9f18-9dbc47f60131 JUMP 1
+  * /score run-entity-command entity:%entity\_uuid% JUMP 1
 
 ## Command Issues
 

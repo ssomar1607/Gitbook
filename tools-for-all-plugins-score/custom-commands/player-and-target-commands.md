@@ -52,11 +52,9 @@ Example:
 
 ## Mixed Commands
 
-In addition of the following list of commands you can also use:
+In addition of the following list of commands you can also use
 
-{% content-ref url="mixed-commands-player-and-entity.md" %}
-[mixed-commands-player-and-entity.md](mixed-commands-player-and-entity.md)
-{% endcontent-ref %}
+* [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity)
 
 These commands can be used in the Player related commands OR Entity related commands.
 
