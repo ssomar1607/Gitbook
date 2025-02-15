@@ -846,6 +846,26 @@ activators:
     detailedClick: LEFT
 ```
 
+### \[S\_A\_L] mustBeAProjectileLaunchWithTheSameEI
+
+* Type of activator category: Specific Activator List
+  * ⭐PROJECTILE\_ENTER\_IN\_LIQUID
+  * ⭐PROJECTILE\_HIT\_BLOCK
+  * ⭐PROJECTILE\_HIT\_ENTITY
+  * 🔹PROJECTILE\_HIT\_PLAYER
+* Info: Feature for the activator that are related to projectile, it affects if the activator should run with projectiles not launched by the same EI.
+  * Example, there is an activator PROJECTILE\_HIT\_ENTITY, detailedSlots: \[all slots] and on commands: \["say hi"]
+    * If the feature is enabled, then it will only work if this ExecutableItem has another activator that has LAUNCH command, so, the projectile will be launched from the EI and then the condition will met
+    * If the feature is disabled, all projectiles, such as: vanilla bow, vanilla snowball, projectiles from others ExecutableItems, and projectile for the ExecutableItem itself will run the activator.
+  * Example:
+
+```yaml
+activators:
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: PROJECTILE_HIT_ENTITY
+    mustBeAProjectileLaunchWithTheSameEI: true
+```
+
 ### \[S\_A\_L] delay and delayTick
 
 * Type of activator category: Specific Activator List

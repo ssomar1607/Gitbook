@@ -104,22 +104,21 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player breaks a shield of another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-
-
-
-<figure><img src="../../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
-
-
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### ⭐PLAYER\_BRUSH\_BLOCK
 
 * Info: Activator that gets triggered when the player brushes a block.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### 🔹PLAYER\_BUCKET\_ENTITY
 
 * Info: Activator that gets triggered when the player buckets an entity
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### 🔹PLAYER\_CHANGE\_WORLD
 
@@ -130,91 +129,91 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player click on an entity
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detailedclick](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### 🔹PLAYER\_CLICK\_ON\_PLAYER
 
 * Info: Activator that gets triggered when the player click on a player
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detailedclick](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### ⭐PLAYER\_CONNECTION
 
 * Info: Activator that gets triggered  when the player log into the server. (Does not activate when you log out)
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CONSUME
 
 * Info: Activator that gets triggered when the player successfully eat / consume the item.
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CONSUME\_THE\_EI
 
 * Info: Activator that gets triggered when the player successfully eat/consume the EI itself
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_CUSTOM\_LAUNCH
 
 * Info: Activator that gets triggered when the player launch a projectile with the commands: LAUNCH, LOCATEDLAUNCH and LAUNCHENTITY.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### 🔹PLAYER\_DEATH
 
 * Info: Activator that gets triggered when the player dies.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.&#x20;
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### ⭐PLAYER\_DESELECT\_THE\_EI
 
 * Info: Activator that gets triggered if you deselect the EI item in the hotbar.&#x20;
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DISABLE\_FLY
 
 * Info: Activator that gets triggered when the player stops flying.&#x20;
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DISABLE\_GLIDE
 
 * Info: Activator that gets triggered when the player stops gliding.&#x20;
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_DISABLE\_SNEAK
 
 * Info: Activator that gets triggered when the player stops from sneaking.&#x20;
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_DISABLE\_SPRINT
 
 * Info: Activator that gets triggered when the player stops from sprinting&#x20;
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
-### 🔹PLAYER\_DISCONNECTION
+### 🔹PLAYER\_DISCONNECT
 
 * Info: Activator that gets triggered when the player logs out from the server.
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PLAYER\_DISMOUNT
 
 * Info: Activator that gets triggered when the player steps out from riding an entity.&#x20;
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### 🔹PLAYER\_DROP\_ITEM
 
 * Info: Activator that gets triggered when the player drops an item.&#x20;
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_DROP\_THE\_EI
 
 * Info: Activator that gets triggered when the player drops the EI item.&#x20;
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### ⭐PLAYER\_EDIT\_BOOK
 
 * Info: Activator that gets triggered when the player made changes to the book and quill and pressed done or sign the book.&#x20;
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PLAYER\_EI\_BREAK
 
-* Info: Activator that gets triggered when the player breaks the ExecutableItem.
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+* Info: Activator that gets triggered when the player breaks the ExecutableItem
 
 ### ⭐PLAYER\_ENABLE\_FLY
 
@@ -258,42 +257,73 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_FERTILIZE\_BLOCK
 
 * Info: Activator that gets triggered if the player fertilizes blocks with bone meal.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### 🔹PLAYER\_FILL\_BUCKET
 
 * Info: Activator that gets triggered when the player attempts to pickup water or lava with a bucket.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### ⭐PLAYER\_FISH\_BLOCK
 
 * Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber is on a block.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### ⭐PLAYER\_FISH\_ENTITY
 
-* Activates when the player right-click the fishing rod when the fishing rod bobber catches an entity.&#x20;
+* Activates when the player right-click the fishing rod when the fishing rod bobber catches an entity.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.&#x20;
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### ⭐PLAYER\_FISH\_FISH
 
 * Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber catches something.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-desactivedrops](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
+  * [ttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### ⭐PLAYER\_FISH\_NOTHING
 
 * Info: Activator that gets triggered when the player fishes nothing.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### ⭐PLAYER\_FISH\_PLAYER
 
 * Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber catches a player.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### 🔹PLAYER\_HARVEST\_BLOCK
 
-* Info: Activator that gets triggered when the player harvests a block (Example: Activator runs if the player right clicks a sweet berry bush that contains berries that can be harvested upon right-click)&#x20;
+* Info: Activator that gets triggered when the player harvests a block (Example: Activator runs if the player right clicks a sweet berry bush that contains berries that can be harvested upon right-click)
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.&#x20;
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### ⭐PLAYER\_HIT\_ENTITY
 
 * Info: Activator that gets triggered when the player hits an entity&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    \
+    https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### 🔹PLAYER\_HIT\_PLAYER
 
 * Info: Activator that gets triggered when the player hits a player&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### ⭐PLAYER\_ITEM\_BREAK
 
@@ -310,14 +340,24 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_KILL\_ENTITY
 
 * Info: Activator that gets triggered when the player kills an entity.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-desactivedrops](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
 
 ### ⭐PLAYER\_KILL\_PLAYER
 
 * Info: Activator that gets triggered when the player kills a player.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-desactivedrops](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### 🔹PLAYER\_LAUNCH\_PROJECTILE
 
 * Info: Activator that gets triggered when the player shoots a projectile.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### 🔹PLAYER\_LEAVE\_THEIR\_LAND
 
@@ -330,6 +370,8 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_LEFT\_CLICK
 
 * Info: Activator that gets triggered when the player left-clicks the item.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-typetarget](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
 
 ### 🔹PLAYER\_MEND\_THE\_EI
 
@@ -350,18 +392,29 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_RECEIVE\_EFFECT
 
 * Info: Activator that gets triggered when the player receives an effect&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detailedeffects](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedeffects)
 
 ### ⭐PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
 
 * Info: Activator that gets triggered when you get hit by anything from an entity.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### ⭐PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
 
 * Info: Activator that gets triggered when you get hit by anything from a player.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### ⭐PLAYER\_RECEIVE\_HIT\_GLOBAL
 
 * Info: Activator that gets triggered when you get hit by anything.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### 🔹PLAYER\_REGAIN\_HEALTH
 
@@ -374,6 +427,8 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_RIGHT\_CLICK
 
 * Info: Activator that gets triggered when the player right-clicks the item. (IT REQUIRES EITHER HAVE AN ITEM IN THE HAND OR TARGET AT A BLOCK TO BE TRIGGERED, THIS IS A SPIGOT LIMITATION)&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-typetarget](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
 
 ### 🔹PLAYER\_RIPTIDE
 
@@ -386,10 +441,15 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_SHEAR\_ENTITY
 
 * Info: Activator that gets triggered when the player shears an entity.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### ⭐PLAYER\_SHIELD\_BREAK\_BY\_PLAYER
 
 * Info: Activator that gets triggered when the shield of the player gets broken by someone else.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### 🔹PLAYER\_SPAWN\_CHANGE
 
@@ -402,10 +462,16 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_TARGETED\_BY\_AN\_ENTITY
 
 * Info: Activator that gets triggered when an entity targets the player.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### 🔹PLAYER\_TRAMPLE\_CROP
 
 * Info: Activator that gets triggered when the player tramples a crop.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### ⭐PLAYER\_UNEQUIP\_THE\_EI
 
@@ -418,22 +484,30 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_WRITE\_COMMAND
 
 * Info: Activator that gets triggered when the player enters commands.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detailedcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedcommands)
 
-### ⭐PROJECTILE\_ENTER\_LIQUID
+### ⭐PROJECTILE\_ENTER\_IN\_LIQUID
 
 * Info: Activator that gets triggered if the launched projectile enters and stays long enough in water&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### ⭐PROJECTILE\_HIT\_BLOCK
 
 * Info: Activator that gets triggered when the projectile of the player hits a block.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐PROJECTILE\_HIT\_ENTITY
 
 * Info: Activator that gets triggered when the projectile of the player hits an entity.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹PROJECTILE\_HIT\_PLAYER
 
 * Info: Activator that gets triggered when the projectile of the player hits a player.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### 🔹CUSTOM\_TRIGGER
 
@@ -450,7 +524,10 @@ Activator features are features that are exclusive to that activator.
 ### ⭐INVENTORY\_CLICK
 
 * Info: Activator that gets triggered when the player clicks the item in its inventory.&#x20;
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
 
 ### ⭐LOOP
 
-* Info: Activator that gets triggered in repeat as long as the item is in the player's inventor
+* Info: Activator that gets triggered in repeat as long as the item is in the player's inventory
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-delay-and-delaytick](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-delay-and-delaytick)
