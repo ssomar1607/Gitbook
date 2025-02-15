@@ -7,11 +7,17 @@ Custom trigger is a way to store a list of commands and then either run those co
 ### How to create custom triggers ?
 
 * Custom trigger is a type of activator, so go to the plugin you want (available in ExecutableItems, ExecutableBlocks and ExecutableEvents) and create the activator and select as option: CUSTOM\_TRIGGER.
-* Then add on "commands section" the commands you want, but be careful ! on ExecutableItems the commands can be run agaisnt the player, but on ExecutableBlocks and ExecutableEvents the commands are run on the console and they are not attached to a player or block, so you can't run for example:
-  * ❌SEND\_MESSAGE \&eMy name is..\
-    Because the activator doesn't know whom to run this command against.\
-    So what can we do ?\
-    Well, this answer is very huge, and it can't be answered just like this, we think its just important to know what we have already said, you'll see some examples of how to deal with this on the tutorial. But as said, its a very huge space of solutions which the one for you will depend on your context.&#x20;
+* Then add on "commands section" the commands you want, but be careful ! Let's explain what happens on each plugin
+  * ExecutableItems: To make the items work with this plugin it needs as requirement the player to have the item in the inventory, nice ! a "player" so.. we can run playerCommands against the player such as
+    * SEND\_MESSAGE \&eHello player with name %player%!
+      * We can run a player command against the player
+      * We can even parse placeholders against the player
+  * ExecutableBlocks: To make the blocks work with this plugin it needs as requiremente the block to be placed, so there is no involved a player, that means:
+    * We can run blockCommands, since there is a block involved
+    * We **could** (depend if you enable the owner feature) run ownerCommands, who targets the owner of the block.&#x20;
+  * ExecutableEvents: To make the events work with this plugin there is no needed for requirement, that means by just existing it will work, this means
+    * There is no player, no block, no owner, nothing involved, so we cant run neither playerCommands nor blockCommands nor entityCommands, etc.
+    * Now ! There is a tip to target this, all custom commands supports adding more than one argument, this means we could store the value of the player who run the command and then run an score run-player-command to achieve this. Its explained here \<IF FORGOT PLS  PING VAYK>
 * Well, let's continue, since you have already created the activator and the commands, now you can differentiate the CUSTOM\_TRIGGER into 2 types:
   * Callables: Custom triggers activators which are only callable by the command
     * /\<plugin> custom-trigger \<features>
@@ -68,7 +74,7 @@ The same idea can be extrapolated to other contexts such as using it in Executab
 
 #### Running custom triggers for ExecutableItems
 
-* Command: <mark style="color:blue;">**/ei run-custom-trigger trigger:{activatorID}**</mark> <mark style="color:orange;">**\[player:{playerName}] \[slot:{slot}]**</mark>
+* Command: <mark style="color:blue;">**/ei run-custom-trigger trigger:{activatorID}**</mark> <mark style="color:orange;">**\[player:{playerName}] \[slot:{slot}] \[additionalArguments]**</mark>
   * activatorID: The ID of the activator you created as custom trigger.
   * playerName: The playername of the user
     * If there is no player specified such as `/ei run-custom-trigger trigger:{activatorId}` then it will try to execute the custom trigger for all the players that have an ExecutableItem with the specified activator ID of custom trigger.
@@ -77,33 +83,90 @@ The same idea can be extrapolated to other contexts such as using it in Executab
     * If there is no slot present then the search is on all inventory
     * If there is a slot specified then the search is only on that slot
       * You can use -1 to target the mainhand slot.
+  * additionalArguments: List of words that you can add to your command that you can get later by using %arg0%, %arg1%, ... placeholders.
 * Examples:
   * /ei run-custom-trigger trigger:activator0
   * /ei run-custom-trigger trigger:activator0 player:SsomarPluginsPlayer
   * /ei run-custom-trigger trigger:activator0 player:SsomarPluginsPlayer slot:-1
+  * /ei run-custom-trigger trigger:activator0 player:SsomarPluginsPlayer slot:-1 how are you
+    * %arg0% = how
+    * %arg1% = are
 
 #### Running custom triggers for ExecutableBlocks
 
-* Command: <mark style="color:blue;">**/eb run-custom-trigger trigger:my\_activator\_trigger:{activatorID}**</mark> <mark style="color:orange;">**\[block:{location}]**</mark>
+* Command: <mark style="color:blue;">**/eb run-custom-trigger trigger:my\_activator\_trigger:{activatorID}**</mark> <mark style="color:orange;">**\[block:{location}] \[additionalArguments]**</mark>
   * activatorID: The ID of the activator you created as custom trigger.
   * location: Location of the ExecutableBlock
     * If no location is provided then it will try to run for all ExecutableBlocks placed, and it will run for the ones who has the custom trigger activator with the ID selected.
     * If a location is provided it will do the same idea but only at that location.
+  * additionalArguments: List of words that you can add to your command that you can get later by using %arg0%, %arg1%, ... placeholders.
 * Examples:
   * /eb run-custom-trigger trigger:MyEpicTrigger
+  * /eb run-custom-trigger trigger:MyEpicTrigger SsomarPlugins
+    * %arg0% = SsomarPlugins
   * /eb run-custom-trigger trigger:MyEpicTrigger block:world,50,65,125
 
 #### Running custom triggers for ExecutableEvents
 
 * Info: This trigger is quite different, because on EI we have as condition the player and slot, on EB the location, but on ExecutableEvents we don't have conditions, that means, if you call for this trigger, if it exists it will always run.
-* Command: <mark style="color:blue;">**/ee run-custom-trigger trigger:{activatorID}**</mark>
+* Command: <mark style="color:blue;">**/ee run-custom-trigger trigger:{activatorID}**</mark>**&#x20;**<mark style="color:orange;">**\[additionalArguments]**</mark>
   * activatorID: The ID of the activator you created as custom trigger.
+  * additionalArguments: List of words that you can add to your command that you can get later by using %arg0%, %arg1%, ... placeholders.
 * Examples:
   * /ee run-custom-trigger trigger:MyEpicTrigger
+  * /ee run-custom-trigger trigger:MyEpicTrigger SsomarPlugins
+    * %arg0% = SsomarPlugins
 
 
 
-### How to run our custom triggers ?
+* Pro tip: How can we run player commands here ? since the event is not linked to a player ?. Well, you can use this feature [https://docs.ssomar.com/#player-commands](https://docs.ssomar.com/#player-commands) + %arg0% tip. For example
+  * Let's say there is an event me as admin I will run, then I would do
+    * /ee run-custom-trigger trigger:TriggerOfEvent
+  * to make this trigger have player commands we could add the name of yourself there, for example
+    * /ee run-custom-trigger trigger:TriggerOfEvent Vayk\_
+  * Now on the commands inside our event we could use
+    * /score run-player-command player:%arg0% {command}
+  * For example
+    * Command ran: /ee run-custom-trigger trigger:activator0 Vayk\_
+    * Output: All players jump
+    * Code:
+
+```yaml
+activators:
+  activator0:
+    name: '&eActivator'
+    option: CUSTOM_TRIGGER
+    cancelEvent: false
+    silenceOutput: false
+    cooldownOptions:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+      enableVisualCooldown: false
+    globalCooldownOptions:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      enableVisualCooldown: false
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    worldConditions: {}
+    placeholdersConditions: {}
+    consoleCommands:
+    - score run-player-command player:%arg0% ALL_PLAYERS JUMP 1
+```
+
+* Its important to know that the name of %arg0% which in this case is Vayk\_ is just dummy, it doesn't make anything more than a dummy value to be able to use score run-player-commands to then be able to use player commands.
+  * Keep in mind that if you usage a normal SCore Player command it will target %arg0% that's why I used ALL\_PLAYERS before adding the command.
+
+### How to run custom triggers scheduled ?
 
 We have already explained the basics of how to create a custom trigger, but it may be not very clear how schedule works or how to run them, that's why, since we already know the content, let's check a couple of examples
 
