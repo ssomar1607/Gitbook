@@ -151,6 +151,7 @@ Lm-Items is a bridge resource between LevelledMobs and ExecutableItems
 ### HeadDB
 
 * You can make your EI items to have the displayItem a head from HeadDB
+* #### silentMessagePreventionErrorHeadDBError
 
 {% hint style="info" %}
 And then you can link it to an EB if want the EB to be a head, more info in EB FAQ.
@@ -280,4 +281,18 @@ _It will add the Advanced enchantment **Haste** with a level of **1** on your Ex
 * requiredMoney feature works with Vault.
 
 
+
+### Citizen NPC
+
+* PLAYER\_CLICK\_ON\_ENTITY
+* ### PLAYER\_FISH\_ENTITY
+* ### PLAYER\_KILL\_ENTITY
+
+
+
+
+
+NBT API
+
+* #### itemCheckWithNBTAPI
 

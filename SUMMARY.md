@@ -43,7 +43,7 @@
     * [Item Restrictions/Resistances](executableitems/configurations/item-configuration/item-restrictions-resistances.md)
   * [Activator Configuration](executableitems/configurations/activator-configuration/README.md)
     * [List of the Activators for ExecutableItems](executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems.md)
-    * [Activators Descriptions / GIFs](executableitems/configurations/activator-configuration/activators-descriptions-gifs.md)
+    * [\[Outdated | Pending removal\] Activators Descriptions / GIFs](executableitems/configurations/activator-configuration/outdated-or-pending-removal-activators-descriptions-gifs.md)
     * [Activators features](executableitems/configurations/activator-configuration/activators-features.md)
 * [⌨️ Commands & Permissions](executableitems/commands-and-permissions.md)
 * [🤖 Questions | Guides](executableitems/questions-or-guides/README.md)

@@ -8,8 +8,8 @@ As previous knowledge activators are different ways you have to trigger features
 [list-of-the-activators-for-executableitems.md](list-of-the-activators-for-executableitems.md)
 {% endcontent-ref %}
 
-{% content-ref url="activators-descriptions-gifs.md" %}
-[activators-descriptions-gifs.md](activators-descriptions-gifs.md)
+{% content-ref url="outdated-or-pending-removal-activators-descriptions-gifs.md" %}
+[outdated-or-pending-removal-activators-descriptions-gifs.md](outdated-or-pending-removal-activators-descriptions-gifs.md)
 {% endcontent-ref %}
 
 {% content-ref url="activators-features.md" %}

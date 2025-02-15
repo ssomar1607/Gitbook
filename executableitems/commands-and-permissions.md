@@ -1,5 +1,9 @@
 # ⌨️ Commands & Permissions
 
+On this page you will learn about Commands and Permissions of ExecutableItems plugin.
+
+Starred features ⭐ are for premium version.
+
 ## Permissions
 
 **TIP for beginners:**
@@ -10,32 +14,41 @@ To give the permissions of all items, I advice you to download a permission plug
 
 #### Item permission
 
-* Permission: `ei.item.{id}`
-* Negative permission: `-ei.item.{id}` <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
-* Example: `ei.item.Test`
-* Give all items permission: `ei.item.*`&#x20;
+* Info: Permission for a player to use an ExecutableItems.
+  * Permission for using specific ExecutableItem ID: `ei.item.{id}`
+  * Permission for using all ExecutableItems: `ei.item.*`&#x20;
+  * ⭐Negative permission to prohibit a specific ExecutableItems ID: `-ei.item.{id}`
+* Example: `ei.item.test`
 
 #### Bypass cooldown permission
 
-* Permission: `ei.nocd.{id}` `ei.nocd.*`
-* Description: Give this custom permission to disable the cooldown for your vip players
-* (Be sure to test without being op)
+* Info: Permission for a player to not have cooldown while using an ExecutableItems.&#x20;
+  * While testing you must test without op/operator/admin.
+  * Permission to bypass specific ExecutableItems ID: `ei.nocd.{id}`
+  * Permission to bypass all ExecutableItems: `ei.nocd.*`
+* Example: `ei.nocd.test`
 
-#### Give all permissions of EI
+#### All permissions
 
-* Permission: `ei.*`
+* Info: Permission that grants all permissions for ExecutableItems.
+  * Be careful ! This one grants literally every permission, even the administrator ones.
+  * Permission: `ei.*`
+* If you want to give a specific permission keep reading below, it will be detailed every command with each permission.
 
-#### Give all commands permissions of EI
+#### All commands permissions
 
-* Permission: `ei.cmds`
+* Info: Permission that grants all commands permissions for ExecutableItems.
+  * Permission: `ei.cmds`
+* If you want to give a specific permission keep reading below, it will be detailed every command with each permission.
 
 ## Commands
 
 #### Create a new ExecutableItem
 
 * Command: <mark style="color:blue;">**/ei create {id}**</mark>
-* Tip:&#x20;
-  * If you want **copy the item of another plugin**, or a custom vanilla item (Banner, Shield, ...), it's simple ! Take it in your main hand and execute the create command.
+  * id: ID of the ExecutableItem.
+  * If you want **copy the item of another plugin**, or a custom vanilla item (Banner, Shield, ...), it's simple ! Take it in your main hand and execute this create command.
+* Example: `/ei create SsomarPluginsItem`
 * Permission: `ei.cmd.create`
 
 #### Open the editor / menu
@@ -50,7 +63,9 @@ To give the permissions of all items, I advice you to download a permission plug
 
 **Reload only 1 item**
 
-* Command: <mark style="color:blue;">**/ei reload \<Id of the item>**</mark>
+* Command: <mark style="color:blue;">**/ei reload {id}**</mark>
+  * id : ID of the ExecutableItem.
+* Example: `/ei reload SsomarPluginsItem`
 * Permission: `ei.cmd.reload`
 
 **Reload a folder**
@@ -66,36 +81,47 @@ To give the permissions of all items, I advice you to download a permission plug
 #### Delete an ExecutableItem
 
 * Command: <mark style="color:blue;">**/ei delete {id}**</mark>
+  * id: ID of the ExecutableItem.
+* Example: `/ei delete SsomarPluginsItem`
 * Permission: `ei.cmd.create`
 
 #### Edit an ExecutableItem with a command
 
 * Command: <mark style="color:blue;">**/ei edit {id}**</mark>
+  * id : ID of the ExecutableItem.
+* Example: `/ei edit SsomarPluginsItem`
 * Permission: `ei.cmd.edit`
 
-#### Clear all cooldowns and delayed commands of EI
+#### Clear all cooldowns and delayed commands of ExecutableItems
 
-* Command: <mark style="color:blue;">**/ei clear**</mark>**&#x20;**<mark style="color:purple;">**\[playerName] \[ALL/DELAYED\_COMMANDS/COOLDOWNS/ACTIONBARS]**</mark>
-  * ALL - Resets the player's delayed commands, cooldowns and actionbars
-  * DELAYED\_COMMANDS - Resets all delayed commands caused by DELAY and DELAYTICK
-  * COOLDOWNS - Resets all player's cooldowns across all items
-  * ACTIONBARS - Resets all player's actionbars from the ACTIONBAR custom command
+* Command: <mark style="color:blue;">**/ei clear {target} \[optionaltarget]**</mark>
+  * target
+    * You can use player names to target a player
+    * You can use UUID to target an entity.
+  * optional\_target
+    * ALL: Resets the player's delayed commands, cooldowns and actionbars.
+    * DELAYED\_COMMANDS: Resets all delayed commands caused by DELAY and DELAYTICK.
+    * COOLDOWNS: Resets all player's cooldowns across all items.
+    * ACTIONBARS - Resets all player's actionbars from the ACTIONBAR custom command.
+* Example: `/ei clear SsomarPluginsPlayer COOLDOWNS`
 * Permission: `ei.cmd.clear`
 
-{% hint style="info" %}
-It supports entities too just use the entity UUID instead of player name
-{% endhint %}
+#### Enable / Disable actionbar of ExecutableItems
 
-#### Enable / Disable actionbar of EI
-
-* Command: <mark style="color:blue;">**/ei actionbar**</mark>**&#x20;**<mark style="color:orange;">**{on or off}**</mark>
+* Command: <mark style="color:blue;">**/ei actionbar {on or off}**</mark>
+* **Example:** `/ei actionbar off`
 * Permission: `ei.cmd.actionbar`
 
 #### Inspect the ExecutableItem that is in your main hand
 
 * Command: <mark style="color:blue;">**/ei inspect**</mark>
-* Requirement: The item must have the option `storeItemInfos: true`
-* \+ : it shows the owner of the item, id, usage, and more !&#x20;
+  * In order to use this command the ExecutableItem must have the feature of store item info enabled. [https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#store-item-info](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#store-item-info)
+  * Output:
+    * Usage
+    * Owner UUID
+    * Owner name
+    * ExecutableItems ID
+    * Variables&#x20;
 * Permission: `ei.cmd.inspect`
 
 #### Remove the owner of the EI that is in your hand

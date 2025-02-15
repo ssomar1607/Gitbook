@@ -1,4 +1,8 @@
-# Activators Descriptions / GIFs
+# \[Outdated | Pending removal] Activators Descriptions / GIFs
+
+## This complete section is outdated, it only remains due to the gif, once the new page is ready this one will be deleted.
+
+***
 
 ### **PLAYER\_ACTIVE\_FLY:** <img src="../../../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
