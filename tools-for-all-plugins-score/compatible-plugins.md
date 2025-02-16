@@ -24,69 +24,80 @@ economy give %player% 100\
 Etcetera, **every command that supports the name of a player is "compatible" with EI |EB | EE.**
 {% endhint %}
 
+This section is for compatible plugins that works with Ssomar plugins, there are some features that we have that its compatible with the other plugins.
+
+* Before starting you must know that compatible ≠ usable, allmost all plugins are usable for Ssomar Plugins, this is because all commands are run by the console, that means you can use your custom plugin's commands using the correct arguments. For example
+  * Want to apply fly command from essentials to the player ?
+    * essentials:fly %player%
+  * Want to apply vanish command from essenntials to the player ?
+    * vanish %player%
+  * Want to give money from essentials economy to the player?
+    * economy give %player% 100
+  * And a big list, every command outside Ssomar plugin's world that supports a target where you can fill with %player% then it can be used.
+
 ### MythicMobs
 
-*   You can make your mm mobs drop EI Items in two ways:
+#### You can make your MythicMobs mobs drop Ssomar Plugins Items in these ways:
 
-    1. First one holding the EI Item and typing /mm i import , this will make the item to get imported into the items.yml file of mm, from there, you can add it to the LootTable of MythicMobs.
-    2. Second one is executing a skill \~onDeath from the mob, casting a command skill adding the next line:
+*   ExecutableItems:
+
+    1. Hold the ExecutableItem and do `/mm i import` , this will make the item to get imported into the items.yml file of MythicMobs, from there, you can add it to the LootTable of MythicMobs.
+    2. Executing a skill \~onDeath from the mob, casting a command skill adding the next line:
 
     ```yaml
     Skills:
     - command{c="ei drop <item> 1 <caster.l.w> <caster.l.x> <caster.l.y> <caster.l.z>"} @self ~onDeath
     ```
+* ExecutableBlocks:
+  * The same idea but instead of using ExecutableItem use the ExecutableBlock, and on the command from skill use "eb" instead of "ei".
 
-{% hint style="info" %}
-To make drop EB is the same idea
-{% endhint %}
+#### You can specify the activators from SsomarPlugins to only work with specific MythicMobs using this feature [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
+* Example : Creating an ExecutableItem that makes more damage to a list of MythicMobs
+* Example: Creating an ExecutableBlock  that damages a specific MythicMob when it walks above the block
+* Example: Creating an ExecutableEvent that only works for a list of MythicMobs.
 
+#### You can summon MM Mobs using this command inside your activator:
 
-* You can make your Items/blocks/events to damage/run skills to specific MM mobs using the detailedEntities, so, for example, in EI you could make a sword that makes 60% more damage to a list of MM mobs (like a ender sword -> it makes more damage to all your mm from end), or in EB damage a specific mob that walks above it, or in EE create a specific event that only works for that mob.
-
-
-
-* You can summon MM Mobs using this command inside your activator:
+* Depending on the activator you are using you may need to change the placeholders.
+  * Example: Instead of %world% it may be needed to use %player\_world%,%target\_world% or %block\_world%
 
 ```yaml
-mm m spawn (mob_id) 1 %world%,%x%,%y%,%z%
+activators:  
+  activator1: # Activator ID, you can create as many activator on the activators list    
+    commands:
+    - mm m spawn {mob_id} 1 %world%,%x%,%y%,%z%
 ```
-
-{% hint style="info" %}
-**It is probably that some placeholder don't work depending on the activator you are using, you may need to change %world% to %player\_world% in some cases, or select the ones that will work depending on your config**
-{% endhint %}
 
 {% hint style="info" %}
 This brings you the idea that MM spawners are possible, but would need premium version.
 {% endhint %}
 
+* ⭐You can use this idea with ExecutableBlocks to create custom MythicMobs spawner.
 
+#### Run MythicMobs skill from Ssomar Plugins features
 
-* You can make item system where you can only use "x" item after a MM mobs does something, using the condition of tag, and using the mechanic add tag from MM.
+* You can use on commands section  `SUDOOP mm test cast <skill>` to run a skill from MythicMobs.
 
+#### Custom SCore commands
 
-
-*   <mark style="color:orange;">**\[PREMIUM]**</mark> You can make a fishing system related with MythicMobs like the one in Hypixel.&#x20;
-
-    * For example having tier list of fishing rods, from low probability to higher probability to catch more epic mobs from your lakes, adding restrictions to only fish MM mobs from the lakes in "x" cordinates (or a WorldGuard region), etc.
-
-
-* Also using the skills from MythicMobs, you could either combine the ExecutableItem with MythicCrucible or just add the command `SUDOOP mm test cast <skill>` (it isn't a good way, but here is explained just in case you want this 100%)
-* #### detailedEntities
+* [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands#changetomythicmob](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands#changetomythicmob)
+  * ⭐Its possible to make a fishing system using MythicMobs like the one that is on the Hypixel Minecraft Server. For example having tier list of different fishing rods (All handled by ExecutableItems), that each tier will have from low probability to higher probability to catch more epic mobs from your lakes, adding restrictions to only fish MM mobs from the lakes in "x" cordinates (or a WorldGuard region), etc.
 
 ### **LevelledMobs**
 
-* You can make your LevelledMobs drop EI items thanks to this following resource:
-
-{% embed url="https://www.spigotmc.org/resources/lm-items.102081/" %}
-Lm-Items is a bridge resource between LevelledMobs and ExecutableItems
-{% endembed %}
+* You can make your LevelledMobs drop ExecutableItems using this resource:
+  * [https://www.spigotmc.org/resources/lm-items.102081/](https://www.spigotmc.org/resources/lm-items.102081/)
 
 ### AureliumSkills
 
 * You can make a system of mana related with skills inside EI | EB | EE, so, some abilities would need mana to be run, or some others give you mana, give mana around you (like supporter idk), etc etc.
   * To make an ExecutableItem that increases the cap of mana with aurelium skills, you first need NBTApi, then use their methods (sk modifier) to add cap to an item, hold it and type /ei create, now the EI has its methods, so the EI increases the cap.
-* RequiredMana
+* Ssomar Plugins have this feature [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana) in order to have as requirement for the activator to work Mana.
+* Aurelium Skills commands
+  * Also you can use AureliumSkills commands on your plugin, such as giving mana to the player, giving mana to the players around (Like a supporter), etc.
+* Aurelium Skills NBT
+  * You can create an ExecutableItem that while holding it increases your maximum mana, this can be done by creating an item, running the `/sk modifier` command and then while holding the item running `/ei create <id>` now the ExecutableItem has the NBTTag of the command and so it has the modifications that you made.
 
 ### ExecutableBlocks & ExecutableItems
 

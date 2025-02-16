@@ -780,14 +780,18 @@ giveFirstJoin:
 ### ⭐Item Recognition Settings
 
 * Info: This features allows to make other items that are not the ExecutableItem as they were the ExecutableItem you are editing. Basically the idea is to work with recognitions, its a list of type of recognitions that if one of them matches between your ExecutableItem and another item (even if its not ExecutableItem) the features that the ExecutableItem has will be on the another item too. This works as long as its recognized following the recognitions requirements.
+  * Available recognitions options:
+    * NAME:  This enable the recognition for all items that matches the custom name of the ExecutableItem
+    * MATERIAL: This enable the recognition for all items that matches the material of the ExecutableItem
+    * LORE: This enable the recognition for all items that matches the lore of the ExecutableItem
 * For example, if you create a diamond pickaxe ExecutableItem, that has an activator PLAYER\_RIGHT\_CLICK and on commands "SEND\_MESSAGE I am a pickaxe" every time you right click it will send that message to the minecraft chat. Now, if you enable item recognition, let's say, for the material, now ALL diamond pickaxes on the server will trigger that activator and so the message will be displayed.
 * Example:&#x20;
 
 ```yaml
 recognitions:
-- NAME # This enable the recognition for all items that matches the custom name of the ExecutableItem
-- MATERIAL  # This enable the recognition for all items that matches the material of the ExecutableItem
-- LORE # This enable the recognition for all items that matches the lore of the ExecutableItem
+- NAME
+- MATERIAL  
+- LORE 
 ```
 
 * Example Scenarios:
