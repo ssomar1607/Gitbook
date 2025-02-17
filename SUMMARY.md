@@ -143,7 +143,7 @@
     * [Launch Diamond Axe](executableitems/questions-or-guides/custom-projectiles-implementation/launch-diamond-axe.md)
     * [Custom damage on projectiles](executableitems/questions-or-guides/custom-projectiles-implementation/custom-damage-on-projectiles.md)
     * [Action per projectile](executableitems/questions-or-guides/custom-projectiles-implementation/action-per-projectile.md)
-  * [\[Premium\] Custom textures](executableitems/questions-or-guides/premium-custom-textures/README.md)
+  * [Custom textures](executableitems/questions-or-guides/premium-custom-textures/README.md)
     * [General items](executableitems/questions-or-guides/premium-custom-textures/general-items.md)
     * [Per states texture](executableitems/questions-or-guides/premium-custom-textures/per-states-texture.md)
     * [Custom armor (using armor trims)](executableitems/questions-or-guides/premium-custom-textures/custom-armor-using-armor-trims.md)
