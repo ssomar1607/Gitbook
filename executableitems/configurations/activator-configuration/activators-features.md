@@ -117,6 +117,8 @@ activators:
   * updateEnchants: Boolean value to update the enchantments of the ExecutableItem. If its true, it will override the current enchantments of the item with the current/updated enchantments set on the config file of the ExecutableItem.
   * updateCustomModelData: Boolean value to update the custom model data value of the ExecutableItem. If its true, it will override the current custom model data of the item with the current/updated customModelData value set on the config file of the ExecutableItem.
   * updateArmorSettings: Boolean value to update the armor settings of the ExecutableItem. If its true, it will override the current armor settings of the item with the current/updated armor settings set on the config file of the ExecutableItem. e.g. (Armor color)
+  * updateMaterial: Boolean value to update the material of the ExecutableItem. If its true, it will override the current material of the item with the current/updated material set on the config file of the ExecutableItem.
+  * updateHiders: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current hiders configuration with the current/updated hiders setup on the config file of the ExecutableItem.
 * Example:
 
 ```yaml
@@ -130,6 +132,8 @@ activators:
     updateEnchants: false
     updateCustomModelData: false
     updateArmorSettings: false
+    updateMaterial: false
+    updateHiders: false
 ```
 
 ### cancelEvent

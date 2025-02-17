@@ -147,6 +147,12 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 - CONTENT_REMOVE STONE 1
 ```
 
+{% hint style="info" %}
+It will not remove ExecutableItems if the material matches. The only way would be specifying with EXECUTABLEITEMS:{id}
+{% endhint %}
+
+
+
 
 
 ### CONSOLEMESSAGE
@@ -525,12 +531,13 @@ Damages nearest player
 ### SELL\_CONTENT
 
 * Info: It sells all the content of a chest / furnace / all blocks that has an inventory.
-* Command: SELL\_CONTENT \[price\_boost]
-  * \[price\_boost]: Multiplier for the sold items. For example, the value here is 2 so the sold items will give you twice the selling price.
+* Command: SELL\_CONTENT priceBoost:{float} deleteUnsellable:{boolean}
+  * price\_boost: Float multiplier for the sold items. For example, the value here is 2 so the sold items will give you twice the selling price.
+  * deleteUnsellable: Boolean value to set if it should delete the unsellable items
 * Example:
 
 ```
-- SELL_CONTENT 3
+- SELL_CONTENT priceBoost:1.0 deleteUnsellable:false
 ```
 
 {% hint style="info" %}
@@ -558,6 +565,22 @@ It requires ShopGUIPlus (priority) & Vault & CMI prices
 
 ```
 - SETTEMPBLOCK STONE 100
+```
+
+{% hint style="warning" %}
+It doesn't replace blocks that have extra datas (inventory, rotation, etc)
+{% endhint %}
+
+
+
+### SET\_TEMP\_BLOCK\_POS
+
+* Info: Replaces the targeted block with a temporary block
+* Command: SET\_TEMP\_BLOCK\_POS x:{x} y:{y} z:{z} material:{material} time:{} bypassProtection:{boolean} whitelistCurrentBlock:{list of materials}
+* Example:
+
+```
+- SET_TEMP_BLOCK_POS x:0.0 y:0.0 z:0.0 material:STONE time:10 bypassProtection:true whitelistCurrentBlock:SAND,DIRT
 ```
 
 {% hint style="warning" %}

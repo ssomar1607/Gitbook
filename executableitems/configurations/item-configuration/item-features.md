@@ -285,60 +285,6 @@ itemModel: "" # "mynamespace:mymodel"
 tootipModel: "" # "mynamespace:mymodel"
 ```
 
-### Tool Rules (1.20.5++)
-
-Info: Here you can select the rules of the tools.
-
-#### Enable
-
-* Info: Boolean value to select if the Tool Rules are enabled or not.
-* Example:
-
-```yaml
-toolRules:
-  enable: true
-```
-
-#### Default mining speed
-
-* Info: Float value to set the default mining speed of the ExecutableItem.
-* Example:
-
-```yaml
-toolRules:
-  enable: true
-  defaultMiningSpeed: 1.0
-```
-
-#### Damage per block break
-
-* Info: Integer value to set as the durability value which will be taken after the ExecutableItem breaks a block.&#x20;
-* Example:
-
-```yaml
-toolRules:
-  enable: false
-  damagePerBlock: 1
-```
-
-#### Specific tool rules
-
-* Info: You can select the mining speed, droppable for certain blocks with the ExecutableItem, in order of tool customization.
-  * miningSpeed: Float value to set the minig speed of the ExecutableItem for the selected blocks on the tool rule.
-  * correctForDrops: Boolean value that represents if the block will be dropped or not using the ExecutableItems.
-  * blocks: List of BLOCKS to apply the tool rules to.
-* Example:
-
-```yaml
-toolRules:
-  toolRule0: #ID Of this tool rule, you can add as many as you want
-    miningSpeed: 1.0
-    correctForDrops: true
-    blocks:
-    - STONE
-  enable: true
-```
-
 ### Features related to the item dropped
 
 Here you will learn about features that are only visible when the item is dropped on the ground.
@@ -456,6 +402,7 @@ In game it will be represented in PublicBukkitValues, like this
   * hideArmorTrim: Boolean value that represents if the armor trim of the ExecutableItem will be displayed in the lore or not.
   * hidePlacedOn: Boolean value that represents if the NBT Tag of "Can be placed on: \[...]" of the ExecutableItem will be displayed in the lore or not.
   * hideDestroys: Boolean value that represents if the NBT Tag of "Can destroy: \[...]" of the ExecutableItem will be displayed in the lore or not.
+  * hideToolTip: Boolean value that represents if the tooltip is hide or not. (Only available in 1.20.5++)
 * Example:
 
 ```yaml
@@ -469,6 +416,7 @@ hiders:
   hideArmorTrim: false
   hidePlacedOn: false
   hideDestroys: false
+  hideToolTip: false
 ```
 
 ### Usage Settings
@@ -739,7 +687,8 @@ customStackSize: 32
     * STRING: With this variable type you can store STRING values, such as words, numbers, letters, characters, etc. For example you can store the name of the last player hit. This type of variable doesn't support variableModification(type:MODIFICATION) increasing or decreasing the value. Its static unless its replaced with a variableModification(type:SET) which will override the old value.
     * NUMBER: With this variable type you can store FLOAT values, such as numbers. For example if you want to store the amount of blocks broken, the amount of kills, track the seconds before something happens, etc. This type of variable support variableModification(type:MODIFICATION) and variableModification(type:SET).
     * LIST: This variable is a list type variable that stores STRING values. Its useful to store a list of things, for example, have track of the clicked blocks and append them to this list, or append the killed players here, etc.
-  * Example
+  * isRefreshableClean: Boolean value that enables the refresh clean. This allows to add custom lore lines and not being removed when the variable updates. Its recommended to have it on true.
+* Example
   * ```yaml
     variables:
       var2:
@@ -759,8 +708,8 @@ customStackSize: 32
         - '1'
         - '2'
     ```
-* You can check more information on the next pages:
-  * \<TODO IF FORGOT PLS PING VAYK>
+* You can check more information on the next page about other type of variables:
+  * [https://docs.ssomar.com/tools-for-all-plugins-score/score-variables](https://docs.ssomar.com/tools-for-all-plugins-score/score-variables)
 
 ### Custom give first join Settings
 
@@ -801,6 +750,10 @@ recognitions:
   * If an EI item only has the item recognition of `MATERIAL` and `NAME`, the items must have the EXACT NAME and MATERIAL of the EI item for the item to be considered as an EI item.
 * Keep in mind that if one of your ExecutableItems has item recognitions enabled on MATERIAL, then you shouldn't use more item recognitions based on MATERIAL for another ExecutableItem with the same MATERIAL. The reason is because if there are 2 ExecutableItems items with the recognition of MATERIAL enabled and both are DIAMOND\_BLOCK, only the first one in the alphabetic order will be the one who will have the most priority in case someone triggers a DIAMOND\_BLOCK.
 
+
+
+## Depending on the type of block
+
 ### Container Features
 
 * Info: Here you can customize the container features if the block is an instance of container such as the chest and the barrel.
@@ -816,3 +769,112 @@ containerFeatures:
   containerContent:
   - slot:0;minecraft:loom
 ```
+
+### Tool Rules (1.20.5++)
+
+Info: Here you can select the rules of the tools.
+
+#### Enable
+
+* Info: Boolean value to select if the Tool Rules are enabled or not.
+* Example:
+
+```yaml
+toolRules:
+  enable: true
+```
+
+#### Default mining speed
+
+* Info: Float value to set the default mining speed of the ExecutableItem.
+* Example:
+
+```yaml
+toolRules:
+  enable: true
+  defaultMiningSpeed: 1.0
+```
+
+#### Damage per block break
+
+* Info: Integer value to set as the durability value which will be taken after the ExecutableItem breaks a block.&#x20;
+* Example:
+
+```yaml
+toolRules:
+  enable: false
+  damagePerBlock: 1
+```
+
+#### Specific tool rules
+
+* Info: You can select the mining speed, droppable for certain blocks with the ExecutableItem, in order of tool customization.
+  * miningSpeed: Float value to set the minig speed of the ExecutableItem for the selected blocks on the tool rule.
+  * correctForDrops: Boolean value that represents if the block will be dropped or not using the ExecutableItems.
+  * blocks: List of BLOCKS to apply the tool rules to.
+* Example:
+
+```yaml
+toolRules:
+  toolRule0: #ID Of this tool rule, you can add as many as you want
+    miningSpeed: 1.0
+    correctForDrops: true
+    blocks:
+    - STONE
+  enable: true
+```
+
+### chargedProjectiles
+
+* Info: Feature that allows to have already charged projectiles when the ExecutableItem is a crossbow item and its given to the player.
+  * The format of the material must be as `minecraft:<id>`. It supports vanilla items for now.
+* Example:
+
+```yaml
+material: CROSSBOW
+chargedProjectiles:
+- minecraft:arrow
+```
+
+### bundleContent
+
+* Info: Feature that allows to have already content items if the ExecutableItems is a bundle item and its given to the player.
+  * The format of the material must be as `minecraft:<id>`. It supports vanilla items for now.
+* Example:
+
+```yaml
+material: BUNDLE
+bundleContent:
+- minecraft:stone
+- minecraft:dirt
+```
+
+### fireworkFeatures
+
+* Info: Feature that allows to have a customized firework features if the ExecutableItems is a firework item.
+* Example:
+
+```yaml
+fireworkFeatures:
+
+  lifeTime: 1
+  fireworkExplosions:
+    explosion_0:
+      colors:
+      - BLUE
+      fadeColors:
+      - RED
+      type: BALL_LARGE
+      hasTrail: true
+      hasTwinkle: true
+    explosion_1:
+      colors:
+      - GREEN
+      fadeColors: []
+      type: CREEPER
+      hasTrail: true
+      hasTwinkle: true
+```
+
+
+

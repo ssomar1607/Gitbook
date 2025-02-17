@@ -69,11 +69,7 @@ activators:
     - mm m spawn {mob_id} 1 %world%,%x%,%y%,%z%
 ```
 
-{% hint style="info" %}
-This brings you the idea that MM spawners are possible, but would need premium version.
-{% endhint %}
-
-* ⭐You can use this idea with ExecutableBlocks to create custom MythicMobs spawner.
+* ⭐You can use this idea with ExecutableBlocks and LOOP activator to create custom MythicMobs spawner.
 
 #### Run MythicMobs skill from Ssomar Plugins features
 
@@ -91,8 +87,6 @@ This brings you the idea that MM spawners are possible, but would need premium v
 
 ### AureliumSkills
 
-* You can make a system of mana related with skills inside EI | EB | EE, so, some abilities would need mana to be run, or some others give you mana, give mana around you (like supporter idk), etc etc.
-  * To make an ExecutableItem that increases the cap of mana with aurelium skills, you first need NBTApi, then use their methods (sk modifier) to add cap to an item, hold it and type /ei create, now the EI has its methods, so the EI increases the cap.
 * Ssomar Plugins have this feature [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana) in order to have as requirement for the activator to work Mana.
 * Aurelium Skills commands
   * Also you can use AureliumSkills commands on your plugin, such as giving mana to the player, giving mana to the players around (Like a supporter), etc.

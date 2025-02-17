@@ -24,6 +24,7 @@ THIS PROJECTILES ARE USED WITH <mark style="color:blue;">**LAUNCH**</mark> AND <
 This is the first thing you have to set, the type of projectile you want to create, Score supports:
 
 * ARROW
+* SPECTRAL\_ARROW
 * EGG
 * ENDER\_PEARL
 * FIREBALL

@@ -68,6 +68,13 @@ Also there will be different colors (but its the same idea as {} and \[] ):
 * Example: `/ei create SsomarPluginsItem`
 * Permission: `ei.cmd.create`
 
+#### Create a new ExecutableItem from a targeted block
+
+* Command: /ei create-from\_block {id}
+  * id: ID of the ExecutableItem.
+* Example: `/ei create-from_block SsomarPluginsItem`
+* Permission: `ei.cmd.create-from-block`
+
 #### Open the editor / menu
 
 * Command: <mark style="color:blue;">**/ei editor**</mark> or <mark style="color:blue;">**/ei show**</mark>
@@ -162,7 +169,7 @@ Also there will be different colors (but its the same idea as {} and \[] ):
 * Info: This command refresh the ExecutableItemID(s) to their last version on its/their config, that means, if a player has an ExecutableItem on old version for example with attribute of GENERIC\_ARMOR to 10, and then you change the value of the attribute on the config of the ExecutableItem, it will not be update on the player side, to allow this update you can use this command so its refreshed and he will have instead of 10 the new updated value.
   * In order to make this process of refresh the ExecutableItem(s) selected must be on the players inventory, otherwise they won't be refreshed
   * As a tip, another way to make this refresh is using [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#auto-update-item](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#auto-update-item)
-* Command: <mark style="color:blue;">**/ei refresh {player} {ExecutableItemID}**</mark> <mark style="color:orange;">**{resetUsage} {resetDurability}**</mark>
+* Command: <mark style="color:blue;">**/ei refresh {player} {ExecutableItemID}**</mark>**&#x20;**<mark style="color:orange;">**{resetUsage} {resetDurability}**</mark>
   * player: Name of a specific player or "all" to target all players online.
   * ExecutableItemID: Name of a specific ExecutableItem or "all" to target all ExecutableItems created.
   * resetUsage: Boolean value to allow through the refresh process to reset the usage value
