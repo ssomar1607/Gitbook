@@ -9,10 +9,12 @@ If you edit the commands in-game don't add the **-** that is before all examples
   * {amount}: To how long you want commands to be delayed (In seconds)
 * Example:
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>#There will be a delay of 10 seconds between the command1 and the command2.
-</strong><strong>- command1
-</strong>- DELAY 10
-- command2
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    commands: #There will be a delay of 10 seconds between the command1 and the command2.
+<strong>    - command1
+</strong>    - DELAY 10
+    - command2
 </code></pre>
 
 
@@ -24,8 +26,13 @@ If you edit the commands in-game don't add the **-** that is before all examples
   * {amount}: To how long you want commands to be delayed (In ticks)
 * Example:
 
-```
-- DELAYTICK 5
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - command1
+    - DELAYTICK 5 # (0.25 seconds)
+    - command2
 ```
 
 ## **IF**
@@ -42,22 +49,27 @@ CURRENTLY ONLY WORKS IN PLAYER RELATED AND ENTITY RELATED COMMANDS
   * {command1},{command2}: The commands that will be executed
 * Example:
 
-```
-IF %player_health%>20 say cool
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - IF %player_health%>20 say cool
 ```
 
-```
-IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
 ```
 
-```
-IF 1=1||2=3 BACKDASH 1
-1=1 OR 2=3 -> YES because 1=1
-IF 1=1&&2=2||2=3 BACKDASH 1
-1=1 and 2=2 or 2=3 -> YES because 1=1 and 2=2
-IF (1=1&&2=2)||(2=3||3=2) BACKDASH 1
-(1=1 and 2=2) or (2=3 or 3=2) -> YES because 1=1 and 2=2
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - IF 1=1||2=3 BACKDASH 1 # 1=1 OR 2=3 -> YES because 1=1
+    - IF 1=1&#x26;&#x26;2=2||2=3 BACKDASH 1 # 1=1 and 2=2 or 2=3 -> YES because 1=1 and 2=2
+    - IF (1=1&#x26;&#x26;2=2)||(2=3||3=2) BACKDASH 1 # (1=1 and 2=2) or (2=3 or 3=2) -> YES because 1=1 and 2=2
+</code></pre>
 
 
 
@@ -71,8 +83,11 @@ IF (1=1&&2=2)||(2=3||3=2) BACKDASH 1
   * {command},{command2}: The commands that will be executed in repeat
 * Example:
 
-```
-WHILE %player_health%>10 20 SENDMESSAGE &eHello &6While <+> effect give %player% speed 1 1
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - WHILE %player_health%>10 20 SENDMESSAGE &eHello &6While <+> effect give %player% speed 1 1
 ```
 
 {% hint style="info" %}
@@ -94,35 +109,41 @@ The command will be stopped if the player is offline
   * Command: LOOP END
 * Example: (This is what you will see on config)
 
-```
-- 'RANDOM RUN: 1'
-- 'LOOP START: 5' # (50%)
-- SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
-- LOOP END
-- 'LOOP START: 3' # (30%)
-- SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
-- LOOP END
-- 'LOOP START: 2' # (20%)
-- SENDMESSAGE &aYOU GOT DIAMOND! +++ give %player% diamond 1
-- LOOP END
-- RANDOM END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - 'LOOP START: 5' # (50%)
+    - SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
+    - LOOP END
+    - 'LOOP START: 3' # (30%)
+    - SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
+    - LOOP END
+    - 'LOOP START: 2' # (20%)
+    - SENDMESSAGE &aYOU GOT DIAMOND! +++ give %player% diamond 1
+    - LOOP END
+    - RANDOM END
 ```
 
 This is what the ExecutableItems plugin sees when it runs
 
-```
-- 'RANDOM RUN: 1'
-- SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
-- SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
-- SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
-- SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
-- SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
-- SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
-- SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
-- SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
-- SENDMESSAGE &aYOU GOT DIAMOND! +++ give %player% diamond 1
-- SENDMESSAGE &aYOU GOT DIAMOND! +++ give %player% diamond 1
-- RANDOM END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
+    - SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
+    - SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
+    - SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
+    - SENDMESSAGE &cYOU GOT AN APPLE! +++ give %player% apple 1
+    - SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
+    - SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
+    - SENDMESSAGE &7YOU GOT IRON! +++ give %player% iron_ingot 1
+    - SENDMESSAGE &aYOU GOT DIAMOND! +++ give %player% diamond 1
+    - SENDMESSAGE &aYOU GOT DIAMOND! +++ give %player% diamond 1
+    - RANDOM END
 ```
 
 Explanation:
@@ -141,11 +162,13 @@ It supports placeholders
 
 * Command that allows you to target multiple elements inside a list
 
-```
-Example one:
-- FOR [Special70, Ssomar, Vayk] > for1
-- effect give %for1% speed 60 2
-- ENDFOR for1
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - FOR [Special70, Ssomar, Vayk] > for1
+    - effect give %for1% speed 60 2
+    - ENDFOR for1
 ```
 
 {% hint style="info" %}
@@ -159,13 +182,15 @@ Special70" then "Ssomar" for the second and "Vayk" for the third timehinhin
 Don't overthink about the `>` symbol.
 {% endhint %}
 
-```
-Example 2:
-- FOR [Special70, Ssomar, Vayk] > for2
-- FOR [5,4,3,2,1] > for3
-- SENDMESSAGE >> &e%for2% &a%for3%
-- ENDFOR for3
-- ENDFOR for2
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - FOR [Special70, Ssomar, Vayk] > for2
+    - FOR [5,4,3,2,1] > for3
+    - SENDMESSAGE >> &e%for2% &a%for3%
+    - ENDFOR for3
+    - ENDFOR for2
 ```
 
 {% hint style="info" %}
@@ -180,11 +205,13 @@ If you're gonna focus on the SENDMESSAGE command, the reason it ran 15 times bec
 **It works with score variable list placeholders**
 {% endhint %}
 
-```
-Example 3:
-- FOR %score_variables_myList% > for4
-- effect give %for4% speed 60 2
-- ENDFOR for4
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - FOR %score_variables_myList% > for4
+    - effect give %for4% speed 60 2
+    - ENDFOR for4
 ```
 
 ## Run commands randomly ?
@@ -203,12 +230,15 @@ Example 3:
   * Command: RANDOM END
 * Example:
 
-```
-- 'RANDOM RUN: 1'
-- give %player% coal 1
-- give %player% iron_ingot 1
-- give %player% gold_ingot 1
-- RANDOM END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - give %player% coal 1
+    - give %player% iron_ingot 1
+    - give %player% gold_ingot 1
+    - RANDOM END
 ```
 
 This means that you have a 1/3 chance of getting coal, iron or gold
@@ -217,21 +247,27 @@ This means that you have a 1/3 chance of getting coal, iron or gold
 **To be able to run multiple commands in one command line use `+++`**
 {% endhint %}
 
-```
-- 'RANDOM RUN: 2'
-- give %player% diamond 1 +++ SENDMESSAGE &aYou receive &b1 Diamond
-- give %player% emerald 1 +++ SENDMESSAGE &aYou receive &21 Emerald
-- give %player% diamond_block 1 +++ SENDMESSAGE &aYou receive &b1 Diamond block
-- RANDOM END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 2'
+    - give %player% diamond 1 +++ SENDMESSAGE &aYou receive &b1 Diamond
+    - give %player% emerald 1 +++ SENDMESSAGE &aYou receive &21 Emerald
+    - give %player% diamond_block 1 +++ SENDMESSAGE &aYou receive &b1 Diamond block
+    - RANDOM END
 ```
 
 This means that from the 3 give commands, 2 of the randomly chosen command lines will run.
 
-```
-- 'RANDOM RUN: 1'
-- NOTHING*9
-- give %player% diamond_block 1
-- RANDOM END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - NOTHING*9
+    - give %player% diamond_block 1
+    - RANDOM END
 ```
 
 This means that there's a 10% chance to give you a diamond block.
@@ -252,11 +288,14 @@ It supports placeholders
 * Command: NOTHING\*{amount}
 * Example of usage:
 
-```
-- 'RANDOM RUN: 1'
-- NOTHING*99
-- give %player% diamond 1
-- RANDOM END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - NOTHING*99
+    - give %player% diamond 1
+    - RANDOM END
 ```
 
 This command line means that there is a 1/100 chance it will give you a diamond
@@ -269,26 +308,32 @@ This command line means that there is a 1/100 chance it will give you a diamond
 
 * So here is how to do it.
 
-```
-- 'LOOP START: 99' 
-- give %player% dirt 1
-- LOOP END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'LOOP START: 99' 
+    - give %player% dirt 1
+    - LOOP END
 ```
 
 * The 99 represents that any commands inside the loop command will be duplicated 99 times. You will only see the give command and the loop command but the plugin sees 99 give commands.
 * Here is what the plugin sees
 
-```
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
-- give %player% dirt 1
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
+    - give %player% dirt 1
 ```
 
 (You get the idea.)
@@ -300,38 +345,50 @@ The (5%) percentage stuff is not part of the command. It's written here in the w
 {% endhint %}
 
 ```yaml
-- 'RANDOM RUN: 1'
-- give %player% dirt #(1/2 = 50%)
-- give %player% diamond #(1/2 = 50%)
-- RANDOM END
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - give %player% dirt #(1/2 = 50%)
+    - give %player% diamond #(1/2 = 50%)
+    - RANDOM END
 ```
 
 ```yaml
-- 'RANDOM RUN: 1'
-- give %player% dirt #(1/3 = 33%)
-- give %player% diamond #(1/3 = 33%)
-- give %player% diamond #(1/3 = 33%)
-- RANDOM END
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - give %player% dirt #(1/3 = 33%)
+    - give %player% diamond #(1/3 = 33%)
+    - give %player% diamond #(1/3 = 33%)
+    - RANDOM END
 ```
 
 ```yaml
-- 'RANDOM RUN: 1'
-- give %player% dirt #(1/4 = 25%)
-- give %player% dirt #(1/4 = 25%)
-- give %player% diamond #(1/4 = 25%)
-- NOTHING*1 #(1/4 = 25%)
-- RANDOM END
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - give %player% dirt #(1/4 = 25%)
+    - give %player% dirt #(1/4 = 25%)
+    - give %player% diamond #(1/4 = 25%)
+    - NOTHING*1 #(1/4 = 25%)
+    - RANDOM END
 ```
 
 * After seeing these RANDOM RUN examples, we will acknowledge that it would work like this.
 
 ```yaml
-- 'RANDOM RUN: 1'
-- 'LOOP START: 99' 
-- give %player% dirt 1  #(99/100 = 99%)
-- LOOP END
-- give %player% diamond 1 #(1/100 = 1%)
-- RANDOM END
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - 'RANDOM RUN: 1'
+    - 'LOOP START: 99' 
+    - give %player% dirt 1  #(99/100 = 99%)
+    - LOOP END
+    - give %player% diamond 1 #(1/100 = 1%)
+    - RANDOM END
 ```
 
 * The total of the supposed lines is 100 so it's going to be (100 command lines / 100% = 1%) rate per command.

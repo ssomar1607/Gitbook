@@ -114,8 +114,16 @@ _Sorted by alphabetical order_
   * time: time of the effect in ticks. Set it empty or "0" if want to be infinite.
 * Example:
 
-```
-- ABSORPTION amount:5 time:200
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ABSORPTION amount:5 time:200 # Gives the player absorption
+  activator1: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - ABSORPTION amount:5 time:200 # Gives the target absorption
 ```
 
 {% hint style="warning" %}
@@ -126,24 +134,43 @@ Check the value by typing : /attribute PLAYER\_NAME minecraft:max\_absorption ba
 And you can increase it by typing: /attribute PLAYER\_NAME minecraft:max\_absorption base set 20
 {% endhint %}
 
-```
-# You can do that to temporary up the max_absorption value of the player
-- attribute %player% minecraft:max_absorption base set 5
-- ABSORPTION amount:5 time:200
-- DELAYTICK 200
-- attribute PLAYER_NAME minecraft:max_absorption base set 0
-```
+<pre class="language-yaml"><code class="lang-yaml">activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    # You can do that to temporary up the max_absorption value of the player
+<strong>    - attribute %player% minecraft:max_absorption base set 5
+</strong>    - ABSORPTION amount:5 time:200
+    - DELAYTICK 200
+    - attribute PLAYER_NAME minecraft:max_absorption base set 0
+  activator1: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    # You can do that to temporary up the max_absorption value of the target
+    - attribute %player% minecraft:max_absorption base set 5
+    - ABSORPTION amount:5 time:200
+    - DELAYTICK 200
+    - attribute PLAYER_NAME minecraft:max_absorption base set 0
+</code></pre>
 
 ### ACTIONBAR
 
 * Info: Display the action bar with your text + the time remaining (59, 58, 57...).
 * Command:&#x20;
   * `ACTIONBAR {Your text} {delay}`
-*   Example:
+* Example:
 
-    ```
-    - `ACTIONBAR &6Hey &e%player% ! 10`
-    ```
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - `ACTIONBAR &6Hey &e%player% ! 10` # Sends an ACTIONBAR to the player
+  activator1: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - `ACTIONBAR &6Hey &e%player% ! 10`# Sends an ACTIONBAR to the target
+```
 
 
 
@@ -157,8 +184,16 @@ And you can increase it by typing: /attribute PLAYER\_NAME minecraft:max\_absorp
   * equipmentSlot: The slot where the attribute will be enabled
 * Example:
 
-```
-- ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND # Add this attribute to the player
+  activator1: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND # Add this attribute to the target
 ```
 
 {% hint style="info" %}
@@ -180,8 +215,16 @@ And the slots here
   * level: The level for the enchantment
 * Example:
 
-```
-- ADD_ITEM_ENCHANTMENT slot:-1 enchantment:unbreaking level:1
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ADD_ITEM_ENCHANTMENT slot:-1 enchantment:unbreaking level:1 
+  activator1: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - ADD_ITEM_ENCHANTMENT slot:-1 enchantment:unbreaking level:1
 ```
 
 {% hint style="info" %}
@@ -198,8 +241,16 @@ You can find the enchantments here
   * text: The text for the new lore line
 * Example:
 
-```
-- ADD_ITEM_LORE slot:%slot% text:&7Item of %player%
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ADD_ITEM_LORE slot:%slot% text:&7Item of %player%
+  activator1: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of target
+    commands:
+    - ADD_ITEM_LORE slot:%slot% text:&7Item of %target% added by %player%
 ```
 
 ### AROUND
@@ -215,44 +266,75 @@ You can find the enchantments here
 
 This summons lightning at players in a 20 block radius
 
-```
-- AROUND distance:20 displayMsgIfNoPlayer:false execute at %around_target% run summon lightning_bolt
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:20 displayMsgIfNoPlayer:false execute at %around_target% run summon lightning_bolt
 ```
 
 This gives players slowness in a 10 block radius
 
-```
-- AROUND distance:10 effect give %around_target% slowness 50 5
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 effect give %around_target% slowness 50 5
+</code></pre>
 
 Damages nearby visible players by 20 player damage in a 7 block radius
 
-```
-- AROUND distance:7 throughBlocks:false DAMAGE 20
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:7 throughBlocks:false DAMAGE 20
 ```
 
 Send a message to players between 5 and 10 blocks
 
-```
-AROUND distance:10 displayMsgIfNoPlayer:true throughBlocks:true safeDistance:5 SENDMESSAGE &eIt is a test !
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 displayMsgIfNoPlayer:true throughBlocks:true safeDistance:5 SENDMESSAGE &eIt is a test !
 ```
 
 Many around in the same command
 
-```
-- AROUND distance:5 displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND distance:5 displayMsgIfNoPlayer:false say &a(2)&e%around_target::step2%
-```
-
-```
-- AROUND say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
-```
-
-```
-- AROUND distance:10 throughBlocks:false displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:5 displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND distance:5 displayMsgIfNoPlayer:false say &a(2)&e%around_target::step2%
 ```
 
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
 ```
-- AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_{% raw %}
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 throughBlocks:false displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
+```
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_{% raw %}
 {%player%}
 {% endraw %}_{betterteams_name}::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
 ```
@@ -265,14 +347,21 @@ Many around in the same command
 * To add MORE than 1 condition use "&&" between the conditions
 * Example:
 
-```
-- AROUND distance:10 CONDITIONS(%::player_health::%>10&&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 CONDITIONS(%::player_health::%>10&#x26;&#x26;%::player_name::%=2Ssomar) SENDMESSAGE &#x26;eclick
+</code></pre>
 
 (Mainly in blockCommands/entityCommands) where you want the owner of the block/projectile won't harm the user of the item (Requires PlaceholderAPI's Player Expansion)
 
-```
-- AROUND distance:2 CONDITIONS(%::player_name::%!=%player%) DAMAGE 15
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:2 CONDITIONS(%::player_name::%!=%player%) DAMAGE 15
 ```
 
 {% hint style="info" %}
@@ -294,8 +383,12 @@ Placeholder Source: ([https://factions.support/placeholderapi/](https://factions
 * No command setting
 * Example:
 
-```
-- BOOTS
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - BOOTS
 ```
 
 
@@ -309,8 +402,12 @@ Placeholder Source: ([https://factions.support/placeholderapi/](https://factions
   * text: text on the bossbar
 * Example:
 
-```
-- BOSSBAR time:200 color:RED text:This is a bossbar text
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - BOSSBAR time:200 color:RED text:This is a bossbar text
 ```
 
 
@@ -323,10 +420,13 @@ Placeholder Source: ([https://factions.support/placeholderapi/](https://factions
   * material: If set the player cant pickup only the material specified, if null he can't pickup everything
 * Example:
 
-```yaml
-- CANCEL_PICKUP time:600
-- CANCEL_PICKUP time:600 material:stone
-```
+<pre class="language-yaml"><code class="lang-yaml">activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CANCEL_PICKUP time:600
+<strong>    - CANCEL_PICKUP time:600 material:stone
+</strong></code></pre>
 
 {% hint style="info" %}
 The only way to RESET this command after setting a time in ticks is reloading or restarting the server. If would like a way to reset this suggest it in the #suggestions channel on Discord.
@@ -341,8 +441,12 @@ The only way to RESET this command after setting a time in ticks is reloading or
   * text: Text to send
 * Example:
 
-```
-- CHAT &6Hello !!
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CHAT &6Hello !!
 ```
 
 
@@ -353,8 +457,12 @@ The only way to RESET this command after setting a time in ticks is reloading or
 * No command setting
 * Example:
 
-```
-- CHESTPLATE
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CHESTPLATE
 ```
 
 
@@ -366,7 +474,11 @@ The only way to RESET this command after setting a time in ticks is reloading or
 * Example:
 
 ```yaml
-- CLOSE_INVENTORY
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CLOSE_INVENTORY
 ```
 
 
@@ -384,8 +496,12 @@ The only way to RESET this command after setting a time in ticks is reloading or
 The following command will generate 20 growth boost every 10 ticks.\
 All blocks within the radius will have 50% chance to growth when a boost is applied.
 
-```
-- CROPS_GROWTH_BOOST radius:5 delay:10 durations:200 chance:50
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CROPS_GROWTH_BOOST radius:5 delay:10 durations:200 chance:50
 ```
 
 
@@ -397,8 +513,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * time: The duration in seconds of the effect
 * Example: (The command below disable the activation of the fly during 1 minute)
 
-```
-- DISABLE_FLY_ACTIVATION time:60
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DISABLE_FLY_ACTIVATION time:60
 ```
 
 
@@ -410,8 +530,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * time: The duration in seconds of the effect
 * Example: (the command below disable the use of elytra for 20 secs)
 
-```
-- DISABLE_GLIDE_ACTIVATION time:20
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DISABLE_GLIDE_ACTIVATION time:20
 ```
 
 
@@ -427,8 +551,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * \[optional activator id]: You can apply it to a specific activator id
 * Example:&#x20;
 
-```
-- EICOOLDOWN %player% thisismyid 10 true
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - EICOOLDOWN %player% thisismyid 10 true
 ```
 
 
@@ -444,9 +572,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * \[optional activator id]: You can apply it to a specific activator id
 * Example:&#x20;
 
-```
-- EBCOOLDOWN %player% thisismyid 10 true
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - EBCOOLDOWN %player% thisismyid 10 true
+</code></pre>
 
 
 
@@ -461,8 +592,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * \[optional activator id]: You can apply it to a specific activator id
 * Example:&#x20;
 
-```
-- EECOOLDOWN %player% thisismyid 10 true
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - EECOOLDOWN %player% thisismyid 10 true
 ```
 
 
@@ -473,9 +608,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
 * No command setting
 * Example:
 
-```
-- FLY_ON
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - FLY_ON
+</code></pre>
 
 ### FLY OFF
 
@@ -484,8 +622,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * teleportOnTheGround: (true or false) Whether the player would get teleported to the ground or not (Default true)
 * Example:
 
-```
-- FLY_OFF teleportOnTheGround:true
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - FLY_OFF teleportOnTheGround:true
 ```
 
 
@@ -497,8 +639,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * ei\_id: Specify the EI that you want to be force dropped by the player
 * Example:&#x20;
 
-```
-- FORCE_DROP ei_id:excalibursword
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - FORCE_DROP ei_id:excalibursword
 ```
 
 
@@ -510,8 +656,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
   * It supports -1 as slot to target the mainhand
 * Example:
 
-```
-- FORMAT_ENCHANTMENTS %slot%
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - FORMAT_ENCHANTMENTS %slot%
 ```
 
 ![](<../../.gitbook/assets/image (393).png>) -> ![](<../../.gitbook/assets/image (382).png>)
@@ -524,10 +674,14 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
 * No command settings
 * Example:
 
-```
-- GRAVITY_DISABLE
-- DELAY 5
-- GRAVITY_ENABLE
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - GRAVITY_DISABLE
+    - DELAY 5
+    - GRAVITY_ENABLE
 ```
 
 ### GRAVITY\_ENABLE
@@ -536,10 +690,14 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
 * No command setting
 * Example:
 
-```
-- GRAVITY_DISABLE
-- DELAY 5
-- GRAVITY_ENABLE
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - GRAVITY_DISABLE
+    - DELAY 5
+    - GRAVITY_ENABLE
 ```
 
 ### HEAD
@@ -548,40 +706,12 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
 * No command setting
 * Example:
 
-```
-- HEAD
-```
-
-
-
-### **IF**
-
-* Info: Executes commands if condition is met
-* Command: IF {condition\_without\_spaces} {command1} <+> {command2} <+> ...
-  * {condition\_without\_spaces}: The condition for the IF to decide whether it runs or not.
-    * Symbols: =, !=, >=, <=, >, <
-    * It supports () for priority , && for AND and || for OR
-  * {command1},{command2}: The commands that will be executed
-* Example:
-
-```
-IF %player_health%>20 say cool
-```
-
-```
-IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
-```
-
-```
-IF 1=1||2=3 BACKDASH 1
-1=1 OR 2=3 -> YES because 1=1
-IF 1=1&&2=2||2=3 BACKDASH 1
-1=1 and 2=2 or 2=3 -> YES because 1=1 and 2=2
-IF (1=1&&2=2)||(2=3||3=2) BACKDASH 1
-(1=1 and 2=2) or (2=3 or 3=2) -> YES because 1=1 and 2=2
-```
-
-
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - HEAD
+</code></pre>
 
 ### JOBS\_MONEY\_BOOST
 
@@ -595,8 +725,12 @@ It supports "Jobs reborn"
   * time: Duration in seconds of the boost in seconds
 * Example:
 
-```
-JOBS_MONEY_BOOST multiplier:2.0 time:10
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - JOBS_MONEY_BOOST multiplier:2.0 time:10
 ```
 
 ### LAUNCH
@@ -631,16 +765,24 @@ JOBS_MONEY_BOOST multiplier:2.0 time:10
   * velocity: To customize the velocity of the projectile
 * Example:
 
-```
-- LAUNCH projectile:My_Custom_Proj velocity:5
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - LAUNCH projectile:My_Custom_Proj velocity:5
 ```
 
 * Example multiple shoots:
 
-```
-- LAUNCH projectile:WITHERSKULL
-- LAUNCH projectile:WITHERSKULL angleRotationVertical:20
-- LAUNCH projectile:WITHERSKULL angleRotationVertical:-20
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - LAUNCH projectile:WITHERSKULL
+    - LAUNCH projectile:WITHERSKULL angleRotationVertical:20
+    - LAUNCH projectile:WITHERSKULL angleRotationVertical:-20
 ```
 
 {% hint style="info" %}
@@ -655,8 +797,12 @@ If you use the LAUNCH COMMAND in the activator PLAYER\_LAUNCH\_PROJECTILE, and t
 * No command setting
 * Example:
 
-```
-- LEGGINGS
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - LEGGINGS
 ```
 
 
@@ -674,8 +820,12 @@ If you use the LAUNCH COMMAND in the activator PLAYER\_LAUNCH\_PROJECTILE, and t
   * &#x20;angleRotationHorizontal: (Optional) you can add a horizontal rotation for your projectile (in degrees)
 * Example:
 
-```
-- LOCATED_LAUNCH projectile:ARROW frontValue:0 rightValue:0 yValue:0 velocity:1 angleRotationVertical:0 angleRotationHorizontal:0
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - LOCATED_LAUNCH projectile:ARROW frontValue:0 rightValue:0 yValue:0 velocity:1 angleRotationVertical:0 angleRotationHorizontal:0
 ```
 
 ### MINECART\_BOOST
@@ -685,9 +835,15 @@ If you use the LAUNCH COMMAND in the activator PLAYER\_LAUNCH\_PROJECTILE, and t
   * boost: The boost speed
 * Example:
 
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - MINECART_BOOST boost:10
 ```
-MINECART_BOOST boost:10
-```
+
+
 
 ### MIX\_HOTBAR
 
@@ -695,8 +851,12 @@ MINECART_BOOST boost:10
 * No command setting
 * Example:
 
-```
-- MIX_HOTBAR
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - MIX_HOTBAR
 ```
 
 
@@ -716,13 +876,17 @@ MINECART_BOOST boost:10
     * WHITELIST(CHICKEN)
 * Example:
 
-```
-- MOB_AROUND distance:3 displayMsgIfNoEntity:true throughBlocks:true safeDistance:0 [conditions] COMMAND1 <+> COMMAND2 <+> ...
-- MOB_AROUND distance:3 displayMsgIfNoEntity:false BURN 10
-- MOB_AROUND distance:5 execute at %around_target_uuid% run summon lightning_bolt
-- MOB_AROUND distance:5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
-- MOB_AROUND distance:5 displayMsgIfNoEntity:false effect give %around_target_uuid% poison 10 10
-- MOB_AROUND distance:10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - MOB_AROUND distance:3 displayMsgIfNoEntity:true throughBlocks:true safeDistance:0 [conditions] COMMAND1 <+> COMMAND2 <+> ...
+    - MOB_AROUND distance:3 displayMsgIfNoEntity:false BURN 10
+    - MOB_AROUND distance:5 execute at %around_target_uuid% run summon lightning_bolt
+    - MOB_AROUND distance:5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
+    - MOB_AROUND distance:5 displayMsgIfNoEntity:false effect give %around_target_uuid% poison 10 10
+    - MOB_AROUND distance:10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
 ```
 
 To use entity nbt on the WHITELIST/BLACKLIST field, you need to install NBT API plugin
@@ -733,11 +897,15 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
 
 {% embed url="https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities" %}
 
-```
-- MOB_AROUND distance:7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
-- MOB_AROUND distance:5 WHITELIST(ZOMBIE{IsBaby:1}) DAMAGE 20
-- MOB_aROUND distance:9 WHITELIST(WOLF{Owner:"%player%"}) HEAL 5
-- MOB_aROUND distance:9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - MOB_AROUND distance:7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
+    - MOB_AROUND distance:5 WHITELIST(ZOMBIE{IsBaby:1}) DAMAGE 20
+    - MOB_aROUND distance:9 WHITELIST(WOLF{Owner:"%player%"}) HEAL 5
+    - MOB_aROUND distance:9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
 ```
 
 
@@ -751,8 +919,12 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
   * supportUnbreaking: (true or false) If it supports the unbreaking enchantment or not
 * Example:
 
-```
-- MODIFY_DURABILITY modification:-1 slot:%slot% supportUnbreaking:true
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - MODIFY_DURABILITY modification:-1 slot:%slot% supportUnbreaking:true
 ```
 
 
@@ -764,8 +936,12 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
   * {bypassProtections}: If it will open the chest anyways even if its protected
 * Example:
 
-```
-- OPENCHEST VanillaWorld 100 100 100
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - OPENCHEST VanillaWorld 100 100 100
 ```
 
 {% hint style="info" %}
@@ -778,9 +954,12 @@ It supports barrels
 * No command setting
 * Example:
 
-```yaml
-- OPEN_ENDERCHEST
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - OPEN_ENDERCHEST
+</code></pre>
 
 
 
@@ -791,7 +970,11 @@ It supports barrels
 * Example:
 
 ```yaml
-- OPEN_WORKBENCH
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - OPEN_WORKBENCH
 ```
 
 ### OXYGEN
@@ -801,8 +984,12 @@ It supports barrels
   * time: The duration in ticks of oxygen you want to give
 * Example:
 
-```
-- OXYGEN time:200
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - OXYGEN time:200
 ```
 
 
@@ -814,8 +1001,12 @@ It supports barrels
   * fallDamage: Whether you will get fall damage or not (If you forgot to set whether it's true or false, the default will be false. To get fall damage, set this to true)
 * Example:
 
-```
-- PROJECTILE_CUSTOMDASH1 fallDamage:false
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - PROJECTILE_CUSTOMDASH1 fallDamage:false
 ```
 
 
@@ -827,8 +1018,12 @@ It supports barrels
   * amount: The amount of saturation points you want to gain. Use negative values to reduce hunger points
 * Example:
 
-```
-- REGAIN_FOOD amount:5
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - REGAIN_FOOD amount:5
 ```
 
 
@@ -841,8 +1036,12 @@ It supports barrels
   * amount: The amount to get.
 * Example:
 
-```
-- REGAIN_MAGIC ecoSkillsMagicID:mana amount:15
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - REGAIN_MAGIC ecoSkillsMagicID:mana amount:15
 ```
 
 {% hint style="info" %}
@@ -858,8 +1057,12 @@ It supports negative values.
   * amount: The amount of saturation you can to give
 * Example:
 
-```
-- REGAIN_SATURATION amount:10
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - REGAIN_SATURATION amount:10
 ```
 
 
@@ -872,9 +1075,12 @@ It supports negative values.
   * enchantment: Enchantment to remove (ALL for every enchantment)
 * Example:
 
-```
-- REMOVE_ENCHANTMENT slot:-1 enchantment:ALL
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - REMOVE_ENCHANTMENT slot:-1 enchantment:ALL
+</code></pre>
 
 
 
@@ -886,8 +1092,12 @@ It supports negative values.
   * {line}: The line that you want to remove
 * Example:
 
-```
-- REMOVE_LORE slot:1 line:5
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - REMOVE_LORE slot:1 line:5
 ```
 
 
@@ -899,9 +1109,13 @@ It supports negative values.
   * {material}: Block ID (Block states are supported)&#x20;
 * Example:
 
-```
-- REPLACE_BLOCK STONE_BRICKS
-- REPLACE_BLOCK WATER[LEVEL=0]
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - REPLACE_BLOCK STONE_BRICKS
+    - REPLACE_BLOCK WATER[LEVEL=0]
 ```
 
 
@@ -912,8 +1126,12 @@ It supports negative values.
 * No command setting
 * Example:
 
-```
-- SEND_BLANK_MESSAGE
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SEND_BLANK_MESSAGE
 ```
 
 
@@ -925,8 +1143,11 @@ It supports negative values.
   * message: the message you want to send
 * Example:
 
-```
-- SEND_MESSAGE text:&fThis is a somewhat random text.
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    commands:
+    - SEND_MESSAGE text:&fThis is a somewhat random text.
 ```
 
 {% hint style="info" %}
@@ -942,8 +1163,12 @@ You can only use one type of formatting at once in the same SENDMESSAGE command,
   * message: the message you want to send
 * Example:
 
-```
-- SEND_CENTERED_MESSAGE text:&fThis is a somewhat random text.
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SEND_CENTERED_MESSAGE text:&fThis is a somewhat random text.
 ```
 
 {% hint style="info" %}
@@ -963,9 +1188,13 @@ You can only use one type of formatting at once in the same SENDMESSAGE command,
   * patternMaterial: The material of the pattern
 * Example:
 
-```
-- SET_ARMOR_TRIM slot:38 pattern:vex patternMaterial:netherite
-- SET_ARMOR_TRIM slot:38 pattern:null #to clear the armor trim
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ARMOR_TRIM slot:38 pattern:vex patternMaterial:netherite
+    - SET_ARMOR_TRIM slot:38 pattern:null #to clear the armor trim
 ```
 
 
@@ -989,9 +1218,13 @@ You can find all trim material here:
   * bypassProtection: Whether or not it will place the block even if the player doesnt have the permission
 * Example:
 
-```
-- SET_BLOCK blockface:UP material:OAK_WOOD
-- SET_BLOCK material:FURNACE[LIT=TRUE]
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_BLOCK blockface:UP material:OAK_WOOD
+    - SET_BLOCK material:FURNACE[LIT=TRUE]
 ```
 
 {% hint style="info" %}
@@ -1006,9 +1239,12 @@ You can find all blockface here:
 * Command: SETBLOCKPOS {x} {y} {z} {material} \[bypassProtection true-false] \[replace true or false]
 * Example:
 
-```
-- SETBLOCKPOS %entity_x% %entity_y% %entity_z% BEDROCK true
-```
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SETBLOCKPOS %entity_x% %entity_y% %entity_z% BEDROCK true
+</code></pre>
 
 
 
@@ -1026,8 +1262,12 @@ You can find all blockface here:
   * ownerUUID: (Optional) The uuid of the supposed owner of the executable block
 * Example:
 
-```
--  SET_EXECUTABLE_BLOCK id:Mithril_Ore x:%block_x_int% y:%block_y_int% z:%block_z_int% world:%block_world% replace:false bypassProtection:true ownerUUID:%player_uuid%
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_EXECUTABLE_BLOCK id:Mithril_Ore x:%block_x_int% y:%block_y_int% z:%block_z_int% world:%block_world% replace:false bypassProtection:true ownerUUID:%player_uuid%
 ```
 
 
@@ -1040,8 +1280,12 @@ You can find all blockface here:
   * name: the new name of the item
 * Example:
 
-```
-- SET_ITEM_NAME slot:%slot% name:&eThis is the new name of the item
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_NAME slot:%slot% name:&eThis is the new name of the item
 ```
 
 
@@ -1054,8 +1298,12 @@ You can find all blockface here:
   * color: number value of the color
 * Example:
 
-```
-- SET_ITEM_COLOR slot:1 color:0
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_COLOR slot:1 color:0
 ```
 
 {% hint style="info" %}
@@ -1078,8 +1326,12 @@ It supports FIREWORK\_STAR
   * equipmentSlot: The slot for the attribute
 * Example:
 
-```
-- SET_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ARMOR value:10 equipmentSlot:CHEST
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ARMOR value:10 equipmentSlot:CHEST
 ```
 
 {% hint style="info" %}
@@ -1096,8 +1348,12 @@ You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/b
   * customModelData: value of the customModelData
 * Example:
 
-```
-- SET_ITEM_CUSTOM_MODEL_DATA slot:10 customModelData:10
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_CUSTOM_MODEL_DATA slot:10 customModelData:10
 ```
 
 
@@ -1110,12 +1366,20 @@ You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/b
   * cooldown:: cooldown in seconds
 * Example:
 
-```
-- SET_ITEM_COOLDOWN material:ENDER_PEARL cooldown:10
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_COOLDOWN material:ENDER_PEARL cooldown:10
 ```
 
-```
-- SET_ITEM_COOLDOWN group:my_cooldown_group cooldown:10
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_COOLDOWN group:my_cooldown_group cooldown:10
 ```
 
 more info for the group arg:
@@ -1136,8 +1400,12 @@ Only works at 1.20.5 and above
   * material: The material you want the item to become into
 * Example:
 
-```
-SET_ITEM_MATERIAL slot:10 material:DIAMOND_HOE
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_MATERIAL slot:10 material:DIAMOND_HOE
 ```
 
 
@@ -1151,8 +1419,12 @@ SET_ITEM_MATERIAL slot:10 material:DIAMOND_HOE
   * text: The new line text
 * Example:
 
-```
-- SET_ITEM_LORE slot:%slot% line:3 text:&6LEGENDARY SWORD
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_ITEM_LORE slot:%slot% line:3 text:&6LEGENDARY SWORD
 ```
 
 
@@ -1174,8 +1446,12 @@ SET_ITEM_MATERIAL slot:10 material:DIAMOND_HOE
     * !STONE, !COBBLESTONE
 
 {% code overflow="wrap" %}
-```
- - SET_TEMP_BLOCK_POS x:%entity_x% y:%entity_y% z:%entity_z% world:%entity_world% material:BEDROCK time:40 bypassProtectiontrue whitelistCurrentBlock:!AIR,!WATER
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SET_TEMP_BLOCK_POS x:%entity_x% y:%entity_y% z:%entity_z% world:%entity_world% material:BEDROCK time:40 bypassProtectiontrue whitelistCurrentBlock:!AIR,!WATER
 ```
 {% endcode %}
 
@@ -1194,8 +1470,12 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
   * maxRange: The max range of the spawn (Default 200)
 * Example:
 
-```
-- SPAWN_ENTITY_ON_CURSOR entity:CREEPER amount:1
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SPAWN_ENTITY_ON_CURSOR entity:CREEPER amount:1
 ```
 
 
@@ -1206,9 +1486,13 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 * Command: SUDO (command)
 * Example:
 
-```
-- SUDO sit
-- SUDO say hi
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SUDO sit
+    - SUDO say hi
 ```
 
 
@@ -1220,11 +1504,15 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 * Command: SUDO\_OP (command)
 * Example:
 
-```
-- SUDO_OP summon zombie
-- SUDO_OP fly
-- SUDO_OP god
-- SUDO_OP /replacenear 20 tnt
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SUDO_OP summon zombie
+    - SUDO_OP fly
+    - SUDO_OP god
+    - SUDO_OP /replacenear 20 tnt
 ```
 
 {% hint style="danger" %}
@@ -1241,8 +1529,12 @@ And if you have no other way but using SUDOOP, then use this command. This shoul
 * No command setting
 * Example:
 
-```
-- SWAPHAND
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - SWAPHAND
 ```
 
 
@@ -1264,7 +1556,11 @@ And if you have no other way but using SUDOOP, then use this command. This shoul
 * Example:
 
 ```yaml
-- XPBOOST 2 10
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - XPBOOST 2 10
 ```
 
 {% hint style="info" %}
@@ -1278,33 +1574,6 @@ This means the XP will be boosted in this order:\
 1 second: x2\
 4 seconds: x4 \
 1 second: x2
-{% endhint %}
-
-### WHILE
-
-* Info: It constantly executes the commands written as long as the condition matches
-* Command: WHILE {condition\_without\_spaces} {delay\_in\_ticks} {command}
-  * {condition\_without\_spaces}: The condition that need to match for the commands to run
-    * Condition supports these symbols: != ; <= ; >= ; < ; > ; =
-  * {delay\_in\_ticks}: The delay between each moment to run the commands
-    * Condition support double placeholders, example %player\_x%>%player\_z%
-  * {command}: The command that you want to run as long as the condition matches
-* Example:
-
-```
-- WHILE %player_health%>10 20 SENDMESSAGE &eHello &6While
-```
-
-{% hint style="info" %}
-It supports more than one command
-{% endhint %}
-
-```
-WHILE %player_health%>10 20 SENDMESSAGE &eHello &6While <+> effect give %player% speed 1 1
-```
-
-{% hint style="info" %}
-You can force to remove the WHILE command with "/score clear {player} WHILE"
 {% endhint %}
 
 

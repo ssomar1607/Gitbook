@@ -22,19 +22,40 @@ _Sorted by alphabetical order_
     * {command}: The command that will be executed
 * Example:
 
-Damages nearest player
-
-```
-- ALL_PLAYERS DAMAGE 5
-- ALL_PLAYERS say Hello %parseother_{% raw %}
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ALL_PLAYERS SEND_MESSAGE Hello %parseother_{% raw %}
 {%around_target%}
 {% endraw %}_{player_name}%
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - ALL_PLAYERS SEND_MESSAGE %target% has been hit by %player%
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - ALL_PLAYERS SEND_MESSAGE %entity% has been hit by %player%
 ```
 
 Run multiple commands : Give a random item to all player, all players will not have the same.
 
-```
-- ALL_PLAYERS RANDOM RUN:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM END
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ALL_PLAYERS RANDOM RUN:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM END
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - ALL_PLAYERS RANDOM RUN:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM END
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - ALL_PLAYERS RANDOM RUN:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM END
 ```
 
 
@@ -47,18 +68,46 @@ Run multiple commands : Give a random item to all player, all players will not h
     * {command}: The command that will be executed
 * Example:
 
-Damages nearest player
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ALL_MOBS DAMAGE 5
+    - ALL_MOBS BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
+    - ALL_MOBS WHITELIST(ZOMBIE) DAMAGE 20
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - ALL_MOBS DAMAGE 5
+    - ALL_MOBS BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
+    - ALL_MOBS WHITELIST(ZOMBIE) DAMAGE 20
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - ALL_MOBS DAMAGE 5
+    - ALL_MOBS BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
+    - ALL_MOBS WHITELIST(ZOMBIE) DAMAGE 20
 
-```
-- ALL_MOBS DAMAGE 5
-- ALL_MOBS BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
-- ALL_MOBS WHITELIST(ZOMBIE) DAMAGE 20
 ```
 
 Run multiple commands:
 
-```
-- ALL_MOBS DAMAGE 5 <+> effect give %around_target_uuid% strength 10 1
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - ALL_MOBS DAMAGE 5 <+> effect give %around_target_uuid% strength 10 1
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - ALL_MOBS DAMAGE 5 <+> effect give %around_target_uuid% strength 10 1
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - ALL_MOBS DAMAGE 5 <+> effect give %around_target_uuid% strength 10 1
+
 ```
 
 {% hint style="info" %}
@@ -74,8 +123,20 @@ It supports blacklist and whitelist
   * {amount}: The value to how strong the launch will be
 * Example:
 
-```
-- BACKDASH 5
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - BACKDASH 5
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - BACKDASH 5
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - BACKDASH 5
 ```
 
 
@@ -86,8 +147,20 @@ It supports blacklist and whitelist
 * Command: BURN {timeinsecs}
 * Example:
 
-```
-- BURN 200
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - BURN 200
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - BURN 200
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - BURN 200
 ```
 
 
@@ -100,7 +173,19 @@ It supports blacklist and whitelist
 * Example:
 
 ```yaml
-- CONSOLEMESSAGE This is a debug message
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CONSOLEMESSAGE This is a debug message sent to the %player%
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - CONSOLEMESSAGE This is a debug message sent to the %player% triggered by %target%
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - CONSOLEMESSAGE This is a debug message sent to the %player% triggered by %entity%
 ```
 
 
@@ -112,8 +197,21 @@ It supports blacklist and whitelist
   * \[limitDuration]: it means if the target has for example 3 mins of poison effect, if you limit it to 5 secs, you will only receive a poison effect of 5 seconds
 * Example:
 
-```
-- COPYEFFECTS [limitDuration]
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - COPYEFFECTS 5 # Using this will copy the player's own effects
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - COPYEFFECTS 5 # Using this will copy the target effects into the player
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - COPYEFFECTS 5 # Using this will copy the entity effects into the player 
+
 ```
 
 ### CUSTOMDASH1
@@ -124,14 +222,85 @@ It supports blacklist and whitelist
   * {y}: Y-Coordinate
   * {z}: Z-Coordinate
   * {fallDamage}: true or false. Whether the player will take fall damage or not after getting launched by it.
-* **NOTE: IT IS POSSIBLE TO USE PLACEHOLDERS ON X,Y,Z VALUES**
 * Example:
 
-```
-- CUSTOMDASH1 %block_x% %block_y% %block_z% true
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - CUSTOMDASH1 %target_x% %target_y%+5 %target_z% true # This will dash up the target
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - CUSTOMDASH1 %entity_x% %entity_y% %entity_z% true # This will dash up the entity
 ```
 
+If you have activators that are related between two type of targets then you can do
 
+* Example 1 | Instance of player - entity | Dash the player towards the entity
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Activator instance of player and entity
+    commands:
+    - CUSTOMDASH1 %entity_x% %entity_y% %entity_z% true
+    entityCommands: []
+```
+
+* Example 2 | Instance of player - entity | Dash the entity towards the player
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong><strong>  activator0: # Activator ID, you can create as many activators on the activators list
+</strong>    option: # Activator instance of player and entity
+    commands: []
+    entityCommands: 
+    - CUSTOMDASH1 %player_x% %player_y% %player_z% true
+</code></pre>
+
+* Example 3 | Instance of player - block | Dash the player towards the block
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong><strong>  activator0: # Activator ID, you can create as many activators on the activators list
+</strong>    option: # Activator instance of player and block
+    commands: 
+    - CUSTOMDASH1 %block_x% %block_y% %block_z% true
+    blockCommands: []    
+</code></pre>
+
+You can increase the strength of the command running many times the command (but not on the same tick they must be differentiated in time otherwise it won't make sense since you are making the player dash from the same position against the location), examples:
+
+* Running it many times manually
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
+    - DELAYTICK 1
+    - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
+    - DELAYTICK 1
+    - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
+```
+
+* Using LOOP START Utility command
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - 'LOOP START: 3'
+    - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
+    - DELAYTICK 1
+    - LOOP END
+```
 
 ### CUSTOMDASH2
 
@@ -143,11 +312,54 @@ It supports blacklist and whitelist
   * {strength}: Strength of the dash
 * Example:
 
-```
-- CUSTOMDASH2 %entity_x% %entity_y% %entity_z% 5
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CUSTOMDASH2 %player_x% %player_y%+5 %player_z% 5 # This will dash down the player with strength 5
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - CUSTOMDASH2 %target_x% %target_y%+5 %target_z% 5 # This will dash down the target with strength 5
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - CUSTOMDASH2 %entity_x% %entity_y% %entity_z% 5 # This will dash down the entity with strength 5
 ```
 
+If you have activators that are related between two type of targets then you can do
 
+* Example 1 | Instance of player - entity | Dash the player away from the entity
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Activator instance of player and entity
+    commands:
+    - CUSTOMDASH1 %entity_x% %entity_y% %entity_z% 5
+    entityCommands: []
+```
+
+* Example 2 | Instance of player - entity | Dash the entity away from the player
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong><strong>  activator0: # Activator ID, you can create as many activators on the activators list
+</strong>    option: # Activator instance of player and entity
+    commands: []
+    entityCommands: 
+    - CUSTOMDASH1 %player_x% %player_y% %player_z% 5
+</code></pre>
+
+* Example 3 | Instance of player - block | Dash the player away from the block
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong><strong>  activator0: # Activator ID, you can create as many activators on the activators list
+</strong>    option: # Activator instance of player and block
+    commands: 
+    - CUSTOMDASH1 %block_x% %block_y% %block_z% 5
+    blockCommands: []    
+</code></pre>
 
 ### CUSTOMDASH3
 
@@ -158,8 +370,20 @@ It supports blacklist and whitelist
   * {front z}: If the dash is frontward or backwardsti
 * Example:
 
-```
-- CUSTOMDASH3 cosx 10 true
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - CUSTOMDASH3 cosx 10 true
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - CUSTOMDASH3 cosx 10 true
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - CUSTOMDASH3 cosx 10 true
 ```
 
 {% hint style="info" %}
@@ -171,6 +395,10 @@ You can see how function works here [https://www.geogebra.org/calculator](https:
 ### DAMAGE
 
 * Info: Damages the player with a specific amount. (Damage dealt with the help of this command is counted as player damage)
+  * This command triggers the activators related to damage of ExecutableItems and ExecutableEvents
+  *   The spigot damage type is ENTITY\_ATTACK if there is a player involved on the activator.
+
+      Otherwise, the spigot damage type is CUSTOM
 * Command: DAMAGE {amount} {amplified If Strength Effect} {amplified with attack attribute} \[damageType]
   * {amount}: Amount of damage in hitpoints (Not in hearts)
   * {amplified If Strength Effect}: true or false, Strength 1 -> + 1.5 damage, ....
@@ -178,25 +406,37 @@ You can see how function works here [https://www.geogebra.org/calculator](https:
   * \[damageType]: The type of damage -> [List](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/damage/DamageType.html)
 * Example:
 
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DAMAGE 20 true true # Apply 20 of damage to the player
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - DAMAGE 20 true true # Apply 20 of damage to the target
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - DAMAGE 20 true true # Apply 20 of damage to the entity 
 ```
-- DAMAGE 20 true true
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DAMAGE 25% # Will apply 25% of the max health of the player as damage
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - DAMAGE 25% # Will apply 25% of the max health of the target as damage
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - DAMAGE 25% # Will apply 25% of the max health of the entity as damage
 ```
-
-* This command will deal 20 damage
-
-```
-- DAMAGE 25%
-```
-
-* This command will deal 25% of the player's hp
-
-{% hint style="info" %}
-Damage type is ENTITY\_ATTACK if there is a player involved. Otherwise, it's CUSTOM
-{% endhint %}
-
-{% hint style="info" %}
-It triggers the hit/damages activators of EE/EI
-{% endhint %}
 
 {% hint style="info" %}
 To apply real damage you can use:\
@@ -211,53 +451,92 @@ minecraft:damage %target% 10 by %player%\
 ### DAMAGE\_NO\_KNOCKBACK
 
 * Info: Damages the player with a specific amount without applying knockback. (Damage dealt with the help of this command is not counted as player damage and more of an indirect damage)
+  * This command triggers the activators related to damage of ExecutableItems and ExecutableEvents
+  *   The spigot damage type is ENTITY\_ATTACK if there is a player involved on the activator.
+
+      Otherwise, the spigot damage type is CUSTOM
 * Command: DAMAGE\_NO\_KNOCKBACK {amount} {amplified If Strength Effect} {amplified with attack attribute}
   * {amount}: Amount of damage in hitpoints (Not in hearts)
   * {amplified If Strength Effect}: true or false, Strength 1 -> + 1.5 damage, ....
   * {amplified with attack attribute}: true or false, player with 500% bonus damage, the command will do 5 x "\<damage>".
 * Example:
 
-```
-- DAMAGE_NO_KNOCKBACK 20 true true
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DAMAGE_NO_KNOCKBACK 20 true true # Apply 20 of damage to the player
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - DAMAGE_NO_KNOCKBACK 20 true true # Apply 20 of damage to the target
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - DAMAGE_NO_KNOCKBACK 20 true true # Apply 20 of damage to the entity 
 ```
 
-* This command will deal 20 damage
-
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DAMAGE_NO_KNOCKBACK 25% # Will apply 25% of the max health of the player as damage
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - DAMAGE_NO_KNOCKBACK 25% # Will apply 25% of the max health of the target as damage
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - DAMAGE_NO_KNOCKBACK 25% # Will apply 25% of the max health of the entity as damage
 ```
-- DAMAGE_NO_KNOCKBACK 25%
-```
-
-* This command will deal 25% of the player's hp
-
-{% hint style="info" %}
-It triggers the hit/damages activators of EE/EI
-{% endhint %}
 
 
 
 ### DAMAGE\_BOOST
 
 * Info: Allows you to give yourself custom damage boost
+  * This command boost the damage of custom commands too e.g. (DAMAGE, DAMAGE\_NO\_KNOCKBACK)
+  * This command doesn't boost the damage for projectiles
 * Command: DAMAGE\_BOOST {modification in percentage example 100} {timeinticks}
   * {modification in percentage example 100}: Amount of the boost. Example below:
-    * 50 = Makes you deal +50% damage\
-      -80 = Makes you deal -80% damage
+    * 50 = Makes you deal +50% damage
+    * -80 = Makes you deal -80% damage
   * {timeinticks}: The duration of the custom damage boost
 * Example: (The command below gives you +50% damage dealen for 10s)
 
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DAMAGE_BOOST 50 200 # This will boost the damage of the player
+  activator1: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of target
+    targetCommands:
+    - DAMAGE_BOOST 50 200 # This will boost the damage of the target
+  activator2: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of entity
+    entityCommands:
+    - DAMAGE_BOOST 50 200 # This will boost the damage of the entity
+
 ```
-- DAMAGE_BOOST 50 200
+
+This command can be used many time and the boost will get stacked, on this example you will see that \[0-10] seconds the player will apply 50% more damage then on \[10-20] seconds will apply 100% more damage and then on \[20-30] seconds of 50% more damage, due that on \[10-20] two commands were stacked of DAMAGE\_BOOST.
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - DAMAGE_BOOST 50 200 # This will boost the damage of the player by 50% for 200 ticks (10 seconds)
+    - DELAY 10 # Delay of 10 seconds
+    - DAMAGE_BOOST 50 200 # This will boost the damage of the player by 50% for 200 ticks (10 seconds)
 ```
 
-{% hint style="info" %}
-It can be used as many times as you want, it will get stacked **additively**, that means:
 
-8 -> 16 -> 24 -> 32
-{% endhint %}
-
-{% hint style="info" %}
-You can easily increase the damage of the ei's sword using this custom command by applying this DAMAGE\_BOOST command in your PLAYER\_HIT\_... activators. Currently doesn't work perfectly with PROJECTILE\_HIT\_... as of writing this message
-{% endhint %}
 
 ### DAMAGE\_RESISTANCE
 

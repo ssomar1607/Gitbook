@@ -2,6 +2,10 @@
 
 The free version of ExecutableItems is like a free-trial of it, to know how it works, what is possible and you could even make your whole server with it, but once you want to improve your items, and don't have all limitations the free one you have you start thinking into buying the premium version.. but, is it worth? what differences are there? couple of common questions asked in #support-ei in discord of Ssomar plugins, this page, should solve your answers.
 
+## No more advertising
+
+* In or
+
 ## No more limitations
 
 ### Amount of items
@@ -16,11 +20,6 @@ The free version of ExecutableItems is like a free-trial of it, to know how it w
 ### All features
 
 * There are some features that grants a whole different view about how the items, activators, and triggering skills works, ¿problem with free one? most of them are disabled in the free version.
-
-## Custom textures
-
-* Did you already created your custom sword that makes more than 4 abilities, has custom particles, makes you to front dash, and looks epic but.. the sword is just a normal diamond sword? Well, wouldn't be a bad idea to have the same item.. but with a more epic sword.. you know what I mean, you need.. custom textures !!
-* In terms of it, we have created retexturing tutorials for you, to know how to retexture normal items, state items such as bow and even add textures animations such as a rainbow sword !. There is also a tutorial for you about how to upload your texture pack into your server. And as if that were not enough, if you have troubles in your texture pack, we can help you to figure out what did you do wrong.&#x20;
 
 ## Premium support
 

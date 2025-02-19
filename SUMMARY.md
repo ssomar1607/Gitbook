@@ -70,7 +70,6 @@
     * [Armor trims](executableitems/questions-or-guides/frequently-asked-questions/armor-trims.md)
     * [Attributes not working](executableitems/questions-or-guides/frequently-asked-questions/attributes-not-working.md)
     * [How to duplicate an EI Item](executableitems/questions-or-guides/frequently-asked-questions/how-to-duplicate-an-ei-item.md)
-    * [More than 25 items bug ??](executableitems/questions-or-guides/frequently-asked-questions/more-than-25-items-bug.md)
     * [How to change particle vanilla command color](executableitems/questions-or-guides/frequently-asked-questions/how-to-change-particle-vanilla-command-color.md)
     * [Free vs premium](executableitems/questions-or-guides/frequently-asked-questions/free-vs-premium.md)
     * [Edit plugin messages](executableitems/questions-or-guides/frequently-asked-questions/edit-plugin-messages.md)
