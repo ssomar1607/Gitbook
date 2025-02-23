@@ -112,6 +112,11 @@ Activator features are features that are exclusive to that activator.
 * Info: Activator that gets triggered when the player breaks a shield of another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+* Examples:
+  * Shatter Strike – When breaking a player’s shield, the attacker gains Strength I for 5 seconds, empowering their next attack.
+  * Upon destroying a shield, a small explosion occurs at the target’s location, knocking them back 5 blocks.
+  * When a shield is shattered, the target receives **Wither I** for **5 seconds**, slowly draining their health.
+  * Dimensional Fracture – When breaking a player’s shield, the target is momentarily teleported 5 blocks upwards, disorienting them before they fall back down.
 
 ### ⭐PLAYER\_BRUSH\_BLOCK
 
@@ -119,14 +124,22 @@ Activator features are features that are exclusive to that activator.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+* Examples:
+  * Cursed Dust – If the player brushes a suspicious block, there is a 10% chance that they get temporarily blinded as a cloud of cursed dust erupts around them.
+  * Buried Riches – Brushing a block has a small chance to reward the player with a gold nugget or emerald, simulating the discovery of lost treasure.
+  * Temporal Echoes – When brushing an artifact block, the player hears faint whispers from the past, hinting at lore-based secrets hidden nearby.
 
 ### 🔹PLAYER\_BUCKET\_ENTITY
 
 * Info: Activator that gets triggered when the player using a bucket, it buckets an entity.
   * Example is how you store a fish inside a bucket with water.
+  * If want to run something when "trying" to bucket an entity that can't be bucketed this activator won't run, you should use PLAYER\_CLICK\_ON\_ENTITY.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+* Examples:
+  * Instant Fillet – Instead of capturing a fish in a bucket, the player instantly receives raw fish in their inventory, as if they expertly filleted it on the spot.
+  * Essence Extraction – When using a bucket on an axolotl, instead of capturing it, the player receives an "Axolotl Mucus" potion, which grants Regeneration I for 10 seconds.
 
 ### 🔹PLAYER\_CHANGE\_WORLD
 
