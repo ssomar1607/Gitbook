@@ -4,13 +4,11 @@
 
 ### Manual dependency
 
-To use the API, you need download the SCore jar (given when you download ExecutableItems on Spigot)
-
-{% embed url="https://www.spigotmc.org/resources/custom-items-free-executable-items-1-14-1-18.77578" %}
+To use the API, you need download the [SCore](https://modrinth.com/plugin/score) jar , it's my lib plugin where all the API are packaged
 
 ### Maven dependency
 
-Download the plugin on Spigot (Free version) : Place the SCore jar in your resources project
+Place the SCore jar in your resources project
 
 and in maven add:
 

@@ -26,24 +26,39 @@ There are Hostings that allows you to install quickly some plugins that are down
 
 ### Versions of Minecraft
 
-* These are the versions supported by ExecutableItems (Premium version supports from 1.8, more information in [<mark style="color:blue;">MC Versions Compatibility</mark>](../../../mc-versions-compatibility.md))
-
-![](<../../../../.gitbook/assets/image (375).png>)
+* These are the versions supported by ExecutableItems.
+  * Free version from 1.12.2 to 1.21.4+
+  * Premium version from 1.8 to 1.21.4+
+* &#x20;(More information in [<mark style="color:blue;">MC Versions Compatibility</mark>](../../../mc-versions-compatibility.md))
 
 {% hint style="info" %}
-In case you are using 1.12 you need to have installed NBTAPI.
+In case you are using a version between **1.8** and **1.12.2** you need to have installed NBTAPI.
 {% endhint %}
 
 ### Correct way of installing
 
-1. Download the plugin from spigot
-2. You get a file .zip (this is like a folder, you have to open it using Winrar)
-3. You open it and you see that there are 2 files inside, **ExecutableItems.jar** and **Score.jar**, <mark style="color:green;">**both of them are needed**</mark>
-4. Pick up both **plugins** and drag them into plugins folder. (the zip is nothing so don't drag that file into plugins folder, you only need the two plugins inside the jar)
+1. Download the plugin (Links are available on the page bellow)
+
+{% content-ref url="../../../information-ei.md" %}
+[information-ei.md](../../../information-ei.md)
+{% endcontent-ref %}
+
+{% tabs %}
+{% tab title="You get .jar" %}
+* If you only get ExecutableItems.jar, you will need to download also the SCore jar (our lib plugin). You can find it on [Modrinth ](https://modrinth.com/plugin/score)
+* Pick up both **plugins jar** and drag them into plugins folder.
+{% endtab %}
+
+{% tab title="You get a .zip" %}
+* You get a file .zip (this is like a folder, you have to open it using Winrar)
+* You open it and you see that there are 2 files inside, **ExecutableItems.jar** and **Score.jar**, <mark style="color:green;">**both of them are needed**</mark>
+* Pick up both **plugins jar** and drag them into plugins folder. (the zip is nothing so don't drag that file into plugins folder, you only need the two plugins inside the jar)
 
 {% hint style="warning" %}
 If its the case you are using a webpage host server, it is <mark style="color:green;">**highly recommended**</mark> to <mark style="color:red;">**don't drop it instantly into plugins folder**</mark>, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
 {% endhint %}
+{% endtab %}
+{% endtabs %}
 
 Once done, you can start your server.
 

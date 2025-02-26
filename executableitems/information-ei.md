@@ -6,19 +6,19 @@
 Many new features / default items appeared after this video, I let you discover them directly in-game :smile:
 {% endembed %}
 
-{% embed url="https://www.spigotmc.org/resources/custom-items-free-executable-items-1-14-1-18.77578" %}
-
 ## Support
 
-### Need help, report a bug or submit a suggestion?
+#### Need help, report a bug or submit a suggestion? Something is not in the wiki or poorly explained ?
 
-{% embed url="https://discord.com/invite/TRmSwJaYNv" %}
+* Join the [Discord](https://discord.com/invite/TRmSwJaYNv)
 
-### Something is not in the wiki or poorly explained ?
+## Free version
 
-{% embed url="https://discord.com/invite/TRmSwJaYNv" %}
+* Download on [Modrinth](https://modrinth.com/plugin/executableitems)
+* Download on [Spigot](https://www.spigotmc.org/resources/custom-items-plugin-executable-items.77578/)
+* Download on [Polymart](https://polymart.org/resource/executableitems-free.2859)
 
-## Premium version <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+## Premium version (19.99`€)` <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 {% hint style="success" %}
 You want the access to all the features, and support our work ?
@@ -26,7 +26,11 @@ You want the access to all the features, and support our work ?
 Premium ExecutableItems:
 {% endhint %}
 
-{% embed url="https://www.spigotmc.org/resources/83070" %}
+* Purchase on  [Spigot (Paypal only)](https://www.spigotmc.org/resources/83070)
+* Purchase on [BuiltByBit](https://builtbybit.com/resources/custom-items-plugin-executable-items.18673/)
+* Purchase on [Polymart](https://polymart.org/resource/executableitems.2858)
+* Purchase using RUB on [Boosty](https://discord.com/channels/701066025516531753/1133826476635062294/1279383744133861378) (then contact me on the discord)
+* Purchase on [Ssomar Website](https://plugins.ssomar.com/) (then go on the discord to get the plugin)
 
 {% hint style="success" %}
 **Examples of what you can do with ExecutableItems Premium. These are simply examples as there are way more things that can be done with the help of your imagination.**
