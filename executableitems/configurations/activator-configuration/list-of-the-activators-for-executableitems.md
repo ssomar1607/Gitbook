@@ -8,7 +8,7 @@ Hi ! Its planned for each activator to record video of explanation of it and how
 
 Here you have the list of activators available with their description and some examples. Remember as previous knowledge activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
 
-The activators that have "⭐" are available only on premium version and "🔹" for free versions.\
+The activators that have "⭐" are available only on **premium** version and "🔹" for **free** versions.\
 Premium version also have the free version activators just in case.
 
 Activator features are features that are exclusive to that activator.
@@ -29,7 +29,7 @@ Activator features are features that are exclusive to that activator.
   * Gravity Boots – Launches the player 3 blocks into the air and negates fall damage for 5 seconds.
   * Explosive Rune – Creates a small explosion at the player's location that knocks back nearby mobs but does not damage terrain.
 
-### ⭐PLAYER\_BED\_ANTER
+### ⭐PLAYER\_BED\_ENTER
 
 * Info: Activator that gets triggered when the player right clicks a bed and enters to it. If the player doesn't enter then this activator won't get triggered. This doesn't get triggered when the player sleeps, only by the action of entering the bed.
 * Examples:
@@ -73,7 +73,7 @@ Activator features are features that are exclusive to that activator.
 ### ⭐PLAYER\_BLOCK\_HIT\_OF\_ENTITY
 
 * Info: Activator that gets triggered when the player blocks a hit that comes from an entity with the shield.
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.ve.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detaileddamagecauses](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
