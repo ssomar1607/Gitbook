@@ -17,6 +17,7 @@ Many new features / default items appeared after this video, I let you discover 
 * Download on [Modrinth](https://modrinth.com/plugin/executableitems)
 * Download on [Spigot](https://www.spigotmc.org/resources/custom-items-plugin-executable-items.77578/)
 * Download on [Polymart](https://polymart.org/resource/executableitems-free.2859)
+* Download on [Discord](https://discord.com/channels/701066025516531753/1344653330173005939)
 
 ## Premium version (19.99€) <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
@@ -30,7 +31,7 @@ Premium ExecutableItems:
 * Purchase on [BuiltByBit](https://builtbybit.com/resources/custom-items-plugin-executable-items.18673/)
 * Purchase on [Polymart](https://polymart.org/resource/executableitems.2858)
 * Purchase using RUB on [Boosty](https://discord.com/channels/701066025516531753/1133826476635062294/1279383744133861378) (then contact me on the discord)
-* Purchase on [Ssomar Website](https://plugins.ssomar.com/) (then go on the discord to get the plugin)
+* Purchase on [Ssomar Website](https://plugins.ssomar.com/) (then go on the discord to get the plugin. [Download Premium](https://discord.com/channels/701066025516531753/1134158503498502154))
 
 {% hint style="success" %}
 **Examples of what you can do with ExecutableItems Premium. These are simply examples as there are way more things that can be done with the help of your imagination.**
