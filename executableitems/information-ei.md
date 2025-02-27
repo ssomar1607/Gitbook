@@ -18,7 +18,7 @@ Many new features / default items appeared after this video, I let you discover 
 * Download on [Spigot](https://www.spigotmc.org/resources/custom-items-plugin-executable-items.77578/)
 * Download on [Polymart](https://polymart.org/resource/executableitems-free.2859)
 
-## Premium version (19.99`€)` <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+## Premium version (19.99€) <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
 
 {% hint style="success" %}
 You want the access to all the features, and support our work ?
