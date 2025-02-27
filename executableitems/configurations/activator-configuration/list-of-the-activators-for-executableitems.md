@@ -157,6 +157,11 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player changes to a different world.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+* Examples:
+  * Dimensional Adaptation – When the player enters a new world, they receive a random temporary buff (Speed, Strength, or Night Vision for 30 seconds) as their body adjusts to the new environment.
+  * Weight of Realms – If a player enters the Nether or End, they temporarily gain Slowness II for 10 seconds, simulating the sudden change in gravity.
+  * Forgotten Memories – When switching worlds, there’s a small chance (5%) that the player loses a random inventory item, simulating a “memory” being forgot.
+  * Realmwalker’s Favor – Entering a new world grants a mysterious loot item, themed to the dimension (e.g., Nether gives a random gold ingot, End gives an Ender Pearl, etc.), as if gifted by an unknown force.
 
 ### ⭐PLAYER\_CLICK\_ON\_ENTITY
 
