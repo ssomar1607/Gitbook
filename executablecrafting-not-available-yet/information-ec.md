@@ -8,13 +8,9 @@ Link available soon
 
 ## Support
 
-### Need help, report a bug or submit a suggestion?
+#### Need help, report a bug or submit a suggestion? Something is not in the wiki or poorly explained ?
 
-{% embed url="https://discord.com/invite/TRmSwJaYNv" %}
-
-### Something is not in the wiki or poorly explained ?
-
-{% embed url="https://discord.com/invite/TRmSwJaYNv" %}
+* Join the [Discord](https://discord.com/invite/TRmSwJaYNv)
 
 ## Premium version&#x20;
 

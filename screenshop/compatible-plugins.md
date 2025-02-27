@@ -1,4 +1,0 @@
-# ✔️ Compatible Plugins
-
-###
-

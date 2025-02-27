@@ -263,7 +263,6 @@
 ## ScreenShop
 
 * [📌 Information ScreenShop](screenshop/information-screenshop.md)
-* [✔️ Compatible Plugins](screenshop/compatible-plugins.md)
 
 ## TEAM AND DONATIONS
 
