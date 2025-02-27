@@ -29,6 +29,18 @@ Activator features are features that are exclusive to that activator.
   * Gravity Boots – Launches the player 3 blocks into the air and negates fall damage for 5 seconds.
   * Explosive Rune – Creates a small explosion at the player's location that knocks back nearby mobs but does not damage terrain.
 
+<details>
+
+<summary>Configuration example</summary>
+
+```
+// Some code
+```
+
+</details>
+
+
+
 ### ⭐PLAYER\_BED\_ENTER
 
 * Info: Activator that gets triggered when the player right clicks a bed and enters to it. If the player doesn't enter then this activator won't get triggered. This doesn't get triggered when the player sleeps, only by the action of entering the bed.
