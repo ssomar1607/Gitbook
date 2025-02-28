@@ -51,7 +51,7 @@ This section is for compatible plugins that works with Ssomar plugins, there are
 * ExecutableBlocks:
   * The same idea but instead of using ExecutableItem use the ExecutableBlock, and on the command from skill use "eb" instead of "ei".
 
-#### You can specify the activators from SsomarPlugins to only work with specific MythicMobs using this feature [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+#### You can specify the activators from SsomarPlugins to only work with specific MythicMobs using the feature [detailedEntities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities).
 
 * Example : Creating an ExecutableItem that makes more damage to a list of MythicMobs
 * Example: Creating an ExecutableBlock  that damages a specific MythicMob when it walks above the block
@@ -77,201 +77,201 @@ activators:
 
 #### Custom SCore commands
 
-* [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands#changetomythicmob](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands#changetomythicmob)
+* [CHANGETOMYTHICMOB](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands#changetomythicmob)
   * ⭐Its possible to make a fishing system using MythicMobs like the one that is on the Hypixel Minecraft Server. For example having tier list of different fishing rods (All handled by ExecutableItems), that each tier will have from low probability to higher probability to catch more epic mobs from your lakes, adding restrictions to only fish MM mobs from the lakes in "x" cordinates (or a WorldGuard region), etc.
 
 ### **LevelledMobs**
 
-* You can make your LevelledMobs drop ExecutableItems using this resource:
-  * [https://www.spigotmc.org/resources/lm-items.102081/](https://www.spigotmc.org/resources/lm-items.102081/)
+* ExecutableItems
+  * You can make your LevelledMobs drop ExecutableItems using this resource:
+    * [https://www.spigotmc.org/resources/lm-items.102081/](https://www.spigotmc.org/resources/lm-items.102081/)
 
 ### AureliumSkills
 
-* Ssomar Plugins have this feature [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana) in order to have as requirement for the activator to work Mana.
+* Ssomar Plugins have the activator feature of [requiredMana](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana) in order to have as requirement for the activator to work.
 * Aurelium Skills commands
   * Also you can use AureliumSkills commands on your plugin, such as giving mana to the player, giving mana to the players around (Like a supporter), etc.
-* Aurelium Skills NBT
-  * You can create an ExecutableItem that while holding it increases your maximum mana, this can be done by creating an item, running the `/sk modifier` command and then while holding the item running `/ei create <id>` now the ExecutableItem has the NBTTag of the command and so it has the modifications that you made.
+* ExecutableItems
+  * Aurelium Skills NBT
+    * You can create an ExecutableItem that while holding it increases your maximum mana, this can be done by creating an item, running the `/sk modifier` command and then while holding the item running `/ei create <id>` now the ExecutableItem has the NBTTag of the command and so it has the modifications that you made.
 
 ### ExecutableBlocks & ExecutableItems
 
-* You can link an ExecutableItems and ExecutableBlocks so the item will have activators as an item and same as a block, the usage will keep the same in both even if the EB is placed and then broke.
+* This two plugins (ExecutableBlocks and ExecutableItems) can get linked to each other. This link is made by the EB on the [TYPE\_OF\_CREATION ](https://docs.ssomar.com/executableblocks/configurations/block-configuration/block-features#creationtype)feature. For example:
+  * Placing the ExecutableItem and it becomes the ExecutableBlock linked to it (by default it would lose the data of ExecutableItem and it would be placed as a vanilla block)
+  * Breaking an ExecutableBlock and getting the ExecutableItem linked to it.
+  * Tracking the same usage that the ExecutableBlock had placed when its broken and turned into the ExecutableItem linked and viceversa.
+  * Tracking the same variable values that the ExecutableBlock had placed when its broken and turned into the ExecutableItem linked and viceversa.
 
 ### ItemsAdder
 
-* You can link an item/block from ItemsAdder and ExecutableItems (also the item texture & block texture is supported, etc). The method for items can be done with 2 ways:
-  * Item:
-    * By their side adding this in their .yml
-      *
+* ExecutableItems
+  * You can use the textures created with ItemsAdder by using [customModelData ](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14)feature or by using [item\_model](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#itemmodel).
+  *   You can link the ItemsAdder item into EI by following their wiki on how to link, its by adding the next line of code to the ItemsAdder item file.
 
-          ```
-          executableitem:
-            id: ZEUSCROWN
-          ```
-      * You can search more info in their wiki.
-    * Having NBTAPI plugin, taking the ItemsAdder item on your hand and doing /ei create
-  * Block:
-    * And for block texture import the EB as ItemsAdder (from EB gui).
+      ```yaml
+      executableitem:
+        id: ZEUSCROWN
+      ```
+* ExecutableBlocks
+  * You can create an ExecutableBlock with the texture of ItemsAdder block, this is done by selecting the [TYPE\_OF\_CREATION ](https://docs.ssomar.com/executableblocks/configurations/block-configuration/block-features#creationtype)feature of ExecutableBlocks.
+* Its possible to select as [detailedBlocks ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)for the activators related to a block of all plugins to select specific ItemsAdder blocks
+  *   Example:
 
+      ```yaml
+      activators:  
+        activator0: # Activator ID, you can create as many activator on the activators list    
+          option: PLAYER_BLOCK_BREAK
+          detailedBlocks:
+          - ITEMSADDER:turquoise_block
+      ```
 
+### Nexo
 
-* detailedBlocks of specific activators supports ItemsAdder blocks
-  * Example:
-
-<pre><code>detailedBlocks:
-<strong>- STONE
-</strong><strong>- ANDESITE
-</strong>- FURNACE{lit:true}
-- ITEMSADDER:turquoise_block
-</code></pre>
-
-### Oraxen
-
-* The Oraxen retexturing blocks is supported by EI as item retexturing
-* The oragen retexturing blocks and furnitures is supported by EB.&#x20;
+* ExecutableItems
+  * You can use the textures from Nexo inside your ExecutableItem just by using the [custom model data](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14) value or the [item\_model](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#itemmodel).
 
 ### PlaceholderAPI
 
-* You can use any placeholder as a condition, as a variable, as a value to print, as a value to damage, as a value of almost anything you want.
+* One of the main pillars when it comes to creating items, you can use any PlaceholderAPI placeholder in any part of our plugins:
+  * Lore
+  * Commands section
+  * Messages (All type of messages, cooldown message, condition not met message, required things message, etc)
+  * Variables
+  * etc.
 
 ### ShopGui+
 
-* This plugin supports EI | EB from being sell in its shop.
-* Also it has a command that allow you to sell all the items inside a chest
+* This plugin supports selling items with specific NBT Tags on the shop, therefore, it supports ExecutableItems and ExecutableBlocks for being sell.
+* The block command [SELL\_CONTENT ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#sell_content)is supported for this plugin.
 
 ### ShopKeepers
 
-* This plugin supports EI | EB from being sell in its shop.
+* This plugin supports selling items with specific NBT Tags on the shop, therefore, it supports ExecutableItems and ExecutableBlocks for being sell.
 
 ### Tradesplus
 
-* This plugin supports EI | EB from being sell in its shop.
+* This plugin supports selling items with specific NBT Tags on the shop, therefore, it supports ExecutableItems and ExecutableBlocks for being sell.
 
 ### WorldGuard
 
-* Inside conditions of EI |EB | EE you can select the condition if you want an activator to run if IN or OUTSIDE a region of WorldGuard
-* Most of the commands are detected by WorldGuard first, so you can chill out thinking, "oh, the players will grief the server if I use a break command from EI", because that will not happen (unless you don't use a EI Command, for example setblock vanilla command, that is not protected with griefing.)
-* Also on EB you can fill a WorldGuard region with specific percentages of eb, and normal blocks, useful for mines.
+* For all plugins you have the condition to make the activator work only if the player is inside or outside a region, its called [ifInRegion](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifinregion-not) and its compatible with this plugin.
+* All SCore commands are conditioned by WorldGuard protection
+  * This means, a BREAK (SCore command) wont run if the player doesnt have permission to break a block at the selected position.
+  * Keep in mind that this feature is on SCore commands, not on commands run by our plugins, this means using vanilla command inside one of our plugins "execute at %player% run setblock %block\_x% %block\_y% %block\_z% air replace" will bypass any restriction.
+* ExecutableBlocks
+  * You can fill a region with specific ExecutableBlock(s) with detailed weights by using [/eb wg-fill-region](https://docs.ssomar.com/executableblocks/commands-and-permissions#fill-a-worldguard-region-with-an-eb).
+    * With this feature for example you could make a globlal loop that resets a specific mine like typical /warp mines inside Minecraft servers.
 
 ### HeadDB
 
-* You can make your EI items to have the displayItem a head from HeadDB
-* #### silentMessagePreventionErrorHeadDBError
-
-{% hint style="info" %}
-And then you can link it to an EB if want the EB to be a head, more info in EB FAQ.
-{% endhint %}
+* ExecutableItems
+  * You can use this plugin in order to select a specific player head for the item of the ExecutableItem by using [head settings](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings).
+* ExecutableBlocks
+  * You can use this plugin in order to select a specific player head for the block of the ExecutableBlock by link an ExecutableItem with [head settings](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings) and using the [TYPE\_OF\_CREATION](https://docs.ssomar.com/executableblocks/configurations/block-configuration/block-features#creationtype) as from the ExecutableItem specified.
 
 ### IridiumSkyblock
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his island.
+* For all plugins you have the condition to make the activator work only if the player is inside their island, its called [ifPlayerMustBeOnHisIsland ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisisland)and its compatible with this plugin.
 
 ### SuperiorSkyblock
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his island.
-* Coop feature from the plugin SuperiorSkyblock. For example the commands like MINEINCUBE will not anymore be canceled for the coop players.
+* For all plugins you have the condition to make the activator work only if the player is inside their island, its called [ifPlayerMustBeOnHisIsland ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisisland)and its compatible with this plugin.
 
 ### GriefPrevention
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his claim.
+* For all plugins you have the condition to make the activator work only if the player is inside their claim, its called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and also there is [ifPlayerMustBeOnHisClaimOrWilderness ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaimorwilderness)and both are compatible with this plugin.
 
 ### Lands
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his claim.
-*   Two activators specific for the plugin Lands: &#x20;
-
-    ```
-    PLAYER_ENTER_IN_HIS_LAND
-    PLAYER_LEAVE_HIS_LAND
-    ```
+* For all plugins you have the condition to make the activator work only if the player is inside their claim, its called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and also there is [ifPlayerMustBeOnHisClaimOrWilderness ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaimorwilderness)and both are compatible with this plugin.
+* ExecutableItems
+  * There are some activators specific for this plugin, these are:
+    * PLAYER\_ENTER\_IN\_THEIR\_LAND
+    * PLAYER\_LEAVE\_THEIR\_LAND
 
 ### GriefDefender
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his claim.
+* For all plugins, you have the condition to make the activator work only if the player is inside their claim. This condition is called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and is compatible with this plugin.
 
 ### Residence
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his claim.
+* For all plugins, you have the condition to make the activator work only if the player is inside their claim. This condition is called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and is compatible with this plugin.
 
 ### PlotSquared
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his Plot.
+* For all plugins, you have the condition to make the activator work only if the player is inside their plot. This condition is called [ifPlayerMustBeOnHisPlot ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisplot)and is compatible with this plugin.
 
 ### Towny
 
-* Inside conditions of EI | EB | EE you can select the condition if you want an activator to run if is IN his "town"
+* For all plugins, you have the condition to make the activator work only if the player is inside their town. This condition is called [ifPlayerMustBeOnHisTown ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhistown)and is compatible with this plugin.
 
 ### Advanced Enchantments
 
-* Due to how it works, their enchants are not present in the enchantments list. So it can't be added with the enchants feature:
-* ![](<../.gitbook/assets/image (256).png>)
-* But it's possible to add their enchants on your ExecutableItems:
+* ExecutableItems
+  * Due the way Advanced Enchantments plugin works, their enchants are not present in the enchantments list. So it can't be added with the enchants feature:![](<../.gitbook/assets/image (256).png>)
+  * But it's possible to add their enchants on your ExecutableItems by using NBTAPI plugin and following one of this ways:
+    * The first way is by creating a vanilla item , then adding the AdvancedEnchantment on it and then while holding it do /ei create \<id>, the ExecutableItem output will automatically have the Advanced enchantments imported.
+    *   The second way is by adding the NBT Tag manually on the ExecutableItems config file. Here is an example:
 
-- [ ] Require ExecutableItems premium to have access to the NBT tags modifications
-- [ ] Require the plugin [NBT- API ](https://www.spigotmc.org/resources/nbt-api.7939/)
-- [ ] Then you have two choices:
-  * [ ] Create a vanilla item , add the AE on it and then do /ei create, the new EI will automatically have the Advanced enchantments.
-  * [ ] Or modify manually the config of your existing ExecutableItem, open the config and add the good NBT tag. Look the example below:
-
-```yaml
-nbt:
-  '0':
-    key: ae_enchantment;haste
-    type: INT
-    value: 1
-```
-
-_It will add the Advanced enchantment **Haste** with a level of **1** on your ExecutableItem_
-
-* [ ] Then you should edit the lore of your EI, to let your player know that their is an Advanced enchant on it.
+        ```yaml
+        nbt:
+          '0':
+            key: ae_enchantment;haste # This add the haste AdvancedEnchantment NBT tag
+            type: INT
+            value: 1
+        ```
+  * After all this steps you must add manually the enchantment in the lore to let the players know this item has that enchantment.
 
 ### RoseLoots
 
-* Most of the commands related to break supports the custom block loots from this plugin. Such as: MINEINCUBE-FARMINCUBE-BREAK-etc.
+* All block commands related (e.g. [MINEINCUBE](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#mineincube), [FARMINCUBE](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#farmincube), [BREAK](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#break), etc) supports the custom block loots from this plugin.
 
 ### MMOInventory
 
-* The activator EI\_ENTER\_IN\_THE\_PLAYER\_INVENTORY is triggered by their methods.
+* ExecutableItems
+  * The activators related to enter and leave inventory (e.g. EI\_ENTER\_IN\_THE\_PLAYER\_INVENTORY and EI\_LEAVE\_THE\_PLAYER\_INVENTORY) are triggered by their methods.
 
 ### EnchantsSquared
 
-* Items from ExecutableItems can have their enchantments.
+* ExecutableItems
+  * This plugin supports the enchantments of EnchantsSquared.
 
 ### ExcellentEnchants
 
-* Items from ExecutableItems can have their enchantments (it could be that the enchantments aren't displayed in the lore, this is problem of ExcellentEnchants, not our problem. Written in 12/28/2022)
+* ExecutableItems
+  * This plugin supports the enchantments of ExcellentEnchants
 
 ### MMOCore
 
-* requiredMana feature for activators can use mana from this plugin.
+* The requiredMana feature for activators can use mana from MMOCore, allowing you to set mana requirements for activators to function.
 
 ### TAB
 
-* The custom command SETGLOW is compatible with TAB, just use the placeholder %score\_cmd-glow%
+* The custom command SETGLOW is compatible with TAB. You have to use the placeholder %score\_cmd-glow%
 
 ### BlocksToCommand
 
-* This allows you to import structures that can be placed with EI | EB | EE.
+* Plugin that allows you to import structures that can be placed with Ssomar Plugins.
 
 ### Terra
 
-* Their biomes are supported by biome conditions
+* Terra's custom biomes are supported by biome conditions using the [ifInBiome ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifinbiome-not)condition. This allows you to create specific activators, effects, or restrictions based on the biome a player is in.
 
 ### EcoSkills
 
-* You can use conditions to checks if the player has specific magic values.
+* You can use placeholders conditions to check if a player has specific magic values before allowing an activator to trigger.
 * You can use commands to get or remove magic values.
-* RequiredMagic
+* ExecutableItems
+  * [RequiredMagic ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmagic-ecoskills)feature instead of using placeholders conditions and commands to remove magic.
 
 ### FACTIONS UUID
 
-* It supports
-  * Block protections
-  * Custom claim conditions
+* SCore commands place and remove blocks safely respecting the FactionsUUID protections of the player.
 
 ### CMI
 
-* SELL\_CONTENT command supports CMI prices
+* [SELL\_CONTENT ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#sell_content)command supports CMI prices, allowing seamless integration with the CMI economy system for selling items at the correct in-game value.
 
 ### JOBS REBORN
 
@@ -279,25 +279,26 @@ _It will add the Advanced enchantment **Haste** with a level of **1** on your Ex
 
 ### AURA SKILLS
 
-* requiredMana features inside the activator supports the mana from this plugin.
+* [JOBS\_MONEY\_BOOST](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#jobs_money_boost) command works with Jobs Reborn, allowing you to apply money multipliers for players based on their job earnings.
 
 ### VAULT
 
-* requiredMoney feature works with Vault.
-
-
+* ExecutableItems
+  * [requiredMoney ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmoney)feature works with Vault, allowing you to set a money requirement for activators to trigger.
 
 ### Citizen NPC
 
-* PLAYER\_CLICK\_ON\_ENTITY
-* ### PLAYER\_FISH\_ENTITY
-* ### PLAYER\_KILL\_ENTITY
+* ExecutableItems
+  * The next activators works for Citizen NPC(s)
+    * PLAYER\_CLICK\_ON\_ENTITY
+    * PLAYER\_FISH\_ENTITY
+    * PLAYER\_KILL\_ENTIT
 
-
-
-
-
-NBT API
+### NBT API
 
 * #### itemCheckWithNBTAPI
+
+### Wild Stacker
+
+* SILK\_SPAWNER commands work with this plugin
 

@@ -55,6 +55,10 @@ lore:
 To leave an empty space between lore lines you can add '' in the config file. If you are editing the lore inside Minecraft using the custom GUI you would need to use '\&f' then.
 {% endhint %}
 
+{% hint style="info" %}
+For ExecutableItems free there is a line with "Made with ExecutableItems": It cant be removed, its the counterpart of the update of increasing the amount of items from 25 to 500.
+{% endhint %}
+
 ### Glowing effect (enchanted glowing)
 
 * Info: Boolean value that selects if gives the executable item a glow/enchanted effect look.
@@ -188,7 +192,7 @@ keepDefaultAttributes: false
 ignoreKeepDefaultAttributesFeature: true
 ```
 
-### ⭐Custom model data (1.14++)
+### Custom model data (1.14++)
 
 * Info: Integer to set the value of the customModelData feature of the item. Useful to create different textures for an item.
 * Example:&#x20;
@@ -267,7 +271,7 @@ repairableFeatures:
 glider: false
 ```
 
-### ⭐itemModel&#x20;
+### itemModel&#x20;
 
 * Info: Path of a custom item model on texture pack in the format of \<mynamespace:model\_id> that will target inside assets/\<mynamespace>/models/item/\<model\_id>.
 * Example:
@@ -321,7 +325,7 @@ dropOptions:
   displayNameDrop: true
 ```
 
-### &#x20;⭐ NBT Tags
+### &#x20;NBT Tags
 
 * Info: Requires the plugin [**NBTAPI**](https://www.spigotmc.org/resources/nbt-api.7939/) available on Spigo&#x74;**.** This features allows you to add your custom nbt tags inside your ExecutableItem.
   * type: The type of value you are storing e.g:
