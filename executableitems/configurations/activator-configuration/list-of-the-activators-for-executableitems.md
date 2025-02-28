@@ -170,6 +170,12 @@ Activator features are features that are exclusive to that activator.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detailedclick](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+* Examples:
+  * Beast Tamer’s Bond – Clicking on a Wolf, Cat, or Horse while holding a special item (e.g., a Golden Apple) grants it temporary Speed II and Regeneration for 60 seconds.
+  * Hidden Pocket – Clicking on a Zombie Piglin with Gold Ingots has a 5% chance to instantly receive a random Nether loot item instead of needing to barter.
+  * Gourmet’s Choice – Clicking on a Cow, Pig, or Chicken while holding a Knife (custom item) instantly provides a higher-quality meat drop (e.g., Cooked Steak instead of Raw Beef).
+  * Battle Focus – Clicking on an Iron Golem while holding a Shield gives it temporary Resistance II and Knockback Resistance for 30 seconds, allowing it to tank more damage.
+  * Final Tribute – Clicking on a Skeleton or Wither Skeleton while holding Bone Blocks grants the player a brief Speed II boost as if absorbing ancient warrior energy.
 
 ### 🔹PLAYER\_CLICK\_ON\_PLAYER
 
@@ -177,10 +183,20 @@ Activator features are features that are exclusive to that activator.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-detailedclick](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+* Examples:
+  * Shared Fortune – Clicking on a player while holding an Emerald Block splits your XP levels in half, giving the other player the lost XP instantly.
+  * Clicking on a teammate while holding a Potion of Healing instantly transfers half of your health to them, making it a strategic last-second lifesaver.
+  * Tactical Mark – Clicking on another player while sneaking places a glowing effect on them for 10 seconds, making them visible to teammates in a PvP fight.
+  * Oath of Protection – Clicking on a player while holding a Shield grants them Resistance I for 30 seconds, acting as a temporary guardian effect.
 
 ### ⭐PLAYER\_CONNECTION
 
 * Info: Activator that gets triggered when the player log into the server.
+* Examples:
+  * Realm’s Welcome – When logging in, the player receives a temporary Speed I and Haste I boost for 30 seconds, simulating a burst of energy upon entering the world.
+  * Echo of the Past – The first message the player sees in chat is a customized “memory” message.
+  * Daily Fortune – Upon logging in, the player is granted a random minor buff or debuff for 10 minutes (e.g., Luck I, Speed I, or Slowness I), making each session slightly different.
+  * Dimensional Echo – If the player logs in from another world (Nether or End), they briefly experience a swirling particle effect and hear distorted ambient sounds for a few seconds before fully stabilizing.
 
 ### 🔹PLAYER\_CONSUME
 
