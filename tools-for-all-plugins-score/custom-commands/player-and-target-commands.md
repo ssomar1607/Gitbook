@@ -400,6 +400,12 @@ activators:
   * time: The duration of the bossbar in ticks
   * color: Color of bossbar text
   * text: text on the bossbar
+  * count: how many times you want it to count&#x20;
+    * if this option is present, the time argument will not matter anymore
+  * countTicks: true/false whether you want it to count in ticks or in seconds instead
+  * countOrder:&#x20;
+    * ascending: makes the timer count from 0
+    * descending: makes the timer count from the given
 * Example:
 
 ```yaml
@@ -408,6 +414,7 @@ activators:
     option: # Here goes an activator that is at least instance of player
     commands:
     - BOSSBAR time:200 color:RED text:This is a bossbar text
+    - BOSSBAR time:20 color:BLUE text:Hello_world count:50 countTicks:true countOrder:ascending
 ```
 
 
