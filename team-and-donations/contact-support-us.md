@@ -20,7 +20,7 @@ Mail: SsomarDev2@gmail.com
 
 Discord: Ssomar#2000
 
-[<mark style="color:purple;">**Stripe Donation**</mark>](https://buy.stripe.com/aEU7sX66l3O82MUdQT)
+[<mark style="color:purple;">**Stripe Donation**</mark>](https://donate.ssomar.com)
 
 </details>
 
