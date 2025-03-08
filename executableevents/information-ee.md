@@ -22,7 +22,11 @@ Let's take a look at the events that you can customize here:&#x20;
 * Download on [Spigot](https://www.spigotmc.org/resources/custom-events-plugin-executableevents.107622/)
 * Download on [Discord](https://discord.com/channels/701066025516531753/1344653581789167737)
 
-## Premium version (12.29€) <img src="../.gitbook/assets/Executable_Events_Icon-removebg-preview.png" alt="" data-size="line">
+## Premium version <img src="../.gitbook/assets/Executable_Events_Icon-removebg-preview.png" alt="" data-size="line">
+
+{% hint style="info" %}
+Price : 12.29€
+{% endhint %}
 
 {% hint style="success" %}
 You want the access to all the features, and support my work ?

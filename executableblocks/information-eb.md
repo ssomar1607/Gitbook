@@ -16,7 +16,11 @@
 * Download on [Polymart](https://polymart.org/resource/custom-blocks-executableblocks.3195)
 * Download on [Discord](https://discord.com/channels/701066025516531753/1344653496900780054)
 
-## Premium version (14.49€) <img src="../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">
+## Premium version <img src="../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">
+
+{% hint style="info" %}
+Price : 14.49€
+{% endhint %}
 
 {% hint style="success" %}
 You want the access to all the features, and support our work ?

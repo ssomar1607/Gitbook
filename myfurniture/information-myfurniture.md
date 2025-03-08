@@ -18,7 +18,11 @@ Your furniture will have a perfect hit and bounding box. MyFurniture is not like
 * Download on [Spigot](https://www.spigotmc.org/resources/%E2%9B%A9%EF%B8%8F-myfurniture-%E2%AD%90-add-custom-furniture-%E2%AD%90-clean-hit-and-bounding-box-custom-triggers-quick-setup.79024/)
 * Download on [Discord](https://discord.com/channels/701066025516531753/1344653685669498995)
 
-## Premium version (4.99€/month) <img src="../.gitbook/assets/79024.png" alt="" data-size="line">
+## Premium version <img src="../.gitbook/assets/79024.png" alt="" data-size="line">
+
+{% hint style="info" %}
+Price : 4.99€/month
+{% endhint %}
 
 {% hint style="success" %}
 You want the access to all the features, and support my work ?

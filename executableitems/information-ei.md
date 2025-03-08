@@ -19,7 +19,11 @@ Many new features / default items appeared after this video, I let you discover 
 * Download on [Polymart](https://polymart.org/resource/executableitems-free.2859)
 * Download on [Discord](https://discord.com/channels/701066025516531753/1344653330173005939)
 
-## Premium version (19.99€) <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+## Premium version <img src="../.gitbook/assets/Executable Items Color3.png" alt="" data-size="line">
+
+{% hint style="info" %}
+Price : 19.99€
+{% endhint %}
 
 {% hint style="success" %}
 You want the access to all the features, and support our work ?
