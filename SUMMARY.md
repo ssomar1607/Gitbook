@@ -226,7 +226,7 @@
 
 ## MyFurniture
 
-* [📌 Information MyFurniture](myfurniture/information-myfurniture.md)
+* [📌 Information MF](myfurniture/information-mf.md)
 * [🤖 Question | Guides](myfurniture/question-or-guides/README.md)
   * [Frequently Asked Questions](myfurniture/question-or-guides/frequently-asked-questions/README.md)
     * [Install/update/errors](myfurniture/question-or-guides/frequently-asked-questions/install-update-errors/README.md)

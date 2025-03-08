@@ -5,8 +5,8 @@ This tutorial will be made assuming you already have the plugin on your server f
 * Stop the server
 * Go to spigot and download the last version. Both links in the link below.
 
-{% content-ref url="../../../information-myfurniture.md" %}
-[information-myfurniture.md](../../../information-myfurniture.md)
+{% content-ref url="../../../information-mf.md" %}
+[information-mf.md](../../../information-mf.md)
 {% endcontent-ref %}
 
 * Go to your server files / plugins / and delete <mark style="color:orange;">MyFurniture</mark>.jar, <mark style="color:orange;">ExecutableItems</mark>.jar and <mark style="color:orange;">Score</mark>.jar (old ones).
