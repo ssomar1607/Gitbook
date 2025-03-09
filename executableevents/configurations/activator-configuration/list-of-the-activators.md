@@ -25,12 +25,12 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates in repeat one time each loop
 
-### ⭐ LIGHTNING\_STRIKE
+### ⭐LIGHTNING\_STRIKE
 
 * Info: Activates when a lightning strike is emitting in the world
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#lightning_strike)
 
-### ⭐ WEATHER\_CHANGE
+### ⭐WEATHER\_CHANGE
 
 * Info: Activates when the weather change in a world
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#weather_change)
@@ -376,15 +376,15 @@ Activator features are features that are exclusive to that activator.
 
 ## Block activators
 
-### ⭐ BLOCK\_DRY
+### ⭐BLOCK\_DRY
 
 * Info: Activates when corals or farmlands got dried.
 
-### ⭐ CROP\_GROW
+### ⭐CROP\_GROW
 
 * Info: Activates when a crop grows.
 
-### ⭐ ITEMSADDER\_PLAYER\_BLOCK\_BREAK
+### ⭐ITEMSADDER\_PLAYER\_BLOCK\_BREAK
 
 * Info: Activates when the player breaks a block from ItemsAdder
 
@@ -392,112 +392,112 @@ Activator features are features that are exclusive to that activator.
 
 ## Entity activators
 
-### ⭐ CREEPER\_POWER\_CHANGE
+### ⭐CREEPER\_POWER\_CHANGE
 
 * Info: Activates when the creeper is struck by lightning.
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#creeper_power_change)
 
-### ⭐ ENDERDRAGON\_CHANGE\_PHASE
+### ⭐ENDERDRAGON\_CHANGE\_PHASE
 
 * Info: Activates when the Ender Dragon change phase.&#x20;
 
-### ⭐ ENTITY\_BEFORE\_DEATH
+### ⭐ENTITY\_BEFORE\_DEATH
 
 * Info: Activates before the entity dies&#x20;
 
-### ⭐ ENTITY\_BREAK\_DOOR
+### ⭐ENTITY\_BREAK\_DOOR
 
 * Info: Activates when an entity breaks a door (as zombie does)&#x20;
 
-### ⭐ ENTITY\_BREED
+### ⭐ENTITY\_BREED
 
 * Info: Activates when one entity breeds with another entity&#x20;
 
-### ⭐ ENTITY\_CHANGE\_BLOCK
+### ⭐ENTITY\_CHANGE\_BLOCK
 
 * Info: Activates when an entity change a block state (as enderman when picking a block)&#x20;
 
-### ⭐ ENTITY\_COMBUST\_BY\_BLOCK
+### ⭐ENTITY\_COMBUST\_BY\_BLOCK
 
 * Info: Activates when an entity enters on fire by a block&#x20;
 
-### ⭐ ENTITY\_COMBUST\_BY\_ENTITY
+### ⭐ENTITY\_COMBUST\_BY\_ENTITY
 
 * Info: Activates when an entity enters on fire because of another entity&#x20;
 
-### ⭐ ENTITY\_DAMAGE\_BY\_BLOCK
+### ⭐ENTITY\_DAMAGE\_BY\_BLOCK
 
 * Info: Activates when an entity gets damaged by a block&#x20;
 
-### ⭐ ENTITY\_DAMAGE\_BY\_ENTITY
+### ⭐ENTITY\_DAMAGE\_BY\_ENTITY
 
 * Info: Activates when an entity gets damaged by entity&#x20;
 
-### ⭐ ENTITY\_DAMAGE\_BY\_PLAYER
+### ⭐ENTITY\_DAMAGE\_BY\_PLAYER
 
 * Info: Activates when an entity gets damaged by a player&#x20;
 
-### ⭐ ENTITY\_DEATH
+### ⭐ENTITY\_DEATH
 
 * Info: Activates when an entity dies&#x20;
 
-### ⭐ ENTITY\_DROP\_ITEM
+### ⭐ENTITY\_DROP\_ITEM
 
 * Info: Activates when an entity drops an item&#x20;
 
-### ⭐ ENTITY\_ENTER\_BLOCK
+### ⭐ENTITY\_ENTER\_BLOCK
 
 * Info: Activates when an entity enters in a block (as bee enters into beehive)&#x20;
 
-### ⭐ ENTITY\_ENTER\_LOVE\_MODE
+### ⭐ENTITY\_ENTER\_LOVE\_MODE
 
 * Info: Activates when an entity enters into love mode&#x20;
 
-### ⭐ ENTITY\_EXPLODE
+### ⭐ENTITY\_EXPLODE
 
 * Info: Activates when an entity explodes itself&#x20;
 
-### ⭐ ENTITY\_PARTICIPATE\_KILL\_ENTITY
+### ⭐ENTITY\_PARTICIPATE\_KILL\_ENTITY
 
 * Info: Activates when an entity participates on killing an entity&#x20;
 
-### ⭐ ENTITY\_PARTICIPATE\_KILL\_PLAYER
+### ⭐ENTITY\_PARTICIPATE\_KILL\_PLAYER
 
 * Info: Activates when an entity participates on killing a player&#x20;
 
-### ⭐ ENTITY\_PICKUP\_ITEM
+### ⭐ENTITY\_PICKUP\_ITEM
 
 * Info: Activates when an entity pickup an item&#x20;
 
-### ⭐ ENTITY\_PORTAL\_ENTER
+### ⭐ENTITY\_PORTAL\_ENTER
 
 * Info: Activates when an entity enters to a portal&#x20;
 
-### ⭐ ENTITY\_PORTAL\_EXIT
+### ⭐ENTITY\_PORTAL\_EXIT
 
 * Info: Activates when an entity leaves a portal&#x20;
 
-### ⭐ ENTITY\_PROJECTILE\_HIT\_BLOCK
+### ⭐ENTITY\_PROJECTILE\_HIT\_BLOCK
 
 * Info: Activates when the entity projectile hits a block&#x20;
 
-### ⭐ ENTITY\_PROJECTILE\_HIT\_ENTITY
+### ⭐ENTITY\_PROJECTILE\_HIT\_ENTITY
 
 * Info: Activates when the entity projectile hits another entity&#x20;
 
-### ⭐ ENTITY\_PROJECTILE\_HIT\_PLAYER
+### ⭐ENTITY\_PROJECTILE\_HIT\_PLAYER
 
 * Info: Activates when the entity projectile hits a player&#x20;
 
-### ⭐ ENTITY\_REGAIN\_HEALTH
+### ⭐ENTITY\_REGAIN\_HEALTH
 
 * Info: Activates when an entity regains health&#x20;
 
-### ⭐ ENTITY\_RESURRECT
+### ⭐ENTITY\_RESURRECT
 
 * Info: Activates when an entity resurrects&#x20;
 
-### ⭐ ENTITY\_SPAWN
+### ⭐ENTITY\_SPAWN
 
 * Info: Activates when an entity spawns&#x20;
 
@@ -505,28 +505,28 @@ Activator features are features that are exclusive to that activator.
 If the entity is just summoned, the activator will be triggered before the entity exists in the world so if you want to run custom commands on the entity add **DELAYTICK 1** before to delay the commands. Like that you are sure that the entity is really spawned.
 {% endhint %}
 
-### ⭐ ENTITY\_SPAWN\_TRIALSPAWNER
+### ⭐ENTITY\_SPAWN\_TRIALSPAWNER
 
 * Info; Activates when an entity is spawned from a trial spawner
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity_spawn_trialspawner)
 
-### ⭐ ENTITY\_TAME
+### ⭐ENTITY\_TAME
 
 * Info: Activates when an entity got tamed&#x20;
 
-### ⭐ ENTITY\_TARGET\_ENTITY
+### ⭐ENTITY\_TARGET\_ENTITY
 
 * Info: Activates when an entity targets another entity&#x20;
 
-### ⭐ ENTITY\_TARGET\_PLAYER
+### ⭐ENTITY\_TARGET\_PLAYER
 
 * Info: Activates when an entity targets a player&#x20;
 
-### ⭐ ENTITY\_TELEPORT
+### ⭐ENTITY\_TELEPORT
 
 * Info: Activates when an entity teleports itself&#x20;
 
-### ⭐ ENTITY\_TRANSFORM
+### ⭐ENTITY\_TRANSFORM
 
 * Info: Activates when an entity got transforme
 
