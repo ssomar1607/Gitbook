@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # \[Outdated | Pending removal] Activators Descriptions / GIFs
 
 ## This complete section is outdated, it only remains due to the gif, once the new page is ready this one will be deleted.

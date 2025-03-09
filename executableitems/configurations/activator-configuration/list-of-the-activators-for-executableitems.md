@@ -459,7 +459,13 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_OPEN\_INVENTORY
 
-* Info: Activator that gets triggered when the player opens his inventory.&#x20;
+* Info: Activator that gets triggered when the player opens inventories but **NOT its own inventory**.&#x20;
+
+{% hint style="info" %}
+Its currently not possible to detect when the player open **its own** inventory because its only client side.&#x20;
+
+The event is only triggered when someone force the player to open its inventory or if the player open custom, block or merchant inventories.
+{% endhint %}
 
 ### ⭐PLAYER\_PICKUP\_THE\_EI
 
