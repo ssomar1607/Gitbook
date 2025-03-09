@@ -182,7 +182,11 @@ activators:
   * attribute: The attribute you want to add
   * value: The value for the operation
   * equipmentSlot: The slot where the attribute will be enabled
-  * stack: If this setting is enabled instead of adding a new attribute to the item, if there is existing one it will modify the existing one
+  * mode: select the mode of addition
+    * mode:ADD # Add the attribute to the item&#x20;
+    * mode:OVERRIDE # Remove the current attributes of the same type of the item + Add the attribute to the item&#x20;
+    * mode:STACK # Stack with the attribute present on the item, if no one exist it adds it
+  * affectDefaultAttributes: true or false # When it's true the mode OVERRIDE will also override the default attributes, and for the MODE stack it allows to stack with the default attributes (green)
 * Example:
 
 ```yaml
@@ -190,11 +194,11 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND stack:true # Add this attribute to the player
+    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND mode:ADD # Add this attribute to the player
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
-    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND stack:false # Add this attribute to the target
+    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND mode:STACK affectDefaultAttributes: true # Add this attribute to the target
 ```
 
 {% hint style="info" %}
