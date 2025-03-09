@@ -182,6 +182,7 @@ activators:
   * attribute: The attribute you want to add
   * value: The value for the operation
   * equipmentSlot: The slot where the attribute will be enabled
+  * stack: If this setting is enabled instead of adding a new attribute to the item, if there is existing one it will modify the existing one
 * Example:
 
 ```yaml
@@ -189,11 +190,11 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND # Add this attribute to the player
+    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND stack:true # Add this attribute to the player
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
-    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND # Add this attribute to the target
+    - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND stack:false # Add this attribute to the target
 ```
 
 {% hint style="info" %}
