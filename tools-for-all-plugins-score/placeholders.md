@@ -125,31 +125,11 @@ Example: `%target_block_x%`
 
 Its the same placeholders that the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "owner".
 
-Example: `%owner_health%`
+Example: `%owner_health%SC`
 
-## AROUND & NEAREST placeholders
+***
 
-(Placeholders to use in the custom commands AROUND)
-
-Its the same placeholders that the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "around\_target".
-
-Example: `%around_target_direction%`
-
-## MOB\_AROUND & MOB\_NEAREST placeholders
-
-(Placeholders to use in the custom commands MOB\_AROUND)
-
-Its the same placeholders that the **ENTITY PLACEHOLDERS** abov&#x65;**,** just replace "entity" by "around\_target".
-
-Example: `%around_target_health%`
-
-Example: `%around_target_uuid%`
-
-Example: `%around_target_x%`
-
-
-
-## Variables
+## Variables placeholders
 
 Here you can take a look at the internal item/block variable types and their placeholders. This type of variables are not the same as "score variables", these variables are independent for each item/block, and score variables are variables not linked to an item or a block.
 
@@ -183,9 +163,9 @@ Take a look here:
 [score-variables.md](score-variables.md)
 {% endcontent-ref %}
 
+***
 
-
-## ExecutableItems
+## ExecutableItems placeholders
 
 | Placeholder                                                  | Description                                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------ |
@@ -193,7 +173,9 @@ Take a look here:
 | %executableitems\_checkamount\_slot:0,2,3,4%                 | Count all EI amount in the inventory at the slots 0,2,3,4                      |
 | %executableitems\_checkamount\_id:item1,item2\_slot:0,2,3,4% | Count all EI that are "item1" or "item2" amount in the inv at the slot 0,2,3,4 |
 
-## ExecutableBlocks
+***
+
+## ExecutableBlocks placeholders
 
 | Placeholder                                                   | Description                                                                    |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -201,10 +183,35 @@ Take a look here:
 | %executableblocks\_checkamount\_slot:0,2,3,4%                 | Count all EB amount in the inventory at the slots 0,2,3,4                      |
 | %executableblocks\_checkamount\_id:item1,item2\_slot:0,2,3,4% | Count all EB that are "item1" or "item2" amount in the inv at the slot 0,2,3,4 |
 
-## Circumstantial
+***
+
+## Activators placeholders
+
+### PLAYER\_EXPERIENCE\_CHANGE
+
+* Plugins: ExecutableItems / ExecutableEvents
+* %experience% to get the amount of experience
+
+### PLAYER\_RECEIVE\_EFFECT
+
+* Plugins: ExecutableItems / ExecutableEvents
+
+```
+%effect_received%
+%effect_received_lower%
+%effect_received_level%
+%effect_received_duration%
+```
+
+{% hint style="info" %}
+They return the minecraft effect name instead of the spigot name
+{% endhint %}
+
+
 
 ### PLAYER\_WRITE\_COMMAND | PLAYER\_SEND\_MESSAGE
 
+* Plugins: ExecutableItems / ExecutableEvents
 * For this activator you will be able to use the arguments provided by the user in your EI Command or as placeholders conditions, for example:
 
 **`Command: modify`**
@@ -227,9 +234,79 @@ Take a look here:
 * If you want to get all the args the player wrote use `%all_args%`
 * Or all the args without the first one (useful for commands) `%all_args_without_first%`
 
-### PLAYER\_EXPERIENCE\_CHANGE
 
-* %experience% to get the amount of experience
+
+### PLAYER\_ENCHANT\_ITEM
+
+* Plugin: ExecutableEvents
+* %enchants% to get the enchantments Ex: "Sharpness;10:Efficiency;2"
+* %levelCost%
+
+### CREEPER\_POWER\_CHANGE
+
+* Plugin: ExecutableEvents
+* %powerCause%
+
+### ENTITY\_SPAWN\_TRIALSPAWNER
+
+* Plugin: ExecutableEvents
+* %isOminous%
+
+### PLAYER\_HIT\_ENTITY | PLAYER\_HIT\_PLAYER
+
+* Plugins: ExecutableItems / ExecutableEvents
+* %critical% return true if the hit is a critical otherwise false
+
+### PLAYER\_INVENTORY\_CLICK
+
+* Plugins: ExecutableEvents
+* %isShiftClick%
+* %isMouseClick%
+* %isLeftClick%
+* %isRightClick%
+* %isKeyboardClick%
+* %isCreativeAction%
+* %getAction%
+* %beforeSlot%
+* %afterSlot%
+
+### PLAYER\_LEVEL\_CHANGE
+
+* Plugin: ExecutableEvents
+* %newLevel%
+* %oldLevel%
+
+### LIGHTNING\_STRIKE
+
+* Plugin ExecutableEvent
+* %cause%
+
+### WEATHER\_CHANGE
+
+* Plugin ExecutableEvent
+* %cause%
+
+
+
+## SCore commands placeholders
+
+### AROUND & NEAREST placeholders
+
+To get the placeholders of the around players or nearest player you can use the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "around\_target".
+
+Example: `%around_target_direction%`
+
+
+
+### MOB\_AROUND & MOB\_NEAREST placeholders
+
+To get the placeholders of the around entities or nearest entity you can use the **ENTITY PLACEHOLDERS** abov&#x65;**,** just replace "entity" by "around\_target".
+
+Example: `%around_target_health%`
+
+Example: `%around_target_uuid%`
+
+Example: `%around_target_x%`
 
 
 
@@ -243,29 +320,18 @@ Take a look here:
 * For this command you can get the boost given by the custom player command `DAMAGE_RESISTANCE {modification in percentage example 100} {timeinticks}`
   * %score\_cmd-damage-resistance%
 
-### **COOLDOWN**
+
+
+### SETGLOW
+
+* You can get the glow color with %score\_cmd-glow% using it on the plugin TAB
+
+
+
+## **Cooldown placeholders**
 
 * You can get the cooldown in seconds like that with `%score_cooldown_{plugin}:{object_id}:{activator_id}%`&#x20;
 
 Example: `%score_cooldown_EI:Free_Lotery:activator1%`
 
 It returns the cooldown of the activator1 of the EI Free\_Lotery. It works with EE, EB, EI, EL cooldowns.
-
-### SETGLOW
-
-* You can get the glow color with %score\_cmd-glow% using it on the plugin TAB
-
-### RECEIVE\_EFFECT
-
-Placeholders for activators RECEIVE\_EFFECT (in EI and EE)
-
-```
-%effect_received%
-%effect_received_lower%
-%effect_received_level%
-%effect_received_duration%
-```
-
-{% hint style="info" %}
-They return the minecraft effect name instead of the spigot name
-{% endhint %}
