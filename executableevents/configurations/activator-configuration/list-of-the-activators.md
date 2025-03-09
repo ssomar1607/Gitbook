@@ -1,6 +1,30 @@
 # List of the Activators
 
-* CUSTOM\_TRIGGER: It can be executed by running a command, or it can be scheduled.
+## Activators of ExecutableEvents
+
+Here you have the list of activators available with their description and some examples. The activators allow you to execute custom actions,  it can have conditions, run commands, have cooldown, etc.
+
+The activators that have "⭐" are available only on **premium** version and "🔹" for **free** versions.\
+Premium version also have the free version activators.
+
+Activator features are features that are exclusive to that activator.
+
+
+
+## &#x20;Miscellaneous activators
+
+### 🔹CUSTOM\_TRIGGER
+
+*   Info: Activator that can be executed by running a command, or it can be scheduled.&#x20;
+
+    * This activator is for all plugins, because of that its explained on [https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers](https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers)
+
+
+
+
+
+
+
 * <mark style="color:orange;">**CROP\_GROW**</mark>**: Activates when a crop grows.**
 * **PLAYER\_CUSTOM\_LAUNCH: Activates when a player launches a custom projectile.**
 * <mark style="color:blue;">**PLAYER\_ENABLE\_FLY**</mark>**&#x20; : Activates when a player starts and stops flying.**

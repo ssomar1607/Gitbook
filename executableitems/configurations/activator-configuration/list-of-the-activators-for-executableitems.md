@@ -6,10 +6,10 @@ Hi ! Its planned for each activator to record video of explanation of it and how
 
 ## Activators of ExecutableItems
 
-Here you have the list of activators available with their description and some examples. Remember as previous knowledge activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
+Here you have the list of activators available with their description and some examples. The activators allow you to execute custom actions,  it can have conditions, run commands, have cooldown, etc.
 
 The activators that have "⭐" are available only on **premium** version and "🔹" for **free** versions.\
-Premium version also have the free version activators just in case.
+Premium version also have the free version activators.
 
 Activator features are features that are exclusive to that activator.
 
@@ -28,16 +28,6 @@ Activator features are features that are exclusive to that activator.
   * Thunder Rod – Strikes a lightning bolt at the nearest enemy within 10 blocks.
   * Gravity Boots – Launches the player 3 blocks into the air and negates fall damage for 5 seconds.
   * Explosive Rune – Creates a small explosion at the player's location that knocks back nearby mobs but does not damage terrain.
-
-<details>
-
-<summary>Configuration example</summary>
-
-```
-// Some code
-```
-
-</details>
 
 
 
