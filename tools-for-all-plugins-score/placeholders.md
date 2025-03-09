@@ -185,6 +185,48 @@ Take a look here:
 
 ***
 
+## SCore commands placeholders
+
+### AROUND & NEAREST placeholders
+
+To get the placeholders of the around players or nearest player you can use the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "around\_target".
+
+Example: `%around_target_direction%`
+
+
+
+### MOB\_AROUND & MOB\_NEAREST placeholders
+
+To get the placeholders of the around entities or nearest entity you can use the **ENTITY PLACEHOLDERS** abov&#x65;**,** just replace "entity" by "around\_target".
+
+Example: `%around_target_health%`
+
+Example: `%around_target_uuid%`
+
+Example: `%around_target_x%`
+
+
+
+### DAMAGE\_BOOST
+
+* For this command you can get the boost given by the custom player command `DAMAGE_BOOST {modification in percentage example 100} {timeinticks}`
+  * %score\_cmd-damage-boost%
+
+### DAMAGE\_RESISTANCE
+
+* For this command you can get the boost given by the custom player command `DAMAGE_RESISTANCE {modification in percentage example 100} {timeinticks}`
+  * %score\_cmd-damage-resistance%
+
+
+
+### SETGLOW
+
+* You can get the glow color with %score\_cmd-glow% using it on the plugin TAB
+
+
+
+***
+
 ## Activators placeholders
 
 ### PLAYER\_EXPERIENCE\_CHANGE
@@ -269,6 +311,8 @@ They return the minecraft effect name instead of the spigot name
 * %getAction%
 * %beforeSlot%
 * %afterSlot%
+* %inventory\_type%
+* %inventory\_title%
 
 ### PLAYER\_LEVEL\_CHANGE
 
@@ -288,45 +332,7 @@ They return the minecraft effect name instead of the spigot name
 
 
 
-## SCore commands placeholders
-
-### AROUND & NEAREST placeholders
-
-To get the placeholders of the around players or nearest player you can use the **PLAYER PLACEHOLDERS** abov&#x65;**,** just replace "player" by "around\_target".
-
-Example: `%around_target_direction%`
-
-
-
-### MOB\_AROUND & MOB\_NEAREST placeholders
-
-To get the placeholders of the around entities or nearest entity you can use the **ENTITY PLACEHOLDERS** abov&#x65;**,** just replace "entity" by "around\_target".
-
-Example: `%around_target_health%`
-
-Example: `%around_target_uuid%`
-
-Example: `%around_target_x%`
-
-
-
-### DAMAGE\_BOOST
-
-* For this command you can get the boost given by the custom player command `DAMAGE_BOOST {modification in percentage example 100} {timeinticks}`
-  * %score\_cmd-damage-boost%
-
-### DAMAGE\_RESISTANCE
-
-* For this command you can get the boost given by the custom player command `DAMAGE_RESISTANCE {modification in percentage example 100} {timeinticks}`
-  * %score\_cmd-damage-resistance%
-
-
-
-### SETGLOW
-
-* You can get the glow color with %score\_cmd-glow% using it on the plugin TAB
-
-
+***
 
 ## **Cooldown placeholders**
 

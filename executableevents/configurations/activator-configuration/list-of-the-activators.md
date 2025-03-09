@@ -21,126 +21,512 @@ Activator features are features that are exclusive to that activator.
 
 
 
+### 🔹LOOP\_SERVER
+
+* Info: Activates in repeat one time each loop
+
+### ⭐ LIGHTNING\_STRIKE
+
+* Info: Activates when a lightning strike is emitting in the world
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#lightning_strike)
+
+### ⭐ WEATHER\_CHANGE
+
+* Info: Activates when the weather change in a world
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#weather_change)
 
 
 
+## Player activators
 
-* <mark style="color:orange;">**CROP\_GROW**</mark>**: Activates when a crop grows.**
-* **PLAYER\_CUSTOM\_LAUNCH: Activates when a player launches a custom projectile.**
-* <mark style="color:blue;">**PLAYER\_ENABLE\_FLY**</mark>**&#x20; : Activates when a player starts and stops flying.**
-* <mark style="color:blue;">**PLAYER\_ENABLE\_SNEAK**</mark>**&#x20; : Activates when a player starts sneaking.**
-* <mark style="color:blue;">**PLAYER\_ENABLE\_SPRINT**</mark>**&#x20; : Activates when a player starts sprinting.**
-* <mark style="color:blue;">**PLAYER\_ALL\_CLICK**</mark> : Activates when a player left-clicks or right-clicks the item.
-* <mark style="color:blue;">**PLAYER\_BED\_ENTER**</mark>**&#x20; : Activates when a player right-clicks a bed.**
-* <mark style="color:blue;">**PLAYER\_BED\_LEAVE**</mark>**&#x20; : Activates when a player leaves the bed.**
-* <mark style="color:blue;">**PLAYER\_BEFORE\_DEATH**</mark> : Activates before a player's death.
-* <mark style="color:blue;">**PLAYER\_BLOCK\_BREAK**</mark>**&#x20; : Activates when a player mines/breaks a block.**
-* <mark style="color:blue;">**PLAYER\_BLOCK\_PLACE**</mark>**&#x20; : Activates when a player places a block.**
-* <mark style="color:blue;">**PLAYER\_CHANGE\_WORLD**</mark> : Activates when a player moves to a different world.
-* <mark style="color:blue;">**PLAYER\_CLICK\_ON\_ENTITY**</mark>**&#x20; : Activates when a player click on an entity.**
-* <mark style="color:blue;">**PLAYER\_CLICK\_ON\_PLAYER**</mark> : Activates when a player click on a player.
-* <mark style="color:blue;">**PLAYER\_CONNECTION**</mark>**&#x20; : Activates when a player log into the server. (Does not activate when you log out)**
-* <mark style="color:blue;">**PLAYER\_CONSUME**</mark> : Activates when a player successfully eat/consume the item.
-* <mark style="color:blue;">**PLAYER\_DEATH**</mark> : Activates when a player dies.
-* <mark style="color:blue;">**PLAYER\_DISCONNECTION**</mark>**&#x20; : Activates when a player logs out from the server.**&#x20;
-* [<mark style="color:blue;">**PLAYER\_D**</mark>](list-of-the-activators.md#player_desactive_sneak)<mark style="color:blue;">**ISABLE\_SNEAK**</mark>**&#x20;: Activates when a player stops from sneaking.**&#x20;
-* [<mark style="color:blue;">**PLAYER\_D**</mark>](list-of-the-activators.md#player_desactive_sprint)<mark style="color:blue;">**ISABLE\_SPRINT**</mark>**&#x20;: Activates when a player stops from sprinting**
-* <mark style="color:blue;">**PLAYER\_DISABLE\_FLY**</mark>**&#x20; : Activates when the player stops flying.**
-* <mark style="color:blue;">**PLAYER\_DISABLE\_GLIDE**</mark>**&#x20;: Activates when the player stops gliding.**
-* <mark style="color:blue;">**PLAYER\_DESELECT\_THE\_EI**</mark>**&#x20; : Activates if you deselect the EI item in the hotbar. (TO CHECK)**
-* <mark style="color:blue;">**PLAYER\_DISMOUNT**</mark>**&#x20;: Activates when a player steps out from riding an entity.**&#x20;
-* <mark style="color:blue;">**PLAYER\_DROP\_ITEM**</mark> : Activates when a player drops an item.
-* <mark style="color:blue;">**PLAYER\_EDIT\_BOOK**</mark>**&#x20;: Activates when a player made changes to the book and quill and pressed done or sign the book.**
-* <mark style="color:blue;">**PLAYER\_ENABLE\_GLIDE**</mark>**&#x20;: Activates when the player starts gliding.**
-* <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_PLOT**</mark>**&#x20; : Activates if you enter a plot from the PlotSquared plugin.**&#x20;
-* <mark style="color:blue;">**PLAYER\_ENTER\_IN\_HIS\_LAND**</mark>**&#x20;: Activates if you enter in your land or a land where you are trusted**&#x20;
-* <mark style="color:blue;">**PLAYER\_ENTITY\_PLACE**</mark>**&#x20;: Activates when the player places an entity (armor stands, boats, minecarts and end crystal)**&#x20;
-* <mark style="color:blue;">**PLAYER\_EQUIP\_ARMOR**</mark>**: Activates when the player experience change naturally.**
-* <mark style="color:blue;">**PLAYER\_EXPERIENCE\_CHANGE**</mark>**: Activates when the player equips an armor.**
-* <mark style="color:blue;">**PLAYER\_UNEQUIP\_ARMOR**</mark>**: Activates when the player unequips an armor.**
-* <mark style="color:blue;">**PLAYER\_FOOD\_CHANGE**</mark>**&#x20;: Activates when the player food changes.**
-* <mark style="color:blue;">**PLAYER\_FIRST\_CONNECTION**</mark> : **Activates when the player joins for first time on the server.**
-* <mark style="color:blue;">**PLAYER\_FERTILIZE\_BLOCK**</mark>**&#x20;: Activates if a player fertilizes blocks with bone meal.**
-* <mark style="color:blue;">**PLAYER\_FILL\_BUCKET**</mark> : Activates when a player attempts to pickup water or lava with a bucket.
-* <mark style="color:blue;">**PLAYER\_FISH\_BLOCK**</mark>**&#x20;: Activates when a player right-click the fishing rod when the fishing rod bobber is on a block.**
-* <mark style="color:blue;">**PLAYER\_FISH\_ENTITY**</mark>**&#x20; : Activates when a player right-click the fishing rod when the fishing rod bobber catches an entity.**
-* <mark style="color:blue;">**PLAYER\_FISH\_FISH**</mark>**&#x20; : Activates when a player right-click the fishing rod when the fishing rod bobber catches something.**
-* <mark style="color:blue;">**PLAYER\_FISH\_NOTHING**</mark>**&#x20; : Activates when a player fishes nothing.**
-* <mark style="color:blue;">**PLAYER\_FISH\_PLAYER**</mark>**&#x20; : Activates when a player right-click the fishing rod when the fishing rod bobber catches a player.**
-* <mark style="color:blue;">**PLAYER\_HIT\_PLAYER**</mark> **:** Activates when a player hits a player
-* <mark style="color:blue;">**PLAYER\_HIT\_ENTITY**</mark> : **Activates when a player hits an entity**&#x20;
-* <mark style="color:blue;">**PLAYER\_ITEM\_BREAK**</mark>**&#x20; : Activates when a player breaks the item by making it loose all its durability.**
-* <mark style="color:blue;">**PLAYER\_JUMP**</mark>**&#x20; : Activates when a player jumps.**
-* <mark style="color:blue;">**PLAYER\_KILL\_ENTITY**</mark>**&#x20; : Activates when a player kills an entity.**
-* <mark style="color:blue;">**PLAYER\_KILL\_PLAYER**</mark>&#x20;**&#x20;: Activates when a player kills a player**.
-* <mark style="color:blue;">**PLAYER\_LEAVE\_HIS\_PLOT**</mark>**&#x20; : Activates if you leave a plot from the PlotSquared plugin.**
-* <mark style="color:blue;">**PLAYER\_LEAVE\_HIS\_LAND**</mark>**&#x20;: Activates if you leave your land or a land where you are trusted**
-* <mark style="color:blue;">**PLAYER\_LEFT\_CLICK**</mark> : Activates when a player left-clicks the item.
-* <mark style="color:blue;">**PLAYER\_MOUNT**</mark>**&#x20;: Activates when a player mounts an entity.**&#x20;
-* <mark style="color:blue;">**PLAYER\_SEND\_MESSAGE**</mark>**&#x20;: Activates when a player sends a message.**&#x20;
-* <mark style="color:blue;">**PLAYER\_TELEPORT**</mark>**&#x20;: Activates when the player gets teleported**
-* <mark style="color:blue;">**PLAYER\_PICKUP\_ITEM**</mark>**&#x20;: Activates when the player pick ups an item**
-* <mark style="color:blue;">**PLAYER\_WALK**</mark>**&#x20; : Activates when a player walks.**
-* <mark style="color:blue;">**PLAYER\_WRITE\_COMMAND**</mark>**&#x20; : Activates when a player enters commands.**
-* <mark style="color:blue;">**PLAYER\_RECEIVE\_HIT\_BY\_ENTITY**</mark>&#x20;**&#x20;: Activates when a player gets hit by anything from an entity.**
-* <mark style="color:blue;">**PLAYER\_RECEIVE\_HIT\_BY\_PLAYER**</mark>**&#x20; : Activates when a player gets hit by anything from a player.**
-* <mark style="color:blue;">**PLAYER\_RECEIVE\_HIT\_GLOBAL**</mark>**&#x20; : Activates when a player gets hit by anything.**
-* <mark style="color:blue;">**PLAYER\_RESPAWN**</mark>**&#x20; : Activates when a player re-spawns.**
-* <mark style="color:blue;">**PLAYER\_RIGHT\_CLICK**</mark> : Activates when a player right-clicks the item.
-* <mark style="color:blue;">**PLAYER\_SHEAR\_ENTITY**</mark>**&#x20; : Activates when a player shears an entity.**
-* <mark style="color:blue;">**PLAYER\_SELECT\_THE\_EI**</mark>**&#x20; : Activates when a player selects the EI item in the hotbar.**&#x20;
-* <mark style="color:blue;">**PLAYER\_SWAP\_HANDI**</mark>**&#x20; : Activates when a player swap hands.**&#x20;
-* <mark style="color:blue;">**PLAYER\_TARGETED\_BY\_AN\_ENTITY**</mark> : Activates when an entity targets a player.
-* <mark style="color:blue;">**PLAYER\_TRAMPLE\_CROP**</mark> : Activates when a player tramples a crop.
-* PLAYER\_PORTAL: Activates when a player enters to a portal
-* <mark style="color:blue;">**LOOP**</mark>**&#x20; : Activates in repeat per player**
-* <mark style="color:blue;">**LOOP\_SERVER**</mark>**&#x20;: Activates in repeat one time each loop**
-* **BLOCK\_DRY: Activates when corals or farmlands got dried.**
-* <mark style="color:orange;">**ENTITY\_SPAWN**</mark>**: Activates when an entity spawns**
-  * If using summon command to trigger this add DELAYTICK 1 before all entityCommands, this happens because the commands doesn't run if the entity doesn't exist, and it will actually exist after 1 tick.
-* <mark style="color:orange;">**ENTITY\_BEFORE\_DEATH**</mark>**: Activates before the entity dies**
-* <mark style="color:orange;">**ENTITY\_BREAK\_DOOR**</mark>**: Activates when an entity breaks a door (as zombie does)**
-* <mark style="color:orange;">**ENTITY\_BREED**</mark>**: Activates when one entiti breeds with another entity**
-* <mark style="color:orange;">**ENTITY\_CHANGE\_BLOCK**</mark>**: Activates when an entity change a block state (as enderman when picking a block)**
-* <mark style="color:orange;">**ENTITY\_COMBUST\_BY\_BLOCK**</mark>**: Activates when an entity enters on fire by a block**
-* <mark style="color:orange;">**ENTITY\_COMBUST\_BY\_ENTITY**</mark>**: Activates when an entity enters on fire because of another entity**
-* <mark style="color:orange;">**ENTITY\_DAMAGE\_BY\_PLAYER**</mark>**: Activates when an entity gets damaged by a player**
-* <mark style="color:orange;">**ENTITY\_DAMAGE\_BY\_ENTITY**</mark>**: Activates when an entity gets damaged by entity**
-* <mark style="color:orange;">**ENTITY\_DAMAGE\_BY\_BLOCK**</mark>**: Activates when an entity gets damaged by a block**
-* <mark style="color:orange;">**ENTITY\_DEATH**</mark>**: Activates when an entity dies**
-* <mark style="color:orange;">**ENTITY\_DROP\_ITEM**</mark>**: Activates when an entity drops an item**
-* <mark style="color:orange;">**ENTITY\_ENTER\_BLOCK**</mark>**: Activates when an entity enters in a block (as bee enters into beehive)**
-* <mark style="color:orange;">**ENTITY\_ENTER\_LOVE\_MODE**</mark>**: Activates when an entity enters into love mode**
-* <mark style="color:orange;">**ENTITY\_EXPLODE**</mark>**: Activates when an entity explodes itself**
-* <mark style="color:orange;">**ENTITY\_PICKUP\_ITEM**</mark>**: Activates when an entity pickup an item**
-* <mark style="color:orange;">**ENTITY\_PORTAL\_ENTER**</mark>**: Activates when an entity enters to a portal**
-* <mark style="color:orange;">**ENTITY\_PORTAL\_EXIT**</mark>**: Activates when an entity leaves a portal**
-* <mark style="color:orange;">**ENTITY\_REGAIN\_HEALTH**</mark>**: Activates when an entity regains health**
-* <mark style="color:orange;">**ENTITY\_RESURRECT**</mark>**: Activates when an entity resurrects**
-* <mark style="color:orange;">**ENTITY\_TAME**</mark>**: Activates when an entity got tamed**
-* <mark style="color:orange;">**ENTITY\_TARGET\_PLAYER**</mark>**: Activates when an entity targets a player**
-* <mark style="color:orange;">**ENTITY\_TARGET\_ENTITY**</mark>**: Activates when an entity targets another entity**
-* <mark style="color:orange;">**ENTITY\_TELEPORT**</mark>**: Activates when an entity teleports itself**
-* <mark style="color:orange;">**ENTITY\_TRANSFORM**</mark>**: Activates when an entity got transformed**
-* <mark style="color:orange;">**ENDERDRAGON\_CHANGE\_PHASE**</mark>**: Activates when the Ender Dragon change phase.**
-* <mark style="color:blue;">**ITEMSADDER\_PLAYER\_BLOCK\_BREAK**</mark>: **Activates when the player breaks a block from ItemsAdder**
-* <mark style="color:blue;">**PLAYER\_PROJECTILE\_HIT\_BLOCK**</mark>: **Activates when the player projectile hits a block**
-* <mark style="color:blue;">**PLAYER\_PROJECTILE\_HIT\_ENTITY**</mark>: **Activates when the player projectile hits an entity**
-* <mark style="color:blue;">**PLAYER\_PROJECTILE\_HIT\_PLAYER**</mark>: **Activates when the player projectile hits another player**
-* <mark style="color:orange;">**ENTITY\_PROJECTILE\_HIT\_BLOCK**</mark>: **Activates when the entity projectile hits a block**
-* <mark style="color:orange;">**ENTITY\_PROJECTILE\_HIT\_ENTITY**</mark>: **Activates when the entity projectile hits another entity**
-* <mark style="color:orange;">**ENTITY\_PROJECTILE\_HIT\_PLAYER**</mark>: **Activates when the entity projectile hits a player**
-* **ENTITY\_PARTICIPATE\_KILL\_ENTITY: Activates when an entity participates on killing an entity**
-* **ENTITY\_PARTICIPATE\_KILL\_PLAYER: Activates when an entity participates on killing a player**
-* **PLAYER\_PARTICIPATE\_KILL\_ENTITY: Activates when a player participates on killing an entity**
-* PLAYER\_BRUSH\_BLOC&#x4B;**: Activates when a player brushes a block**
-* PLAYER\_BUCKET\_ENTIT&#x59;**: Activates when a player buckets an entity**
-* PLAYER\_HARVEST\_BLOC&#x4B;**: Activates when a player harvests a block**
-* PLAYER\_KIC&#x4B;**: Activates when a player gets kicked**
-* PLAYER\_LAUNCH\_PROJECTIL&#x45;**: Activates when a player launch a projectile**
-* PLAYER\_OPEN\_INVENTOR&#x59;**: Activates when a player opens their inventory**
-* PLAYER\_RECEIVE\_EFFEC&#x54;**: Activates when a player receives an effect**
-* PLAYER\_REGAIN\_HEALT&#x48;**: Activates when a player regains health**
-* PLAYER\_RIPTID&#x45;**: Activates when a player riptides**
-* PLAYER\_SPAWN\_CHANG&#x45;**: Activates when a player change their spawn**
+### 🔹LOOP&#x20;
+
+* Info: Activates in repeat per player&#x20;
+
+
+
+### 🔹PLAYER\_ALL\_CLICK
+
+* Info Activates when a player left-clicks or right-clicks the item.&#x20;
+
+### 🔹PLAYER\_BED\_ENTER
+
+* Info: Activates when a player right-clicks a bed.&#x20;
+
+### 🔹PLAYER\_BED\_LEAVE
+
+* Info: Activates when a player leaves the bed.&#x20;
+
+### 🔹PLAYER\_BEFORE\_DEATH
+
+* Info: Activates before a player's death.&#x20;
+
+### 🔹PLAYER\_BLOCK\_BREAK
+
+* Info: Activates when a player mines/breaks a block.&#x20;
+
+### 🔹PLAYER\_BLOCK\_PLACE
+
+* Info: Activates when a player places a block.&#x20;
+
+### 🔹PLAYER\_BRUSH\_BLOCK
+
+* Info: Activates when a player brushes a block&#x20;
+
+### 🔹PLAYER\_BUCKET\_ENTITY
+
+* Info: Activates when a player buckets an entity&#x20;
+
+### 🔹PLAYER\_CHANGE\_WORLD
+
+* Info: Activates when a player moves to a different world.&#x20;
+
+### 🔹PLAYER\_CLICK\_ON\_ENTITY
+
+* Info: Activates when a player click on an entity. PLAYER\_CLICK\_ON\_PLAYER : Activates when a player click on a player.&#x20;
+
+### 🔹PLAYER\_CONNECTION
+
+* Info: Activates when a player log into the server. (Does not activate when you log out)&#x20;
+
+### 🔹PLAYER\_CONSUME
+
+* Info: Activates when a player successfully eat/consume the item. PLAYER\_CUSTOM\_LAUNCH: Activates when a player launches a custom projectile.&#x20;
+
+### 🔹PLAYER\_DEATH
+
+* Info: Activates when a player dies.&#x20;
+
+### 🔹PLAYER\_DISABLE\_FLY&#x20;
+
+* Info: Activates when the player stops flying.&#x20;
+
+### 🔹PLAYER\_DISABLE\_GLIDE
+
+* Info: Activates when the player stops gliding.&#x20;
+
+### 🔹PLAYER\_DISABLE\_SNEAK
+
+* Info: Activates when a player stops from sneaking.&#x20;
+
+### 🔹PLAYER\_DISABLE\_SPRINT
+
+* Info: Activates when a player stops from sprinting&#x20;
+
+### 🔹PLAYER\_DISCONNECTION
+
+* Info: Activates when a player logs out from the server.&#x20;
+
+### 🔹PLAYER\_DISMOUNT
+
+* Info: Activates when a player steps out from riding an entity.&#x20;
+
+### 🔹PLAYER\_DROP\_ITEM
+
+* Info: Activates when a player drops an item.&#x20;
+
+### 🔹PLAYER\_EDIT\_BOOK
+
+* Info: Activates when a player made changes to the book and quill and pressed done or sign the book.&#x20;
+
+### 🔹PLAYER\_ENABLE\_FLY
+
+* Info: Activates when a player starts and stops flying.&#x20;
+
+### 🔹PLAYER\_ENABLE\_GLIDE
+
+* Info: Activates when the player starts gliding.&#x20;
+
+### 🔹PLAYER\_ENABLE\_SNEAK
+
+* Info: Activates when a player starts sneaking.&#x20;
+
+### 🔹PLAYER\_ENABLE\_SPRINT
+
+* Info: Activates when a player starts sprinting.&#x20;
+
+### 🔹PLAYER\_ENCHANT\_ITEM
+
+* Info: Activates when a player add enchant to an item
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_enchant_item)
+
+### 🔹PLAYER\_ENTER\_IN\_HIS\_LAND
+
+* Info: Activates if you enter in your land or a land where you are trusted&#x20;
+
+### 🔹PLAYER\_ENTER\_IN\_HIS\_PLOT
+
+* Info: Activates if you enter a plot from the PlotSquared plugin.
+
+### 🔹PLAYER\_ENTITY\_PLACE
+
+* Info: Activates when the player places an entity (armor stands, boats, minecarts and end crystal)&#x20;
+
+### 🔹PLAYER\_EQUIP\_ARMOR
+
+* Info: Activates when the player experience change naturally.&#x20;
+
+### 🔹PLAYER\_EXPERIENCE\_CHANGE
+
+* Info: Activates when the player equips an armor.
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_experience_change)
+
+### 🔹PLAYER\_FERTILIZE\_BLOCK
+
+* Info: Activates if a player fertilizes blocks with bone meal.&#x20;
+
+### 🔹PLAYER\_FILL\_BUCKET
+
+* Info: Activates when a player attempts to pickup water or lava with a bucket.
+
+### 🔹PLAYER\_FIRST\_CONNECTION
+
+* Info: Activates when the player joins for first time on the server.&#x20;
+
+### 🔹PLAYER\_FISH\_BLOCK
+
+* Info: Activates when a player right-click the fishing rod when the fishing rod bobber is on a block.&#x20;
+
+### 🔹PLAYER\_FISH\_ENTITY
+
+* Info : Activates when a player right-click the fishing rod when the fishing rod bobber catches an entity.&#x20;
+
+### 🔹PLAYER\_FISH\_FISH
+
+* Info: Activates when a player right-click the fishing rod when the fishing rod bobber catches something.&#x20;
+
+### 🔹PLAYER\_FISH\_NOTHING
+
+* Info : Activates when a player fishes nothing.&#x20;
+
+### 🔹PLAYER\_FISH\_PLAYER
+
+* Info: Activates when a player right-click the fishing rod when the fishing rod bobber catches a player.&#x20;
+
+### 🔹PLAYER\_FOOD\_CHANGE
+
+* Info: Activates when the player food changes.&#x20;
+
+### 🔹PLAYER\_HARVEST\_BLOCK
+
+* Info: Activates when a player harvests a block&#x20;
+
+### 🔹PLAYER\_HIT\_ENTITY
+
+* Info: Activates when a player hits an entity&#x20;
+
+### 🔹PLAYER\_HIT\_PLAYER
+
+* Info: Activates when a player hits a player&#x20;
+
+### 🔹PLAYER\_INVENTORY\_CLICK
+
+* Info: Activates when the player click an inventory
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_inventory_click)
+
+### 🔹PLAYER\_ITEM\_BREAK
+
+* Info: Activates when a player breaks the item by making it loose all its durability.&#x20;
+
+### 🔹PLAYER\_JUMP
+
+* Info: Activates when a player jumps. PLAYER\_KICK: Activates when a player gets kicked&#x20;
+
+### 🔹PLAYER\_KILL\_ENTITY
+
+* Info: Activates when a player kills an entity.&#x20;
+
+### 🔹PLAYER\_KILL\_PLAYER
+
+* Info: Activates when a player kills a player.&#x20;
+
+### 🔹PLAYER\_LAUNCH\_PROJECTILE
+
+* Info: Activates when a player launch a projectile&#x20;
+
+### 🔹PLAYER\_LEAVE\_HIS\_LAND
+
+* Info: Activates if you leave your land or a land where you are trusted&#x20;
+
+### 🔹PLAYER\_LEAVE\_HIS\_PLOT
+
+* Info: Activates if you leave a plot from the PlotSquared plugin.&#x20;
+
+### 🔹PLAYER\_LEFT\_CLICK
+
+* Info: Activates when a player left-clicks the item.&#x20;
+
+### 🔹PLAYER\_LEVEL\_CHANGE
+
+* Info: Activates when the player levels change
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_level_change)
+
+### 🔹PLAYER\_MOUNT
+
+* Info: Activates when a player mounts an entity.&#x20;
+
+### 🔹PLAYER\_OPEN\_INVENTORY
+
+* Info: Activates when a player opens their inventory&#x20;
+
+### 🔹PLAYER\_PARTICIPATE\_KILL\_ENTITY
+
+* Info: Activates when a player participates on killing an entity&#x20;
+
+### 🔹PLAYER\_PICKUP\_ITEM
+
+* Info: Activates when the player pick ups an item&#x20;
+
+### 🔹PLAYER\_PORTAL
+
+* Info: Activates when a player enters to a portal&#x20;
+
+### 🔹PLAYER\_PROJECTILE\_HIT\_BLOCK
+
+* Info: Activates when the player projectile hits a block
+
+### 🔹PLAYER\_PROJECTILE\_HIT\_ENTITY
+
+* Info: Activates when the player projectile hits an entity&#x20;
+
+### 🔹PLAYER\_PROJECTILE\_HIT\_PLAYER
+
+* Info: Activates when the player projectile hits another player&#x20;
+
+### 🔹PLAYER\_RECEIVE\_EFFECT
+
+* Info: Activates when a player receives an effect
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_receive_effect)
+
+### 🔹PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
+
+* Info: Activates when a player gets hit by anything from an entity.&#x20;
+
+### 🔹PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
+
+* Info: Activates when a player gets hit by anything from a player.&#x20;
+
+### 🔹PLAYER\_RECEIVE\_HIT\_GLOBAL
+
+* Info: Activates when a player gets hit by anything.&#x20;
+
+### 🔹PLAYER\_REGAIN\_HEALTH
+
+* Info: Activates when a player regains health&#x20;
+
+### 🔹PLAYER\_RESPAWN
+
+* Info: Activates when a player re-spawns.&#x20;
+
+### 🔹PLAYER\_RIGHT\_CLICK
+
+* Info: Activates when a player right-clicks the item.&#x20;
+
+### 🔹PLAYER\_RIPTIDE
+
+* Info: Activates when a player riptides&#x20;
+
+### 🔹PLAYER\_SELECT\_THE\_EI
+
+* Info: Activates when a player selects the EI item in the hotbar.&#x20;
+
+### 🔹PLAYER\_SEND\_MESSAGE
+
+* Info: Activates when a player sends a message.&#x20;
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_write_command-or-player_send_message)
+
+### 🔹PLAYER\_SHEAR\_ENTITY
+
+* Info: Activates when a player shears an entity.&#x20;
+
+### 🔹PLAYER\_SPAWN\_CHANGE
+
+* Info: Activates when a player change their spawn&#x20;
+
+### 🔹PLAYER\_SWAP\_HAND
+
+* Info: Activates when a player swap hands.&#x20;
+
+### 🔹PLAYER\_TARGETED\_BY\_AN\_ENTITY
+
+* Info: Activates when an entity targets a player.&#x20;
+
+### 🔹PLAYER\_TELEPORT
+
+* Info: Activates when the player gets teleported&#x20;
+
+### 🔹PLAYER\_TRAMPLE\_CROP
+
+* Info: Activates when a player tramples a crop.&#x20;
+
+### 🔹PLAYER\_UNEQUIP\_ARMOR
+
+* Info: Activates when the player unequips an armor.&#x20;
+
+### 🔹PLAYER\_WALK
+
+* Info: Activates when a player walks.&#x20;
+
+### 🔹PLAYER\_WRITE\_COMMAND
+
+* Info: Activates when a player enters commands.
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_write_command-or-player_send_message)
+
+
+
+## Block activators
+
+### ⭐ BLOCK\_DRY
+
+* Info: Activates when corals or farmlands got dried.
+
+### ⭐ CROP\_GROW
+
+* Info: Activates when a crop grows.
+
+### ⭐ ITEMSADDER\_PLAYER\_BLOCK\_BREAK
+
+* Info: Activates when the player breaks a block from ItemsAdder
+
+
+
+## Entity activators
+
+### ⭐ CREEPER\_POWER\_CHANGE
+
+* Info: Activates when the creeper is struck by lightning.
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#creeper_power_change)
+
+### ⭐ ENDERDRAGON\_CHANGE\_PHASE
+
+* Info: Activates when the Ender Dragon change phase.&#x20;
+
+### ⭐ ENTITY\_BEFORE\_DEATH
+
+* Info: Activates before the entity dies&#x20;
+
+### ⭐ ENTITY\_BREAK\_DOOR
+
+* Info: Activates when an entity breaks a door (as zombie does)&#x20;
+
+### ⭐ ENTITY\_BREED
+
+* Info: Activates when one entity breeds with another entity&#x20;
+
+### ⭐ ENTITY\_CHANGE\_BLOCK
+
+* Info: Activates when an entity change a block state (as enderman when picking a block)&#x20;
+
+### ⭐ ENTITY\_COMBUST\_BY\_BLOCK
+
+* Info: Activates when an entity enters on fire by a block&#x20;
+
+### ⭐ ENTITY\_COMBUST\_BY\_ENTITY
+
+* Info: Activates when an entity enters on fire because of another entity&#x20;
+
+### ⭐ ENTITY\_DAMAGE\_BY\_BLOCK
+
+* Info: Activates when an entity gets damaged by a block&#x20;
+
+### ⭐ ENTITY\_DAMAGE\_BY\_ENTITY
+
+* Info: Activates when an entity gets damaged by entity&#x20;
+
+### ⭐ ENTITY\_DAMAGE\_BY\_PLAYER
+
+* Info: Activates when an entity gets damaged by a player&#x20;
+
+### ⭐ ENTITY\_DEATH
+
+* Info: Activates when an entity dies&#x20;
+
+### ⭐ ENTITY\_DROP\_ITEM
+
+* Info: Activates when an entity drops an item&#x20;
+
+### ⭐ ENTITY\_ENTER\_BLOCK
+
+* Info: Activates when an entity enters in a block (as bee enters into beehive)&#x20;
+
+### ⭐ ENTITY\_ENTER\_LOVE\_MODE
+
+* Info: Activates when an entity enters into love mode&#x20;
+
+### ⭐ ENTITY\_EXPLODE
+
+* Info: Activates when an entity explodes itself&#x20;
+
+### ⭐ ENTITY\_PARTICIPATE\_KILL\_ENTITY
+
+* Info: Activates when an entity participates on killing an entity&#x20;
+
+### ⭐ ENTITY\_PARTICIPATE\_KILL\_PLAYER
+
+* Info: Activates when an entity participates on killing a player&#x20;
+
+### ⭐ ENTITY\_PICKUP\_ITEM
+
+* Info: Activates when an entity pickup an item&#x20;
+
+### ⭐ ENTITY\_PORTAL\_ENTER
+
+* Info: Activates when an entity enters to a portal&#x20;
+
+### ⭐ ENTITY\_PORTAL\_EXIT
+
+* Info: Activates when an entity leaves a portal&#x20;
+
+### ⭐ ENTITY\_PROJECTILE\_HIT\_BLOCK
+
+* Info: Activates when the entity projectile hits a block&#x20;
+
+### ⭐ ENTITY\_PROJECTILE\_HIT\_ENTITY
+
+* Info: Activates when the entity projectile hits another entity&#x20;
+
+### ⭐ ENTITY\_PROJECTILE\_HIT\_PLAYER
+
+* Info: Activates when the entity projectile hits a player&#x20;
+
+### ⭐ ENTITY\_REGAIN\_HEALTH
+
+* Info: Activates when an entity regains health&#x20;
+
+### ⭐ ENTITY\_RESURRECT
+
+* Info: Activates when an entity resurrects&#x20;
+
+### ⭐ ENTITY\_SPAWN
+
+* Info: Activates when an entity spawns&#x20;
+
+{% hint style="warning" %}
+If the entity is just summoned, the activator will be triggered before the entity exists in the world so if you want to run custom commands on the entity add **DELAYTICK 1** before to delay the commands. Like that you are sure that the entity is really spawned.
+{% endhint %}
+
+### ⭐ ENTITY\_SPAWN\_TRIALSPAWNER
+
+* Info; Activates when an entity is spawned from a trial spawner
+* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity_spawn_trialspawner)
+
+### ⭐ ENTITY\_TAME
+
+* Info: Activates when an entity got tamed&#x20;
+
+### ⭐ ENTITY\_TARGET\_ENTITY
+
+* Info: Activates when an entity targets another entity&#x20;
+
+### ⭐ ENTITY\_TARGET\_PLAYER
+
+* Info: Activates when an entity targets a player&#x20;
+
+### ⭐ ENTITY\_TELEPORT
+
+* Info: Activates when an entity teleports itself&#x20;
+
+### ⭐ ENTITY\_TRANSFORM
+
+* Info: Activates when an entity got transforme
 
