@@ -288,7 +288,7 @@ DRAININCUBE *12 WATER
 
 ### FERTILIZEINCUBE
 
-* Info: Fertilizes nearby crops by 1 age
+* Info: Fertilizes nearby crops by 1 age, its like applying bonemeal but it growth the plant 100% of the time.
 * Command: FERTILIZEINCUBE {radius}&#x20;
   * {radius}: Radius of how big the area of the crops you want to fertilize **(LIMIT IS 9)**
 * Example:
