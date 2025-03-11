@@ -300,5 +300,5 @@ activators:
 
 ### Wild Stacker
 
-* SILK\_SPAWNER commands work with this plugin
+* SILK\_SPAWNER commands work with the spawners of WildStacker.
 

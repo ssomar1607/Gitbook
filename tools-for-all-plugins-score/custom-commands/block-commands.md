@@ -625,7 +625,7 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 
 ### SILK\_SPAWNER
 
-* Info: Collects the spawner you clicked
+* Info: Collects the spawner involved in the event
 * Command: SILK\_SPAWNER
 * Example:
 
@@ -633,7 +633,14 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 - SILK_SPAWNER
 ```
 
+{% hint style="info" %}
+The SILK\_SPAWNER command is only compatible with the following plugins:
 
+* RoseStacker
+* WildStacker
+
+And of course the vanilla spawners.
+{% endhint %}
 
 ### SMELT
 
