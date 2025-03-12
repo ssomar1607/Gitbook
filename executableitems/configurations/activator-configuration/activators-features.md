@@ -6,7 +6,7 @@ description: >-
 
 # Activators features
 
-All this features are inside the activator, as reminder activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
+All this features are inside the activator, as reminder the activators allow you to execute custom actions on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
 
 Starred features ⭐ are for premium version.
 
