@@ -2,9 +2,14 @@
 
 The free version of ExecutableItems is like a free-trial of it, to know how it works, what is possible and you could even make your whole server with it, but once you want to improve your items, and don't have all limitations the free one you have you start thinking into buying the premium version.. but, is it worth? what differences are there? couple of common questions asked in #support-ei in discord of Ssomar plugins, this page, should solve your answers.
 
-## No more advertising
+## Short version
 
-* In or
+| Free                              | Premium                                  |
+| --------------------------------- | ---------------------------------------- |
+| 500 ExecutableItems max           | Unlimited ExecutableItems                |
+| 1 activator per ExecutableItem    | Unlimited activators per ExecutableItems |
+| Watermark in the lore of the item | No watermark                             |
+| Some activators are not available | Access to all activators                 |
 
 ## No more limitations
 
