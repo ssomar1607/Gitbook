@@ -1,5 +1,6 @@
 ---
 description: Requires Protocol Lib
+hidden: true
 ---
 
 # ⛏️   Blocks Hardnesses
