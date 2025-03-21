@@ -22,6 +22,10 @@ But you can also you the [math placeholders](https://github.com/PlaceholderAPI/P
 * EI placeholders are pre-parsed and any placeholders that are not ei are parsed upon command activation so you can use ei placeholders for xyz coordinates and not worry about change in values
 {% endhint %}
 
+{% hint style="warning" %}
+If %around\_target% ever fails to properly return the AROUND/MOB\_AROUND around target's details, use **%around\_target::step1%**
+{% endhint %}
+
 ## Miscellaneous Placeholders
 
 {% hint style="info" %}
