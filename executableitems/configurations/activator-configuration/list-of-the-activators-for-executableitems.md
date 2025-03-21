@@ -190,11 +190,13 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_CONSUME
 
-* Info: Activator that gets triggered when the player successfully eat / consume an item.
+* Info: Activator that gets triggered when the player successfully eat / consume an item.\
+  Be careful, it only works for Minecraft Items that are edible or the ones that are transformed into edible item using the [Consumable Features](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#consumablefeatures).
 
 ### 🔹PLAYER\_CONSUME\_THE\_EI
 
-* Info: Activator that gets triggered when the player successfully eat/consume the ExecutableItem itself.
+* Info: Activator that gets triggered when the player successfully eat/consume the ExecutableItem itself. \
+  Be careful, it only works for Executable Items that are edible or the ones that are transformed into edible item using the [Consumable Features](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#consumablefeatures).
 
 ### 🔹PLAYER\_CUSTOM\_LAUNCH
 

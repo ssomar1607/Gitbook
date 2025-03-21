@@ -480,7 +480,7 @@ food:
   canAlwaysEat: true
 ```
 
-### consumableFeatures
+### Consumable features
 
 * Info: Features related to consumable, it allows you to customize the consumable options, is closer to the food feature.
   * enable: Boolean that represents enabling or disabling the consumable features
