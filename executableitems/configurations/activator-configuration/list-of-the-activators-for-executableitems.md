@@ -583,7 +583,7 @@ The event is only triggered when someone force the player to open its inventory 
 
 ### ⭐PROJECTILE\_HIT\_BLOCK
 
-* Info: Activator that gets triggered when a launched projectile of the player hits a block.&#x20;
+* Info: Activator that gets triggered when a launched projectile by a player hits a block.&#x20;
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
@@ -591,7 +591,8 @@ The event is only triggered when someone force the player to open its inventory 
 
 ### ⭐PROJECTILE\_HIT\_ENTITY
 
-* Info: Activator that gets triggered when a launched projectile of the player hits an entity.&#x20;
+* Info: Activator that gets triggered when a launched projectile by a player hits an entity. \
+  Be carefull it doesnt be triggered when the projectile hits a player (For that use PROJECTILE\_HIT\_PLAYER).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
@@ -599,7 +600,7 @@ The event is only triggered when someone force the player to open its inventory 
 
 ### 🔹PROJECTILE\_HIT\_PLAYER
 
-* Info: Activator that gets triggered when a launched projectile of the player hits another player (usually called target).
+* Info: Activator that gets triggered when a launched projectile by a player hits another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_t-targetcommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
   * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-mustbeaprojectilelaunchwiththesameei](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
