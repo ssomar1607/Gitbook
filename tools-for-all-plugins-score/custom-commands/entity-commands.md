@@ -95,64 +95,58 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 
 
 
-### ANGRYAT
+### ANGRY\_AT
 
 * Info: Sets the entity target to a specific UUID
-* Command: ANGRYAT {UUID}
-  * {UUID}: UUID of the entity
+* Command settings:
+  * entityUUID: The entity UUID of the target
 * Example:
 
 ```
-- ANGRYAT %player_uuid%
+- ANGRY_AT entityUUID:%player_uuid%
+# To reset the angry set null
+- ANGRY_AT entityUUID:null
 ```
-
-{% hint style="info" %}
-It supports null to reset the angry
-
-* ANGRYAT null
-{% endhint %}
 
 
 
 ### AWARENESS
 
-* Info: Sets to true or false the awareness of a mob.
-* Command: AWARENESS {DEFAULT TRUE}
-* Example:
-
-```
-- AWARENESS true
-```
+* Info: Sets whether this mob is aware of its surroundings. Unaware mobs will still move if pushed, attacked, etc. but will not move or perform any actions on their own. Unaware mobs may also have other unspecified behaviours disabled, such as drowning.
 
 {% hint style="info" %}
 it only works for 1.16.5+
 {% endhint %}
 
-
-
-### CHANGETO
-
-* Info: Replaces the mob with a different ty&#x70;_&#x65;_
-
-{% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html" %}
-
-* Command: CHANGETO {entityType}
-  * {entityType}: Type of entity.
+* Command settings:
+  * value: true or false
 * Example:
 
 ```
-- CHANGETO CHICKEN
+- AWARENESS value:true
 ```
 
-### CHANGETOMYTHICMOB
 
-* Info: Change the mob to a MythicMob mob.
-* Command: CHANGETOMYTHICMOB \<id>
+
+### CHANGE\_TO
+
+* Info: Replaces the mob with an entity of another type. It will keep the current velocity of the current entity.
+  * You can specify an [EntityType](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)
+  * Or an entity definition example: {HasVisualFire:1b,id:"minecraft:bee"} (1.21.+)
+  * Or a MythicMob ID
+* Command settings:
+  * entity: The entity specification
 * Example:
 
-```
-- CHANGETOMYTHICMOB SkeletonHelper
-```
+<pre><code><strong># With EntityType
+</strong><strong>- CHANGE_TO entity:CHICKEN
+</strong># With EntitySnapshot
+- CHANGE_TO entity:{HasVisualFire:1b,id:"minecraft:bee"}
+# Or using variable
+- CHANGE_TO entity:%var_myvar%
+# With MythicMob ID
+- CHANGE_TO entity:MyCustomBossID
+</code></pre>
 
 
 
@@ -198,13 +192,18 @@ it only works for 1.16.5+
 
 ### HEAL
 
-* Info: Heals the entity with a specific amount
-* Command: HEAL {amount}
-  * {amount}: Per half hearts
+* Info: Heals the entity with a specific amount, if not specified it will full heal the entity.
+* Command settings:
+  * amount: The amount of the heal
 * Example:
 
 ```
-- HEAL 13
+# Full heal
+- HEAL
+# Amount specific heal
+- HEAL amount:5
+# Remove heal
+- HEAL amount:-5
 ```
 
 
@@ -212,7 +211,7 @@ it only works for 1.16.5+
 ### KILL
 
 * Info: Kills the mob without the death animation
-* Command: KILL
+* No command setting
 * Example:
 
 ```
@@ -255,88 +254,37 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
 
 
 
-### MOB\_NEAREST
-
-* Info: Targets the nearest mob from the player/target.
-* Command:&#x20;
-  * `MOB_NEAREST` {max accepted distance} `{command}`
-    * {max accepted distance}:  Max distance accepted that the "entity" can be.
-    * {command}: The command that will be executed
-* Example:
-
-Damages nearest player
-
-```
-- MOB_NEAREST 10 DAMAGE 5
-```
-
-
-
-### NEAREST
-
-* Info: Targets the nearest player from the player/target.
-* Command:&#x20;
-  * `NEAREST` {max accepted distance} `{command}`
-    * {max accepted distance}: Max distance accepted that the "target" can be.
-    * {command}: The command that will be executed
-* Example:
-
-Damages nearest player
-
-```
-- NEAREST 8 DAMAGE 5
-```
-
-
-
-### PARTICLE
-
-* Info: Spawns particles in the player/target's location
-
-{% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html" %}
-
-* Command: PARTICLE {type} {quantity} {offset} {speed}
-  * {type}: The type of particle. (ALL CAPS)
-  * {quantity}: The amount of particles that will spawn
-  * {offset}: The radius of the area where the particles may spawn in the player/target's location
-  * {speed}: To how fast or how big particles will be
-* Example:
-
-```
-- PARTICLE FIREWORKS_SPARK 10 0.1 0.5
-```
-
 ### PLAYER\_RIDE\_ENTITY
 
 * Info: Makes the player to ride the entity targeted.
-* Command: PLAYER\_RIDE\_ON\_ENTITY
+* No command setting
 * Example:
 
 ```yaml
-    entityCommands:
-    - PLAYER_RIDE_ON_ENTITY
+- PLAYER_RIDE_ON_ENTITY
 ```
 
 
 
 ### SET\_AI
 
-* Info: Sets the AI state
-* Command: SET\_AI {true/false}
+* Info: Sets the AI state of the entity
+* Command settings:
+  * value: true to enable the AI of the entity and false to disable.
 * Example:
 
 ```
-- SET_AI false
+- SET_AI value:false
 ```
 
-### SETADULT
+### SET\_ADULT
 
 * Info: Sets the entity in it's "adult" state
-* Command: SETADULT
+* No command setting
 * Example:
 
 ```
-- SETADULT
+- SET_ADULT
 ```
 
 * Example Situation:
@@ -344,14 +292,14 @@ Damages nearest player
 
 
 
-### SETBABY
+### SET\_BABY
 
 * Info: Sets the entity in it's "baby" state
-* Command: SETBABY
+* No command setting
 * Example:
 
 ```
-- SETBABY
+- SET_BABY
 ```
 
 * Example Situation:
@@ -359,15 +307,15 @@ Damages nearest player
 
 
 
-### SETNAME
+### SET\_ENTITY\_NAME
 
 * Info: Forcefully sets the entity's name
-* Command: SETNAME {name}
-  * {name}: The name you want the entity to have
+* Command settings:
+  * name: the new name of the entity
 * Example:
 
 ```
-- SETNAME FLAG
+- SET_ENTITY_NAME name:&6Final &cBoss
 ```
 
 
@@ -375,7 +323,7 @@ Damages nearest player
 ### SHEAR
 
 * Info: Shear the entity
-* Command: SHEAR
+* No command setting
 * Example:
 
 ```
@@ -384,41 +332,41 @@ Damages nearest player
 
 
 
-### TELEPORT ENTITY TO PLAYER
+### TELEPORT\_ENTITY\_TO\_PLAYER
 
 * Info: Teleports the entity to the user of the item
-* Command: TELEPORT ENTITY TO PLAYER
+* No command setting
 * Example:
 
 ```
-- TELEPORT ENTITY TO PLAYER
+- TELEPORT_ENTITY_TO_PLAYER
 ```
 
 
 
-### TELEPORT PLAYER TO ENTITY
+### TELEPORT\_PLAYER\_TO\_ENTITY
 
 * Info: Teleports the user of the item to the entity
-* Command: TELEPORT PLAYER TO ENTITY
+* No command setting
 * Example:
 
 ```
-- TELEPORT PLAYER TO ENTITY
+- TELEPORT_PLAYER_TO_ENTITY
 ```
 
 
 
-### TELEPORT POSITION
+### TELEPORT\_POSITION
 
 * Info: Teleports the entity in a specific location
-* Command: TELEPORT POSITION {x} {y} {z}
-  * {x}: X-Coordinate
-  * {y}: Y-Coordinate
-  * {z}: Z-Coordinate
+* Command settings:
+  * x: X-Coordinate
+  * y: Y-Coordinate
+  * z: Z-Coordinate
 * Example:
 
 ```
-- TELEPORT POSITION %target_x% %target_y% %target_z%
+- TELEPORT_POSITION x:%target_x% y:%target_y% z:%target_z%
 ```
 
 
