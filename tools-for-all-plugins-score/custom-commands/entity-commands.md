@@ -86,7 +86,7 @@ Damages nearby players by 20 player damage in a 7 block radius
 * Example:
 
 ```
-- AROUND 10 false CONDITIONS(%::player_health::%>10&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
+- AROUND 10 false CONDITIONS(%::player_health::%>10&&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
 ```
 
 {% hint style="info" %}
