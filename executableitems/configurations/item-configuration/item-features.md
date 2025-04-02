@@ -194,11 +194,22 @@ ignoreKeepDefaultAttributesFeature: true
 
 ### Custom model data (1.14++)
 
-* Info: Integer to set the value of the customModelData feature of the item. Useful to create different textures for an item.
+* Info:&#x20;
+  * For the Minecraft version before 1.21.4: Integer to set the value of the customModelData feature of the item. Useful to create different textures for an item.
+  * Since the Minecraft version 1.21.4 you can now add text and boolean.
 * Example:&#x20;
 
 ```yaml
+# For the Minecraft version before 1.21.4
 customModelData: 2232
+
+# Since the 1.21.4
+# Use ; to separate your data
+customModelData: 1.0;true;hello;5.0;false;true;my text 2
+
+# A vanilla item like this : /give @p brick[custom_model_data={floats:[1.0],flags:[true],strings:["hello"]}] 1
+# Will look like this in EI : 
+customModelData: 1.0;true;hello
 ```
 
 * Tutorial: [https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures](https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures)

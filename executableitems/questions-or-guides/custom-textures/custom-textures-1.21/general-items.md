@@ -32,7 +32,7 @@ Here you can learn more deeply about the texture pack, how it works, and if you 
   * `/ei create <id>`
 * I'll set up just some visual things, such as the name and the lore.
 
-![](<../../../.gitbook/assets/image (412).png>)
+![](<../../../../.gitbook/assets/image (412).png>)
 
 ### Let's create the textures
 
@@ -44,7 +44,7 @@ Here you can learn more deeply about the texture pack, how it works, and if you 
 
 Once you have it, we are ready to create the texture pack
 
-![Texture of the pickaxe (I couldn't zoom more 😫)](<../../../.gitbook/assets/image (116).png>)
+![Texture of the pickaxe (I couldn't zoom more 😫)](<../../../../.gitbook/assets/image (116).png>)
 
 ### Now the Texture Pack
 
@@ -134,7 +134,7 @@ So checking what we have, should be this:
 
 * The name of "diamond\_pickaxe" is because of that is the nbttag inside the minecraft
 
-![minecraft:diamond\_pickaxe](<../../../.gitbook/assets/image (185).png>)
+![minecraft:diamond\_pickaxe](<../../../../.gitbook/assets/image (185).png>)
 
 {% hint style="info" %}
 The name of the json is the ID ON MINECRAFT
@@ -234,9 +234,9 @@ And that would be all, now grab the pack.mcmeta and the assets folder and create
 If you can't use winrar (as mac users) just create a new folder and drag everything there, that folder will be your ".zip file", then add it to .minecraft/resourcepacks/\<here> and you will be able to use it for local testing. (for server purposes like uploading it, you'd need to check the tutorial about uploading texture pack)
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (244).png>)
+![](<../../../../.gitbook/assets/image (244).png>)
 
-![Remember to change it to .ZIP](<../../../.gitbook/assets/image (158).png>)
+![Remember to change it to .ZIP](<../../../../.gitbook/assets/image (158).png>)
 
 * And now let's put it into minecraft (go to resourcepacks and leave it there)
 
@@ -244,17 +244,17 @@ If you can't use winrar (as mac users) just create a new folder and drag everyth
 
 * Now it is supposed that it is working, so, we are going to edit our item
 
-![](<../../../.gitbook/assets/image (163).png>)
+![](<../../../../.gitbook/assets/image (163).png>)
 
 * And in the customModelData config we are going to set it to "1" (In the files we set it to 1)
 
-![](<../../../.gitbook/assets/image (61).png>)
+![](<../../../../.gitbook/assets/image (61).png>)
 
 * And kaboom !! 💥💥, now the item will have the texture we set before
 
-![](<../../../.gitbook/assets/image (364).png>)
+![](<../../../../.gitbook/assets/image (364).png>)
 
-![](<../../../.gitbook/assets/image (392).png>)
+![](<../../../../.gitbook/assets/image (392).png>)
 
 And that would be all !! If have any question or feel this tutorial needs to explain something better, just tell us in the Discord of EI !! ^^
 
@@ -266,4 +266,4 @@ I hope you understood everything, nice day ! 😀😀
 
 Since a lot of people don't follow the steps correctly, here is the file for you to check if you everything right
 
-{% file src="../../../.gitbook/assets/ExecutableItemsTexturePackExample.zip" %}
+{% file src="../../../../.gitbook/assets/ExecutableItemsTexturePackExample.zip" %}

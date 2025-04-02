@@ -18,8 +18,8 @@
 [custom-projectiles-implementation](custom-projectiles-implementation/)
 {% endcontent-ref %}
 
-{% content-ref url="custom-textures-1.21/" %}
-[custom-textures-1.21](custom-textures-1.21/)
+{% content-ref url="custom-textures/custom-textures-1.21/" %}
+[custom-textures-1.21](custom-textures/custom-textures-1.21/)
 {% endcontent-ref %}
 
 {% content-ref url="../../tools-for-all-plugins-score/general-questions-or-guides/utilities/" %}

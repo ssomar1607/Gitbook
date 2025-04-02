@@ -18,27 +18,27 @@ You can either use the webpage online or download the app, anyways, take a look 
 
 * First, go to FILE -> NEW -> JAVA Block/Item
 
-<figure><img src="../../../.gitbook/assets/image (268).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (268).png" alt=""><figcaption></figcaption></figure>
 
 * Then, this gui will be displayed where the important things are:
   * **File Name**: Basically the project name, it can be whatever you want
   * The other options aren't necessary unless you already have some experience in this app, so, it won't be explained for now. You can read about them in their wiki though.
 
-<figure><img src="../../../.gitbook/assets/image (201).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (201).png" alt=""><figcaption></figcaption></figure>
 
 * Once the project is created, you have your work area, and the materials to work with are CUBES.
 * To add a cube press on 1 and to add a folder press on 2.
 
-<figure><img src="../../../.gitbook/assets/image (282).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (282).png" alt=""><figcaption></figcaption></figure>
 
 * Once a block is added you can move it, resize it or rotate it, each action with specific tools in the toolbar on the top
 
-<figure><img src="../../../.gitbook/assets/image (342).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (342).png" alt=""><figcaption></figcaption></figure>
 
 * And, you can add as many cubes as you want, move them wherever you want rotate it as you want (actually not, the limit is rotation from numbers related to 22.5, but anyways, that part is done automatically by the app 10/10) and resize it until the max (that is 3\*3\*3 blocks)
 * With that options, create lot of cubes until you get your final shape of the item you want. In this case mine finished is this one:
 
-<figure><img src="../../../.gitbook/assets/image (371).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (371).png" alt=""><figcaption></figcaption></figure>
 
 ### Let's create the TEXTURE
 
@@ -46,35 +46,35 @@ Once the MODEL is done, it looks empty, with no texture, so let's create one
 
 * First you have to select EVERY cube on your project
 
-<figure><img src="../../../.gitbook/assets/image (251).png" alt=""><figcaption><p>You can do it selecting everything manually or using folders</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (251).png" alt=""><figcaption><p>You can do it selecting everything manually or using folders</p></figcaption></figure>
 
 * Then go to the left side and click the button that says "Create texture"
 
-<figure><img src="../../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
 * This GUI will be displayed where the important things are:
   * Name: Name of the texture, it MUST BE LOWERCASE
   * Pixel density: In few words, how detailed the texture will be, imagine like minecraft is 16x16 pixels, and real life is 4096x4096 pixels, real life looks lot of times more detailed than minecraft. (doesn't mean better)
   * And the rest of things just leave it as default or as it shows in the photo, they aren't necessary for now, but, the same as before, if want to know about it just read their wiki.
 
-<figure><img src="../../../.gitbook/assets/image (408).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (408).png" alt=""><figcaption></figcaption></figure>
 
 * Now the texture is created, so let's go the PAINT zone on Blockbench
 
-<figure><img src="../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
 * A new GUI will be displayed, and the same as EDIT zone, you have tools
 
-<figure><img src="../../../.gitbook/assets/image (210).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (210).png" alt=""><figcaption></figcaption></figure>
 
 * And the colors palette
 
-<figure><img src="../../../.gitbook/assets/image (359).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (359).png" alt=""><figcaption></figcaption></figure>
 
 * This is your part, where you get picasso vibes and start painting epic things.
 * Once you are done, instead of looking empty like at the first, it will have color and will look as you want.
 
-<figure><img src="../../../.gitbook/assets/image (225).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (225).png" alt=""><figcaption></figcaption></figure>
 
 ### Let's create the DISPLAY
 
@@ -91,7 +91,7 @@ Display is basically the way that it will look inside the game, here you edit lo
 
 * To access there just go to the DISPLAY ZONE of Blockbench
 
-<figure><img src="../../../.gitbook/assets/image (221).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (221).png" alt=""><figcaption></figcaption></figure>
 
 *   And just make your edits, the controls are the same as the one from edit
 
@@ -109,7 +109,7 @@ Now we have the model, texture and display ready, the only thing left is get the
 
 Export the model going FILE -> EXPORT -> Export Block/Item Model
 
-<figure><img src="../../../.gitbook/assets/image (296).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (296).png" alt=""><figcaption></figcaption></figure>
 
 Then the APP will ask you where to save it, do it in a safe place, we are going to use it.
 
@@ -117,7 +117,7 @@ Then the APP will ask you where to save it, do it in a safe place, we are going 
 
 To save the texture just go to the left side and click on the symbol marked in the image.
 
-<figure><img src="../../../.gitbook/assets/image (404).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (404).png" alt=""><figcaption></figcaption></figure>
 
 Then the APP will ask you where to save it, do it in a safe place, we are going to use it.
 

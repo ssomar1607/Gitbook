@@ -2,6 +2,8 @@
 
 {% embed url="https://www.youtube.com/watch?ab_channel=Vayk&v=IAAj2a2dBQo" %}
 
+{% file src="../../../../.gitbook/assets/AnimatedTextures1 (1).zip" %}
+
 {% hint style="info" %}
 The same I said before, this requires previous knowledge, check [<mark style="color:blue;">**General Items**</mark>](general-items.md) for basic stuff[https://youtu.be/IAAj2a2dBQo](https://youtu.be/IAAj2a2dBQo)
 {% endhint %}
@@ -16,11 +18,11 @@ The texture size is something important because we must do some maths after crea
 
 * They will have a order, so take care your animation makes sense for you.
 
-![](<../../../.gitbook/assets/image (373).png>)
+![](<../../../../.gitbook/assets/image (373).png>)
 
 In this case they are 16x16, we have to make a texture file where they all are in a row, so it will have 16x(6x16) -> 16x96 , then put all them in row in correct order and it will look like this
 
-![](<../../../.gitbook/assets/image (233).png>)
+![](<../../../../.gitbook/assets/image (233).png>)
 
 ### Files
 
@@ -42,7 +44,7 @@ frametime is how much frames it will show you in 20 ticks, in this case, the swo
 The name of the file .mcmeta should be equals as the name of the png texture, so it will look like this
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (128).png>)
+![](<../../../../.gitbook/assets/image (128).png>)
 
 {% hint style="info" %}
 Both files must be together, so if the animatedtexture<mark style="color:purple;">.png</mark> is inside "customtextures" folder, the animatedtexture.png<mark style="color:purple;">.mcmeta</mark> must be there too
@@ -50,6 +52,6 @@ Both files must be together, so if the animatedtexture<mark style="color:purple;
 
 * then just save your texture pack and test.
 
-![](<../../../.gitbook/assets/2022-07-15 16-52-08.gif>)
+![](<../../../../.gitbook/assets/2022-07-15 16-52-08.gif>)
 
 * And that's it, make the thing you would want, it is the same for blocks if you want animated blocks. I hope you understood everything and if have any question (that wasn't explained in the last tutorials) feel free to ask it in Discord. Have a nice day !!

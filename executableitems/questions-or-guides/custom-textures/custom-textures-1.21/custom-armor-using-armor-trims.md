@@ -26,21 +26,21 @@ We have to create the texture for our new armor, we can do this here or using an
 
 What you have to create is the custom armor using diamond files, so in this case, this will be the ones used
 
-<figure><img src="../../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 We can download them clicking on Save, then download, and right click the image to save it
 
-<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 Having something like this
 
-<figure><img src="../../../.gitbook/assets/descarga.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/descarga.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/descarga (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/descarga (1).png" alt=""><figcaption></figcaption></figure>
 
 Well, now we have our armor textures, perfect ! Now let's create the texture pack
 
@@ -94,14 +94,14 @@ Finally, lets go into our minecraft and test with the coast trim
 
 It seems working !
 
-<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 
 And.. it works&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
 Perfect ! Now you can do the same with another trims, until you change all the available trims O.O
 
 ### Texture pack
 
-{% file src="../../../.gitbook/assets/texture.zip" %}
+{% file src="../../../../.gitbook/assets/texture.zip" %}
