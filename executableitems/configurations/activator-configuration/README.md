@@ -4,8 +4,8 @@ Here you will be able to read about activator configuration of the ExecutableIte
 
 As previous knowledge activators are different ways you have to trigger features on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
 
-{% content-ref url="list-of-the-activators-for-executableitems.md" %}
-[list-of-the-activators-for-executableitems.md](list-of-the-activators-for-executableitems.md)
+{% content-ref url="list-of-the-activators.md" %}
+[list-of-the-activators.md](list-of-the-activators.md)
 {% endcontent-ref %}
 
 {% content-ref url="outdated-or-pending-removal-activators-descriptions-gifs.md" %}

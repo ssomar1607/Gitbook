@@ -47,15 +47,15 @@ activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - ALL_PLAYERS RANDOM RUN:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM END
+    - ALL_PLAYERS RANDOM_RUN selectionCount:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM_END
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
-    - ALL_PLAYERS RANDOM RUN:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM END
+    - ALL_PLAYERS RANDOM_RUN selectionCount:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM_END
   activator2: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of entity
     entityCommands:
-    - ALL_PLAYERS RANDOM RUN:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM END
+    - ALL_PLAYERS RANDOM_RUN selectionCount:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM_END
 ```
 
 
@@ -114,7 +114,155 @@ activators:
 It supports blacklist and whitelist
 {% endhint %}
 
+### AROUND
 
+* Info: Targets players in a specific radius and makes them run commands
+* Command settings:
+  * distance: To how far in radius the command will select players (Default 3)
+  * displayMsgIfNoPlayer: (true or false) To notify the user of the item if it managed to target players or not (Default true)
+  * throughBlocks: it will affect or not the players that are behind blocks (Default true)
+  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected. (Default 0)
+  * commands: The commands that will be executed for the target players.
+
+{% hint style="success" %}
+You can add **multiple commands** ! Use the separator **<+>**
+
+Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **<+>** DELAY 5 **<+>**  DAMAGE 5
+{% endhint %}
+
+{% hint style="info" %}
+**Placeholders:** The placeholders are the same that the [Player Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player-placeholders) but you need to replace "player" by "around\_target"
+
+Example: %around\_target%, %around\_target\_uuid%
+{% endhint %}
+
+* Examples:
+
+This summons lightning at players in a 20 block radius
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:20 displayMsgIfNoPlayer:false execute at %around_target% run summon lightning_bolt
+```
+
+Send a message to players between 5 and 10 blocks
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 displayMsgIfNoPlayer:true throughBlocks:true safeDistance:5 SENDMESSAGE &eIt is a test !
+```
+
+{% hint style="warning" %}
+You can nest AROUND with the commands : AROUND, IF, NEAREST, ALL\_PLAYERS
+
+If you do that the separator and the placeholders will evolve depending of the nested step.\
+
+
+base command separator : <+>
+
+first nested command : <+::step1>
+
+... : <+::step2> , <+::step3>, ...
+
+\
+base placeholder : %around\_target%
+
+first nested command : %around\_target::step1%
+
+... : %around\_target::step2%, %around\_target::step3%, ...
+{% endhint %}
+
+Examples:
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:5 displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND distance:5 displayMsgIfNoPlayer:false say &a(2)&e%around_target::step2%
+```
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
+```
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 throughBlocks:false displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
+```
+
+
+
+{% hint style="info" %}
+You can add custom placeholders **conditions** to adjust the players targeted
+
+Format:  AROUND \<settings> CONDITIONS(\<conditions>) \<command>
+
+&#x20;    \<settings>  are the command settings
+
+&#x20;    \<conditions> are the conditions
+
+Conditions Format:  CONDITIONS(%::\<my\_placeholder\_name>::%\<comparator>\<value>)
+
+&#x20;     \<my\_placeholder\_name> is the name of the placeholder
+
+&#x20;     \<comparator> The comparator : "<", "<=", "=", ">", ">="
+
+&#x20;     \<value> the value
+
+&#x20;You can add multiple conditions using the separator "&&"
+{% endhint %}
+
+* Examples:
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - 'AROUND distance:10 CONDITIONS(%::player_health::%>10&#x26;&#x26;%::player_name::%=2Ssomar) SEND_MESSAGE &#x26;eclick'
+</code></pre>
+
+{% hint style="info" %}
+Keep in mind that the CONDITIONS() part parses the placeholders in it with the player selected by the AROUND command. So what actually happened in the placeholders above is that it checks if the target's health is greater than 10 and if that player who got selected by the AROUND command is named "2Ssomar"
+{% endhint %}
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_{% raw %}
+{%player%}
+{% endraw %}_{betterteams_name}::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
+```
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - 'AROUND distance:2 CONDITIONS(%::player_name::%!=%player%) DAMAGE 15'
+```
+
+{% hint style="info" %}
+Placeholders that came from plugins like ExecutableItems, ExecutableBlocks will be parsed not by the player affected by the AROUND command.
+
+For example, with ExecutableBlocks, CONDITIONS(%var\_faction%=%::factionsuuid\_faction\_name::%) works through checking if the block's factions variable value is equal to the targetted player's faction\
+Placeholder Source: ([https://factions.support/placeholderapi/](https://factions.support/placeholderapi/))
+{% endhint %}
 
 ### BACKDASH
 
@@ -765,6 +913,84 @@ activators:
 - MLIB_DAMAGE 10 PHYSICAL false FIRE
 ```
 
+### MOB\_AROUND
+
+* Info: Targets entities in a specific radius and makes them run commands
+  * Available entities -> [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html)
+* Command settings:
+  * distance: To how far in radius the command will select entities
+  * displayMsgIfNoEntity: (true or false) To notify the user of the item if it didn't manage to target any mobs.
+    * **Set to false to hide the message**
+  * throughBlocks: it will affect or not the mobs that are behind blocks
+  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
+  * You can BLACKLIST or WHITELIST entities adding one of these ones in anyplace of the command:
+    * BLACKLIST(ZOMBIE,ARMOR\_STAND)
+    * WHITELIST(CHICKEN)
+
+{% hint style="success" %}
+You can add **multiple commands** ! Use the separator **<+>**
+
+Example: minecraft:effect give .. **<+>** DELAY 5 **<+>**  DAMAGE 5
+{% endhint %}
+
+{% hint style="info" %}
+**Placeholders:** The placeholders are the same that the [Entity Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity-placeholders) but you need to replace "player" by "around\_target"
+
+Example: %around\_target%, %around\_target\_uuid%
+{% endhint %}
+
+* Examples:
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - MOB_AROUND distance:3 displayMsgIfNoEntity:true throughBlocks:true safeDistance:0 [conditions] COMMAND1 <+> COMMAND2 <+> ...
+    - MOB_AROUND distance:3 displayMsgIfNoEntity:false BURN 10
+    - MOB_AROUND distance:5 execute at %around_target_uuid% run summon lightning_bolt
+    - MOB_AROUND distance:5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
+    - MOB_AROUND distance:5 displayMsgIfNoEntity:false effect give %around_target_uuid% poison 10 10
+    - MOB_AROUND distance:10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
+```
+
+To use entity nbt on the WHITELIST/BLACKLIST field, you need to install [NBT API](https://www.spigotmc.org/resources/nbt-api.7939/) plugin
+
+It supports [NBT Tags](https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities) so you can add for example something like: `ZOMBIE{IsBaby:1}`&#x20;
+
+Examples:
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - MOB_AROUND distance:7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
+    - MOB_AROUND distance:5 WHITELIST(ZOMBIE{IsBaby:1}) DAMAGE 20
+    - MOB_AROUND distance:9 WHITELIST(WOLF{Owner:"%player%"}) HEAL 5
+    - MOB_AROUND distance:9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
+```
+
+{% hint style="warning" %}
+You can nest MOB\_AROUND with the commands : MOB\_AROUND, IF, MOB\_NEAREST, ALL\_MOBS
+
+If you do that the separator and the placeholders will evolve depending of the nested step.\
+
+
+base command separator : <+>
+
+first nested command : <+::step1>
+
+... : <+::step2> , <+::step3>, ...
+
+\
+base placeholder : %around\_target%
+
+first nested command : %around\_target::step1%
+
+... : %around\_target::step2%, %around\_target::step3%, ...
+{% endhint %}
+
 ### MOB\_NEAREST
 
 * Info: Targets the nearest mob from the player/target.
@@ -772,6 +998,19 @@ activators:
   * `MOB_NEAREST` {max accepted distance} `{command}`
     * {max accepted distance}:  Max distance accepted that the "entity" can be.
     * {command}: The command that will be executed
+
+{% hint style="success" %}
+You can add **multiple commands** ! Use the separator **<+>**
+
+Example: minecraft:effect give .. **<+>** DELAY 5 **<+>**  DAMAGE 5
+{% endhint %}
+
+{% hint style="info" %}
+**Placeholders:** The placeholders are the same that the [Entity Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity-placeholders) but you need to replace "player" by "around\_target"
+
+Example: %around\_target%, %around\_target\_uuid%
+{% endhint %}
+
 * Example:
 
 Damages nearest player
@@ -780,7 +1019,25 @@ Damages nearest player
 - MOB_NEAREST 10 DAMAGE 5
 ```
 
+{% hint style="warning" %}
+You can nest MOB\_NEAREST with the commands : MOB\_AROUND, IF, MOB\_NEAREST, ALL\_MOBS
 
+If you do that the separator and the placeholders will evolve depending of the nested step.\
+
+
+base command separator : <+>
+
+first nested command : <+::step1>
+
+... : <+::step2> , <+::step3>, ...
+
+\
+base placeholder : %around\_target%
+
+first nested command : %around\_target::step1%
+
+... : %around\_target::step2%, %around\_target::step3%, ...
+{% endhint %}
 
 ### NEAREST
 
@@ -789,6 +1046,19 @@ Damages nearest player
   * `NEAREST` {max accepted distance} `{command}`
     * {max accepted distance}: Max distance accepted that the "target" can be.
     * {command}: The command that will be executed
+
+{% hint style="success" %}
+You can add **multiple commands** ! Use the separator **<+>**
+
+Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **<+>** DELAY 5 **<+>**  DAMAGE 5
+{% endhint %}
+
+{% hint style="info" %}
+**Placeholders:** The placeholders are the same that the [Player Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player-placeholders) but you need to replace "player" by "around\_target"
+
+Example: %around\_target%, %around\_target\_uuid%
+{% endhint %}
+
 * Example:
 
 Damages nearest player
@@ -796,6 +1066,26 @@ Damages nearest player
 ```
 - NEAREST 8 DAMAGE 5
 ```
+
+{% hint style="warning" %}
+You can nest NEAREST with the commands : AROUND, IF, NEAREST, ALL\_PLAYERS
+
+If you do that the separator and the placeholders will evolve depending of the nested step.\
+
+
+base command separator : <+>
+
+first nested command : <+::step1>
+
+... : <+::step2> , <+::step3>, ...
+
+\
+base placeholder : %around\_target%
+
+first nested command : %around\_target::step1%
+
+... : %around\_target::step2%, %around\_target::step3%, ...
+{% endhint %}
 
 ### OPMESSAGE
 
@@ -1032,15 +1322,16 @@ This is not the same as essential's smite command. If you want to smite your tar
 * Command: TRANSFER\_ITEM {slot of launcher} {slot of receiver}
   * {slot of launcher}: Slot of the item who is going to move
   * {slot of receiver}: Slot where the item will land
+
+{% hint style="info" %}
+[Slots information](https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots)
+{% endhint %}
+
 * Example:
 
 ```
 - TRANSFER_ITEM 38 40
 ```
-
-{% hint style="info" %}
--1 to mainhand
-{% endhint %}
 
 
 

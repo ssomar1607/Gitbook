@@ -12,7 +12,7 @@ Place the SCore jar in your resources project
 
 and in maven add:
 
-```
+```xml
 <dependency>
     <groupId>com.ssomar.score</groupId>
     <artifactId>SCore</artifactId>

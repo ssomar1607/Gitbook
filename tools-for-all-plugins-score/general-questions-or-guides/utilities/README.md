@@ -2,17 +2,32 @@
 
 Here we will leave some stuff that may be useful when developing anything.
 
-### Colors
+## Colors
 
 <figure><img src="../../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
 
-### Slots
+## Slots
 
 * This is a photo of the slots ID of the latest versions
 
 ![](<../../../.gitbook/assets/image (215).png>)
 
-### More placeholders
+#### Textual description
+
+* Hands :&#x20;
+  * Main Hand : -1
+  * Off Hand: 40
+* Equipment :&#x20;
+  * Boots: 36
+  * Leggings: 37
+  * Chestplate: 38
+  * Helmet: 39
+* Hotbar:
+  * starting from left to right has slots 0 to 8.&#x20;
+* Inventory slots
+  * The 27 slots inside the main inventory goes from top left to bottom right, spanning from 9 to 35.
+
+## More placeholders
 
 *   There are some placeholders from EI, but if want to really hook into placeholders, you should take a look at PlaceholderAPI and its wiki
 
@@ -24,23 +39,23 @@ Here we will leave some stuff that may be useful when developing anything.
 
 
 
-### Effect cmd
+## Effect cmd
 
 * If have no idea how the effect cmd works, take a look at this page:
   * [https://www.digminecraft.com/game\_commands/effect\_command.php](https://www.digminecraft.com/game_commands/effect_command.php)
 
-### Playsound cmd
+## Playsound cmd
 
 * If have no idea how the playsound cmd works you should take a look here:
   * [https://www.digminecraft.com/game\_commands/playsound\_command.php](https://www.digminecraft.com/game_commands/playsound_command.php)
 
-### (General) Particle cmd
+## (General) Particle cmd
 
 * If have no idea how the particle cmd works you should take a look at this links:
   * [https://imgur.com/gallery/tVfks](https://imgur.com/gallery/tVfks)
   * [https://www.digminecraft.com/game\_commands/particle\_command.php](https://www.digminecraft.com/game_commands/particle_command.php)
 
-### (Dust) particle cmd
+## (Dust) particle cmd
 
 
 
@@ -53,12 +68,12 @@ Here we will leave some stuff that may be useful when developing anything.
 * This link will help you to select the correct values to \<R> \<G> \<B>:
   * [https://rgbcolorcode.com](https://rgbcolorcode.com)
 
-### Tellraw cmd
+## Tellraw cmd
 
 * Normally you would use the SENDMESSAGE command, but sometimes, old commands as tellraw is useful, if don't know how to use it take a look here:
   * [https://www.digminecraft.com/game\_commands/tellraw\_command.php](https://www.digminecraft.com/game_commands/tellraw_command.php)
 
-### NBT Tags
+## NBT Tags
 
 *   When developing items, specially in the premium version, you maybe would like to edit some nbt tags to take control of every aspect of minecraft, to know them read this:
 

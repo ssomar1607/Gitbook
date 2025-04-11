@@ -15,7 +15,7 @@ Example with a placeholder`:`
 {% endhint %}
 
 {% hint style="info" %}
-Entity commands now supports NPCs from Citizens
+Entity commands supports NPCs from Citizens
 {% endhint %}
 
 ## Mixed Commands
@@ -31,69 +31,6 @@ These commands can be used in the Player related commands OR Entity related comm
 ## Custom commands
 
 _Sorted by alphabetical order_
-
-### +++ (Command Connector)
-
-* Info: Allows you to add more commands in one command line. Will not work well with `AROUND` and `MOB_AROUND`.
-* Example:
-
-```
-- give %player% diamond 1 +++ SENDMESSAGE &eYou got 1 diamond!
-```
-
-```
-- 'RANDOM RUN: 1'
-- SENDMESSAGE &4You got nothing...
-- SENDMESSAGE &eYou got dirt! +++ give %player% dirt 1
-- SENDMESSAGE &bYou got diamond! +++ give %player% diamond 1
-```
-
-
-
-### AROUND
-
-* Info: Targets players in a specific radius and makes them run commands
-* Command:&#x20;
-  * `AROUND {distance} {command}`
-    * {distance}: To how far in radius the command will select players
-    * {command}: The command that the targeted players will execute
-* Example:
-
-This summons lightning at players in a 20 block radius
-
-```
-- AROUND 20 execute at %around_target% run summon lightning_bolt
-```
-
-This gives players slowness in a 10 block radius
-
-```
-- AROUND 10 effect give %around_target% slowness 50 5
-```
-
-Damages nearby players by 20 player damage in a 7 block radius
-
-```
-- AROUND 7 DAMAGE 20
-```
-
-#### You can add conditions to AROUND command
-
-* The condition looks like AROUND \<distance> CONDITIONS(\<conditions>) \<command>
-* Conditions works with placeholders but need to be %::\_::% instead of %\_%
-  * For example %::player\_health::%
-* To add MORE than 1 condition use "&&" between the conditions
-* Example:
-
-```
-- AROUND 10 false CONDITIONS(%::player_health::%>10&&%::player_name::%=2Ssomar) SENDMESSAGE &eclick
-```
-
-{% hint style="info" %}
-Keep in mind that the CONDITIONS() part parses the placeholders in it with the player selected by the AROUND command. So what actually happened in the placeholders above is that it checks if the target's health is greater than 10 and if that player who got selected by the AROUND command is named "2Ssomar"
-{% endhint %}
-
-
 
 ### ANGRY\_AT
 
@@ -216,40 +153,6 @@ it only works for 1.16.5+
 
 ```
 - KILL
-```
-
-### MOB\_AROUND
-
-* Info: Targets entities in a specific radius and makes them run commands
-* Command: MOB\_AROUND {distance} {mute or not} (command)
-  * {distance}: To how far in radius the command will select entities
-  * {mute or not}: (true or false) To notify the user of the item if it didn't manage to target any mobs.
-    * **Set to true to hide the message**
-  * You can BLACKLIST or WHITELIST entities adding one of these ones in anyplace of the command:
-    * BLACKLIST(ZOMBIE,ARMOR\_STAND)
-    * WHITELIST(CHICKEN)
-* Example:
-
-```
-- MOB_AROUND 3 false BURN 10
-- MOB_AROUND 5 execute at %around_target_uuid% run summon lightning_bolt
-- MOB_AROUND 5 BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
-- MOB_AROUND 5 true effect give %around_target_uuid% poison 10 10
-```
-
-To use entity nbt on the WHITELIST/BLACKLIST field, you need to install NBT API plugin
-
-{% embed url="https://www.spigotmc.org/resources/nbt-api.7939/" %}
-
-It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1}`
-
-{% embed url="https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities" %}
-
-```
-- MOB_AROUND 7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
-- MOB_AROUND 5 WHITELIST(ZOMBIE{IsBaby:1}) DAMAGE 20
-- MOB_aROUND 9 WHITELIST(WOLF{Owner:"%player%"}) HEAL 5
-- MOB_aROUND 9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
 ```
 
 

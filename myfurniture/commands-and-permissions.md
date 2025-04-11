@@ -155,7 +155,7 @@ It supports entities too just use the entity UUID instead of player name
   * <mark style="color:blue;">**/mf giveall {id} {quantity}**</mark>**&#x20;**<mark style="color:purple;">**\[world]**</mark>
 * Permission: `mf.cmd.giveall`
 
-#### Give an EB in a specific slot of a player&#x20;
+#### Give a furniture in a specific slot of a player&#x20;
 
 * Command:&#x20;
   * <mark style="color:blue;">**/mf giveslot {playername} {id}**</mark><mark style="color:purple;">{Variables:{var\_id:val},Usage:val}</mark> <mark style="color:blue;">**{quantity} {slot}**</mark>**&#x20;&#x20;**<mark style="color:purple;">**\[override true or false]**</mark>
@@ -167,7 +167,7 @@ It supports entities too just use the entity UUID instead of player name
   * _Override allow the Furniture to take that slot, and if there was an item there, it is going to move to another slot or get dropped to the ground._
 * Permission: `mf.cmd.giveslot`
 
-**Give every EB in a specific folder to a player**
+**Give every furniture in a specific folder to a player**
 
 * Command:
   * <mark style="color:blue;">**/mf givefolder {playername} {folder} {quantity}**</mark>

@@ -42,7 +42,7 @@ This is the first thing you have to set, the type of projectile you want to crea
 
 Example:
 
-```
+```yaml
 type: ARROW
 ```
 
@@ -54,7 +54,7 @@ type: ARROW
   * false
 * Example:
 
-```
+```yaml
 customNameVisible: true
 ```
 
@@ -63,7 +63,7 @@ customNameVisible: true
 * This is the NAME of the projectile, useful for customNameVisible and placeholder stuff.
 * Example:
 
-```
+```yaml
 customName: '&eBullet'
 ```
 
@@ -72,7 +72,7 @@ customName: '&eBullet'
 * Option to allow visual fire on the projectile
 * Example:
 
-```
+```yaml
 visualFire: true
 ```
 
@@ -93,7 +93,7 @@ visualFire: true
   * CREATIVE\_ONLY
 * Example:
 
-```
+```yaml
 pickupStatus: CREATIVE_ONLY
 ```
 
@@ -105,7 +105,7 @@ pickupStatus: CREATIVE_ONLY
   * false
 * Example:
 
-```
+```yaml
 glowing: true
 ```
 
@@ -117,7 +117,7 @@ glowing: true
   * false
 * Example:
 
-```
+```yaml
 bounce: true
 ```
 
@@ -129,7 +129,7 @@ bounce: true
   * false
 * Example:
 
-```
+```yaml
 gravity: true
 ```
 
@@ -138,7 +138,7 @@ gravity: true
 * How fast the projectile will be
 * Example:
 
-```
+```yaml
 velocity: 2.0
 ```
 
@@ -164,7 +164,7 @@ Equation: `velocity x 1 = Arrow Damage`
 
 * Example:
 
-```
+```yaml
 particles:
   1:
     particlesType: FLAME
@@ -195,7 +195,7 @@ particles:
 * How long will be the projectile's life in seconds
 * Example:
 
-```
+```yaml
 despawnDelay: 10
 ```
 
@@ -218,7 +218,7 @@ It supports decimals
   * false
 * Example:
 
-```
+```yaml
 removeWhenHitBlock: true
 ```
 
@@ -236,7 +236,7 @@ removeWhenHitBlock: true
 
 Example:
 
-```
+```yaml
 visualItem: diamond_sword
 ```
 
@@ -250,8 +250,16 @@ visualItem is compatible with custom head and adding textures to that head
 
 * Also visual item supports custom model data of the item.
 
-```
+```yaml
 customModelData: 37
+```
+
+#### Item Model
+
+* Since the 1.21.2 you can edit the item Model of the projectile.
+
+```yaml
+itemModel: mypack:mymodel
 ```
 
 ### Arrow
@@ -264,7 +272,7 @@ customModelData: 37
   * false
 * Example:
 
-```
+```yaml
 critical: true
 ```
 
@@ -282,7 +290,7 @@ Only for the ARROW projectile
 * Default: -1
 * Example:
 
-```
+```yaml
 damage: 10.0
 ```
 
@@ -300,7 +308,7 @@ Don't use negative value, nothing will change.
 * If value is set to -1, it will disappear after hitting 1 mob.
 * Example:
 
-```
+```yaml
 pierceLevel: 4
 ```
 
@@ -308,13 +316,13 @@ pierceLevel: 4
 
 * **Active color** in -> **true** allows the edition of Color
 
-```
+```yaml
 activeColor: true
 ```
 
 * It is the color that the arrow will emit
 
-```
+```yaml
 color: AQUA
 ```
 
@@ -330,7 +338,7 @@ color: AQUA
   * false
 * Example:
 
-```
+```yaml
 silent: true
 ```
 
@@ -344,7 +352,7 @@ silent: true
   * false
 * Example:
 
-```
+```yaml
 charged: true
 ```
 
@@ -355,7 +363,7 @@ charged: true
 * Radius of explosion
 * Example
 
-```
+```yaml
 radius: 3
 ```
 
@@ -367,7 +375,7 @@ radius: 3
   * false
 * Example:
 
-```
+```yaml
 incendiary: true
 ```
 
@@ -381,7 +389,7 @@ incendiary: true
 
 * Allow to enchant tridents.
 
-```
+```yaml
 enchantments:
  enchantment1:
    enchantment: unbreaking
@@ -395,7 +403,7 @@ enchantments:
 
 * Allow to edit the effects of the splash potion
 
-```
+```yaml
 potionEffects:
  1:
   potionEffectType: SPEED

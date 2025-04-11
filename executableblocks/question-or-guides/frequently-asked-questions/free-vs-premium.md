@@ -2,6 +2,13 @@
 
 The free version of ExecutableBlocks is like a free-trial of it, to know how it works, what is possible but once you want to improve your blocks, and don't have all limitations the free one you have you start thinking into buying the premium version.. but, is it worth? what differences are there? couple of common questions asked in the discord of Ssomar plugins, this page, should solve your answers.
 
+| Free                            | Premium                                               |
+| ------------------------------- | ----------------------------------------------------- |
+| 1 activator per ExecutableBlock | Unlimited activators                                  |
+| Watermark in the lore           | No watermark                                          |
+| 15 ExecutableBlocks max         | Unlimited Furniture                                   |
+| No title                        | Ability to add a title to your placed ExecutableBlock |
+
 ## No more limitations
 
 ### Amount of blocks

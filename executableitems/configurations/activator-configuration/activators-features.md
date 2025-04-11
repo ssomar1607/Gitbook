@@ -93,7 +93,7 @@ activators:
 
 ### Detailed slots
 
-* Info: List of integer values that represents slots of the inventory where the activator will be able to work. This means, if the event occurs in one slot that is not from here then the activator won't be triggered.
+* Info: List of integer values that represents slots of the inventory where the activator will be able to work. This means, if the event occurs in one slot that is not from here then the activator won't be triggered. [More Info about the slots values.](https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots)
 * Example:
 
 ```yaml
@@ -204,7 +204,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
-    cooldownOptions:
+    cooldownFeatures:
       cooldown: 0
       isCooldownInTicks: false
       cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
@@ -234,7 +234,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
-    globalCooldownOptions:
+    globalCooldownFeatures:
       cooldown: 0
       isCooldownInTicks: false
       cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'

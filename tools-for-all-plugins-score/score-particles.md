@@ -6,7 +6,7 @@ Score includes 34 custom pre-made particles shapes from Xparticle library. You c
 
 The attached link will direct you to the list of all **available particle types**.
 
-{% embed url="https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/particles/XParticle.java" %}
+{% embed url="https://github.com/CryptoMorin/XSeries/blob/master/core/src/main/java/com/cryptomorin/xseries/particles/Particles.java" %}
 
 <details>
 

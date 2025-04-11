@@ -1,6 +1,6 @@
 # Projectile ideas - How to create...?
 
-## ¿What is this page?
+## What is this page?
 
 * This page will be a explanation in general terms of common projectiles ideas people ask how to do, so, if you want to create something.. and don't know how to do it, you should take a look here first, maybe your question is here, or, a similar method, that you can think of how to recreate it looking how projectile works ^^
 

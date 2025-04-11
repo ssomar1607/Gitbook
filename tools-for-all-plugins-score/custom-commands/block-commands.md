@@ -26,22 +26,6 @@ Enable **HIDE USAGE** when using a big number in **MINEINCUBE** as it can shorte
 
 _Sorted by alphabetical order_
 
-### +++ (Command Connector)
-
-* Info: Allows you to add more commands in one command line. Will not work well with `AROUND` and `MOB_AROUND`.
-* Example:
-
-```
-- give %player% diamond 1 +++ SENDMESSAGE &eYou got 1 diamond!
-```
-
-```
-- 'RANDOM RUN: 1'
-- SENDMESSAGE &4You got nothing...
-- SENDMESSAGE &eYou got dirt! +++ give %player% dirt 1
-- SENDMESSAGE &bYou got diamond! +++ give %player% diamond 1
-```
-
 ### <+> (Around Command Connector)
 
 * Info: Allows you to add more commands in one command line. Will only work well with `AROUND` and `MOB_AROUND`.

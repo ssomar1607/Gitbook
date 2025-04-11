@@ -1,8 +1,4 @@
-# List of the Activators for ExecutableItems
-
-{% hint style="info" %}
-Hi ! Its planned for each activator to record video of explanation of it and how to create the examples mentioned. if want to insist ping vayk
-{% endhint %}
+# List of the Activators
 
 ## Activators of ExecutableItems
 

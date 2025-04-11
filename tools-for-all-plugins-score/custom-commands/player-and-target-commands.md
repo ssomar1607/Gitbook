@@ -62,50 +62,6 @@ These commands can be used in the Player related commands OR Entity related comm
 
 _Sorted by alphabetical order_
 
-### +++ (Command Connector)
-
-* Info: Allows you to add more commands in one command line. Should be used only when you use the custom command `RANDOM RUN` .
-* Example:
-
-```
-- give %player% diamond 1 +++ SENDMESSAGE &eYou got 1 diamond!
-```
-
-```
-- 'RANDOM RUN: 1'
-- SENDMESSAGE &4You got nothing...
-- SENDMESSAGE &eYou got dirt! +++ give %player% dirt 1
-- SENDMESSAGE &bYou got diamond! +++ give %player% diamond 1
-- RANDOM END
-```
-
-### <+> (Around Command Connector)
-
-* Info: Allows you to add more commands in one command line. Will only work well with `AROUND` and `MOB_AROUND` but also with `ALL_PLAYERS` _,_ `ALL_MOB`, `NEAREST` and `MOB_NEAREST`.
-* Example:&#x20;
-
-```
-- AROUND 10 false execute at %around_target% run summon lightning_bolt ~ ~ ~ <+> SENDMESSAGE &You got smited!
-```
-
-```
-- MOB_AROUND 7 true STUN_ENABLE <+> DELAY 5 <+> STUN_DISABLE
-```
-
-### <+::step1> (Around Command Connector when many AROUND, MOB\_AROUND, NEAREST, MOB\_NEAREST, ALL\_PLAYERS, ALL\_MOBS AND IF are nested)
-
-```
-- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND 5 false say &a(2)&e%around_target::step2%
-```
-
-```
-- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
-```
-
-```
-- AROUND 5 false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND 5 false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
-```
-
 ### ABSORPTION
 
 * Info: Gives absorption effect to the player
@@ -139,18 +95,18 @@ And you can increase it by typing: /attribute PLAYER\_NAME minecraft:max\_absorp
     option: # Here goes an activator that is at least instance of player
     commands:
     # You can do that to temporary up the max_absorption value of the player
-<strong>    - attribute %player% minecraft:max_absorption base set 5
+<strong>    - minecraft:attribute %player% minecraft:max_absorption base set 5
 </strong>    - ABSORPTION amount:5 time:200
-    - DELAYTICK 200
-    - attribute PLAYER_NAME minecraft:max_absorption base set 0
+    - DELAY_TICK 200
+    - minecraft:attribute PLAYER_NAME minecraft:max_absorption base set 0
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
     # You can do that to temporary up the max_absorption value of the target
-    - attribute %player% minecraft:max_absorption base set 5
+    - minecraft:attribute %player% minecraft:max_absorption base set 5
     - ABSORPTION amount:5 time:200
-    - DELAYTICK 200
-    - attribute PLAYER_NAME minecraft:max_absorption base set 0
+    - DELAY_TICK 200
+    - minecraft:attribute PLAYER_NAME minecraft:max_absorption base set 0
 </code></pre>
 
 ### ACTIONBAR
@@ -257,128 +213,6 @@ activators:
     commands:
     - ADD_ITEM_LORE slot:%slot% text:&7Item of %target% added by %player%
 ```
-
-### AROUND
-
-* Info: Targets players in a specific radius and makes them run commands
-* Command settings:
-  * distance: To how far in radius the command will select players (Default 3)
-  * displayMsgIfNoPlayer: (true or false) To notify the user of the item if it managed to target players or not (Default true)
-  * throughBlocks: it will affect or not the players that are behind blocks (Default true)
-  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected. (Default 0)
-  * commands: The commands that will be executed for the target players, separate them with <+>
-* Example:
-
-This summons lightning at players in a 20 block radius
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:20 displayMsgIfNoPlayer:false execute at %around_target% run summon lightning_bolt
-```
-
-This gives players slowness in a 10 block radius
-
-<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
-</strong>  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:10 effect give %around_target% slowness 50 5
-</code></pre>
-
-Damages nearby visible players by 20 player damage in a 7 block radius
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:7 throughBlocks:false DAMAGE 20
-```
-
-Send a message to players between 5 and 10 blocks
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:10 displayMsgIfNoPlayer:true throughBlocks:true safeDistance:5 SENDMESSAGE &eIt is a test !
-```
-
-Many around in the same command
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:5 displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND distance:5 displayMsgIfNoPlayer:false say &a(2)&e%around_target::step2%
-```
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
-```
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:10 throughBlocks:false displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
-```
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_{% raw %}
-{%player%}
-{% endraw %}_{betterteams_name}::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
-```
-
-#### You can add conditions to AROUND command
-
-* The condition looks like AROUND \<settings> CONDITIONS(\<conditions>) \<command>
-* Conditions works with placeholders but need to be %::\_::% instead of %\_%
-  * For example %::player\_health::%
-* To add MORE than 1 condition use "&&" between the conditions
-* Example:
-
-<pre class="language-yaml"><code class="lang-yaml"><strong>activators:
-</strong>  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:10 CONDITIONS(%::player_health::%>10&#x26;&#x26;%::player_name::%=2Ssomar) SENDMESSAGE &#x26;eclick
-</code></pre>
-
-(Mainly in blockCommands/entityCommands) where you want the owner of the block/projectile won't harm the user of the item (Requires PlaceholderAPI's Player Expansion)
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - AROUND distance:2 CONDITIONS(%::player_name::%!=%player%) DAMAGE 15
-```
-
-{% hint style="info" %}
-Keep in mind that the CONDITIONS() part parses the placeholders in it with the player selected by the AROUND command. So what actually happened in the placeholders above is that it checks if the target's health is greater than 10 and if that player who got selected by the AROUND command is named "2Ssomar"
-{% endhint %}
-
-{% hint style="info" %}
-Placeholders that came from plugins like ExecutableItems, ExecutableBlocks will be parsed not by the player affected by the AROUND command.
-
-For example, with ExecutableBlocks, CONDITIONS(%var\_faction%=%::factionsuuid\_faction\_name::%) works through checking if the block's factions variable value is equal to the targetted player's faction\
-Placeholder Source: ([https://factions.support/placeholderapi/](https://factions.support/placeholderapi/))
-{% endhint %}
 
 
 
@@ -869,55 +703,6 @@ activators:
     option: # Here goes an activator that is at least instance of player
     commands:
     - MIX_HOTBAR
-```
-
-
-
-### MOB\_AROUND
-
-* Info: Targets entities in a specific radius and makes them run commands
-  * Available entities -> [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html)
-* Command settings:
-  * distance: To how far in radius the command will select entities
-  * displayMsgIfNoEntity: (true or false) To notify the user of the item if it didn't manage to target any mobs.
-    * **Set to true to hide the message**
-  * throughBlocks: it will affect or not the mobs that are behind blocks
-  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
-  * You can BLACKLIST or WHITELIST entities adding one of these ones in anyplace of the command:
-    * BLACKLIST(ZOMBIE,ARMOR\_STAND)
-    * WHITELIST(CHICKEN)
-* Example:
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - MOB_AROUND distance:3 displayMsgIfNoEntity:true throughBlocks:true safeDistance:0 [conditions] COMMAND1 <+> COMMAND2 <+> ...
-    - MOB_AROUND distance:3 displayMsgIfNoEntity:false BURN 10
-    - MOB_AROUND distance:5 execute at %around_target_uuid% run summon lightning_bolt
-    - MOB_AROUND distance:5 BLACKLIST(ZOMBIE,ARMOR_STAND) DAMAGE 20
-    - MOB_AROUND distance:5 displayMsgIfNoEntity:false effect give %around_target_uuid% poison 10 10
-    - MOB_AROUND distance:10 WHITELIST(ZOMBIE{CustomName:"*"}) say HELLO
-```
-
-To use entity nbt on the WHITELIST/BLACKLIST field, you need to install NBT API plugin
-
-{% embed url="https://www.spigotmc.org/resources/nbt-api.7939/" %}
-
-It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1}`
-
-{% embed url="https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities" %}
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    option: # Here goes an activator that is at least instance of player
-    commands:
-    - MOB_AROUND distance:7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
-    - MOB_AROUND distance:5 WHITELIST(ZOMBIE{IsBaby:1}) DAMAGE 20
-    - MOB_aROUND distance:9 WHITELIST(WOLF{Owner:"%player%"}) HEAL 5
-    - MOB_aROUND distance:9 WHITELIST(WOLF{Owner:%player_uuid%}) HEAL 5
 ```
 
 

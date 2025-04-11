@@ -4,7 +4,7 @@ In this page you will learn how to timer stuff to happen in your block, for exam
 
 * Summoning an item each "x" second
 * Triggering an activator and displaying the cooldown on top of the block
-* Or executing whatever you want and siplaying it on the block.
+* Or executing whatever you want and displaying it on the block.
 
 ## Method
 
@@ -29,7 +29,7 @@ In this page you will learn how to timer stuff to happen in your block, for exam
 
 ### LOOP ACTIVATOR
 
-* Now create a LOOP activator with variableModification timer -1 and placeholderCondition %var\_timer% GREATER than 0.
+* Now create a LOOP activator with variableModification timer MODIFICATION -1 and placeholderCondition PLAYER\_NUMBER %var\_timer% SUPERIOR than 0.
   * ![](<../../../.gitbook/assets/image (311).png>)
   * ![](<../../../.gitbook/assets/image (339).png>)
   * ![](<../../../.gitbook/assets/image (314).png>)
@@ -48,7 +48,100 @@ In this page you will learn how to timer stuff to happen in your block, for exam
 
   * Each time the timer goes to 0 summon an item
     * activator LOOP
-    * placeholderCondition %var\_timer% EQUALS 0
+    * placeholderCondition PLAYER\_NUMBER %var\_timer% EQUALS 0
     * command:&#x20;
       * execute in <<%block\_world%>> run summon item %block\_x% %block\_y%+1 %block\_z% {Item:{id:"minecraft:IDOFTHEITEM",Count:1b\}}
     * variableModification: timer SET 10
+  * Example
+
+```yaml
+creationType: BASIC_CREATION
+name: Timed Block
+lore:
+- '&b&oDefault lore'
+material: STONE
+dropType: IN_THE_INVENTORY
+usage: -1
+canBeMoved: true
+config_3: true
+config_update: true
+titleOptions:
+  activeTitle: true
+  title:
+  - '§6Time: §e%var_timer_int%'
+  titleAdjustement: 0.5
+activators:
+  activator0:
+    name: '&eActivator'
+    option: LOOP
+    usageModification: 0
+    cancelEvent: false
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    commands: []
+    blockConditions: {}
+    worldConditions: {}
+    placeholdersConditions:
+      plchCdt0:
+        type: PLAYER_NUMBER
+        comparator: SUPERIOR
+        part1: '%var_timer%'
+        part2: '0'
+        cancelEventIfNotValid: false
+        messageIfNotValid: ''
+        messageIfNotValidForTarget: ''
+        stopCheckingOtherConditionsIfNotValid: true
+    # Reduce the variable (timer)
+    variablesModification:
+      varUpdt0:
+        variableName: timer
+        type: MODIFICATION
+        modification: -1.0
+    delay: 1
+    delayInTick: false
+    ownerCommands: []
+    ownerConditions: {}
+  activator1:
+    name: '&eActivator'
+    option: LOOP
+    usageModification: 0
+    cancelEvent: false
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    commands:
+    - STRIKELIGHTNING
+    blockConditions:
+      requiredItems: {}
+      requiredExecutableItems: {}
+    worldConditions: {}
+    placeholdersConditions:
+      plchCdt0:
+        type: PLAYER_NUMBER
+        comparator: EQUALS
+        part1: '%var_timer%'
+        part2: '0'
+        cancelEventIfNotValid: false
+        messageIfNotValid: ''
+        messageIfNotValidForTarget: ''
+        stopCheckingOtherConditionsIfNotValid: true
+    # Reset the timer
+    variablesModification:
+      varUpdt0:
+        variableName: timer
+        type: SET
+        modification: 10.0
+    delay: 1
+    delayInTick: false
+    ownerCommands: []
+    ownerConditions: {}
+variables:
+  var0:
+    variableName: timer
+    type: NUMBER
+    default: 10.0
+    isRefreshableClean: true
+    refreshTagDoNotEdit: §他§他§自§天§生§人§人§心§道
+```
+

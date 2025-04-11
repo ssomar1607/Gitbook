@@ -15,4 +15,4 @@ If you think something is not working as intended, or there is a bug, and you al
 {% endcontent-ref %}
 
 * ✅ Downloaded and installed the last version of the plugin
-* ⭐ And tested with only MF, EI, PacketEvents and Score to see if there is an incompatibility with other plugin
+* ⭐ And tested with only MF, EI and Score to see if there is an incompatibility with other plugin

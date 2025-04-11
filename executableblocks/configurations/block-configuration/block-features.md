@@ -135,7 +135,7 @@ executableItem: hack
 
 * Required: NO
 
-## Title <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">
+## Title Features <img src="../../../.gitbook/assets/ExecutableBlocks (64x64)px.png" alt="" data-size="line">
 
 It supports [DecentHolograms](https://www.spigotmc.org/resources/96927/), [HolographicDisplays](https://dev.bukkit.org/projects/holographic-displays) and [CMI](https://www.spigotmc.org/resources/3742/)
 
@@ -175,11 +175,27 @@ title:
 * Example:
 
 ```yaml
-titleAdjustement: 0.5
+titleAdjustment: 0.5
 ```
 
 * Required: NO
   * Extra Info: Positive number for upwards, Negative number for downwards
+
+
+
+```yaml
+titleFeatures:
+  # Active the title
+  activeTitle: true
+  # The title
+  title:
+   - Hello
+   - &6It's support color
+   - and %placeholder%
+  titleAdjustment: 0.5
+```
+
+
 
 ## Custom usage Settings
 

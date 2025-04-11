@@ -26,8 +26,8 @@ Here is a little summarize about some questions that are commonly asked in the s
 [how-to-use-vanilla-commands.md](how-to-use-vanilla-commands.md)
 {% endcontent-ref %}
 
-{% content-ref url="i-cant-add-more-items.md" %}
-[i-cant-add-more-items.md](i-cant-add-more-items.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="server-chat-spamming.md" %}

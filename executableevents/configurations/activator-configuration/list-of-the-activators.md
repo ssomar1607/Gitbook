@@ -164,11 +164,11 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_EQUIP\_ARMOR
 
-* Info: Activates when the player experience change naturally.&#x20;
+* Info: Activates when the player equips an armor.
 
 ### 🔹PLAYER\_EXPERIENCE\_CHANGE
 
-* Info: Activates when the player equips an armor.
+* Info: Activates when the player experience change naturally.
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_experience_change)
 
 ### 🔹PLAYER\_FERTILIZE\_BLOCK
