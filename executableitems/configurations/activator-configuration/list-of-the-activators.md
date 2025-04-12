@@ -497,17 +497,17 @@ The event is only triggered when someone force the player to open its inventory 
 ### ⭐PLAYER\_RESPAWN
 
 * Info: Activator that gets triggered when the player re-spawns.
-  * As normal, all ExecutableItem activator works when the player has it on the inventory, so if the player respawns without the item on the inventory this activator won't trigger.
+  * As normal, all ExecutableItem activator works when the player has it on the inventory, so if the player re-spawns without the item on the inventory this activator won't trigger.
 
 ### 🔹PLAYER\_RIGHT\_CLICK
 
 * Info: Activator that gets triggered when the player right-clicks the item.&#x20;
   * Due to spigot limitations this activator will only trigger if you have an item(any) in your hand.
-* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s\_a\_l-typetarget](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
-  * If typeTarget: ONLY\_BLOCK this features will be available.
-    * [ttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-blockcommands      ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-    * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_b-detailedblocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+* Custom Features of this activator:
+  * [typeTarget](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget) : To specify the type of the click (ONLY\_AIR, ONLY\_BLOCK, NO\_TYPE\_TARGET)
+  * If typeTarget: ONLY\_BLOCK these features will be available:
+    * [blockCommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands) : To write [block commands](../../../tools-for-all-plugins-score/custom-commands/block-commands.md)
+    * [detailedBlocks](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks) : To specify which types of block are valid
 
 ### 🔹PLAYER\_RIPTIDE
 
@@ -515,7 +515,7 @@ The event is only triggered when someone force the player to open its inventory 
 
 ### ⭐PLAYER\_SELECT\_THE\_EI
 
-* Info: Activator that gets triggered when the player selects the ExecutableItem in the hotbar, this means starts holding it on mainhand.&#x20;
+* Info: Activator that gets triggered when the player selects the ExecutableItem in the hotbar, this means starts holding it on main hand.&#x20;
 
 ### ⭐PLAYER\_SHEAR\_ENTITY
 
