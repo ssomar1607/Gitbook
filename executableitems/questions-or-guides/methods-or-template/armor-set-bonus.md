@@ -116,6 +116,7 @@ activators:
     name: Full Set Bonus
     option: LOOP
     delay: 1 # One second delay
+    delayInTick: false # To specify that the delay need to be in seconds
     detailedSlots:
       - 39
     commands:
