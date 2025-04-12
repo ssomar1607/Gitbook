@@ -42,7 +42,7 @@ minecraft:effect give %player% strength 10 0
 
 Right ! we just created the "ability" that the whole set has, but we need to add the **condition** to have the whole set !!
 
-* Go to the Player conditions->ifHasExecutableItem
+* Go to the Player conditions->ifHasExecutableItems
 
 ![](<../../../.gitbook/assets/image (193).png>)
 
@@ -50,7 +50,7 @@ Right ! we just created the "ability" that the whole set has, but we need to add
 
 ![](<../../../.gitbook/assets/image (332).png>)
 
-Here we will add the other 3 parts of the armor, in this case, as I chose the helmet as main, I need to add the chestplate, leggings and boots.
+Then add 3 IfHasExecutableItem condition for the other 3 parts of the armor, in this case, as I chose the helmet as main so I need to add the chestplate, leggings and boots.
 
 I will explain adding the chestplate as a condition first:
 
@@ -122,17 +122,17 @@ activators:
       - minecraft:effect give %player% minecraft:regeneration 1 0
     playerConditions:
       ifHasExecutableItems:
-        hasChestplate:
+        condition1_for_checking_chestplate: # 
           executableItem: CustomChestplate
           amount: 1
           detailedSlots:
             - 38
-        hasLeggings:
+        condition2_for_checking_leggings:
           executableItem: CustomLeggings
           amount: 1
           detailedSlots:
             - 37
-        hasBoots:
+        condition3_for_checking_boots:
           executableItem: CustomBoots
           amount: 1
           detailedSlots:
