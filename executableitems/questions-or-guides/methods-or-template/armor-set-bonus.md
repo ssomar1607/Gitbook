@@ -155,7 +155,7 @@ lore:
   - '&#x26;7Wearing the full set grants Regeneration'
 </code></pre>
 
-{% code title="CustomBoots.yml" overflow="wrap" %}
+{% code title="CustomBoots.yml" fullWidth="false" %}
 ```yaml
 name: '&bBoots'
 material: DIAMOND_BOOTS
