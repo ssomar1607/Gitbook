@@ -35,7 +35,7 @@ In this example we will create an armor that gives you strength always you have 
 * And, for the bonus effect we will use vanilla effect command:
 
 ```
-effect give %player% strength 10 0
+minecraft:effect give %player% strength 10 0
 ```
 
 ### Condition of whole set
@@ -100,3 +100,66 @@ If you have any question you can ask it in **Discord** ^^
 
 Method by Special70
 {% endhint %}
+
+
+
+Examples:
+
+{% code title="CustomHelmet.yml" %}
+```yaml
+name: '&bHelmet'
+material: DIAMOND_HELMET
+lore:
+  - '&7Wearing the full set grants Regeneration'
+activators:
+  fullSetBonus:
+    name: Full Set Bonus
+    option: LOOP
+    delay: 1 # One second delay
+    detailedSlots:
+      - 39
+    commands:
+      - minecraft:effect give %player% minecraft:regeneration 1 0
+    playerConditions:
+      ifHasExecutableItems:
+        hasChestplate:
+          executableItem: CustomChestplate
+          amount: 1
+          detailedSlots:
+            - 38
+        hasLeggings:
+          executableItem: CustomLeggings
+          amount: 1
+          detailedSlots:
+            - 37
+        hasBoots:
+          executableItem: CustomBoots
+          amount: 1
+          detailedSlots:
+            - 36
+```
+{% endcode %}
+
+{% code title="CustomChestplate.yml" %}
+```yaml
+name: '&bChestplate'
+material: DIAMOND_CHESTPLATE
+lore:
+  - '&7Wearing the full set grants Regeneration'
+```
+{% endcode %}
+
+<pre class="language-yaml" data-title="CustomLeggings.yml"><code class="lang-yaml"><strong>name: '&#x26;bLeggings'
+</strong>material: DIAMOND_LEGGINGS
+lore:
+  - '&#x26;7Wearing the full set grants Regeneration'
+</code></pre>
+
+{% code title="CustomBoots.yml" %}
+```yaml
+name: '&bBoots'
+material: DIAMOND_BOOTS
+lore:
+  - '&7Wearing the full set grants Regeneration'
+```
+{% endcode %}
