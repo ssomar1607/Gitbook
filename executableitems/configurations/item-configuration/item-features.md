@@ -864,14 +864,13 @@ bundleContent:
 - minecraft:dirt
 ```
 
-### fireworkFeatures
+### Firework features
 
 * Info: Feature that allows to have a customized firework features if the ExecutableItems is a firework item.
 * Example:
 
 ```yaml
 fireworkFeatures:
-
   lifeTime: 1
   fireworkExplosions:
     explosion_0:
@@ -891,5 +890,40 @@ fireworkFeatures:
       hasTwinkle: true
 ```
 
+### Spawner features
 
+* Info: Feature that allows to create custom spawner with ExecutableItems
+* Settings:
+  * spawnCount: Define how many entities appear at each spawn
+  * spawnDelay: Define the delay of the first spawn after placing the spawner (in ticks, 20 ticks = 1 second)
+  * spawnRange: The spawn range
+  * requiredPlayerRange: Define at which maximum distance the player must be to activate the spawner
+  * minSpawnDelay: The minimum delay between each spawn  (in ticks, 20 ticks = 1 second)
+  * minSpawnDelay: The maximum delay between each spawn  (in ticks, 20 ticks = 1 second)
+  * maxNearbyEntities: Maximum entities around the spawner
+  * addSpawnerNbtToItem: If its adds or the the spawner components tag into the item (It's better to let it false) When it's false the plugin will only add the tags when the spawner will be placed.
+  * potentialSpawns: Define the potentialSpawns of your spawner with weight
+
+{% hint style="success" %}
+It's better to create your spawner in [MCSTAKER ](https://mcstacker.net/?cmd=give)first, then give it to you in-game and finally hold it + do /ei create.\
+It will automatically imports the spawner features into your ExecutableItems.
+{% endhint %}
+
+* Example:
+
+```yaml
+spawnerFeatures:
+  spawnCount: 4
+  spawnDelay: 20
+  spawnRange: 4
+  requiredPlayerRange: 16
+  minSpawnDelay: 200
+  maxSpawnDelay: 800
+  maxNearbyEntities: 6
+  potentialSpawns:
+  # {THE ENTITY};the weight for this SpawnerEntry, when added to a spawner entries with higher weight will spawn more often.
+  - '{BlockState:{Name:"minecraft:diorite"},id:"minecraft:falling_block"};1' 
+  - '{id:"minecraft:chicken"};1' 
+  addSpawnerNbtToItem: false
+```
 

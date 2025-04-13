@@ -245,6 +245,10 @@ activators:
   * countOrder:&#x20;
     * ascending: makes the timer count from 0
     * descending: makes the timer count from the given
+  * overrideMode:
+    * NO\_OVERRIDE: It doesn't override the other Bossbars
+    * OVERRIDE\_ALL: It will override all other BossBars sent by SCore
+    * OVERRIDE\_SAME\_TEXT: It will override the other Bossbars sent by SCore that contain the same text
 * Example:
 
 ```yaml
@@ -254,6 +258,7 @@ activators:
     commands:
     - BOSSBAR time:200 color:RED text:This is a bossbar text
     - BOSSBAR time:20 color:BLUE text:Hello_world count:50 countTicks:true countOrder:ascending
+    - BOSSBAR time:200 color:RED text:This is a bossbar text overrideMode:OVERRIDE_SAME_TEXT
 ```
 
 
