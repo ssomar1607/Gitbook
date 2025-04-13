@@ -236,9 +236,9 @@ itemRarity:
   * sound: Sound effect to play when equipped
   * equipModel: Optional custom model for the equipped item (e.g., "mynamespace:mymodel")
   * cameraOverlay: Optional custom camera overlay when the item is equipped
-  * isDamageableOnHurt: Boolean that selects if the item loses durability when the wearer is hurt
-  * isDispensable: Boolean that selects if the item can be disposed of (removed/dropped)
-  * isSwappable: Boolean that selects if the item can be swapped with another item
+  * damageableOnHurt: Boolean that selects if the item loses durability when the wearer is hurt
+  * dispensable: Boolean that selects if the item can be disposed of (removed/dropped)
+  * swappable: Boolean that selects if the item can be swapped with another item
   * allowedEntities: List of entities permitted to equip this item
 * Example:
 
@@ -252,9 +252,9 @@ equippableFeatures:
     equipModel: "" # Example: "mynamespace:mymodel"
     cameraOverlay: "" # Example: "mynamespace:mymodel"
 
-    isDamageableOnHurt: false
-    isDispensable: true
-    isSwappable: true
+    damageableOnHurt: false
+    dispensable: true
+    swappable: true
 
     allowedEntities:
      - PLAYER
