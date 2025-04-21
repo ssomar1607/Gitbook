@@ -261,6 +261,12 @@
     * [(1)IsEI+(2)IsEI](executablecrafting/configurations/eanvil/1-isei+-2-isei.md)
 * [⌨️ Commands & Permissions](executablecrafting/commands-and-permissions.md)
 
+## AI Chat Moderation
+
+* [📌 Information ACM](ai-chat-moderation/information-acm.md)
+* [📃 Configurations](ai-chat-moderation/configurations.md)
+* [⌨️ Commands & Permissions](ai-chat-moderation/commands-and-permissions.md)
+
 ## CustomPiglinsTrades
 
 * [📌 Information CPT](custompiglinstrades/information-cpt.md)
