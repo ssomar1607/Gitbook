@@ -14,3 +14,9 @@ Reference: [https://discord.com/channels/701066025516531753/1300780091789545553]
 Q: SQL Related issues are appearing
 
 A: Assuming you're using 1.20 for example, try using the latest version of 1.20 (like 1.20.6)
+
+Q: My server is using Mohist 1.19.2 and the chat/text buttons in the chat editor does not work.&#x20;
+
+A: Change your server jar from Mohist 1.19.2 to Arclight Forge 1.19.2
+
+Reference: [https://discord.com/channels/701066025516531753/1363296318755438764/1363509104798208160](https://discord.com/channels/701066025516531753/1363296318755438764/1363509104798208160)
