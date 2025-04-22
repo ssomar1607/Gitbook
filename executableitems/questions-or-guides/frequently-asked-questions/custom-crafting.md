@@ -6,6 +6,10 @@ We suggest you to try the most popular Custom crafting plugin. Some will work fo
 
 ExecutableCrafting in dev
 
+### Special70's Recommendation
+
+{% embed url="https://modrinth.com/plugin/customcrafting" %}
+
 ## Discord
 
 In case this didn't help you to achieve what you wanted or doesn't work for you, feel free to ask in the Discord of Ssomar plugins your question.
