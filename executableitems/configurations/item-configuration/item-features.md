@@ -310,7 +310,7 @@ Here you will learn about features that are only visible when the item is droppe
 * Example:&#x20;
 
 ```yaml
-dropOptions:
+dropFeatures:
   glowDrop: false
 ```
 
@@ -321,7 +321,7 @@ dropOptions:
 * Example:
 
 ```yaml
-dropOptions:
+dropFeatures:
   glowDrop: false
   glowDropColor: WHITE
 ```
@@ -332,7 +332,7 @@ dropOptions:
 * Example:&#x20;
 
 ```yaml
-dropOptions:
+dropFeatures:
   displayNameDrop: true
 ```
 
@@ -404,7 +404,7 @@ In game it will be represented in PublicBukkitValues, like this
 </strong>executableitems:myothertag:blabla2
 </code></pre>
 
-### Hiders Settings
+### Hiders features
 
 * Info: Settings related to hiding features that are normally shown on your ExecutableItem. All features even though they are hide will still be functional.
   * hideEnchantments: Boolean value that represents if the enchantments on the ExecutableItem will be displayed in the lore or not.
@@ -434,7 +434,7 @@ hiders:
   hideToolTip: false
 ```
 
-### Usage Settings
+### Usage features
 
 This section will explain what usage is and its features.
 
@@ -473,7 +473,7 @@ usePerDay: 200 # -1 to ignore it
 
 
 
-### Food Settings (1.20.5++)
+### Food features (1.20.5++)
 
 * Info: This feature allows you to customize food settings related to your ExecutableItem
   * nutrition: Integer value that represent amount of "half-food" it will fill the player once the item is eaten
@@ -484,7 +484,7 @@ usePerDay: 200 # -1 to ignore it
 * &#x20;Example:
 
 ```yaml
-food:
+foodFeatures:
   nutrition: 1
   saturation: 1
   isMeat: false
@@ -512,7 +512,7 @@ consumableFeatures:
 
 ### Potion Settings
 
-Here you can customize the potion settings of your ExecutableItem if the material of the item is a potion.
+Here you can customize the potion features of your ExecutableItem if the material of the item is a potion.
 
 #### Potion color
 
@@ -520,7 +520,7 @@ Here you can customize the potion settings of your ExecutableItem if the materia
 * Example:
 
 ```yaml
-potionSettings:
+potionFeatures:
   potionColor: 10265481
 ```
 
@@ -530,7 +530,7 @@ potionSettings:
 * Example:
 
 ```yaml
-potionSettings:
+potionFeatures:
   potionType: WIND_CHARGED
 ```
 
@@ -546,7 +546,7 @@ potionSettings:
 * Example:
 
 ```yaml
-potionSettings:
+potionFeatures:
   potionColor: 10265481
   potionType: FIRE_RESISTANCE
   potionEffects:
@@ -726,7 +726,7 @@ customStackSize: 32
 * You can check more information on the next page about other type of variables:
   * [https://docs.ssomar.com/tools-for-all-plugins-score/score-variables](https://docs.ssomar.com/tools-for-all-plugins-score/score-variables)
 
-### Custom give first join Settings
+### Custom give first join features
 
 * Info: Here you can customize the feature of giving the item when the player join for the first time on the server.
   * giveFirstJoin: Boolean value that represents if the feature is enabled or not
@@ -735,13 +735,13 @@ customStackSize: 32
 * Example:
 
 ```yaml
-giveFirstJoin:
+giveFirstJoinFeatures:
   giveFirstJoin: false
   giveFirstJoinAmount: 1
   giveFirstJoinSlot: 0
 ```
 
-### ⭐Item Recognition Settings
+### ⭐Item Recognition feature
 
 * Info: This features allows to make other items that are not the ExecutableItem as they were the ExecutableItem you are editing. Basically the idea is to work with recognitions, its a list of type of recognitions that if one of them matches between your ExecutableItem and another item (even if its not ExecutableItem) the features that the ExecutableItem has will be on the another item too. This works as long as its recognized following the recognitions requirements.
   * Available recognitions options:
