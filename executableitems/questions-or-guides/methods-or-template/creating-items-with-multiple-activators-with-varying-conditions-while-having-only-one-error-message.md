@@ -198,33 +198,6 @@ storeItemInfo: false
 unbreakable: false
 usage: 1
 usageLimit: -1
-cancelEventIfNoPerm: false
-cancelEventIfNotOwner: false
-disabledWorlds: []
-recognitions: []
-nbt:
-  '0':
-    key: Damage
-    type: INT
-    value: 0
-config_5: true
-config_update: true
-dropOptions:
-  glowDrop: false
-  glowDropColor: WHITE
-  displayNameDrop: false
-hiders:
-  hideEnchantments: false
-  hideUnbreakable: false
-  hideAttributes: false
-  hidePotionEffects: false
-  hideUsage: true
-  hideDye: false
-enchantments: {}
-giveFirstJoin:
-  giveFirstJoin: false
-  giveFirstJoinAmount: 1
-  giveFirstJoinSlot: 0
 restrictions: {}
 variables:
   var0:

@@ -181,23 +181,8 @@ name: '&e&lOn/Off Demo'
 lore: []
 material: LEVER
 glow: true
-disableStack: false
-keepItemOnDeath: false
-canBeUsedOnlyByTheOwner: false
-storeItemInfo: false
-unbreakable: false
 usage: 1
 usageLimit: -1
-cancelEventIfNoPerm: false
-cancelEventIfNotOwner: false
-disabledWorlds: []
-recognitions: []
-config_5: true
-config_update: true
-dropOptions:
-  glowDrop: false
-  glowDropColor: WHITE
-  displayNameDrop: false
 hiders:
   hideEnchantments: false
   hideUnbreakable: false
@@ -206,10 +191,6 @@ hiders:
   hideUsage: true
   hideDye: false
 enchantments: {}
-giveFirstJoin:
-  giveFirstJoin: false
-  giveFirstJoinAmount: 1
-  giveFirstJoinSlot: 0
 restrictions:
   cancel-item-place: false
 variables:
@@ -227,18 +208,6 @@ activators:
     cancelEvent: true
     silenceOutput: false
     autoUpdateItem: false
-    cooldownOptions:
-      cooldown: 0
-      isCooldownInTicks: false
-      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-      displayCooldownMessage: false
-      cancelEventIfInCooldown: false
-    globalCooldownOptions:
-      cooldown: 0
-      isCooldownInTicks: false
-      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-      displayCooldownMessage: true
-      cancelEventIfInCooldown: false
     otherEICooldowns:
       cd0:
         executableItem: onoff-demo
@@ -279,18 +248,6 @@ activators:
     cancelEvent: true
     silenceOutput: false
     autoUpdateItem: false
-    cooldownOptions:
-      cooldown: 0
-      isCooldownInTicks: false
-      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-      displayCooldownMessage: false
-      cancelEventIfInCooldown: false
-    globalCooldownOptions:
-      cooldown: 0
-      isCooldownInTicks: false
-      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-      displayCooldownMessage: true
-      cancelEventIfInCooldown: false
     otherEICooldowns:
       cd0:
         executableItem: onoff-demo

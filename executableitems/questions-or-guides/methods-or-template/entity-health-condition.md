@@ -15,27 +15,6 @@ storeItemInfo: false
 unbreakable: false
 usage: 0
 usageLimit: -1
-cancelEventIfNoPerm: false
-cancelEventIfNotOwner: false
-disabledWorlds: []
-recognitions: []
-config_5: true
-dropOptions:
-  glowDrop: false
-  glowDropColor: WHITE
-  displayNameDrop: false
-hiders:
-  hideEnchantments: false
-  hideUnbreakable: false
-  hideAttributes: false
-  hidePotionEffects: false
-  hideUsage: false
-  hideDye: false
-enchantments: {}
-giveFirstJoin:
-  giveFirstJoin: false
-  giveFirstJoinAmount: 1
-  giveFirstJoinSlot: 0
 restrictions: {}
 variables: {}
 activators:
