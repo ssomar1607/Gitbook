@@ -871,28 +871,28 @@ activators:
 
 
 
-### LAUNCHENTITY
+### LAUNCH\_ENTITY
 
 * Info: Launches an entity to your direction
 
 {% embed url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html" %}
 
-* Command: LAUNCHENTITY {entityType} {speed} \[angle rotation y]
+* Command: LAUNCH\_ENTITY {entityType} {speed} \[angle rotation y]
   * {entityType}: Mob ID of the launched entity (ALL CAPS)
   * {speed}: (number, Double) Define the speed of the entity
   * \[angle rotation y]: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
 * Example:
 
 ```
-- LAUNCHENTITY PIG 2
+- LAUNCH_ENTITY PIG 2
 ```
 
 * Example to make tri-shoot:
 
 ```
-- LAUNCHENTITY PIG 2
-- LAUNCHENTITY PIG 2 15
-- LAUNCHENTITY PIG 2 -15
+- LAUNCH_ENTITY PIG 2
+- LAUNCH_ENTITY PIG 2 15
+- LAUNCH_ENTITY PIG 2 -15
 ```
 
 

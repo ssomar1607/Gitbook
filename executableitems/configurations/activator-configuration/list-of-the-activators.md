@@ -197,12 +197,13 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_CUSTOM\_LAUNCH
 
 * Info: Activator that gets triggered when the player launch a projectile with an SCore command such as:
-  * [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
-  * [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located\_launch](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located_launch)
-  * [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity#launchentity](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity#launchentity)
+  * [LAUNCH](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
+  * [LOCATED\_LAUNCH](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located_launch)
+  * [LAUNCH\_ENTITY](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity#launchentity)
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-entitycommands    ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p\_e-detailedentities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommandshttps://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [entityCommands](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands) (In this activator the entity is the projectile)
+  * [Projectile placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#projectile-placeholders)
+  * [detailedEntities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities) (To whitelist/blacklist some projectiles)
 
 ### 🔹PLAYER\_DEATH
 
