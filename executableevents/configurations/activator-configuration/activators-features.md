@@ -22,17 +22,6 @@ Starred features ⭐ are for premium version.
     name: '&#x26;eThor activator'
 </code></pre>
 
-### ⭐Usage modification of the activator
-
-* Info: Very important feature, the value of the usage of the item will be modified by this integer value. That means, if this value is positive then usage will increase and if this value is negative then the usage will decrease.
-* Example: (Increasing the value of the usage by 1 each time this activator is triggered)
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activator on the activators list
-    usageModification: 1
-```
-
 ### Variables modification
 
 * Info: Its a list of variables modification to apply to the variables inside your item. Its useful for example, for increase the value of a variable, for overriding an old value of a variable to another value, etc.
@@ -91,53 +80,6 @@ activators:
         modification: '-%var_bulletspershot%'
 ```
 
-### Detailed slots
-
-* Info: List of integer values that represents slots of the inventory where the activator will be able to work. This means, if the event occurs in one slot that is not from here then the activator won't be triggered. [More Info about the slots values.](https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots)
-* Example:
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activators on the activators list
-    detailedSlots:
-  - -1 # Slot for mainhand, this is not a static slot but having it on mainhand
-  - 40 # This is a static slot, it represents the offhand slot.
-```
-
-### Auto update item
-
-* Info: This feature of the activator makes that the item is updated in one of the features of the list. Be careful ! This may not be necessary depending on what you want. There are things that are updated automatically, for example, commands on the activator, conditions, cooldown, etc are updated automatically without this feature.&#x20;
-* This feature targets most the visual aspects of the item, so if you created once a ExecutableItem with id:ex\_sword with a display name of "\&dExcalibur" and you distributed this item to all players and now you would like all the ExecutableItems "ex\_sword" to have the new display name of "\&eEpic Sword" then you would need to enable this feature on one of the activators of the item. Enabling the feature (autoUpdateItem) + the feature of update name (updateName).
-* To make sure its correctly explained, this feature will override the current value depending on the options you enabled with the current option of the config file, and its only used for visual features. Its not necessary for common changes that don't involve the options of this feature.
-  * autoUpdateItem: Boolean value that represents if this feature is enabled or not for the activator.
-  * updateName: Boolean value to update the display name of the ExecutableItem. If its true, it will override the current display name of the item with the current/updated item name set on the config file of the ExecutableItem.
-  * updateLore: Boolean value to update the lore of the ExecutableItem. If its true, it will override the current lore of the item with the current/updated lore set on the config file of the ExecutableItem.
-  * updateDurability: Boolean value to update the current durability of the ExecutableItem. If its true, it will override the current durability of the item with the current/updated durability set on the config file of the ExecutableItem.
-  * updateAttributes: Boolean value to update all the attributes of the ExecutableItem. If its true, it will override the current attributes of the item with the current/updated attributes set on the config file of the ExecutableItem.
-  * updateEnchants: Boolean value to update the enchantments of the ExecutableItem. If its true, it will override the current enchantments of the item with the current/updated enchantments set on the config file of the ExecutableItem.
-  * updateCustomModelData: Boolean value to update the custom model data value of the ExecutableItem. If its true, it will override the current custom model data of the item with the current/updated customModelData value set on the config file of the ExecutableItem.
-  * updateArmorSettings: Boolean value to update the armor settings of the ExecutableItem. If its true, it will override the current armor settings of the item with the current/updated armor settings set on the config file of the ExecutableItem. e.g. (Armor color)
-  * updateMaterial: Boolean value to update the material of the ExecutableItem. If its true, it will override the current material of the item with the current/updated material set on the config file of the ExecutableItem.
-  * updateHiders: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current hiders configuration with the current/updated hiders setup on the config file of the ExecutableItem.
-  * updateEquippable: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current equippable component of the item with the current/updated equippable setup on the config file of the ExecutableItem.
-* Example:
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activators on the activators list
-    autoUpdateItem: false
-    updateName: false
-    updateLore: false
-    updateDurability: false
-    updateAttributes: false
-    updateEnchants: false
-    updateCustomModelData: false
-    updateArmorSettings: false
-    updateMaterial: false
-    updateHiders: false
-    updateEquippable: false
-```
-
 ### cancelEvent
 
 * Info: Boolean value that represents if the event related to the activator is going to be cancelled or not.
@@ -152,38 +94,7 @@ activators:
     cancelEvent: true
 </code></pre>
 
-### commands
 
-Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
-
-* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
-  * Its recommended to check [the placeholders list](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
-
-It's available in all activators type since all activators have a player involved.
-
-* Info: Player commands is a list commands that are normally run against the player when the activator triggers.
-  * This means if it has an SCore command, example: DAMAGE 5,  the damage will be applied to the user of the ExecutableItem.
-    * Custom [player commands](../../../tools-for-all-plugins-score/custom-commands/player-and-target-commands.md) available from SCore
-  * You can also run commands from other plugins or vanilla commands. These commands will be executed by the console.
-    * minecraft:say Hey
-    * money give %player% 500
-* Example:
-
-```yaml
-activators:  
-  activator1: # Activator ID, you can create as many activators on the activator    
-    option: PLAYER_RIGHT_CLICK
-    commands:
-    - SEND_MESSAGE &eHey ! I am a message and the player who triggered this activator
-      can see it ^^
-    - effect give %player% regeneration 5 5 true
-    - SEND_MESSAGE &dYou received regeneration :P
-```
-
-### playerConditions
-
-* Info: You can use this conditions in all type of activators
-* [Player conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
 
 ### worldConditions
 
@@ -194,104 +105,6 @@ activators:
 
 * Info: You can use this conditions in all type of activators
 * [PlaceholdersConditions](../../../tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
-
-### itemConditions
-
-* Info: You can use this conditions in all type of activators
-* [Item conditions](../../../tools-for-all-plugins-score/custom-conditions/item-conditions.md)
-
-## Cooldown
-
-### Player cooldown
-
-* Info: Cooldown options its the cooldown applied to the player who triggered this activator for this activator.
-* If the activator is PLAYER\_RIGHT\_CLICK, it has some commands \[] and the cooldown is 30 seconds, if the player triggers this activator he will need to wait 30 seconds in order to make it trigger again. This doesn't prevent other player from running it between those 30 seconds as long as that player is not on cooldown too. This is a feature per player
-  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
-  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
-  * cooldownMsg: String value to be displayed when the player try to trigger the activator when its on cooldown
-  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
-    * Placeholders that can be used:
-      * %time% -> the entire cooldown in seconds
-      * %time\_H% -> the hours part of the cooldown
-      * %time\_M% -> the minutes part of the cooldown
-      * %time\_S% -> the seconds part of the cooldown&#x20;
-  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
-  * pauseWhenOffline: Boolean value that pauses the cooldown if the player is offline. To better understanding, if its false, the cooldown time doesn't stop so he can leave the server, wait the cooldown and join again and he will be able to trigger the activator again. But if this feature is enabled and he left the server while on cooldown, when he joins again he will have the same remaining cooldown time that he had when he left.
-  * pausePlaceholdersConditions: Its similar to pauseWhenOffline but it only pauses depending on certain placeholdersConditions. Example of usages would be pausing the cooldown if the player is VIP rank. So VIP rank has access to that feature.
-  * enableVisualCooldown: Enables a visual cooldown for the item.
-* Example:&#x20;
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activators on the activators list
-    cooldownFeatures:
-      cooldown: 0
-      isCooldownInTicks: false
-      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-      displayCooldownMessage: true
-      cancelEventIfInCooldown: false
-      pauseWhenOffline: false
-      pausePlaceholdersConditions: {}
-      enableVisualCooldown: false
-```
-
-### Global cooldown
-
-* Info: Its the same idea as cooldown but instead of being the cooldown applied to the player its a global cooldown that is applied to all players. That means, if someone triggers the activator and it has 30 seconds of global cooldown, then no one will be able to use it after those 30 seconds  has gone. It has the same features as cooldown.
-  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
-  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
-  * cooldownMsg: String value to be displayed when a player try to trigger this activator when its on cooldown
-  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
-    * Placeholders that can be used:
-      * %time% -> the entire cooldown in seconds
-      * %time\_H% -> the hours part of the cooldown
-      * %time\_M% -> the minutes part of the cooldown
-      * %time\_S% -> the seconds part of the cooldown&#x20;
-  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
-  * enableVisualCooldown: Enables a visual cooldown for the item.
-* Example:
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activators on the activators list
-    globalCooldownFeatures:
-      cooldown: 0
-      isCooldownInTicks: false
-      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
-      displayCooldownMessage: true
-      cancelEventIfInCooldown: false
-      enableVisualCooldown: false
-```
-
-### otherEICooldowns
-
-* Info: This feature allows to apply player cooldown to specific ExecutableItems and optional specific activators.&#x20;
-  * executableItem: ID of the ExecutableItem you want to apply cooldown to.
-  * activators: List of strings which are the ID of the activators you want to affect for the ExecutableItem specified with cooldown. If none are selected then the cooldown will be applied to all activators of the ExecutableItem specified.
-  * cooldown: Integer value that will be the amount of time of cooldown will be applied.
-  * isCooldownInTicks: Boolean value that represents if the cooldown value will be on seconds or ticks. (20 ticks = 1 second)
-* Tips:
-  * You can specify the ExecutableItem who run this feature itself. For example if you want from one activator to apply cooldown to another activator in the same item.
-  * Another idea can be applying cooldown to all damage related items if you use one of them.
-  * Another example would be using this feature to allow the player to choose one of different ExecutableItems, when they choose one and triggers it, then they can't use neither the chosen one because its on cooldown nor the another ones because they are on cooldown too.
-* Example:
-
-```yaml
-activators:
-  activator0: # Activator ID, you can create as many activators on the activators list
-    otherEICooldowns:
-      cd1: # otherEICooldown ID, you can create as many otherEICooldown on the otherEICooldowns list
-        executableItem: test 
-        activators: 
-        - activator0 
-        cooldown: 20 
-        isCooldownInTicks: false
-      cd0: # otherEICooldown ID, you can create as many otherEICooldown on the otherEICooldowns
-        executableItem: swordSharpness
-        activators: [] 
-        cooldown: 10
-        isCooldownInTicks: false
-```
 
 ### silenceOutput
 
@@ -465,89 +278,81 @@ activators:
 
 ## Features exclusive depending on type of activator
 
-To make the features more understandable on where activators do they work, we will create 5 types of categories to group activators, so if one of the features say one of this categories then you'll know the feature works for all the activators on that category. &#x20;
+To make the features more understandable on which activators they work, we created categories :
 
-* PLAYER\_NONE: This type of activators are exclusive to the player who triggered the activator of the ExecutableItem and don't involve anything else. Abbreviaton \[P\_N]
-* PLAYER\_BLOCK: This type of activators are involved with the player who triggered the activator of the ExecutableItem and the block involved in the activator. Abbreviaton \[P\_B]
-  * 🔹PLAYER\_ALL\_CLICK (with feature typeTarget: ONLY\_BLOCK)
-  * ⭐PLAYER\_BLOCK\_BREAK
-  * ⭐PLAYER\_BLOCK\_PLACE
-  * ⭐PLAYER\_BRUSH\_BLOCK
-  * ⭐PLAYER\_FERTILIZE\_BLOCK
-  * ⭐PLAYER\_FISH\_BLOCK
-  * 🔹PLAYER\_HARVEST\_BLOCK
-  * 🔹PLAYER\_LEFT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
-  * 🔹PLAYER\_RIGHT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
-  * ⭐PROJECTILE\_HIT\_BLOCK
-  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
-* PLAYER\_ENTITY: This type of activators are involved with the player who triggered the activator of the ExecutableItem and an entity involved in the activator. Abbreviaton \[P\_E]
-  * ⭐PLAYER\_BLOCK\_HIT\_OF\_ENTITY
-  * 🔹PLAYER\_BUCKET\_ENTITY
-  * ⭐PLAYER\_CLICK\_ON\_ENTITY
-  * ⭐PLAYER\_CUSTOM\_LAUNCH (The entity is the projectile that is being launched)
-  * ⭐PLAYER\_DISMOUNT
-  * ⭐PLAYER\_FISH\_ENTITY
-  * ⭐PLAYER\_HIT\_ENTITY
-  * ⭐PLAYER\_KILL\_ENTITY
-  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
-  * ⭐PLAYER\_SHEAR\_ENTITY
-  * ⭐PLAYER\_TARGETED\_BY\_AN\_ENTITY
-  * ⭐PROJECTILE\_HIT\_ENTITY
-  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
-* PLAYER\_TARGET: This type of activators are involved with the player who triggered the activator of the ExecutableItem and another player called "target" which is considered as target/enemy. Abbreviation \[P\_T]
-  * ⭐PLAYER\_BLOCK\_HIT\_OF\_PLAYER
-  * ⭐PLAYER\_BREAK\_SHIELD\_OF\_PLAYER
-  * 🔹🔹PLAYER\_CLICK\_ON\_PLAYER
-  * ⭐PLAYER\_FISH\_PLAYER
-  * PLAYER\_HIT\_PLAYER
-  * ⭐PLAYER\_KILL\_PLAYER
-  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
-  * ⭐PLAYER\_SHIELD\_BREAK\_BY\_PLAYER
-  * 🔹PROJECTILE\_HIT\_PLAYER
-  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
-* Specific activator list: If there is a feature that contains different activators across the  categories then its better for understanding creating a new temporal list, which will be mentioned on the feature. Abbreviation \[S\_A\_L] &#x20;
+* \[P\_\*] : It means that the main actor of the event/activator is a player
+* \[E\_\*] : It means that the main actor of the event/activator is an entity
+* \[B\_\*] : It means that the main actor of the event/activator is a block
+* \[\*\_TP] : It means that the second actor of the event/activator is a player (we will call it target player)
+* \[\*\_TE] : It means that the second actor of the event/activator is an entity (we will call it target entity)
+* \[\*\_TB] : It means that the second actor of the event/activator is a block (we will call it target block)
+* \[S\_A\_L] : Specific activator list: Other custom features specific to some activators
 
 
 
-### \[P\_B] blockCommands
+### \[P\_\*] commands
 
-Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
+It's available in all activators that contains a player as the principal actor of the event.
 
-* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
-  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
-* There are three type of entity targets on commands
-  * Player: Its the player/user who triggered the activator on the ExecutableItem
-  * Target: Its the player targeted/enemy involved in an activator.
-  * Entity: Its the entity/mob/enemy involved in an activator.
-* Type of activator category: PLAYER\_BLOCK
+* Info: Player commands is a list commands that are normally run against the player when the activator triggers.
+  * This means if it has an SCore command, example: DAMAGE 5,  the damage will be applied to the user of the ExecutableItem.
+    * Custom [player commands](../../../tools-for-all-plugins-score/custom-commands/player-and-target-commands.md) available from SCore
+  * You can also run commands from other plugins or vanilla commands. These commands will be executed by the console.
+    * minecraft:say Hey
+    * money give %player% 500
+* Example:
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_RIGHT_CLICK
+    commands:
+    - SEND_MESSAGE &eHey ! I am a message and the player who triggered this activator
+      can see it ^^
+    - effect give %player% regeneration 5 5 true
+    - SEND_MESSAGE &dYou received regeneration :P
+```
+
+### \[P\_\*] playerConditions
+
+It's available in all activators that contains a player as the principal actor of the event.
+
+* Info: Feature for activators that involves a player, here you can setup conditions for the player involved.
+* [Player conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
+* Example:
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_RIGHT_CLICK
+    playerConditions:
+      ifSneaking: true
+```
+
+### \[P\_\*] Player placeholders
+
+When the main actor of the event is a player then you can use in your activator config (commands, conditions, other..) [the player placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player-placeholders)
+
+### \[B\_\*] blockCommands
+
+It's available in all activators that contains a block as the principal actor of the event.
+
 * Info: List of commands that are normally run against the block when the activator triggers.
   * This means, the activator must have involved with a block, for example PLAYER\_HIT\_PLAYER is an activator, but it doesn't involve a block, so blockCommands are not available here. With the activator PLAYER\_BLOCK\_BREAK there is a block involved so blockCommands are available here.
-  * Another example PLAYER\_RIGHT\_CLICK has an activatorFeature called typeTarget, by default its ONLY\_AIR so blockCommands are not available due the activator is not involved with a block, but, typeTarget can be changed to ONLY\_BLOCK and then the activator will have as available features blockCommands, more info here -> \<IF I FORGOT PLS PING VAYK>
+  * Another example PLAYER\_RIGHT\_CLICK has an activatorFeature called typeTarget, by default its ONLY\_AIR so blockCommands are not available due the activator is not involved with a block, but, typeTarget can be changed to ONLY\_BLOCK and then the activator will have as available features blockCommands.
   * You can check the list of blockCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands)
 * Example:
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
 </strong>  activator0: # Activator ID, you can create as many activator on the activators list    
-    option: PLAYER_BLOCK_BREAK
+    option: BLOCK_DRY
     blockCommands:
     - EXPLODE
 </code></pre>
 
-* Its important to understand that having blockCommands doesn't mean don't having player commands, on the activator PLAYER\_BLOCK\_BREAK there is two target involved, the player and the block, so we can have for example:
+### \[B\_\*] detailedBlocks
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
-</strong>  activator0: # Activator ID, you can create as many activator on the activators list    
-    option: PLAYER_BLOCK_BREAK
-    commands:
-    - SEND_MESSAGE &#x26;eYou have broken a block, it will explode in 5 seconds !
-    blockCommands:
-    - DELAY 5
-    - EXPLODE
-</code></pre>
-
-### \[P\_B] detailedBlocks
-
-* Type of activator category: PLAYER\_BLOCK
+* It's available in all activators that contains a block as the principal actor of the event.
 * Info: Feature for activators that involves a block, here you can select as condition the type of block(s) where this activator will trigger by using this feature.
   * You can select blocks from Minecraft Vanilla like:
     * "STONE"
@@ -605,66 +410,44 @@ Commands are a list of commands that are run from the console when the activator
 ```yaml
 activators:  
   activator0: # Activator ID, you can create as many activator on the activators list    
-    option: PLAYER_BLOCK_BREAK
+    option: CROP_GROW
     detailedBlocks:
-    - STONE
-    - COBBLESTONE
-    - ANDESITE
-    - FURNACE{lit:true} (🎇 **BLOCK STATE FEATURE IS PREMIUM EXCLUSIVE ONLY AND FOR 1.13+** 🎇)
-    - ITEMSADDER:turquoise_block
-    - EXECUTABLEBLOCKS:CUSTOMDIRT
-    - !DIRT
-    - ALL_ORES
-    - '#MINECRAFT:MINEABLE/PICKAXE'
+    - CARROTS
 ```
 
-### \[P\_B] blockConditions
+### \[B\_\*] blockConditions
 
-* Type of activator category: PLAYER\_BLOCK
+* It's available in all activators that contains a block as the principal actor of the event.
 * Info: Feature for activators that involves a block, here you can setup conditions for the block involved.
 * [Block conditions](../../../tools-for-all-plugins-score/custom-conditions/block-conditions.md)
 
-### \[P\_E] entityCommands
+### \[B\_\*] Block placeholders
 
-Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
+When the main actor of the event is a block then you can use in your activator config (commands, conditions, other..) [the block placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#block-placeholders)
 
-* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
-  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
-* There are three type of entity targets on commands
-  * Player: Its the player/user who triggered the activator on the ExecutableItem
-  * Target: Its the player targeted/enemy involved in an activator.
-  * Entity: Its the entity/mob/enemy involved in an activator.
-* Type of activator category: PLAYER\_ENTITY
-* Info: List of commands that are normally run agaisnt the entity when the activator triggers.
-  * By entity it means entity/mob/enemy involved in an activator.
-  * We know the player is considered as entity, but the entity involved in activators is only the mob/enemy involved in the event.
-  * You can check the list of entity commands here [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands)
+### \[E\_\*] entityCommands
+
+It's available in all activators that contains an entity (not player) as the principal actor of the event.
+
+* Info: Player commands is a list commands that are normally run against the player when the activator triggers.
+  * This means if it has an SCore command, example: DAMAGE 5,  the damage will be applied to the user of the ExecutableItem.
+    * Custom [entity commands](../../../tools-for-all-plugins-score/custom-commands/entity-commands.md) available from SCore
+  * You can also run commands from other plugins or vanilla commands. These commands will be executed by the console.
+    * minecraft:say Hey
+    * money give %player% 500
 * Example:
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
 </strong>  activator1: # Activator ID, you can create as many activator on the activators list    
-    option: PLAYER_HIT_ENTITY
+    option: PLAYER_TARGET_PLAYER
     entityCommands:
     - DAMAGE 10
     - BURN 5
 </code></pre>
 
-* Its important to understand that having entityCommands doesn't mean don't having player commands, on the activator PLAYER\_HIT\_ENTITY there is two target involved, the player and the entity, so we can have for example:&#x20;
+### \[E\_\*] detailedEntities
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
-</strong>  activator1: # Activator ID, you can create as many activator on the activators list    
-    option: PLAYER_HIT_ENTITY
-    commands:
-    - SEND_MESSAGE &#x26;cThe power of the fire will rise in 5 seconds on the entity
-    entityCommands:
-    - DELAY 5
-    - DAMAGE 10
-    - BURN 2
-</code></pre>
-
-### \[P\_E] detailedEntities
-
-* Type of activator category: PLAYER\_ENTITY
+* It's available in all activators that contains an entity (not player) as the principal actor of the event.
 * Info:  For activators that involves an entity you can select as condition the type of entity(es) where this activator will trigger by using this feature.
   * You can select a vanilla Minecraft entity (info: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)) like:
     * "ZOMBIE"
@@ -688,57 +471,263 @@ activators:
     - ZOMBIE{IsBaby:1}
 ```
 
-### \[P\_E] entityConditions
+### \[E\_\*] entityConditions
 
-* Type of activator category: PLAYER\_ENTITY
+It's available in all activators that contains an entity (not player) as the principal actor of the event.
+
 * Info: Feature for activators that involves a entity, here you can setup conditions for the entity involved.
 * [Entity conditions](../../../tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
 
-### \[P\_T] targetCommands
+### \[E\_\*] Entity placeholders
 
-Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
+When the main actor of the event is an entity then you can use in your activator config (commands, conditions, other..) [the entity placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity-placeholders)
 
-* All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI.&#x20;
-  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
-* There are three type of entity targets on commands
-  * Player: Its the player/user who triggered the activator on the ExecutableItem
-  * Target: Its the player targeted/enemy involved in an activator.
-  * Entity: Its the entity/mob/enemy involved in an activator.
-* Type of activator category: PLAYER\_TARGET
+### \[P\_\*, E\_\*] Player cooldown
+
+* Info: Cooldown options its the cooldown applied to the player/entity who triggered this activator for this activator.
+* If the activator is PLAYER\_RIGHT\_CLICK, it has some commands \[] and the cooldown is 30 seconds, if the player triggers this activator he will need to wait 30 seconds in order to make it trigger again. This doesn't prevent other player from running it between those 30 seconds as long as that player is not on cooldown too. This is a feature per player
+  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
+  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
+  * cooldownMsg: String value to be displayed when the player try to trigger the activator when its on cooldown
+  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
+    * Placeholders that can be used:
+      * %time% -> the entire cooldown in seconds
+      * %time\_H% -> the hours part of the cooldown
+      * %time\_M% -> the minutes part of the cooldown
+      * %time\_S% -> the seconds part of the cooldown&#x20;
+  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
+  * pauseWhenOffline: Boolean value that pauses the cooldown if the player is offline. To better understanding, if its false, the cooldown time doesn't stop so he can leave the server, wait the cooldown and join again and he will be able to trigger the activator again. But if this feature is enabled and he left the server while on cooldown, when he joins again he will have the same remaining cooldown time that he had when he left.
+  * pausePlaceholdersConditions: Its similar to pauseWhenOffline but it only pauses depending on certain placeholdersConditions. Example of usages would be pausing the cooldown if the player is VIP rank. So VIP rank has access to that feature.
+  * enableVisualCooldown: Enables a visual cooldown for the item.
+* Example:&#x20;
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    cooldownFeatures:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+      enableVisualCooldown: false
+```
+
+### \[P\_\*, E\_\*] Global cooldown
+
+* Info: Its the same idea as cooldown but instead of being the cooldown applied to the player its a global cooldown that is applied to all players/entities. That means, if someone triggers the activator and it has 30 seconds of global cooldown, then no one will be able to use it after those 30 seconds  has gone. It has the same features as cooldown.
+  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
+  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
+  * cooldownMsg: String value to be displayed when a player try to trigger this activator when its on cooldown
+  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
+    * Placeholders that can be used:
+      * %time% -> the entire cooldown in seconds
+      * %time\_H% -> the hours part of the cooldown
+      * %time\_M% -> the minutes part of the cooldown
+      * %time\_S% -> the seconds part of the cooldown&#x20;
+  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
+  * enableVisualCooldown: Enables a visual cooldown for the item.
+* Example:
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    globalCooldownFeatures:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      enableVisualCooldown: false
+```
+
+### \[\*\_TP] targetPlayerCommands
+
+It's available in all activators that contains a player targeted as the second actor of the event.
+
 * Info: Target commands is a list commands that are normally run against the target when the activator triggers.
-  * This means if it has an SCore command of DAMAGE 5, if its on targetCommands then the damage will be applied to the target/enemy involved in the activator.
-  * Its "normally run against the player" because this works for SCore commands, remember you can use another plugin commands or vanilla commands, so if you add "effect give %player% strength 5 5" even though its on targetCommands, the parse of placeholders will apply the cooldown to %player%. If you would like to apply this command to target then use %target%. More information on [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders)
-  * You can check the list of targetCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
+  * This means if it has an SCore command of DAMAGE 5,  the damage will be applied to the target/enemy involved in the activator.
+    * List of the [Target player commands](../../../tools-for-all-plugins-score/custom-commands/player-and-target-commands.md) available from SCore
+  * You can also run commands from other plugins or vanilla commands. These commands will be executed by the console.
+    * minecraft:say Hey
+    * money give %target% 500
 * Example:
 
 ```yaml
 activators:  
   activator1: # Activator ID, you can create as many activators on the activator    
     option: PLAYER_HIT_PLAYER
-    targetCommands:
+    targetPlayerCommands:
     - SEND_MESSAGE &eHey %target% you have been hit by %player%
     - effect give %target% slowness 5 5 true
     - SEND_MESSAGE &7Your feets are heavier than before, eh ?
 ```
 
-* Its important to understand that having targetCommands doesn't mean don't having player commands, on the activator PLAYER\_HIT\_PLAYER there is two target involved, the player and the target, so we can have for example:&#x20;
+### \[\*\_TP] targetPlayerConditions
+
+It's available in all activators that contains a player targeted as the second actor of the event.
+
+* Info: Feature for activators that involves a player target, here you can setup conditions for the player target involved.
+* [Target player conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
+* Example:
 
 ```yaml
 activators:  
   activator1: # Activator ID, you can create as many activators on the activator    
     option: PLAYER_HIT_PLAYER
-    commands:
-    - SEND_MESSAGE &eYou have hit %target%, he cant pick up items in 5 seconds
-    targetCommands:
-    - SEND_MESSAGE &eHey %target% you have been hit by %player%, in 5 seconds you can't pick up items
-    -CANCEL_PICKUP time:100
+    targetPlayerConditions:
+      ifSneaking: true
 ```
 
-### \[P\_T] targetConditions
+### \[\*\_TP] Target player placeholders
 
-* Type of activator category: PLAYER\_TARGET
+When the second actor of the event is a player then you can use in your activator config (commands, conditions, other..) [the target player placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#target-player-placeholders)
+
+### \[\*\_TE] targetEntityCommands
+
+It's available in all activators that contains an entity targeted as the second actor of the event.
+
+* Info: Target commands is a list commands that are normally run against the target when the activator triggers.
+  * This means if it has an SCore command of DAMAGE 5,  the damage will be applied to the target/enemy involved in the activator.
+    * List of the [Target entity commands](../../../tools-for-all-plugins-score/custom-commands/entity-commands.md) available from SCore
+  * You can also run commands from other plugins or vanilla commands. These commands will be executed by the console.
+    * minecraft:say Hey
+* Example:
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_HIT_ENTITY
+    targetEntityCommands:
+    - effect give %target_uuid% slowness 5 5 true
+```
+
+### \[\*\_TE] targetEntityConditions
+
+It's available in all activators that contains a player targeted as the second actor of the event.
+
 * Info: Feature for activators that involves a player target, here you can setup conditions for the player target involved.
-* [Target conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
+* [Target entity conditions](../../../tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
+* Example:
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activators on the activator    
+    option: PLAYER_HIT_ENTITY
+    targetEntityConditions:
+      ifName: 
+      - Watame
+      - Okayu
+      ifNameMsg: ''
+```
+
+### \[\*\_TE] Target entity placeholders
+
+When the second actor of the event is a player then you can use in your activator config (commands, conditions, other..) [the target entity placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#target-entity-placeholders)
+
+### \[\*\_TB] targetBlockCommands
+
+It's available in all activators that contains a block as the second actor of the event.
+
+* Info: List of commands that are normally run against the block when the activator triggers.
+  * Another example PLAYER\_RIGHT\_CLICK has an activatorFeature called typeTarget, by default its ONLY\_AIR so targetBlockCommands are not available due the activator is not involved with a block, but, typeTarget can be changed to ONLY\_BLOCK and then the activator will have as available features targetBlockCommands
+    * List of [block commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands) you can use
+* Example:
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>activators:  
+</strong>  activator0: # Activator ID, you can create as many activator on the activators list    
+    option: ENTITY_CHANGE_BLOCK
+    targetBlockCommands:
+    - EXPLODE
+</code></pre>
+
+### \[\*\_TB] detailedTargetBlocks
+
+It's available in all activators that contains a block as the second actor of the event.
+
+* Info: Feature for activators that involves a target block, here you can select as condition the type of block(s) where this activator will trigger by using this feature.
+  * You can select blocks from Minecraft Vanilla like:
+    * "STONE"
+  * ⭐You can select blocks from Minecraft Vanilla with NBT (info: [https://minecraft.fandom.com/wiki/Block\_states](https://minecraft.fandom.com/wiki/Block_states)) like:&#x20;
+    * "FURNACE{lit:true}"
+  * You can select blocks from ItemsAdder like:
+    * "ITEMSADDER:\<id>"
+  * You can select blocks from ExecutableBlocks like:
+    * "EXECUTABLEBLOCKS:\<id>"
+  * You can blacklist certain blocks adding ! at the beginning like:
+    * "!DIRT"
+  * You can add Block Tags like:&#x20;
+    * "#MINECRAFT:MINEABLE/PICKAXE"
+  * You can add group of blocks like
+    * "ALL\_ORES"
+
+<details>
+
+<summary>List of group of blocks</summary>
+
+```
+    ALL_CHESTS,
+    ALL_FURNACES,
+    ALL_PLANKS,
+    ALL_LOGS,
+    ALL_STRIPPED_LOGS,
+    ALL_STRIPPED_WOODS,
+    ALL_WOODS,
+    ALL_ORES,
+    ALL_WOOLS,
+    ALL_SLABS,
+    ALL_STAIRS,
+    ALL_FENCES,
+    ALL_SAPLINGS,
+    ALL_CROPS,
+    ALL_DOORS,
+    ALL_TRAPDOORS,
+    ALL_BEDS,
+    ALL_TERRACOTTA,
+    ALL_NORMAL_TERRACOTTA,
+    ALL_GLAZED_TERRACOTTA,
+    ALL_CONCRETE,
+    ALL_CONCRETE_POWDERS,
+    ALL_GLASS,
+    ALL_STAINED_GLASS,
+    ALL_SHULKER_BOXES,
+    ALL_LEAVES,
+    ALL_CARPETS;
+```
+
+</details>
+
+* Example:
+
+```yaml
+activators:  
+  activator0: # Activator ID, you can create as many activator on the activators list    
+    option: ENTITY_COMBUST_BY_BLOCK
+    detailedTargetBlocks:
+    - CAMPFIRE
+```
+
+### \[\*\_TB] targetBlockConditions
+
+It's available in all activators that contains a block as the second actor of the event.
+
+* Info: Feature for activators that involves a target block, here you can setup conditions for the target block involved.
+* [Block conditions](../../../tools-for-all-plugins-score/custom-conditions/block-conditions.md)
+* Example:
+
+```yaml
+activators:  
+  activator0: # Activator ID, you can create as many activator on the activators list    
+    option: ENTITY_COMBUST_BY_BLOCK
+    targetBlockConditions:
+      ifMustBeNatural: true
+```
+
+### \[\*\_TB] Target block placeholders
+
+When the second actor of the event is a player then you can use in your activator config (commands, conditions, other..) [the target block placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#target-block-placeholders)
 
 ### \[S\_A\_L] detailedItems
 

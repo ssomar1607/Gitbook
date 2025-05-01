@@ -205,6 +205,7 @@
   * [General Configuration](executableevents/configurations/general-configuration.md)
   * [Activator Configuration](executableevents/configurations/activator-configuration/README.md)
     * [List of the Activators](executableevents/configurations/activator-configuration/list-of-the-activators.md)
+    * [Activators features](executableevents/configurations/activator-configuration/activators-features.md)
 * [🤖 Question | Guides](executableevents/question-or-guides/README.md)
   * [Informal Guides](executableevents/question-or-guides/informal-guides.md)
   * [Frequently Asked Questions](executableevents/question-or-guides/frequently-asked-questions/README.md)
