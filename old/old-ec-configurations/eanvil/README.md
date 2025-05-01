@@ -8,12 +8,12 @@ description: Information related to EAnvil
 
 EAnvil is a custom anvil that has the next mechanics:
 
-{% content-ref url="../../../executablecrafting/configurations/eanvil/1-nonei-+-2-isei.md" %}
-[1-nonei-+-2-isei.md](../../../executablecrafting/configurations/eanvil/1-nonei-+-2-isei.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="../../../executablecrafting/configurations/eanvil/1-isei+-2-isei.md" %}
-[1-isei+-2-isei.md](../../../executablecrafting/configurations/eanvil/1-isei+-2-isei.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% hint style="info" %}

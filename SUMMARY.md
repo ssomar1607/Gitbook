@@ -254,11 +254,9 @@
   * [General Configuration](executablecrafting/configurations/general-configuration.md)
   * [Recipe Configuration](executablecrafting/configurations/recipe-configuration/README.md)
     * [Recipe Features](executablecrafting/configurations/recipe-configuration/recipe-features.md)
+    * [Crafting Recipe Examples](executablecrafting/configurations/recipe-configuration/crafting-recipe-examples.md)
   * [Recipe groups](executablecrafting/configurations/recipe-groups.md)
   * [Recipe Book](executablecrafting/configurations/recipe-book.md)
-  * [EAnvil](executablecrafting/configurations/eanvil/README.md)
-    * [(1)NonEI + (2)IsEI](executablecrafting/configurations/eanvil/1-nonei-+-2-isei.md)
-    * [(1)IsEI+(2)IsEI](executablecrafting/configurations/eanvil/1-isei+-2-isei.md)
 * [⌨️ Commands & Permissions](executablecrafting/commands-and-permissions.md)
 
 ## AI Chat Moderation

@@ -14,6 +14,6 @@
 [recipe-book.md](../../executablecrafting/configurations/recipe-book.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../executablecrafting/configurations/eanvil/" %}
-[eanvil](../../executablecrafting/configurations/eanvil/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

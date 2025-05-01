@@ -14,6 +14,6 @@
 [recipe-book.md](recipe-book.md)
 {% endcontent-ref %}
 
-{% content-ref url="eanvil/" %}
-[eanvil](eanvil/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
