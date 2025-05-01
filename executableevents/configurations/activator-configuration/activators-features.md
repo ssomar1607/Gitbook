@@ -623,6 +623,8 @@ activators:
       ifNameMsg: ''
 ```
 
+### \[\_TE] targetEntityConditions
+
 ### \[\*\_TE] Target entity placeholders
 
 When the second actor of the event is a player then you can use in your activator config (commands, conditions, other..) [the target entity placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#target-entity-placeholders)
