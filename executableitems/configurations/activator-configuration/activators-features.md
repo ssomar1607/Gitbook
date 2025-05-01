@@ -119,6 +119,7 @@ activators:
   * updateArmorSettings: Boolean value to update the armor settings of the ExecutableItem. If its true, it will override the current armor settings of the item with the current/updated armor settings set on the config file of the ExecutableItem. e.g. (Armor color)
   * updateMaterial: Boolean value to update the material of the ExecutableItem. If its true, it will override the current material of the item with the current/updated material set on the config file of the ExecutableItem.
   * updateHiders: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current hiders configuration with the current/updated hiders setup on the config file of the ExecutableItem.
+  * updateEquippable: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current equippable component of the item with the current/updated equippable setup on the config file of the ExecutableItem.
 * Example:
 
 ```yaml
@@ -134,6 +135,7 @@ activators:
     updateArmorSettings: false
     updateMaterial: false
     updateHiders: false
+    updateEquippable: false
 ```
 
 ### cancelEvent
@@ -179,6 +181,26 @@ activators:
     - effect give %player% regeneration 5 5 true
     - SEND_MESSAGE &dYou received regeneration :P
 ```
+
+### playerConditions
+
+* Info: You can use this conditions in all type of activators
+* [Player conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
+
+### worldConditions
+
+* Info: You can use this conditions in all type of activators
+* [World conditions](../../../tools-for-all-plugins-score/custom-conditions/world-conditions.md)
+
+### placeholdersConditions
+
+* Info: You can use this conditions in all type of activators
+* [PlaceholdersConditions](../../../tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
+
+### itemConditions
+
+* Info: You can use this conditions in all type of activators
+* [Item conditions](../../../tools-for-all-plugins-score/custom-conditions/item-conditions.md)
 
 ## Cooldown
 
@@ -598,6 +620,12 @@ activators:
     - '#MINECRAFT:MINEABLE/PICKAXE'
 ```
 
+### \[P\_B] blockConditions
+
+* Type of activator category: PLAYER\_BLOCK
+* Info: Feature for activators that involves a block, here you can setup conditions for the block involved.
+* [Block conditions](../../../tools-for-all-plugins-score/custom-conditions/block-conditions.md)
+
 ### \[P\_E] entityCommands
 
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
@@ -662,6 +690,12 @@ activators:
     - ZOMBIE{IsBaby:1}
 ```
 
+### \[P\_E] entityConditions
+
+* Type of activator category: PLAYER\_ENTITY
+* Info: Feature for activators that involves a entity, here you can setup conditions for the entity involved.
+* [Entity conditions](../../../tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
+
 ### \[P\_T] targetCommands
 
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
@@ -701,6 +735,12 @@ activators:
     - SEND_MESSAGE &eHey %target% you have been hit by %player%, in 5 seconds you can't pick up items
     -CANCEL_PICKUP time:100
 ```
+
+### \[P\_T] targetConditions
+
+* Type of activator category: PLAYER\_TARGET
+* Info: Feature for activators that involves a player target, here you can setup conditions for the player target involved.
+* [Target conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
 
 ### \[S\_A\_L] detailedItems
 

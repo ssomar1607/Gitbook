@@ -9,7 +9,7 @@
 # -
 #       ExecutableCrafting
 # -
-#         By: Vayk and Ssomar
+#         By: Vayk
 # -
 # ----------------------------------
 # -
@@ -24,19 +24,28 @@ recipeConfig:
     eventsPriority: NORMAL #In case some plugin is causing problems you can set this to NORMAL, HIGH or HIGHEST
   craftingTable:
     castResultAsMaxAmount: false #If you want the result to stack on the result slot of the crafting inventory
+  furnace:
+    furnaceRestrictions: true #If you want to disable the restrictions of furnace.
 #Configuration related to recipe books
 recipeBook:
   recipeBookNameOfID: true #If you want inside the recipe book the name of the items to be the ID, otherwise it will be the result name
   recipesInternal: true #If you want to be able to check the recipes inside recipes.
   recipesInternal_ShiftClickToRecipesInternal: true #If you want to only click the items inside of recipes to get the recipe then disable this.
   recipesInternal_checkRecipesFromInventory: false #If you want to also be able to check the recipes of the items in your inventory then enable this
-  plchdShowAll: true #If you want the items to show all not meeting conditions in the recipe book
-  playerCanOpenNotMeetingCondition: false #If you want the players to be able to open recipes in the recipe book even if they don't meet the conditions
+  plchdLore: true #If you want to be shown if the player can craft the item or not if the plchd doesn't match
+  plchdShowAll: true #If you want to be shown all conditions, or only the first one that doesn't match
+#Configuration related to eAnvil
+eAnvil:
+  EAnvilGlobal: false #If the EAnvil can work on global anvils or can only work if its added manually
+  EAnvilForgeLore: false #If the anvil should add "&fForged with <item2.name>" to item1 on anvil forge.
+
+
+
 ```
 
-
-
 ## Visual configuration of recipeBook
+
+
 
 ```yaml
 #Customization of the messages that the plugin send

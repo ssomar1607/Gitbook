@@ -37,7 +37,7 @@ itemConditions:
 
 * Example Situations:
   * If the value is `<789`, the activator will only activate if the item's durability is below 789
-  * If the value is `<1000`, the activator will only activate if the item's durability is 1000 and below.
+  * If the value is `<=1000`, the activator will only activate if the item's durability is 1000 and below.
   * If the value is `==788`, the activator will only activate if the item's durability is 788.
   * If the value is `>989`, the activator will only activate if the item's durability is above 989.
   * If the value is `>=676`, the activator will only activate if the item's durability is 676 and above.
@@ -71,7 +71,26 @@ itemConditions:
         ifUsageCancel: false
 ```
 
-####
+### ifUseCooldown
+
+* Description: Checks if the EI has the specified use cooldown. (It's like the enderpearl cooldown) (This cooldown is not related to the activator cooldown, it's the vanilla use cooldown)&#x20;
+  * This feature is only available for Minecraft 1.21.2 and +
+  * The cooldown is specified in ticks (20 ticks = 1 second)
+* Example:
+
+```yaml
+itemConditions:
+    ifUseCooldown: '>600'
+    ifUseCooldownMsg: '' #<- Here is where you will add the custom message.
+```
+
+* Example Situations:
+  * If the value is `<789`, the activator will only activate if the item's use cooldown is below 789 ticks
+  * If the value is `<=1000`, the activator will only activate if the item's use cooldown is 1000 and below.
+  * If the value is `==788`, the activator will only activate if the item's use cooldown  is 788.
+  * If the value is `>989`, the activator will only activate if the item's use cooldown is above 989.
+  * If the value is `>=676`, the activator will only activate if the item's use cooldown  is 676 and above.
+* Required: NO
 
 ### ifHasEnchant
 
