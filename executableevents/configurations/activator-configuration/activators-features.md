@@ -606,9 +606,9 @@ activators:
 
 ### \[\*\_TE] targetEntityConditions
 
-It's available in all activators that contains a player targeted as the second actor of the event.
+It's available in all activators that contains an entity targeted as the second actor of the event.
 
-* Info: Feature for activators that involves a player target, here you can setup conditions for the player target involved.
+* Info: Feature for activators that involves a player target, here you can setup conditions for the entity target involved.
 * [Target entity conditions](../../../tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
 * Example:
 
@@ -621,6 +621,33 @@ activators:
       - Watame
       - Okayu
       ifNameMsg: ''
+```
+
+### \[\*\_TE] detailedTargetEntities
+
+It's available in all activators that contains an entity targeted as the second actor of the event.
+
+* Info:  For activators that involves a target entity you can select as condition the type of entity(es) where this activator will trigger by using this feature.
+  * You can select a vanilla Minecraft entity (info: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)) like:
+    * "ZOMBIE"
+  * ⭐\[Requires NBTAPI Plugin] You can select a vanilla Minecraft mob with NBT (info: [https://minecraft.fandom.com/wiki/Tutorials/Command\_NBT\_tags#Entities](https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities)) like:
+    * "ZOMBIE{isBaby:1}"
+    * "ZOMBIE{CustomName:"\*"}"
+  * You can select a MythicMob mob like:
+    * "MM-\<ID>"
+  * You can blacklist a mob by usinig ! like
+    * !SKELETON
+
+```yaml
+activators:  
+  activator1: # Activator ID, you can create as many activator on the activators list    
+    option: PLAYER_PARTICIPATE_KILL_ENTITY
+    detailedTargetEntities:
+    - MM-Giant
+    - MM-MyMob
+    - '!SKELETON'
+    - ZOMBIE{CustomName:"*"}
+    - ZOMBIE{IsBaby:1}
 ```
 
 ### \[\*\_TE] Target entity placeholders
@@ -723,6 +750,72 @@ activators:
     option: ENTITY_COMBUST_BY_BLOCK
     targetBlockConditions:
       ifMustBeNatural: true
+```
+
+### \[\*\_TB] detailedTargetBlocks
+
+It's available in all activators that contains a block as the second actor of the event.
+
+* Info: Feature for activators that involves a target block, here you can select as condition the type of block(s) where this activator will trigger by using this feature.
+  * You can select blocks from Minecraft Vanilla like:
+    * "STONE"
+  * ⭐You can select blocks from Minecraft Vanilla with NBT (info: [https://minecraft.fandom.com/wiki/Block\_states](https://minecraft.fandom.com/wiki/Block_states)) like:&#x20;
+    * "FURNACE{lit:true}"
+  * You can select blocks from ItemsAdder like:
+    * "ITEMSADDER:\<id>"
+  * You can select blocks from ExecutableBlocks like:
+    * "EXECUTABLEBLOCKS:\<id>"
+  * You can blacklist certain blocks adding ! at the beginning like:
+    * "!DIRT"
+  * You can add Block Tags like:&#x20;
+    * "#MINECRAFT:MINEABLE/PICKAXE"
+  * You can add group of blocks like
+    * "ALL\_ORES"
+
+<details>
+
+<summary>List of group of blocks</summary>
+
+```
+    ALL_CHESTS,
+    ALL_FURNACES,
+    ALL_PLANKS,
+    ALL_LOGS,
+    ALL_STRIPPED_LOGS,
+    ALL_STRIPPED_WOODS,
+    ALL_WOODS,
+    ALL_ORES,
+    ALL_WOOLS,
+    ALL_SLABS,
+    ALL_STAIRS,
+    ALL_FENCES,
+    ALL_SAPLINGS,
+    ALL_CROPS,
+    ALL_DOORS,
+    ALL_TRAPDOORS,
+    ALL_BEDS,
+    ALL_TERRACOTTA,
+    ALL_NORMAL_TERRACOTTA,
+    ALL_GLAZED_TERRACOTTA,
+    ALL_CONCRETE,
+    ALL_CONCRETE_POWDERS,
+    ALL_GLASS,
+    ALL_STAINED_GLASS,
+    ALL_SHULKER_BOXES,
+    ALL_LEAVES,
+    ALL_CARPETS;
+```
+
+</details>
+
+* Example:
+
+```yaml
+activators:  
+  activator0: # Activator ID, you can create as many activator on the activators list    
+    option: ENTITY_CHANGE_BLOCK
+    detailedTargetBlocks:
+    - DIRT
 ```
 
 ### \[\*\_TB] Target block placeholders
