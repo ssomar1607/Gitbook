@@ -83,4 +83,8 @@ You might encounter console errors such as:
 ...:minecraft:magma_block,Count:1b,tag:{CustomModelData:10002}}]}<--[HERE]
 ```
 
-To fix it, change the `"` symbols to `'`
+To fix it, change the `"` symbols to `'` &#x20;
+
+### Issues related to custom commands not executing under varying circumstances
+
+Try adding DELAYTICK 1 or DELAYTICK 2 or longer before executing the custom command. It may be due to how the nature of the used activators work.
