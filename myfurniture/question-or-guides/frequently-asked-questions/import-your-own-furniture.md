@@ -5,7 +5,7 @@
 To import your own furniture pack, it's simple, here are the few steps to follow:
 
 1. The server needs to be loaded with the plugin
-2. Drag and drop your texture pack into `plugins/Myfurniture/__textures__`
+2. Drag and drop your texture pack folder (not zip) into `plugins/Myfurniture/__textures__`
 3. do `/mf pack` in-game or `mf pack` in your console
 4. The plugin will load your custom furniture into the plugin, it can take some minutes
 5. Once it's done you will see the file MyFurniturePack.zip in the \_\_textures\_\_ folder
