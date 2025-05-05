@@ -16,7 +16,7 @@
 # WIKI HERE : https://docs.ssomar.com
 # DISCORD HERE : https://discord.com/invite/TRmSwJaYNv
 # -
-locale: EN_US
+
 #Configuration related to recipe
 recipeConfig:
   global:
@@ -24,7 +24,10 @@ recipeConfig:
     eventsPriority: NORMAL #In case some plugin is causing problems you can set this to NORMAL, HIGH or HIGHEST
   craftingTable:
     castResultAsMaxAmount: false #If you want the result to stack on the result slot of the crafting inventory
+
+
 #Configuration related to recipe books
+locale: EN_US
 recipeBook:
   recipeBookNameOfID: true #If you want inside the recipe book the name of the items to be the ID, otherwise it will be the result name
   recipesInternal: true #If you want to be able to check the recipes inside recipes.

@@ -38,7 +38,7 @@ recipeBooks: #This goes by default
 
 Then you can open the recipe book using the command
 
-* `ec recipebook {player} {id_of_recipebook}`
+* `ec book {player} {id_of_book}`
 
 ### Tips
 
