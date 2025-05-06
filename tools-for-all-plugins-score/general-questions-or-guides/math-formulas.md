@@ -6,6 +6,22 @@ description: >-
 
 # Math Formulas
 
+## Requirements
+
+{% hint style="warning" %}
+To use the placeholders mentioned on this page you need to have the plugin [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
+
+Also you need the Math, Player and RNG Expansions that can be downloaded by typing:
+
+/papi ecloud download Math
+
+/papi ecloud download Player
+
+/papi ecloud download RNG
+
+/papi reload
+{% endhint %}
+
 ## Particle-Related Math Formulas
 
 ### Player-Direction Offset Formula
@@ -15,9 +31,6 @@ X: %math_2*SIN({player_yaw}*-1)*COS({player_pitch}*-1)%
 Y: %math_2*SIN({player_pitch}*-1)%
 Z: %math_2*COS({player_yaw}*-1)*COS({player_pitch}*-1)%
 ```
-
-Requires:\
-\- PlaceholderAPI & Math Expansion
 
 Example Usage:&#x20;
 
@@ -34,12 +47,12 @@ Example Usage:&#x20;
 Command below shoots firework particles like a shotgun (Commands below are in config form)
 
 ```yaml
-    - 'LOOP START: 20'
-    - 'RANDON RUN: 1'
+    - 'LOOP_START loopCount:20'
+    - 'RANDOM_RUN selectionCount:1'
     - execute at %player% run particle firework ~ ~1.6 ~ %math_2*SIN(({player_yaw}+{rng_-10,10})*-1)*COS(({player_pitch}+{rng_-10,10})*-1)%
       %math_2*SIN(({player_pitch}+{rng_-10,10})*-1)% %math_2*COS(({player_yaw}+{rng_-10,10})*-1)*COS(({player_pitch}+{rng_-10,10})*-1)%
       0.%rng_5,70% 0
-    - RANDOM END
+    - RANDOM_END
     - LOOP END
 ```
 
@@ -105,11 +118,6 @@ Using the formulas:
 ## Origin-Related Math Formulas
 
 ### Distance from XYZ
-
-Requires:\
-\- PlaceholderAPI \
-&#x20; \- Math Expansion\
-&#x20; \- Player Expansion
 
 Example Usage:\
 You want to get the distance between you and a specific XYZ location which is x:30, y:60, z:-120
