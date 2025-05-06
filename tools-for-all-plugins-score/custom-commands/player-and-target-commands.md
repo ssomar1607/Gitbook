@@ -396,7 +396,7 @@ activators:
 * Info: It applys a cooldown to a specific ExecutableItems
 * Command: EICOOLDOWN {PLAYER} {ID} {SECONDS} {boolean TICKS} \[optional activator id]
   * {PLAYER}: The player to target the command
-  * {ID}: The id of the ExecutableItem
+  * {ID}: The id of the ExecutableItem or "all" for all ExecutableItems
   * {Seconds}: The amount of time
   * {boolean TICKS}: If you want the time to be in ticks
   * \[optional activator id]: You can apply it to a specific activator id
@@ -407,7 +407,8 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - EICOOLDOWN %player% thisismyid 10 true
+    - EICOOLDOWN %player% thisismyid 10 true # For the ExecutableItem thisismyid 
+    - EICOOLDOWN %player% all 10 true # For all ExecutableItems
 ```
 
 
@@ -417,7 +418,7 @@ activators:
 * Info: It applys a cooldown to a specific ExecutableBlocks
 * Command: EBCOOLDOWN {PLAYER} {ID} {SECONDS} {boolean TICKS} \[optional activator id]
   * {PLAYER}: The player to target the command
-  * {ID}: The id of the ExecutableItem
+  * {ID}: The id of the ExecutableBlocks or "all" for all ExecutableBlocks
   * {Seconds}: The amount of time
   * {boolean TICKS}: If you want the time to be in ticks
   * \[optional activator id]: You can apply it to a specific activator id
@@ -427,7 +428,8 @@ activators:
 </strong>  activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - EBCOOLDOWN %player% thisismyid 10 true
+    - EBCOOLDOWN %player% thisismyid 10 true # For the ExecutableBlock thisismyid 
+    - EBCOOLDOWN %player% all 10 true # For all ExecutableBlocks
 </code></pre>
 
 
@@ -437,7 +439,7 @@ activators:
 * Info: It applys a cooldown to a specific ExecutableItems
 * Command: EECOOLDOWN {PLAYER} {ID} {SECONDS} {boolean TICKS} {optional activator}
   * {PLAYER}: The player to target the command
-  * {ID}: The id of the ExecutableItem
+  * {ID}: The id of the ExecutableEvent  or "all" for all ExecutableEvents
   * {Seconds}: The amount of time
   * {boolean TICKS}: If you want the time to be in ticks
   * \[optional activator id]: You can apply it to a specific activator id
@@ -448,7 +450,8 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - EECOOLDOWN %player% thisismyid 10 true
+    - EECOOLDOWN %player% thisismyid 10 true # For the ExecutableEvent thisismyid 
+    - EECOOLDOWN %player% all 10 true # For all ExecutableEvents
 ```
 
 
