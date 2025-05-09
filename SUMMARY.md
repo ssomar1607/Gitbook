@@ -258,6 +258,11 @@
     * [Crafting Recipe Examples](executablecrafting/configurations/recipe-configuration/crafting-recipe-examples.md)
   * [Recipe groups](executablecrafting/configurations/recipe-groups.md)
   * [Recipe Book](executablecrafting/configurations/recipe-book.md)
+* [🤖 Questions | Guides](executablecrafting/questions-or-guides/README.md)
+  * [Free vs Premium](executablecrafting/questions-or-guides/free-vs-premium.md)
+  * [Install/update/errors](executablecrafting/questions-or-guides/install-update-errors/README.md)
+    * [How to install correctly](executablecrafting/questions-or-guides/install-update-errors/how-to-install-correctly.md)
+    * [How to update correctly](executablecrafting/questions-or-guides/install-update-errors/how-to-update-correctly.md)
 * [⌨️ Commands & Permissions](executablecrafting/commands-and-permissions.md)
 
 ## AI Chat Moderation

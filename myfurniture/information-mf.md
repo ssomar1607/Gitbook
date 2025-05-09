@@ -1,4 +1,4 @@
-# 📌 Information MyFurniture
+# 📌 Information MF
 
 ## Description
 
@@ -18,10 +18,18 @@ Your furniture will have a perfect hit and bounding box. MyFurniture is not like
 * Download on [Spigot](https://www.spigotmc.org/resources/%E2%9B%A9%EF%B8%8F-myfurniture-%E2%AD%90-add-custom-furniture-%E2%AD%90-clean-hit-and-bounding-box-custom-triggers-quick-setup.79024/)
 * Download on [Discord](https://discord.com/channels/701066025516531753/1344653685669498995)
 
-## Premium version <img src="../.gitbook/assets/79024.png" alt="" data-size="line">
+## Premium version <img src="../.gitbook/assets/ChatGPT Image 29 mars 2025, 22_44_46(1).png" alt="" data-size="line">&#x20;
 
 {% hint style="info" %}
-Price : 4.99€/month
+Subscription: 4.99€/month
+
+For:&#x20;
+
+* MyFurniture Premium
+* ExecutableItems Premium
+* ExecutableCrafting Premium
+* ExecutableLevers
+* CustomPiglinsTrades
 {% endhint %}
 
 {% hint style="success" %}
