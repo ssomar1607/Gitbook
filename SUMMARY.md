@@ -7,6 +7,7 @@
   * [Mixed Commands (Player & Entity)](tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity.md)
   * [Entity Commands](tools-for-all-plugins-score/custom-commands/entity-commands.md)
   * [Block Commands](tools-for-all-plugins-score/custom-commands/block-commands.md)
+  * [Item Commands](tools-for-all-plugins-score/custom-commands/item-commands.md)
   * [Utility Commands](tools-for-all-plugins-score/custom-commands/utility-commands.md)
 * [📚 Custom Conditions](tools-for-all-plugins-score/custom-conditions/README.md)
   * [Player & Target Conditions](tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
