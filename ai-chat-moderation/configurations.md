@@ -45,6 +45,19 @@ Give your moderators the tools they need to maintain a positive community withou
 ```yaml
 # Enable or disable the plugin
 enabled: true
+
+# ---- NO AI PART ----
+# To blacklist some words without using AI
+blacklisted-words:
+  - fuck you
+  - retarded
+# Whether or not the message will be hidden when it contains a blacklisted word
+blacklisted-words-hide-message: true
+# The commands to run if the message contains a blacklisted word
+blacklisted-words-commands:
+  - "SEND_MESSAGE &6%player% &cUse a correct language."
+
+# ---- AI PART ----
 # Choose your provider OPENAI or MISTRAL
 # + Mistral is better for arabic and Russian languages
 # + OpenAI responses are faster
