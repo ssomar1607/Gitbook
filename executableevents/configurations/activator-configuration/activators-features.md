@@ -412,7 +412,9 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list    
     option: CROP_GROW
     detailedBlocks:
-    - CARROTS
+      blocks:
+      - CARROTS
+      cancelEventIfNotValid: false
 ```
 
 ### \[B\_\*] blockConditions

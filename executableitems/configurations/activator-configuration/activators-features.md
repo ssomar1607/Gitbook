@@ -607,15 +607,17 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list    
     option: PLAYER_BLOCK_BREAK
     detailedBlocks:
-    - STONE
-    - COBBLESTONE
-    - ANDESITE
-    - FURNACE{lit:true} (🎇 **BLOCK STATE FEATURE IS PREMIUM EXCLUSIVE ONLY AND FOR 1.13+** 🎇)
-    - ITEMSADDER:turquoise_block
-    - EXECUTABLEBLOCKS:CUSTOMDIRT
-    - !DIRT
-    - ALL_ORES
-    - '#MINECRAFT:MINEABLE/PICKAXE'
+      blocks:
+      - STONE
+      - COBBLESTONE
+      - ANDESITE
+      - FURNACE{lit:true} (🎇 **BLOCK STATE FEATURE IS PREMIUM EXCLUSIVE ONLY AND FOR 1.13+** 🎇)
+      - ITEMSADDER:turquoise_block
+      - EXECUTABLEBLOCKS:CUSTOMDIRT
+      - !DIRT
+      - ALL_ORES
+      - '#MINECRAFT:MINEABLE/PICKAXE'
+      cancelEventIfNotValid: false
 ```
 
 ### \[P\_B] blockConditions
@@ -731,7 +733,7 @@ activators:
     - SEND_MESSAGE &eYou have hit %target%, he cant pick up items in 5 seconds
     targetCommands:
     - SEND_MESSAGE &eHey %target% you have been hit by %player%, in 5 seconds you can't pick up items
-    -CANCEL_PICKUP time:100
+    - CANCEL_PICKUP time:100
 ```
 
 ### \[P\_T] targetConditions
