@@ -47,7 +47,7 @@ To give the permissions of all commands, I advice you to download a permission p
 
 #### Open a recipe book
 
-* Command: **/ec recipebook \<player> \<book>**
+* Command: **/ec book \<player> \<book>**
 * Permission: `ec.cmd.book`
 
 #### Activate the debug mode for yourself
