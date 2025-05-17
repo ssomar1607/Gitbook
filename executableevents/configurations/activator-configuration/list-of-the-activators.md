@@ -83,7 +83,11 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_CLICK\_ON\_ENTITY
 
-* Info: Activates when a player click on an entity. PLAYER\_CLICK\_ON\_PLAYER : Activates when a player click on a player.&#x20;
+* Info: Activates when a player click on an entity.&#x20;
+
+### 🔹 PLAYER\_CLICK\_ON\_PLAYER&#x20;
+
+* Info: Activates when a player click on a player.&#x20;
 
 ### 🔹PLAYER\_CONNECTION
 
@@ -91,7 +95,11 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_CONSUME
 
-* Info: Activates when a player successfully eat/consume the item. PLAYER\_CUSTOM\_LAUNCH: Activates when a player launches a custom projectile.&#x20;
+* Info: Activates when a player successfully eat/consume the item.&#x20;
+
+### 🔹PLAYER\_CUSTOM\_LAUNCH
+
+* Info: Activates when a player launches a custom projectile.&#x20;
 
 ### 🔹PLAYER\_DEATH
 
@@ -128,6 +136,10 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_EDIT\_BOOK
 
 * Info: Activates when a player made changes to the book and quill and pressed done or sign the book.&#x20;
+
+### 🔹PLAYER\_EMPTY\_BUCKET
+
+* Info: Activates when a player empties the bucket they have in their hand (Such as placing water from water bucket)
 
 ### 🔹PLAYER\_ENABLE\_FLY
 
@@ -211,6 +223,10 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates when a player harvests a block&#x20;
 
+### 🔹PLAYER\_HIDE\_ENTITY
+
+* Info: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_&#x20;
+
 ### 🔹PLAYER\_HIT\_ENTITY
 
 * Info: Activates when a player hits an entity&#x20;
@@ -230,7 +246,11 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_JUMP
 
-* Info: Activates when a player jumps. PLAYER\_KICK: Activates when a player gets kicked&#x20;
+* Info: Activates when a player jumps.&#x20;
+
+### 🔹PLAYER\_KICK
+
+* Info: Activates when a player gets kicked&#x20;
 
 ### 🔹PLAYER\_KILL\_ENTITY
 

@@ -41,6 +41,10 @@ They are stored in `plugins/Score/variables`
 * /score variables
 * /score variables clear {typeofvariable} {nameofvariable} \[player]
 
+{% hint style="info" %}
+You can type `/score variables clear {typeofvariable} {nameofvariable} all` to reset all player data in that SCore variable
+{% endhint %}
+
 
 
 **/score variables \<typeofmodification> \<typeofvariable> \<nameofvariable> \<value> \[player]**

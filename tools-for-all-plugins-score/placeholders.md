@@ -67,6 +67,30 @@ Examples:
 
 <table><thead><tr><th width="150">Placeholder</th><th>Description</th></tr></thead><tbody><tr><td><strong>%player%</strong></td><td>Name of the player. Can be used to display the owner of the item in the item's lore</td></tr><tr><td><strong>%player_uuid%</strong></td><td>UUID of the player (%player_uuid_array% for its 4-array integer form. Ex: <code>[I;-1288600659,-373273272,-1897203511,898446696])</code></td></tr><tr><td><strong>%player_world%</strong></td><td>Name of the world (<strong>%player_world_lower%</strong> for lowercase) Use &#x3C;&#x3C;%player_world%>> when entering world argument in vanilla commands</td></tr><tr><td><strong>%player_x%</strong></td><td>X-Coordinates of the player (Decimal) >> For an integer use <strong>%player_x_int%</strong></td></tr><tr><td><strong>%player_y%</strong></td><td>Y-Coordinates of the player (Decimal) >> For an integer use <strong>%player_y_int%</strong></td></tr><tr><td><strong>%player_z%</strong></td><td>Z-Coordinates of the player (Decimal) >> For an integer use <strong>%player_z_int%</strong></td></tr><tr><td><strong>%player_slot%</strong></td><td>The slot used to active the activator</td></tr><tr><td><strong>%player_slot_live%</strong></td><td>The current held slot</td></tr><tr><td><strong>%player_pitch%</strong></td><td>The pitch of the player >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>pitch</strong><em><strong>_</strong></em><strong>int%</strong></td></tr><tr><td><strong>%player_pitch_positive%</strong></td><td>The pitch of the player but always positive >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>pitch</strong><em><strong>_</strong></em><strong>positive</strong><em><strong>_</strong></em><strong>int%</strong></td></tr><tr><td><strong>%player_yaw%</strong></td><td>The yaw of the player >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>yaw</strong><em><strong>_</strong></em><strong>int%</strong></td></tr><tr><td><strong>%player_yaw</strong><em><strong>_</strong></em><strong>positive</strong><em><strong>%</strong></em></td><td>The yaw of the player but always positive >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>yaw_positive_int%</strong></td></tr><tr><td><strong>%player_direction%</strong></td><td>Direction of where the player is facing (ex: N, SW, NE)</td></tr><tr><td><strong>%last_damage</strong><em><strong>_</strong></em><strong>taken%</strong><br><strong>%last_damage_taken_int%</strong></td><td>The last damage taken by the player</td></tr><tr><td><strong>%last_damage</strong><em><strong>_</strong></em><strong>dealt%</strong><br><strong>%last_damage_dealt_int%</strong></td><td>The last damage dealt by the player</td></tr><tr><td><strong>%player_team%</strong></td><td>The team of the player if the player has one</td></tr><tr><td><strong>%player_attack</strong><em><strong>_</strong></em><strong>charge%</strong></td><td>Gets the current cooldown for a player's attack. This is used to calculate damage, with 1.0 representing a fully charged attack and 0.0 representing a non-charged attack (1.16+ only)<br><br>This placeholder gets reset after a DAMAGE command, so if you want to debug it, display the value before a DAMAGE command.</td></tr></tbody></table>
 
+### Initial Player Placeholders (NOT RELEASED YET)
+
+The significance of these placeholders is for people who want to create advanced configurations that require the user's values when the activator gets triggered while expecting them to not change as the commands execute.
+
+```
+%player_world_initial%
+%player_world_lower_initial%
+%player_direction_initial%
+%player_x_initial%
+%player_y_initial%
+%player_z_initial%
+%player_x_initial_int%
+%player_y_initial_int%
+%player_z_initial_int%
+%player_pitch_initial%
+%player_pitch_positive_initial%
+%player_pitch_initial_int%
+%player_pitch_positive_initial_int%
+%player_yaw_initial%
+%player_yaw_positive_initial%
+%player_yaw_initial_int%
+%player_yaw_positive_initial_int%
+```
+
 ## Target player placeholders
 
 (The activator must have a target player)
@@ -253,7 +277,13 @@ Example: `%around_target_x%`
 They return the minecraft effect name instead of the spigot name
 {% endhint %}
 
+### PLAYER\_TELEPORT
 
+* Plugins: ExecutableEvents
+
+```
+%teleportCause%
+```
 
 ### PLAYER\_WRITE\_COMMAND | PLAYER\_SEND\_MESSAGE
 
@@ -323,6 +353,30 @@ They return the minecraft effect name instead of the spigot name
 * Plugin: ExecutableEvents
 * %newLevel%
 * %oldLevel%
+
+### RAID\_TRIGGER
+
+```
+%player% (who triggers the raid)
+%badomenlevel%
+```
+
+### RAID\_WAVE
+
+{% code overflow="wrap" %}
+```
+%raiders% (UUID LIST) Example OUT "123e4567-e89b-12d3-a456-426614174000,123e4567-e89b-12d3-a456-426614174001,123e4567-e89b-12d3-a456-426614174002"
+```
+{% endcode %}
+
+### RAID\_FINISH
+
+{% code overflow="wrap" %}
+```
+%badomenlevel%
+%heroes% (UUID LIST) Example OUT "123e4567-e89b-12d3-a456-426614174000,123e4567-e89b-12d3-a456-426614174001,123e4567-e89b-12d3-a456-426614174002"
+```
+{% endcode %}
 
 ### LIGHTNING\_STRIKE
 

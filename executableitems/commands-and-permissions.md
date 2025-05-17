@@ -204,12 +204,16 @@ Also there will be different colors (but its the same idea as {} and \[] ):
       * Usage: You can select a value for the usage when giving the item
         * ✅`{Usage:5}` # Not use of white space(s)
         * ❌`{Usage : 5}` # Use of white space(s)
+      * **Durability**: You can decide how much durability the item loses upon giving the user the item
+        * ✅`{Durability:5}` # Not use of white space(s)
+        * ❌`{Durability : 5}` # Use of white space(s)
   * quantity: Amount of items to give
   * giveOfflinePlayer: Boolean value to set if the item will be given to an offline player or not. By default this value is on true.
 * Examples: (On all this examples the commands is being run inside an ExecutableItems in order to parse placeholders such as %player%,%var\_name% and %usage%)
-  * /e`i give %player% Genesis_Crystal{Variables:{vibraniun:10,proton:30},Usage:10} 3`&#x20;
-  * /ei give %player% Su`rgeBlade{Variables:{charge:%var_charge%+1},Usage:%usage%-1} 1`
+  * `/ei give %player% Genesis_Crystal{Variables:{vibraniun:10,proton:30},Usage:10} 3`&#x20;
+  * `/ei give %player% SurgeBlade{Variables:{charge:%var_charge%+1},Usage:%usage%-1} 1`
   * `/ei give SsomarPluginsPlayer BoneBlade 1`
+  * `/ei give edp445 cupcake{Durability:12} 1`
 * Permission: `ei.cmd.give`
 
 #### Give All command
