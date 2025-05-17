@@ -2,11 +2,9 @@
 
 {% embed url="https://youtu.be/_GavkHnQcvg?si=UaRm9LlUomDzoveQ" %}
 
-Score includes 34 custom pre-made particles shapes from Xparticle library. You can check all the information on their github.&#x20;
+Score includes many pre-made particles shapes from XParticle library and some custom other.&#x20;
 
 The attached link will direct you to the list of all **available particle types**.
-
-{% embed url="https://github.com/CryptoMorin/XSeries/blob/master/core/src/main/java/com/cryptomorin/xseries/particles/Particles.java" %}
 
 <details>
 
@@ -59,102 +57,198 @@ The attached link will direct you to the list of all **available particle types*
 
 </details>
 
-## Parameters
+## How to display the particles
 
-Each shape has some **custom parameters to configure**, to see these parameters use the following command:
+The command to display the particle is `/score particles`
 
-```yaml
-/score particles-info 
-#Example
-/score particles-info shape:blackhole
-```
+You will have to select a shape and configure correctly the command to achieve to do what you want.
 
-## Display the particle
 
-To display the shape use the following command:
 
-```
-/score particles
-```
+## General settings for all shapes
 
-To change the parameters of your shape just add into your current command
+### Define the spawn point
 
-```
-{the parameter name}:{the value}
-```
+To define where the shape will be displayed you have two choice, by mentioning directly the location or setting an entity UUID&#x20;
 
-{% hint style="info" %}
-You can add as much parameters as you want in the same line
-{% endhint %}
+#### Using Player/Entity UUID
 
-## Target&#x20;
+When you decide to use the entity UUID **the shape will follow en Player/Entity if he moves**. So it can deform the shape or make a cool effect.
 
-Normally the shape is in the player who is running the command, to change this use:
-
-```
+```css
 target:{uuid of the target}
+/* Example using flat UUID */
+target:b33183ad-e9c0-4d48-8eea-f8c9358d3568
+/* Example using a placeholder */
+target:%player_uuid%
 ```
 
 {% hint style="danger" %}
-THE **UUID** not the name of the player, not the name of the target, not the name of the entity, the **UUID**.
+You have to specify an UUID of a player or an entity. The player name doesn't work !
 {% endhint %}
 
-If don't want to target someone but targetting a specific location use:
+#### Using a specific location
 
-```
+Using location you are sure that the shape will not be deformed, it will stay static.
+
+```css
 location:{world},{x},{y},{z}
+/* Example using flat location */
+location:world,100,50,500
+/* Example using placeholders */
+location:%player_world%,%player_x%,%player_y%,%player_z%
 ```
 
-{% hint style="info" %}
-Example:\
-\
-score particles location:%block\_world%,%block\_x%+0.5,%block\_y%+0.5,%block\_z%+0.5 shape:circularBeam particle:flame color:ORANGE maxRadius:14 rate:500 radiusRate:15 extend:1 time:12\
-\
-The 0.5 is added to make the particles appear on the center of the block
-{% endhint %}
 
-### Particle type
 
-Default, the shape will use the FLAME particle, to change this use
+### Particles definition
 
-```
+#### Particle type
+
+Define the particle used by the shape. By default it will be the FLAME particle
+
+```css
 particle:{the particle type}
+/* Example */
+particle:CLOUD
 ```
 
-### Color of redstone particle
+List of particles available here: [List of Spigot particles ](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html)
 
-**Instead** of using `particle:{particle name}` to use the restone particle with a [custom color](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Color.html), add the next parameter:
+#### Color
 
-```
+**Instead** of using `particle:{particle name}`  if you want to use REDSTONE / DUST particles you can directly use the setting color with a [custom color](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Color.html).
+
+You can set two colors separated by a , to have a color transition.
+
+```css
 color:{color Name}
+/* Example one color */
+color:RED
+/* Example two colors with transition */
+color:AQUA,BLUE
 ```
 
-## Example
+#### Block particles
 
-* **"heart"**
-  * "/score particles shape:heart particle:HEART cut:4 cutAngle:2 depth:2 compressHeight:1 rate:100"
-* **"blackhole"**
-  * "/score particles target:731bec03-102e-3179-b676-04de47c40580 particle:SMOKE\_NORMAL shape:blackhole points:30 radius:2.5 rate:1 mode:2 time:50"
-* **"vortex"**
-  * "/score particles shape:vortex particle:crit points:5 rate:25 time:100"
-* **"diamond"**
-  * "/score particles shape:diamond particle:glow radiusRate:0.6 rate:0.4 height:3"
-* **"ring"**
-  * "/score particles shape:ring particle:PORTAL rate:100 radius:2 tubeRadius:1"
-* **"illuminati"**
-  * "/score particles shape:illuminati particle:NAUTILUS size:5 extension:20"
-* **"meguminExplosion"**
-  * "/score particles shape:meguminExplosion color:RED size:5"
-* **"circularBeam"**
-  * "/score particles shape:circularBeam color:PURPLE maxRadius:5 rate:500 radiusRate:15 extend:1 time:100"
-* **"cone"**
-  * "/score particles shape:cone color:GREEN height:5 radius:1 rate:0.2 circleRate:10"
+**Instead** of using `particle:{particle name}`  if you want to use BLOCK\_CRACK / BLOCK particles you can directly use the setting blockdata with a [material](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html).
 
-```
-/score particles target:731bec03-102e-3179-b676-04de47c40580 shape:blackhole particle:SMOKE_NORMAL points:30 radius:2.5 rate:1 mode:2 time:50
+```css
+blockdata:{material}
+/* Example */
+blockdata:LAVA
 ```
 
-{% hint style="info" %}
-Normally you won't know the uuid of a player, but since you can run this command inside EI, EB or EE, you can use the placeholders of it, such as using %target\_uuid%.
-{% endhint %}
+#### Item particles
+
+**Instead** of using `particle:{particle name}`  if you want to use ITEM\_CRACK/ ITEM particles you can directly use the setting itemstack with a [material](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html).
+
+```css
+itemstack:{material}
+/* Example */
+itemstack:DIAMOND_SHOVEL
+```
+
+### Offset / Shift the spawn point of the shape&#x20;
+
+You can define an offset in a specific direction, it allows you for example to display the shape around the player / entity, without having to do complex calculation.
+
+* offsetPitch: the pitch direction where the offset will be directed
+* offsetYaw: the yaw direction where the offset will be directed
+* offsetSitance: the distance of the offset
+* offsetX: Increase the offset X location
+* offsetY: Increase the offset Y location
+* offsetZ: Increase the offset Z location
+
+By default these settings are set to 0
+
+```css
+offsetPitch:{the pitch direction}
+offsetYaw:{the yaw direction}
+offsetDistance:{the distance}
+offsetX:{x bonus}
+offsetY:{y bonus}
+offsetZ:{z bonus}
+/* Example with flat values */
+offsetPitch:0
+offsetYaw:-90
+offsetDistance:5
+offsetY:-1
+/* Example with placeholders */
+offsetPitch:%player_pitch_initial%+30
+offsetYaw:%player_yaw_initial%
+offsetDistance:%var_myvar%
+```
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+## Settings of the shapes
+
+### Circle
+
+* radius: radius of the circle
+* density: number of particles per block (higher = more dense).
+* drawMode: clockWise, counterClockWise, random
+* fillMode: disk, spiral, ring
+* timeToDisplay: time in ticks to animate the full display.
+* directionPitch: pitch direction of the square
+* directionYaw: yaw direction of the square
+
+Examples:
+
+```yaml
+# Examples that you can include into your commands
+# Display multiple Green circles in front the player
+commands:
+- FOR [+20,-20,+40,-40,+60,-60,+80,-80,+100,-100] > for3
+- score particles shape:circle location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% color:GREEN,WHITE radius:3 density:100 timeToDisplay:10 drawMode:clockwise offsetDistance:8 offsetPitch:0 offsetYaw:%player_yaw_initial%%for3%  directionYaw:%player_yaw_initial%%for3% fillMode:disk directionPitch:-90 offsetY:-1
+- END_FOR for3
+```
+
+### Cylinder
+
+* radius: radius of the cylinder
+* height: the height of the cylinder
+* density: number of particles per block (higher = more dense).
+* drawMode: clockWise, counterClockWise, random
+* timeToDisplay: time in ticks to animate the full display.
+* directionPitch: pitch direction of the square
+* directionYaw: yaw direction of the square
+
+Examples:
+
+```yaml
+# Examples that you can include into your commands
+# Display two green cylinder in front of the player
+- FOR [+20,-20] > for3
+- score particles shape:cylinder location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% color:GREEN,WHITE radius:1 density:100 timeToDisplay:5 drawMode:clockwise offsetDistance:8 offsetPitch:0 offsetYaw:%player_yaw_initial%%for3%  directionYaw:%player_yaw_initial%%for3% directionPitch:-90 offsetY:-1 height:3
+- END_FOR for3
+```
+
+### Square
+
+* height: height in blocks along vertical axis.
+* length: length in blocks along direction vector.
+* width: width in blocks perpendicular to the wall direction.
+* density: number of particles per block (higher = more dense).
+* timeToDisplay: time in ticks to animate the full display.
+* drawMode: "vertical" or "horizontal" — controls iteration order.
+* verticalOrder: "up" or "down" — order along height.
+* horizontalOrder: "near" or "far" — order along length.
+* directionPitch: pitch direction of the square
+* directionYaw: yaw direction of the square
+
+```yaml
+# Examples that you can run manually in-game
+...
+
+# Examples that you can include into your commands
+commands:
+# A line of explosion
+- score particles shape:square location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% particle:EXPLOSION height:1 length:30 timeToDisplay:20 density:1 directionYaw:%player_yaw_initial% directionPitch:%player_pitch_initial% verticalOrder:up horizontalOrder:near offsetY:-1
+# A wall of flame
+- score particles shape:square location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% particle:FLAME height:3.5 length:30 timeToDisplay:5 density:3 directionYaw:%player_yaw_initial% directionPitch:%player_pitch_initial% verticalOrder:up horizontalOrder:near
+```
+
+
 

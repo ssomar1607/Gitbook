@@ -112,7 +112,7 @@ activators:
   * For example, using the minecraft vanilla command effect give \[...] normally has an output on the console with this format: "Applied effect strength to \<playerName>", well, to disable this output you can enable this feature
     *
 
-        <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 * Example:&#x20;
 
 ```yaml

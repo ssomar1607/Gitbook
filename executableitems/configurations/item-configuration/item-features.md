@@ -580,7 +580,7 @@ Here you can select configuration for the head settings, that means the custom h
   *   Then get the Value of the head\
 
 
-      <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
   * Now copy that value and paste it inside the headValue feature of ExecutableItems
   * Example:
   * ```yaml
