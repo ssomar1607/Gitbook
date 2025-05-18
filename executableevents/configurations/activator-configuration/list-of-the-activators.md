@@ -30,10 +30,64 @@ Activator features are features that are exclusive to that activator.
 * Info: Activates when a lightning strike is emitting in the world
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#lightning_strike)
 
+### PORTAL\_CREATE
+
+* Info: Activates when a portal is created
+
+### RAID\_FINISH
+
+* Info: Activates when a village raid finishes
+
+### RAID\_TRIGGER
+
+* Info: Activates when a village raid starts
+
+### RAID\_WAVE
+
+* Info: Activates when the next village raid starts
+
+### CHUNK\_LOAD
+
+* Info: Activates when a chunk is loaded
+
+### CHUNK\_UNLOAD
+
+* Info: Activates when a chunk is unloaded
+
+
+
 ### ⭐WEATHER\_CHANGE
 
 * Info: Activates when the weather change in a world
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#weather_change)
+
+### STRUCTURE\_GROW
+
+* Info: Activates when a structure grows
+
+### THUNDER\_CHANGE
+
+* Info: Activates when there's a change to the state of the thunder weather
+
+### VEHICLE\_CREATE
+
+* Info: Activates when a player places/creates a vehicle
+
+### VEHICLE\_DAMAGE
+
+* Info: Activates when an entity considered as a vehicle is damaged
+
+### VEHICLE\_DESTROY
+
+* Info: Activates when an entity considered as a vehicle is destroyed'
+
+### WORLD\_DAY
+
+* Info: Activates when the world hits daytime
+
+### WORLD\_NIGHT
+
+* Info: Activates when the world hits nighttime
 
 
 
@@ -225,7 +279,7 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_HIDE\_ENTITY
 
-* Info: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_&#x20;
+* Info: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerHideEntityEvent.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerHideEntityEvent.html)
 
 ### 🔹PLAYER\_HIT\_ENTITY
 
@@ -291,7 +345,11 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_PARTICIPATE\_KILL\_ENTITY
 
-* Info: Activates when a player participates on killing an entity&#x20;
+* Info: Activates when a player participates on killing an entity
+
+### 🔹PLAYER\_PARTICIPATE\_KILL\_PLAYER
+
+* Info: Activates when a player participates on killing a player
 
 ### 🔹PLAYER\_PICKUP\_ITEM
 
@@ -346,10 +404,6 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates when a player riptides&#x20;
 
-### 🔹PLAYER\_SELECT\_THE\_EI
-
-* Info: Activates when a player selects the EI item in the hotbar.&#x20;
-
 ### 🔹PLAYER\_SEND\_MESSAGE
 
 * Info: Activates when a player sends a message.&#x20;
@@ -358,6 +412,10 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_SHEAR\_ENTITY
 
 * Info: Activates when a player shears an entity.&#x20;
+
+### 🔹PLAYER\_SHOW\_ENTITY
+
+* Info: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerShowEntityEvent.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerShowEntityEvent.html)
 
 ### 🔹PLAYER\_SPAWN\_CHANGE
 
@@ -407,6 +465,10 @@ Activator features are features that are exclusive to that activator.
 ### ⭐ITEMSADDER\_PLAYER\_BLOCK\_BREAK
 
 * Info: Activates when the player breaks a block from ItemsAdder
+
+### REDSTONE\_BLOCK\_ACTIVATION
+
+* Info: Activates when a block has changed state due to redstone activation
 
 
 
@@ -489,6 +551,10 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates when an entity pickup an item&#x20;
 
+### ⭐ENTITY\_PLACE\_EVENT
+
+* Info: Activates when an entity places a block
+
 ### ⭐ENTITY\_PORTAL\_ENTER
 
 * Info: Activates when an entity enters to a portal&#x20;
@@ -517,6 +583,10 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates when an entity resurrects&#x20;
 
+### ⭐ENTITY\_SHOOT\_BOW
+
+* Info: Activates when an entity shoots with a bow
+
 ### ⭐ENTITY\_SPAWN
 
 * Info: Activates when an entity spawns&#x20;
@@ -530,9 +600,13 @@ If the entity is just summoned, the activator will be triggered before the entit
 * Info; Activates when an entity is spawned from a trial spawner
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity_spawn_trialspawner)
 
-### ⭐ENTITY\_TAME
+### ⭐ENTITY\_TAME\_BY\_ENTITY
 
-* Info: Activates when an entity got tamed&#x20;
+* Info: Activates when an entity got tamed by an entity
+
+### ⭐ENTITY\_TAME\_BY\_PLAYER
+
+* Info: Activates when an entity got tamed by a player
 
 ### ⭐ENTITY\_TARGET\_ENTITY
 
