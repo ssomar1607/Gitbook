@@ -1,26 +1,6 @@
 # ✨    SCore particles
 
-
-
-
-
-
-
-## PAGE CREATION IN PROGRESS 19 may 2025
-
-## PAGE CREATION IN PROGRESS 19 may 2025
-
-## PAGE CREATION IN PROGRESS 19 may 2025
-
-## PAGE CREATION IN PROGRESS 19 may 2025
-
-
-
-
-
-
-
-
+## PAGE CREATION IN PROGRESS (it remains GIF and some examples to add)
 
 
 
@@ -30,64 +10,15 @@
 
 Score includes many pre-made particles shapes from XParticle library and some custom other.&#x20;
 
-The attached link will direct you to the list of all **available particle types**.
-
-<details>
-
-<summary>Shapes</summary>
-
-* &#x20;atom&#x20;
-* &#x20;atomic&#x20;
-* blackSun&#x20;
-* blackhole&#x20;
-* cage&#x20;
-* chaoticDoublePendulum&#x20;
-* circle&#x20;
-* circularBeam&#x20;
-* cone&#x20;
-* crescent&#x20;
-* cube&#x20;
-* cylinder&#x20;
-* diamond&#x20;
-* dna&#x20;
-* dnaReplication&#x20;
-* ellipse&#x20;
-* explosionWave&#x20;
-* eye&#x20;
-* filledCircle&#x20;
-* filledCube&#x20;
-* flower&#x20;
-* guard&#x20;
-* heart&#x20;
-* helix&#x20;
-* hypercube&#x20;
-* illuminati&#x20;
-* infinity&#x20;
-* julia&#x20;
-* magicCircles&#x20;
-* mandelbrot&#x20;
-* meguminExplosion&#x20;
-* moveRotatingAround&#x20;
-* polygon&#x20;
-* rainbow&#x20;
-* rectangle&#x20;
-* ring&#x20;
-* sphere&#x20;
-* spikeSphere&#x20;
-* spread&#x20;
-* star&#x20;
-* structuredCube&#x20;
-* tesseract&#x20;
-* vortex&#x20;
-* waveFunction
-
-</details>
-
 ## How to display the particles
 
 The command to display the particle is `/score particles`
 
 You will have to select a shape and configure correctly the command to achieve to do what you want.
+
+### How to remove displayed particles
+
+The command to clear displayed particles is `/score clear {player} PARTICLES`&#x20;
 
 
 
@@ -215,13 +146,13 @@ offsetDistance:%var_myvar%
 Creates a set of elliptical orbits with a small particle sphere at the center, resembling an atom.
 
 * `orbits`: Number of elliptical orbits.
-* `radius`: Radius of the orbits.
+* `radius`: Radius of the orbits in blocks
 * `rate`: Number of particles per orbit.
 
 ```yaml
 # Examples that you can run manually in-game
-/score particles shape:atom location:%loc% radius:2 rate:60 orbits:4
-
+/score particles shape:atom color:BLUE,YELLOW orbits:4 radius:5.0 rate:100 offsetY:1
+/score particles shape:atom particle:CLOUD orbits:10 radius:20.5 rate:100 offsetY:1
 # Examples that you can include into your commands
 
 ```
@@ -231,12 +162,12 @@ Creates a set of elliptical orbits with a small particle sphere at the center, r
 Animated version of `atom` with orbiting particles.
 
 * `orbits`: Number of orbiting paths.
-* `radius`: Radius of orbit.
+* `radius`: Radius of orbit in blocks.
 * `rate`: Rate of orbit.
 * `time`: Duration in ticks.
 
 <pre class="language-yaml"><code class="lang-yaml"><strong># Examples that you can run manually in-game
-</strong>/score particles shape:atomic location:%loc% radius:2 rate:30 orbits:3 time:100
+</strong>/score particles shape:atomic orbits:15 radius:5 rate:100 offsetY:1 time:200
 
 # Examples that you can include into your commands
 
@@ -246,14 +177,14 @@ Animated version of `atom` with orbiting particles.
 
 Multiple concentric circles increasing in size.
 
-* `radius`: Max radius.
+* `radius`: Max radius in blocks.
 * `radiusRate`: Difference in radius between each circle.
 * `rate`: Particle density.
 * `rateChange`: Change of rate per layer.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:blacksun radius:10 radiusRate:0.5 rate:200 rateChange:10
 
 # Examples that you can include into your commands
 ```
@@ -269,26 +200,12 @@ A dynamic particle vortex effect.
 * `time`: Duration in ticks.
 
 <pre class="language-yaml"><code class="lang-yaml"><strong># Examples that you can run manually in-game
-</strong>/score particles shape:blackhole location:%loc% points:8 radius:2 rate:10 mode:2 time:100
+</strong>/score particles particle:SMOKE shape:blackhole points:30 radius:2.5 rate:1 mode:2 time:50
 
 # Examples that you can include into your commands
 </code></pre>
 
-### Cage
 
-Displays a 3D cage with vertical bars.
-
-* `start`: Start location.
-* `end`: End location.
-* `rate`: Distance between bars.
-* `barRate`: Frequency of bars.
-
-```yaml
-# Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
 
 ### ChaoticDoublePendulum
 
@@ -300,13 +217,15 @@ Simulates a chaotic double pendulum effect.
 * `mass1`, `mass2`: Mass of each pendulum.
 * `dimension3`: Whether to use 3D rotation.
 * `speed`: Animation speed.
-* `time`: Duration.
+* `time`: Duration in ticks.
 
-<pre class="language-yaml"><code class="lang-yaml"># Examples that you can run manually in-game
-<strong>/score particles shape:chaoticDoublePendulum location:%loc% radius:3 gravity:-1 length:200 length2:200 mass1:50 mass2:50 dimension3:true speed:2 time:200
-</strong>
+```yaml
+# Examples that you can run manually in-game
+/score particles shape:chaoticDoublePendulum radius:2 gravity:-1 length:200 length2:200 mass1:50 mass2:50 dimension3:false speed:2 time:200
+/score particles shape:chaoticDoublePendulum color:RED,YELLOW radius:1 gravity:-1 length:200 length2:2000 mass1:50 mass2:50 dimension3:true speed:2 time:200
+/score particles shape:chaoticDoublePendulum particle:FLAME radius:2 gravity:5 length:200 length2:200 mass1:50 mass2:50 dimension3:false speed:2 time:200
 # Examples that you can include into your commands
-</code></pre>
+```
 
 ### Circle
 
@@ -316,9 +235,9 @@ Displays a circle of particles.
 * `density`: number of particles per block (higher = more dense).
 * `drawMode`: clockWise, counterClockWise, random
 * `fillMode`: disk, spiral, ring
-* `timeToDisplay`: time in ticks to animate the full display.
-* `directionPitch`: pitch direction of the square
-* `directionYaw`: yaw direction of the square
+* `time`: time in ticks to animate the full display. (0 = instant)
+* `directionPitch`: pitch direction of the circle
+* `directionYaw`: yaw direction of the circle
 
 Examples:
 
@@ -327,7 +246,7 @@ Examples:
 # Display multiple Green circles in front the player
 commands:
 - FOR [+20,-20,+40,-40,+60,-60,+80,-80,+100,-100] > for3
-- score particles shape:circle location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% color:GREEN,WHITE radius:3 density:100 timeToDisplay:10 drawMode:clockwise offsetDistance:8 offsetPitch:0 offsetYaw:%player_yaw_initial%%for3%  directionYaw:%player_yaw_initial%%for3% fillMode:disk directionPitch:-90 offsetY:-1
+- score particles shape:circle location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% color:GREEN,WHITE radius:3 density:100 time:10 drawMode:clockwise offsetDistance:8 offsetPitch:0 offsetYaw:%player_yaw_initial%%for3%  directionYaw:%player_yaw_initial%%for3% fillMode:disk directionPitch:-90 offsetY:-1
 - END_FOR for3
 ```
 
@@ -335,15 +254,15 @@ commands:
 
 Animated beam with changing circle sizes over time.
 
-* `maxRadius`: Max circle radius.
+* `maxRadius`: Max circle radius in blocks.
 * `rate`: Point rate per circle.
 * `radiusRate`: Change in radius.
-* `extend`: Extension distance.
-* `time`: Duration.
+* `extend`: Extension distance in blocks.
+* `time`: Duration in ticks.
 
 ```yaml
 # Examples that you can run manually in-game
-/score particles shape:circularBeam location:%loc% maxRadius:2 rate:10 radiusRate:0.2 extend:0.5 time:100score particles shape:chaoticDoublePendulum location:%loc% radius:3 gravity:-1 length:200 length2:200 mass1:50 mass2:50 dimension3:true speed:2 time:200
+/score particles shape:circularBeam color:PURPLE maxRadius:5 rate:500 radiusRate:15 extend:1 time:100
 
 # Examples that you can include into your commands
 ```
@@ -355,11 +274,13 @@ Cone made of stacked circles.
 * `height`: Height of the cone.
 * `radius`: Base radius.
 * `rate`: Circle spacing.
-* `circleRate`: Point density.
+* `circleRate`: Points density.
+* `fillMode`: the fill Mode "disk", "ring", "spiral", by default its disk
 
 <pre class="language-yaml"><code class="lang-yaml"># Examples that you can run manually in-game
 <strong>/score particles shape:cone location:%loc% height:5 radius:2 rate:1 circleRate:50
-</strong>
+</strong>/score particles shape:cone color:GREEN,YELLOW height:3 radius:2 rate:0.4 circleRate:40 fillMode:ring
+
 # Examples that you can include into your commands
 </code></pre>
 
@@ -369,27 +290,13 @@ Renders a crescent moon using two overlapping circles.
 
 * `radius`: size of the outer arc.
 * `rate`: resolution of the curve.
+* `directionYaw`: direction of the crescent in degrees
 
 <pre class="language-yaml"><code class="lang-yaml"># Examples that you can run manually in-game
-<strong>/score particles shape:cone location:%loc% height:5 radius:2 rate:1 circleRate:50
-</strong>
-# Examples that you can include into your commands
+<strong>/score particles shape:cone location:%loc% height:5 radius:2 rate:1 circleRate:50/score particles shape:crescent color:GREEN,YELLOW radius:5 rate:100
+</strong><strong>
+</strong># Examples that you can include into your commands
 </code></pre>
-
-### Cube
-
-Displays a 3D cube, showing only its edges.
-
-* `start`: Bottom corner of the cube.
-* `end`: Top corner of the cube.
-* `rate`: Particle density.
-
-```yaml
-# Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
 
 ### Cylinder
 
@@ -421,7 +328,7 @@ Creates a diamond (rhombus) shape in 2D or 3D.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:diamond color:BLUE,AQUA radiusRate:0.6 rate:0.4 height:3
 
 # Examples that you can include into your commands
 ```
@@ -434,11 +341,10 @@ Displays a DNA double helix with hydrogen bonds.
 * `rate`: Spacing between points.
 * `extension`: Helix stretch factor.
 * `height`: Total height.
-* `hydrogenBondDist`: Distance between each hydrogen bond.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:dna color:BLUE,AQUA radius:10 rate:0.1 height:4 extension:15
 
 # Examples that you can include into your commands
 ```
@@ -453,7 +359,7 @@ Simulates DNA replication with bonds and colors.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:dnaReplication color:BLUE,AQUA radius:4 rate:0.2 height:3 extension:5 hydrogenBondDist:1 speed:1
 
 # Examples that you can include into your commands
 ```
@@ -466,7 +372,7 @@ Simulates DNA replication with bonds and colors.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:ellipse color:BLUE,AQUA radius:3 rate:0.8 otherRadius:2 start:50 end:200 offsetY:1
 
 # Examples that you can include into your commands
 ```
@@ -479,7 +385,7 @@ Wavy animation representing an explosion shockwave.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:explosionWave rate:5
 
 # Examples that you can include into your commands
 ```
@@ -491,55 +397,12 @@ Draws an oval eye-like shape.
 * `radius`, `radius2`: Primary radii.
 * `rate`: Resolution.
 * `extension`: Elongation factor
+* `directionPitch`: pitch direction of the eye
+* `directionYaw`: yaw direction of the eye
 
 ```yaml
 # Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
-
-### FilledCube
-
-Displays a cube fully filled with particles.
-
-* `start`, `end`: Opposite corners of the cube.
-* `rate`: Particle density.
-
-```yaml
-# Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
-
-### Flower
-
-Creates a floral effect with repeating patterns around a circle.
-
-* `count`: Number of "petals".
-* `radius`: Radius of the flower.
-* `runnable`: The shape to display at each petal.
-
-```yaml
-# Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
-
-### Guard
-
-Makes a shape spin or oscillate around a point.
-
-* `update`: Update interval.
-* `rate`: Rotation speed.
-* `offsetx/y/z`: Oscillation distance on each axis.
-* `runnable`: The particle form to run.
-
-```yaml
-# Examples that you can run manually in-game
-
+/score particles shape:eye particle:INFESTED radius:2 radius2:2 extension:1 rate:100 directionYaw:-164
 
 # Examples that you can include into your commands
 ```
@@ -552,10 +415,12 @@ Draws a heart using a polar curve.
 * `depth`: Central notch depth.
 * `compressHeight`: Vertical compression.
 * `rate`: Resolution.
+* `directionPitch`: pitch direction of the heart
+* `directionYaw`: yaw direction of the heart
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:heart particle:HEART cut:4 cutAngle:2 depth:2 compressHeight:1 rate:100 offsetY:-1 directionYaw:-75
 
 # Examples that you can include into your commands
 ```
@@ -573,23 +438,7 @@ Draws animated 3D helices.
 
 ```yaml
 # Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
-
-### Hypercube
-
-Displays a structure of interlinked cubes simulating a hypercube.
-
-* `startOrigin`, `endOrigin`: Bounding corners.
-* `rate`: Particle spacing.
-* `sizeRate`: Spacing between cubes.
-* `cubes`: Number of cube iterations.
-
-```yaml
-# Examples that you can run manually in-game
-
+/score particles shape:helix particle:TOTEM_OF_UNDYING strings:3 radius:2.5 rate:0.1 extension:2 height:3 speed:2 fadeUp:true fadeDown:true
 
 # Examples that you can include into your commands
 ```
@@ -598,29 +447,19 @@ Displays a structure of interlinked cubes simulating a hypercube.
 
 Creates a 3D infinity symbol shape.
 
-* `radius`: Size of the shape.
-* `rate`: Point density.
+* `size`: Size of the shape.
+* `extension`: The extension of the illuminati eye.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:illuminati particle:SCULK_SOUL size:5 extension:15
 
 # Examples that you can include into your commands
 ```
 
-### Julia
-
-Displays a Julia fractal set.
-
-* `size`, `zoom`, `colorScheme`: Visual settings.
-* `moveX`, `moveY`: Position offset.
-
-```yaml
-# Examples that you can run manually in-game
+### Infinity
 
 
-# Examples that you can include into your commands
-```
 
 ### MagicCircles
 
@@ -630,28 +469,13 @@ Displays expanding rings like magical glyphs.
 * `rate`: Point spacing.
 * `radiusRate`: Growth speed.
 * `distance`: Spacing between rings.
-* `time`: Duration.
+* `time`: Duration in ticks.
 
 ```yaml
 # Examples that you can run manually in-game
+/score particles shape:magicCircles radius:1 rate:3 radiusRate:1 time:20
 
-
-# Examples that you can include into your commands
-```
-
-### Mandelbrot
-
-Displays a Mandelbrot fractal set.
-
-* `size`, `zoom`, `rate`: Rendering settings.
-* `x0`, `y0`: Center position.
-* `color`: Iteration depth.
-
-```yaml
-# Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
+# Examples that you can include into your command
 ```
 
 ### MeguminExplosion
@@ -662,7 +486,7 @@ Stylized magical explosion effect.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:meguminExplosion color:RED size:5
 
 # Examples that you can include into your commands
 ```
@@ -679,7 +503,7 @@ Draws a polygon with optional internal connections
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:polygon points:5 connection:5 size:5 rate:1 extend:1
 
 # Examples that you can include into your commands
 ```
@@ -688,27 +512,15 @@ Draws a polygon with optional internal connections
 
 Displays stacked rainbow arcs with colored layers.
 
-* `radius`, `rate`, `curve`: Shape and spacing.
+* `radius`: Radius of the rainbow
+* `rate`: Rate of points more = more points
+* `curve`: Curve 1 for up and -1 for down
 * `layers`: Number of arcs.
 * `compact`: Reduces spacing between arcs.
 
 ```yaml
 # Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
-
-### Rectangle
-
-Draws a flat 2D rectangle.
-
-* `start`, `end`: Opposite corners.
-* `rate`: Point spacing.
-
-```yaml
-# Examples that you can run manually in-game
-
+/score particles shape:rainbow radius:3 rate:100 curve:2 layers:1 compact:1
 
 # Examples that you can include into your commands
 ```
@@ -719,13 +531,14 @@ Draws a flat ring (annulus).
 
 * `radius`: Radius of the ring.
 * `density`: Particle density.
-* `height`: Ring thickness.
-* `timeToDisplay`: Duration.
-* `drawMode`: Drawing order.
+* `time`: Durationto display in ticks.
+* `drawMode`: Drawing order : clockWise, counterClockWise or random
+* `directionPitch`: pitch direction of the circle
+* `directionYaw`: yaw direction of the circle
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles particle:SONIC_BOOM shape:ring radius:5 density:100 time:0
 
 # Examples that you can include into your commands
 ```
@@ -735,11 +548,11 @@ Draws a flat ring (annulus).
 Draws a full 3D sphere.
 
 * `radius`: Sphere radius.
-* `rate`: Angular resolution
+* `rate`: Density of points
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles particle:SNEEZE shape:sphere radius:5 rate:30
 
 # Examples that you can include into your commands
 ```
@@ -754,26 +567,12 @@ Draws a sphere with random spikes.
 
 ```yaml
 # Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
-
-### Spread
-
-Randomly launches particles toward a target.
-
-* `amount`: Number of launches.
-* `rate`: Frequency.
-* `start`, `originEnd`: Start and end positions.
-* `offsetx/y/z`: Target randomness
-
-```yaml
-# Examples that you can run manually in-game
-
+/score particles particle:GLOW shape:spikeSphere radius:4 rate:20 chance:30 minRandomDistance:2 maxRandomDistance:4
 
 # Examples that you can include into your commands
 ```
+
+
 
 ### Square
 
@@ -806,7 +605,7 @@ Creates a 3D star with animated spikes.
 
 * `points`: Number of base sides.
 * `spikes`: Number of star tips.
-* `rate`: Resolution.
+* `rate`: How many display of points
 * `spikeLength`: Tip length.
 * `coreRadius`: Core radius.
 * `neuron`: Tip curvature.
@@ -815,37 +614,23 @@ Creates a 3D star with animated spikes.
 
 ```yaml
 # Examples that you can run manually in-game
-
-
-# Examples that you can include into your commands
-```
-
-### StructuredCube
-
-Draws a wireframe cube showing only its edges.
-
-* `start`, `end`: Opposite corners.
-* `rate`: Edge particle density.
-
-```yaml
-# Examples that you can run manually in-game
-
+/score particles shape:star points:5 spikes:5 rate:20 spikeLength:20 coreRadius:4 speed:1 neuron:3
 
 # Examples that you can include into your commands
 ```
 
 ### Tesseract
 
-Draws a rotating 4D cube (tesseract)
+Draws tesseract
 
 * `size`: Overall size.
 * `rate`: Density.
-* `speed`: Rotation speed.
+* `speed`: speed.
 * `time`: Display time.
 
 ```yaml
 # Examples that you can run manually in-game
-
+/score particles shape:tesseract size:3 rate:100 speed:2 time:200 offsetY:2 particle:END_ROD
 
 # Examples that you can include into your commands
 ```
@@ -860,23 +645,7 @@ Spiral effect like a galaxy or tornado.
 
 ```yaml
 # Examples that you can run manually in-game
- 
-
-# Examples that you can include into your commands
-```
-
-### WaveFunction
-
-Visualizes a quantum wave function.
-
-* `extend`: Length.
-* `heightRange`: Amplitude range.
-* `size`: Overall size.
-* `rate`: Point density
-
-```yaml
-# Examples that you can run manually in-game
-
+/score particles shape:vortex particle:ENCHANT points:5 rate:25 time:100 offsetY:2
 
 # Examples that you can include into your commands
 ```
