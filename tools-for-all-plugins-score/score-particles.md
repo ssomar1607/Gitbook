@@ -157,6 +157,10 @@ Creates a set of elliptical orbits with a small particle sphere at the center, r
 
 ```
 
+<figure><img src="../.gitbook/assets/1.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/2.gif" alt=""><figcaption></figcaption></figure>
+
 ### Atomic
 
 Animated version of `atom` with orbiting particles.
