@@ -177,6 +177,8 @@ Animated version of `atom` with orbiting particles.
 
 </code></pre>
 
+<figure><img src="../.gitbook/assets/3.gif" alt=""><figcaption></figcaption></figure>
+
 ### BlackSun
 
 Multiple concentric circles increasing in size.
@@ -192,6 +194,8 @@ Multiple concentric circles increasing in size.
 
 # Examples that you can include into your commands
 ```
+
+<figure><img src="../.gitbook/assets/3 (1).gif" alt=""><figcaption></figcaption></figure>
 
 ### BlackHole
 
@@ -209,7 +213,7 @@ A dynamic particle vortex effect.
 # Examples that you can include into your commands
 </code></pre>
 
-
+<figure><img src="../.gitbook/assets/5.gif" alt=""><figcaption></figcaption></figure>
 
 ### ChaoticDoublePendulum
 
@@ -271,6 +275,8 @@ Animated beam with changing circle sizes over time.
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/6.gif" alt=""><figcaption></figcaption></figure>
+
 ### Cone
 
 Cone made of stacked circles.
@@ -287,6 +293,8 @@ Cone made of stacked circles.
 
 # Examples that you can include into your commands
 ```
+
+<figure><img src="../.gitbook/assets/7.gif" alt=""><figcaption></figcaption></figure>
 
 ### Crescent
 
@@ -369,6 +377,8 @@ Simulates DNA replication with bonds and colors.
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/8.gif" alt=""><figcaption></figcaption></figure>
+
 ### Ellipse
 
 * `start`, `end`: Start and end angles.
@@ -397,6 +407,8 @@ Wavy animation representing an explosion shockwave.
 /score particles shape:explosionWave rate:10
 # Examples that you can include into your commands
 ```
+
+
 
 ### Eye
 
@@ -433,6 +445,8 @@ Draws a heart using a polar curve.
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/10.gif" alt=""><figcaption></figcaption></figure>
+
 ### Helix
 
 Draws animated 3D helices.
@@ -451,6 +465,8 @@ Draws animated 3D helices.
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/11.gif" alt=""><figcaption></figcaption></figure>
+
 ### Illuminati
 
 Creates a 3D infinity symbol shape.
@@ -464,6 +480,8 @@ Creates a 3D infinity symbol shape.
 
 # Examples that you can include into your commands
 ```
+
+<figure><img src="../.gitbook/assets/12.gif" alt=""><figcaption></figcaption></figure>
 
 ### Infinity
 
@@ -499,6 +517,10 @@ Stylized magical explosion effect.
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/13.gif" alt=""><figcaption></figcaption></figure>
+
+
+
 ### Polygon
 
 Draws a polygon with optional internal connections
@@ -533,6 +555,8 @@ Displays stacked rainbow arcs with colored layers.
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/14.gif" alt=""><figcaption></figcaption></figure>
+
 ### Ring
 
 Draws a flat ring (annulus).
@@ -551,6 +575,8 @@ Draws a flat ring (annulus).
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/15.gif" alt=""><figcaption></figcaption></figure>
+
 ### Sphere
 
 Draws a full 3D sphere.
@@ -564,6 +590,8 @@ Draws a full 3D sphere.
 
 # Examples that you can include into your commands
 ```
+
+<figure><img src="../.gitbook/assets/16.gif" alt=""><figcaption></figcaption></figure>
 
 ### SpikeSphere
 
@@ -580,7 +608,7 @@ Draws a sphere with random spikes.
 # Examples that you can include into your commands
 ```
 
-
+<figure><img src="../.gitbook/assets/17.gif" alt=""><figcaption></figcaption></figure>
 
 ### Square
 
@@ -627,6 +655,8 @@ Creates a 3D star with animated spikes.
 # Examples that you can include into your commands
 ```
 
+<figure><img src="../.gitbook/assets/18.gif" alt=""><figcaption></figcaption></figure>
+
 ### Tesseract
 
 Draws tesseract
@@ -642,6 +672,8 @@ Draws tesseract
 
 # Examples that you can include into your commands
 ```
+
+<figure><img src="../.gitbook/assets/19.gif" alt=""><figcaption></figcaption></figure>
 
 ### Vortex
 
