@@ -277,12 +277,12 @@ Cone made of stacked circles.
 * `circleRate`: Points density.
 * `fillMode`: the fill Mode "disk", "ring", "spiral", by default its disk
 
-<pre class="language-yaml"><code class="lang-yaml"># Examples that you can run manually in-game
-<strong>/score particles shape:cone location:%loc% height:5 radius:2 rate:1 circleRate:50
-</strong>/score particles shape:cone color:GREEN,YELLOW height:3 radius:2 rate:0.4 circleRate:40 fillMode:ring
+```yaml
+# Examples that you can run manually in-game
+/score particles shape:cone color:GREEN,YELLOW height:3 radius:2 rate:0.4 circleRate:40 fillMode:ring
 
 # Examples that you can include into your commands
-</code></pre>
+```
 
 ### Crescent
 
@@ -292,11 +292,12 @@ Renders a crescent moon using two overlapping circles.
 * `rate`: resolution of the curve.
 * `directionYaw`: direction of the crescent in degrees
 
-<pre class="language-yaml"><code class="lang-yaml"># Examples that you can run manually in-game
-<strong>/score particles shape:cone location:%loc% height:5 radius:2 rate:1 circleRate:50/score particles shape:crescent color:GREEN,YELLOW radius:5 rate:100
-</strong><strong>
-</strong># Examples that you can include into your commands
-</code></pre>
+```yaml
+# Examples that you can run manually in-game
+/score particles shape:crescent radius:3 rate:100 directionYaw:90 color:RED,YELLOW
+
+# Examples that you can include into your commands
+```
 
 ### Cylinder
 
@@ -382,11 +383,14 @@ Simulates DNA replication with bonds and colors.
 Wavy animation representing an explosion shockwave.
 
 * `rate`: Particle density within the wave.
+* `start`: the initial distance from the center to start the wave.
+* `height`: the vertical amplitude of the wave.
 
 ```yaml
 # Examples that you can run manually in-game
-/score particles shape:explosionWave rate:5
-
+/score particles shape:explosionWave rate:5 start:-3 height:3
+/score particles shape:explosionWave rate:5 height:1 offsetY:-1
+/score particles shape:explosionWave rate:10
 # Examples that you can include into your commands
 ```
 
