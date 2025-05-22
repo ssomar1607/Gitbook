@@ -1,11 +1,5 @@
 # ✨    SCore particles
 
-## PAGE CREATION IN PROGRESS (it remains GIF and some examples to add)
-
-
-
-
-
 {% embed url="https://youtu.be/_GavkHnQcvg?si=UaRm9LlUomDzoveQ" %}
 
 Score includes many pre-made particles shapes from XParticle library and some custom other.&#x20;
@@ -195,7 +189,7 @@ Multiple concentric circles increasing in size.
 # Examples that you can include into your commands
 ```
 
-<figure><img src="../.gitbook/assets/3 (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/4.gif" alt=""><figcaption></figcaption></figure>
 
 ### BlackHole
 
