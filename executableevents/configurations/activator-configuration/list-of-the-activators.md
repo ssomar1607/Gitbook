@@ -13,13 +13,33 @@ Activator features are features that are exclusive to that activator.
 
 ## &#x20;Miscellaneous activators
 
+### BROADCAST\_MESSAGE
+
+* Info: Triggered when a broadcast message is sent
+* Specific placeholders:
+  * %message%
+  * %is\_async%
+
 ### 🔹CUSTOM\_TRIGGER
 
-*   Info: Activator that can be executed by running a command, or it can be scheduled.&#x20;
+* Info: Activator that can be executed by running a command, or it can be scheduled.&#x20;
+  * This activator is for all plugins, because of that its explained on [https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers](https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers)
 
-    * This activator is for all plugins, because of that its explained on [https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers](https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers)
+### HANGING\_PLACE
 
+* Info: Triggered when a hanging entity like an item frame or painting is placed
 
+### HANGING\_BREAK
+
+* Info: Triggered when a hanging entity is broken by natural causes or player
+
+### HANGING\_BREAK\_BY\_ENTITY
+
+* Info: Triggered when a hanging entity is broken by another entity, like a player or mob
+
+### MAP\_INITIALIZE
+
+* Info: Triggered when a map is initialized by the server
 
 ### 🔹LOOP\_SERVER
 
@@ -28,31 +48,70 @@ Activator features are features that are exclusive to that activator.
 ### ⭐LIGHTNING\_STRIKE
 
 * Info: Activates when a lightning strike is emitting in the world
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#lightning_strike)
+* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#lightning_strike):&#x20;
+  * %cause% : List of [causes](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/weather/LightningStrikeEvent.Cause.html)
 
 ### PORTAL\_CREATE
 
 * Info: Activates when a portal is created
 
+### PLUGIN\_DISABLE
+
+* Info: Triggered when a plugin is disabled
+* Specific placeholders:
+  * %plugin\_name%
+
+### PLUGIN\_ENABLE
+
+* Info: Triggered when a plugin is enabled
+* Specific placeholders:
+  * %plugin\_name%
+
 ### RAID\_FINISH
 
 * Info: Activates when a village raid finishes
+* Specific placeholders:&#x20;
+  * %badomen\_level%
+  * %heroes%
 
 ### RAID\_TRIGGER
 
 * Info: Activates when a village raid starts
+* Specific placeholders:&#x20;
+  * %player%
+  * %badomen\_level%
 
 ### RAID\_WAVE
 
 * Info: Activates when the next village raid starts
+* Specific placeholders:&#x20;
+  * %raiders%
 
 ### CHUNK\_LOAD
 
 * Info: Activates when a chunk is loaded
+* Specific placeholders:
+  * %world%
+  * %coord\_x%
+  * %coord\_z%
+  * %is\_slime\_chunk%
+  * %is\_loaded%
+  * %is\_generated%
+  * %is\_force\_loaded%
+  * %is\_new\_chunk%
 
 ### CHUNK\_UNLOAD
 
 * Info: Activates when a chunk is unloaded
+* Specific placeholders:
+  * %world%
+  * %coord\_x%
+  * %coord\_z%
+  * %is\_slime\_chunk%
+  * %is\_loaded%
+  * %is\_generated%
+  * %is\_force\_loaded%
+  * %is\_new\_chunk%
 
 
 
@@ -67,7 +126,9 @@ Activator features are features that are exclusive to that activator.
 
 ### THUNDER\_CHANGE
 
-* Info: Activates when there's a change to the state of the thunder weather
+* Info:  Thunder state changing in a world
+* Specific placeholders:&#x20;
+  * %cause% : List of causes (COMMAND, NATURAL, SLEEP, PLUGIN, UNKNOWN)
 
 ### VEHICLE\_CREATE
 
@@ -79,7 +140,13 @@ Activator features are features that are exclusive to that activator.
 
 ### VEHICLE\_DESTROY
 
-* Info: Activates when an entity considered as a vehicle is destroyed'
+* Info: Activates when an entity considered as a vehicle is destroyed
+
+### WEATHER\_CHANGE
+
+* Info: Triggered when the weather change
+* Specific placeholders:&#x20;
+  * %cause% : List of causes (COMMAND, NATURAL, SLEEP, PLUGIN, UNKNOWN)
 
 ### WORLD\_DAY
 
@@ -214,7 +281,9 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_ENCHANT\_ITEM
 
 * Info: Activates when a player add enchant to an item
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_enchant_item)
+* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_enchant_item):&#x20;
+  * %enchants%
+  * %level\_cost%
 
 ### 🔹PLAYER\_ENTER\_IN\_HIS\_LAND
 
@@ -235,7 +304,8 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_EXPERIENCE\_CHANGE
 
 * Info: Activates when the player experience change naturally.
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_experience_change)
+* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_experience_change):&#x20;
+  * %experience%
 
 ### 🔹PLAYER\_FERTILIZE\_BLOCK
 
@@ -283,7 +353,9 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_HIT\_ENTITY
 
-* Info: Activates when a player hits an entity&#x20;
+* Info: Activates when a player hits an entity
+* Specific placeholders:
+  * %critical% : true or false (For Paper and Paper forks only)
 
 ### 🔹PLAYER\_HIT\_PLAYER
 
@@ -292,7 +364,18 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_INVENTORY\_CLICK
 
 * Info: Activates when the player click an inventory
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_inventory_click)
+* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_inventory_click):&#x20;
+  * %is\_shift\_click%
+  * %is\_mouse\_click%
+  * %is\_left\_click%
+  * %is\_right\_click%
+  * %is\_keyboard\_click%
+  * %is\_creative\_action%
+  * %get\_action%
+  * %before\_slot%
+  * %after\_slot%
+  * %inventory\_type%
+  * %inventory\_title%
 
 ### 🔹PLAYER\_ITEM\_BREAK
 
@@ -333,7 +416,9 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_LEVEL\_CHANGE
 
 * Info: Activates when the player levels change
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_level_change)
+* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_level_change):&#x20;
+  * %new\_level%
+  * %old\_level%
 
 ### 🔹PLAYER\_MOUNT
 
@@ -431,7 +516,9 @@ Activator features are features that are exclusive to that activator.
 
 ### 🔹PLAYER\_TELEPORT
 
-* Info: Activates when the player gets teleported&#x20;
+* Info: Activates when the player gets teleported
+* Specific placeholders:
+  * %teleport\_cause% : List of [causes](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html)
 
 ### 🔹PLAYER\_TRAMPLE\_CROP
 
@@ -469,6 +556,9 @@ Activator features are features that are exclusive to that activator.
 ### REDSTONE\_BLOCK\_ACTIVATION
 
 * Info: Activates when a block has changed state due to redstone activation
+* Specific placeholders:
+  * %new\_state%
+  * %old\_state%
 
 
 
@@ -477,7 +567,8 @@ Activator features are features that are exclusive to that activator.
 ### ⭐CREEPER\_POWER\_CHANGE
 
 * Info: Activates when the creeper is struck by lightning.
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#creeper_power_change)
+* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#creeper_power_change):&#x20;
+  * %power\_cause%
 
 ### ⭐ENDERDRAGON\_CHANGE\_PHASE
 
@@ -598,7 +689,8 @@ If the entity is just summoned, the activator will be triggered before the entit
 ### ⭐ENTITY\_SPAWN\_TRIALSPAWNER
 
 * Info; Activates when an entity is spawned from a trial spawner
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity_spawn_trialspawner)
+* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity_spawn_trialspawner):&#x20;
+  * %is\_ominous%
 
 ### ⭐ENTITY\_TAME\_BY\_ENTITY
 
