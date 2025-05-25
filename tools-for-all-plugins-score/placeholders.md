@@ -308,32 +308,6 @@ They return the minecraft effect name instead of the spigot name
 
 
 
-### RAID\_TRIGGER
-
-```
-%player% (who triggers the raid)
-%badomenlevel%
-```
-
-### RAID\_WAVE
-
-{% code overflow="wrap" %}
-```
-%raiders% (UUID LIST) Example OUT "123e4567-e89b-12d3-a456-426614174000,123e4567-e89b-12d3-a456-426614174001,123e4567-e89b-12d3-a456-426614174002"
-```
-{% endcode %}
-
-### RAID\_FINISH
-
-{% code overflow="wrap" %}
-```
-%badomenlevel%
-%heroes% (UUID LIST) Example OUT "123e4567-e89b-12d3-a456-426614174000,123e4567-e89b-12d3-a456-426614174001,123e4567-e89b-12d3-a456-426614174002"
-```
-{% endcode %}
-
-
-
 ***
 
 ## **Cooldown placeholders**

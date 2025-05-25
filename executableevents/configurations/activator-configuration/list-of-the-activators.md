@@ -72,20 +72,20 @@ Activator features are features that are exclusive to that activator.
 * Info: Activates when a village raid finishes
 * Specific placeholders:&#x20;
   * %badomen\_level%
-  * %heroes%
+  * %heroes% : (UUID LIST) Example  "123e4567-e89b-12d3-a456-426614174000,123e4567-e89b-12d3-a456-426614174001,123e4567-e89b-12d3-a456-426614174002"
 
 ### ⭐ RAID\_TRIGGER
 
 * Info: Activates when a village raid starts
 * Specific placeholders:&#x20;
-  * %player%
+  * %player% : who triggered the raid
   * %badomen\_level%
 
 ### ⭐ RAID\_WAVE
 
 * Info: Activates when the next village raid starts
 * Specific placeholders:&#x20;
-  * %raiders%
+  * %raiders% : (UUID LIST) Example  "123e4567-e89b-12d3-a456-426614174000,123e4567-e89b-12d3-a456-426614174001,123e4567-e89b-12d3-a456-426614174002"
 
 ### ⭐ CHUNK\_LOAD
 
