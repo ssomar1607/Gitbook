@@ -13,7 +13,7 @@ Activator features are features that are exclusive to that activator.
 
 ## &#x20;Miscellaneous activators
 
-### BROADCAST\_MESSAGE
+### ⭐ BROADCAST\_MESSAGE
 
 * Info: Triggered when a broadcast message is sent
 * Specific placeholders:
@@ -25,19 +25,19 @@ Activator features are features that are exclusive to that activator.
 * Info: Activator that can be executed by running a command, or it can be scheduled.&#x20;
   * This activator is for all plugins, because of that its explained on [https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers](https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers)
 
-### HANGING\_PLACE
+### ⭐ HANGING\_PLACE
 
 * Info: Triggered when a hanging entity like an item frame or painting is placed
 
-### HANGING\_BREAK
+### ⭐ HANGING\_BREAK
 
 * Info: Triggered when a hanging entity is broken by natural causes or player
 
-### HANGING\_BREAK\_BY\_ENTITY
+### ⭐ HANGING\_BREAK\_BY\_ENTITY
 
 * Info: Triggered when a hanging entity is broken by another entity, like a player or mob
 
-### MAP\_INITIALIZE
+### ⭐ MAP\_INITIALIZE
 
 * Info: Triggered when a map is initialized by the server
 
@@ -51,43 +51,43 @@ Activator features are features that are exclusive to that activator.
 * Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#lightning_strike):&#x20;
   * %cause% : List of [causes](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/weather/LightningStrikeEvent.Cause.html)
 
-### PORTAL\_CREATE
+### ⭐ PORTAL\_CREATE
 
 * Info: Activates when a portal is created
 
-### PLUGIN\_DISABLE
+### ⭐ PLUGIN\_DISABLE
 
 * Info: Triggered when a plugin is disabled
 * Specific placeholders:
   * %plugin\_name%
 
-### PLUGIN\_ENABLE
+### ⭐ PLUGIN\_ENABLE
 
 * Info: Triggered when a plugin is enabled
 * Specific placeholders:
   * %plugin\_name%
 
-### RAID\_FINISH
+### ⭐ RAID\_FINISH
 
 * Info: Activates when a village raid finishes
 * Specific placeholders:&#x20;
   * %badomen\_level%
   * %heroes%
 
-### RAID\_TRIGGER
+### ⭐ RAID\_TRIGGER
 
 * Info: Activates when a village raid starts
 * Specific placeholders:&#x20;
   * %player%
   * %badomen\_level%
 
-### RAID\_WAVE
+### ⭐ RAID\_WAVE
 
 * Info: Activates when the next village raid starts
 * Specific placeholders:&#x20;
   * %raiders%
 
-### CHUNK\_LOAD
+### ⭐ CHUNK\_LOAD
 
 * Info: Activates when a chunk is loaded
 * Specific placeholders:
@@ -100,7 +100,7 @@ Activator features are features that are exclusive to that activator.
   * %is\_force\_loaded%
   * %is\_new\_chunk%
 
-### CHUNK\_UNLOAD
+### ⭐ CHUNK\_UNLOAD
 
 * Info: Activates when a chunk is unloaded
 * Specific placeholders:
@@ -120,39 +120,39 @@ Activator features are features that are exclusive to that activator.
 * Info: Activates when the weather change in a world
 * [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#weather_change)
 
-### STRUCTURE\_GROW
+### ⭐ STRUCTURE\_GROW
 
 * Info: Activates when a structure grows
 
-### THUNDER\_CHANGE
+### ⭐ THUNDER\_CHANGE
 
 * Info:  Thunder state changing in a world
 * Specific placeholders:&#x20;
   * %cause% : List of causes (COMMAND, NATURAL, SLEEP, PLUGIN, UNKNOWN)
 
-### VEHICLE\_CREATE
+### ⭐ VEHICLE\_CREATE
 
 * Info: Activates when a player places/creates a vehicle
 
-### VEHICLE\_DAMAGE
+### ⭐ VEHICLE\_DAMAGE
 
 * Info: Activates when an entity considered as a vehicle is damaged
 
-### VEHICLE\_DESTROY
+### ⭐ VEHICLE\_DESTROY
 
 * Info: Activates when an entity considered as a vehicle is destroyed
 
-### WEATHER\_CHANGE
+### ⭐ WEATHER\_CHANGE
 
 * Info: Triggered when the weather change
 * Specific placeholders:&#x20;
   * %cause% : List of causes (COMMAND, NATURAL, SLEEP, PLUGIN, UNKNOWN)
 
-### WORLD\_DAY
+### ⭐ WORLD\_DAY
 
 * Info: Activates when the world hits daytime
 
-### WORLD\_NIGHT
+### ⭐ WORLD\_NIGHT
 
 * Info: Activates when the world hits nighttime
 
