@@ -265,25 +265,16 @@ Example: `%around_target_x%`
 ### PLAYER\_RECEIVE\_EFFECT
 
 * Plugins: ExecutableItems / ExecutableEvents
-
-```
-%effect_received%
-%effect_received_lower%
-%effect_received_level%
-%effect_received_duration%
-```
+* %effect\_received%
+* %effect\_received\_lower%
+* %effect\_received\_level%
+* %effect\_received\_duration%
 
 {% hint style="info" %}
 They return the minecraft effect name instead of the spigot name
 {% endhint %}
 
-### PLAYER\_TELEPORT
 
-* Plugins: ExecutableEvents
-
-```
-%teleportCause%
-```
 
 ### PLAYER\_WRITE\_COMMAND | PLAYER\_SEND\_MESSAGE
 
@@ -310,49 +301,12 @@ They return the minecraft effect name instead of the spigot name
 * If you want to get all the args the player wrote use `%all_args%`
 * Or all the args without the first one (useful for commands) `%all_args_without_first%`
 
-
-
-### PLAYER\_ENCHANT\_ITEM
-
-* Plugin: ExecutableEvents
-* %enchants% to get the enchantments Ex: "Sharpness;10:Efficiency;2"
-* %levelCost%
-
-### CREEPER\_POWER\_CHANGE
-
-* Plugin: ExecutableEvents
-* %powerCause%
-
-### ENTITY\_SPAWN\_TRIALSPAWNER
-
-* Plugin: ExecutableEvents
-* %isOminous%
-
 ### PLAYER\_HIT\_ENTITY | PLAYER\_HIT\_PLAYER
 
 * Plugins: ExecutableItems / ExecutableEvents
 * %critical% return true if the hit is a critical otherwise false
 
-### PLAYER\_INVENTORY\_CLICK
 
-* Plugins: ExecutableEvents
-* %isShiftClick%
-* %isMouseClick%
-* %isLeftClick%
-* %isRightClick%
-* %isKeyboardClick%
-* %isCreativeAction%
-* %getAction%
-* %beforeSlot%
-* %afterSlot%
-* %inventory\_type%
-* %inventory\_title%
-
-### PLAYER\_LEVEL\_CHANGE
-
-* Plugin: ExecutableEvents
-* %newLevel%
-* %oldLevel%
 
 ### RAID\_TRIGGER
 
@@ -377,16 +331,6 @@ They return the minecraft effect name instead of the spigot name
 %heroes% (UUID LIST) Example OUT "123e4567-e89b-12d3-a456-426614174000,123e4567-e89b-12d3-a456-426614174001,123e4567-e89b-12d3-a456-426614174002"
 ```
 {% endcode %}
-
-### LIGHTNING\_STRIKE
-
-* Plugin ExecutableEvent
-* %cause%
-
-### WEATHER\_CHANGE
-
-* Plugin ExecutableEvent
-* %cause%
 
 
 
