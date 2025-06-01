@@ -1041,14 +1041,20 @@ You can find all blockface here:
 ### SET\_BLOCK\_POS
 
 * Info: Set a block in a specific position
-* Command: SETBLOCKPOS {x} {y} {z} {material} \[bypassProtection true-false] \[replace true or false]
+* Command settings:
+  * X-Coordinate
+  * y: Y-Coordinate
+  * z: Z-Coordinate
+  * material: the material of the block
+  * bypassProtection: true or false, whether or not it bypass region, claim , island protection
+  * replace: true or false, whether or not it replaces the block if one already exists
 * Example:
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>activators:
 </strong>  activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - SETBLOCKPOS %entity_x% %entity_y% %entity_z% BEDROCK true
+    - SET_BLOCK_POS x:0 y:0 z:0 material:STONE bypassProtection:false replace:true
 </code></pre>
 
 
