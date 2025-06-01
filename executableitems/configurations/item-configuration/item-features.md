@@ -410,7 +410,10 @@ In game it will be represented in PublicBukkitValues, like this
   * hideEnchantments: Boolean value that represents if the enchantments on the ExecutableItem will be displayed in the lore or not.
   * hideUnbreakable: Boolean value that represents if the unbreakable description will be shown in the lore or not.
   * hideAttributes: Boolean value that represents if the attributes of the ExecutableItem will be displayed in the lore or not.
-  * hidePotionEffects: Boolean value that represents if the potion effects of the ExecutableItem will be displayed in the lore or not.
+  * hidePotionEffects: Boolean value that represents if the potion effects of the ExecutableItem will be displayed in the lore or not. In versions 1.20.5 or + use hideAdditionalTooltip.
+  *   hideAdditionalTooltip (Only available in 1.20.5++)&#x20;
+
+      Setting to show/hide potion effects, book and firework information, map tooltips, patterns of banners, and enchantments of enchanted books. It replaces the old hidePotionEffects
   * hideUsage: Boolean value that represents if the Usage custom feature from ExecutableItem plugin of the item itself will be displayed in the lore or not.
     * You can display manually the usage using %usage% placeholder adding it when editing your lore.
   * hideDye: Boolean value that represents if the dye color (#\<color>) of the ExecutableItem will be displayed in the lore or not.
@@ -426,6 +429,7 @@ hiders:
   hideUnbreakable: false
   hideAttributes: false
   hidePotionEffects: false
+  hideAdditionalTooltip: false
   hideUsage: false
   hideDye: false
   hideArmorTrim: false
