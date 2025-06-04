@@ -23,3 +23,69 @@ Reference: [https://discord.com/channels/701066025516531753/1363296318755438764/
 ### Q: The texture in my custom texture isn't working
 
 A: Assuming that the png doesn't seem corrupted, go to [https://cloudconvert.com/png-converter](https://cloudconvert.com/png-converter) for example and re-convert the png file and try again
+
+### Q: The ingame editor is facing errors when opened&#x20;
+
+A: This one needs extra explanation
+
+<figure><img src="../../../.gitbook/assets/image (449).png" alt=""><figcaption></figcaption></figure>
+
+For example, you may have lots of items and when you go to the next page, this happens. For this scenario, the error posted in console shows as follows:
+
+```
+[10:04:51 ERROR]: Could not pass event InventoryClickEvent to SCore v5.25.6.1
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143) ~[?:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.features.custom.armortrim.ArmorTrim.getArmorTrim(ArmorTrim.java:77) ~[SCore-5.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.features.custom.armortrim.ArmorTrim.applyOnItemMeta(ArmorTrim.java:178) ~[SCore-5.25.6.1.jar:?]
+	at ExecutableItems_Prem-7.25.6.1.jar/com.ssomar.executableitems.executableitems.ExecutableItemObject.refreshMeta(ExecutableItemObject.java:269) ~[ExecutableItems_Prem-7.25.6.1.jar:?]
+	at ExecutableItems_Prem-7.25.6.1.jar/com.ssomar.executableitems.executableitems.ExecutableItemObject.refresh(ExecutableItemObject.java:238) ~[ExecutableItems_Prem-7.25.6.1.jar:?]
+	at ExecutableItems_Prem-7.25.6.1.jar/com.ssomar.executableitems.executableitems.ExecutableItemObject.build(ExecutableItemObject.java:221) ~[ExecutableItems_Prem-7.25.6.1.jar:?]
+	at ExecutableItems_Prem-7.25.6.1.jar/com.ssomar.executableitems.executableitems.ExecutableItem.buildItem(ExecutableItem.java:717) ~[ExecutableItems_Prem-7.25.6.1.jar:?]
+	at ExecutableItems_Prem-7.25.6.1.jar/com.ssomar.executableitems.executableitems.ExecutableItem.buildItem(ExecutableItem.java:697) ~[ExecutableItems_Prem-7.25.6.1.jar:?]
+	at ExecutableItems_Prem-7.25.6.1.jar/com.ssomar.executableitems.executableitems.ExecutableItem.buildItem(ExecutableItem.java:770) ~[ExecutableItems_Prem-7.25.6.1.jar:?]
+	at ExecutableItems_Prem-7.25.6.1.jar/com.ssomar.executableitems.executableitems.ExecutableItem.getIconItem(ExecutableItem.java:221) ~[ExecutableItems_Prem-7.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.sobject.menu.SObjectsWithFileEditor.load(SObjectsWithFileEditor.java:101) ~[SCore-5.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.sobject.menu.SObjectsEditorAbstract.goNextPage(SObjectsEditorAbstract.java:86) ~[SCore-5.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.sobject.menu.NewSObjectsManagerEditor.nextPage(NewSObjectsManagerEditor.java:154) ~[SCore-5.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.editor.NewGUIManager.clicked(NewGUIManager.java:116) ~[SCore-5.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.editor.NewGUIManager.clicked(NewGUIManager.java:75) ~[SCore-5.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.editor.NewEditorInteractionsListener.manage(NewEditorInteractionsListener.java:164) ~[SCore-5.25.6.1.jar:?]
+	at SCore-5.25.6.1.jar/com.ssomar.score.editor.NewEditorInteractionsListener.onInvClick(NewEditorInteractionsListener.java:145) ~[SCore-5.25.6.1.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-api-1.21.4-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-api-1.21.4-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-api-1.21.4-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.handleContainerClick(ServerGamePacketListenerImpl.java:3208) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.network.protocol.game.ServerboundContainerClickPacket.handle(ServerboundContainerClickPacket.java:69) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.network.protocol.game.ServerboundContainerClickPacket.handle(ServerboundContainerClickPacket.java:14) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:29) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.TickTask.run(TickTask.java:18) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:155) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:1448) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:176) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:129) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:1428) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:1422) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:139) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.managedBlock(MinecraftServer.java:1379) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:1387) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1264) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310) ~[paper-1.21.4.jar:1.21.4-227-7675321]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[?:?]
+```
+
+Based on the first few lines of the error, it mentioned things like armor trim attributes, meaning there's something wrong that happened in the armor trim settings.&#x20;
+
+To know which item exactly caused the error, check the rightmost item in the display.
+
+![](<../../../.gitbook/assets/image (451).png>) The id is berserker\_blade. Now go to your items folder and find the item next to berserker\_blade.
+
+![](<../../../.gitbook/assets/image (452).png>) Now you know that this file in specific caused the issue.
+
+How to fix it?\
+![](<../../../.gitbook/assets/image (453).png>) Try to remove these 4 lines and reload the plugin.
+
+The question is, does it solve the issue? Not entirely. The cause of such issue may vary from case-to-case. Please create a new post at the bugs-errors-issues channel in the discord so this issue can at least be prevented in the future updates.
