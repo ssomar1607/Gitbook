@@ -176,6 +176,18 @@ Also there will be different colors (but its the same idea as {} and \[] ):
   * resetDurability: Boolean value to allow through the refresh process to reset the durability value
 * Permission: `ei.cmd.refresh`
 
+Refresh ExecutableItems Texture Pack
+
+* Command: <mark style="color:blue;">**/ei refresh-pack**</mark>
+* Permission: `ei.cmd.refresh-pack`
+
+Download Default Executable Items Texture Pack
+
+* Command: <mark style="color:blue;">**/ei download-default-pack**</mark>
+* Permission: `ei.cmd.download-default-pack`
+
+
+
 #### **Modify the owner of the ExecutableItem that is in your hand**
 
 * Command: <mark style="color:blue;">**/ei set\_owner**</mark> <mark style="color:blue;">**{player}**</mark>

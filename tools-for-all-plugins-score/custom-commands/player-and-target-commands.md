@@ -1042,7 +1042,7 @@ You can find all blockface here:
 
 * Info: Set a block in a specific position
 * Command settings:
-  * X-Coordinate
+  * x: X-Coordinate
   * y: Y-Coordinate
   * z: Z-Coordinate
   * material: the material of the block

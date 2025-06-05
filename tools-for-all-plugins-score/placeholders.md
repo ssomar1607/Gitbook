@@ -61,13 +61,13 @@ Examples:
 
 ## Item placeholders
 
-<table><thead><tr><th width="150">Placeholder</th><th>Description</th></tr></thead><tbody><tr><td><strong>%name%</strong></td><td>The name of the ExecutableItems</td></tr><tr><td><strong>%id%</strong></td><td>Returns the id of the ExecutableItem used to run the activator</td></tr><tr><td><strong>%usage%</strong></td><td>The max usage that the item has (CAN BE USED IN LORE)</td></tr><tr><td><strong>%usage_limit%</strong></td><td>The max usage that the item can have (CAN BE USED IN LORE)</td></tr><tr><td><strong>%usage_roman%</strong></td><td>Display the usage in roman numerals (11 -> XI)</td></tr><tr><td><strong>%max_use_per_day_item%</strong></td><td>The max use per day that the item has.</td></tr><tr><td><strong>%max_use_per_day_activator%</strong></td><td>The max use per day for the activator.</td></tr><tr><td><strong>%amount%</strong></td><td>The amount of ExecutableItems that the player has in his current selected slot. Also tells the amount of EI you dropped when triggering the <code>PLAYER_DROP_THE_EI</code> activator</td></tr><tr><td><p><strong>%usage_bar(amount:30,color1:&#x26;d,color2:&#x26;5,symbol:|)%</strong><br></p><p><img src="https://i.imgur.com/mT6qKeh.png" alt=""><br><em>(by default: amount = 30 bars, color1 is yellow, color2 is green, symbol is |)</em></p></td><td><strong>amount</strong> = The amount of bars the usage bar will have<br><strong>color1</strong> = The color that represents how much usage the item has (The light purple)<br><strong>color2</strong> = The color that represents the dark purple<br><strong>symbol</strong> = The symbol that will be used on the custom usage bar<br><br><strong>Requirements:</strong><br>- The item must have the usage and the usage limit different than -1</td></tr></tbody></table>
+<table><thead><tr><th width="150">Placeholder</th><th>Description</th></tr></thead><tbody><tr><td><strong>%name%</strong></td><td>The name of the ExecutableItems</td></tr><tr><td><strong>%id%</strong></td><td>Returns the id of the ExecutableItem used to run the activator</td></tr><tr><td><strong>%usage%</strong></td><td>The max usage that the item has (CAN BE USED IN LORE)</td></tr><tr><td><strong>%usage_limit%</strong></td><td>The max usage that the item can have (CAN BE USED IN LORE)</td></tr><tr><td><strong>%usage_roman%</strong></td><td>Display the usage in roman numerals (11 -> XI)</td></tr><tr><td><strong>%max_use_per_day_item%</strong></td><td>The max use per day that the item has.</td></tr><tr><td><strong>%max_use_per_day_activator%</strong></td><td>The max use per day for the activator.</td></tr><tr><td><strong>%amount%</strong></td><td>The amount of ExecutableItems that the player has in his current selected slot. Also tells the amount of EI you dropped when triggering the <code>PLAYER_DROP_THE_EI</code> activator</td></tr><tr><td><p><strong>%usage_bar(amount:30,color1:&#x26;d,color2:&#x26;5,symbol:|)%</strong><br></p><p><img src="https://i.imgur.com/mT6qKeh.png" alt=""><br><em>(by default: amount = 30 bars, color1 is yellow, color2 is green, symbol is |)</em></p></td><td><strong>amount</strong> = The amount of bars the usage bar will have<br><strong>color1</strong> = The color that represents how much usage the item has (The light purple)<br><strong>color2</strong> = The color that represents the dark purple<br><strong>symbol</strong> = The symbol that will be used on the custom usage bar<br><br><strong>Requirements:</strong><br>- The item must have the usage and the usage limit different than -1</td></tr><tr><td>%durability%</td><td>The current durability of the item</td></tr></tbody></table>
 
 ## Player placeholders
 
 <table><thead><tr><th width="150">Placeholder</th><th>Description</th></tr></thead><tbody><tr><td><strong>%player%</strong></td><td>Name of the player. Can be used to display the owner of the item in the item's lore</td></tr><tr><td><strong>%player_uuid%</strong></td><td>UUID of the player (%player_uuid_array% for its 4-array integer form. Ex: <code>[I;-1288600659,-373273272,-1897203511,898446696])</code></td></tr><tr><td><strong>%player_world%</strong></td><td>Name of the world (<strong>%player_world_lower%</strong> for lowercase) Use &#x3C;&#x3C;%player_world%>> when entering world argument in vanilla commands</td></tr><tr><td><strong>%player_x%</strong></td><td>X-Coordinates of the player (Decimal) >> For an integer use <strong>%player_x_int%</strong></td></tr><tr><td><strong>%player_y%</strong></td><td>Y-Coordinates of the player (Decimal) >> For an integer use <strong>%player_y_int%</strong></td></tr><tr><td><strong>%player_z%</strong></td><td>Z-Coordinates of the player (Decimal) >> For an integer use <strong>%player_z_int%</strong></td></tr><tr><td><strong>%player_slot%</strong></td><td>The slot used to active the activator</td></tr><tr><td><strong>%player_slot_live%</strong></td><td>The current held slot</td></tr><tr><td><strong>%player_pitch%</strong></td><td>The pitch of the player >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>pitch</strong><em><strong>_</strong></em><strong>int%</strong></td></tr><tr><td><strong>%player_pitch_positive%</strong></td><td>The pitch of the player but always positive >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>pitch</strong><em><strong>_</strong></em><strong>positive</strong><em><strong>_</strong></em><strong>int%</strong></td></tr><tr><td><strong>%player_yaw%</strong></td><td>The yaw of the player >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>yaw</strong><em><strong>_</strong></em><strong>int%</strong></td></tr><tr><td><strong>%player_yaw</strong><em><strong>_</strong></em><strong>positive</strong><em><strong>%</strong></em></td><td>The yaw of the player but always positive >> For an integer <strong>%player</strong><em><strong>_</strong></em><strong>yaw_positive_int%</strong></td></tr><tr><td><strong>%player_direction%</strong></td><td>Direction of where the player is facing (ex: N, SW, NE)</td></tr><tr><td><strong>%last_damage</strong><em><strong>_</strong></em><strong>taken%</strong><br><strong>%last_damage_taken_int%</strong></td><td>The last damage taken by the player</td></tr><tr><td><strong>%last_damage</strong><em><strong>_</strong></em><strong>dealt%</strong><br><strong>%last_damage_dealt_int%</strong></td><td>The last damage dealt by the player</td></tr><tr><td><strong>%player_team%</strong></td><td>The team of the player if the player has one</td></tr><tr><td><strong>%player_attack</strong><em><strong>_</strong></em><strong>charge%</strong></td><td>Gets the current cooldown for a player's attack. This is used to calculate damage, with 1.0 representing a fully charged attack and 0.0 representing a non-charged attack (1.16+ only)<br><br>This placeholder gets reset after a DAMAGE command, so if you want to debug it, display the value before a DAMAGE command.</td></tr></tbody></table>
 
-### Initial Player Placeholders (NOT RELEASED YET)
+### Initial Player Placeholders
 
 The significance of these placeholders is for people who want to create advanced configurations that require the user's values when the activator gets triggered while expecting them to not change as the commands execute.
 
@@ -257,6 +257,23 @@ Example: `%around_target_x%`
 
 ## Activators placeholders
 
+### RAID\_TRIGGER
+
+* Plugins: ExecutableEvents
+* %player% - Returns the name of the player that triggered the raid
+* %badomenlevel% - Returns the level of bad omen used to start the raid
+
+### RAID\_WAVE
+
+* Plugins: ExecutableEvents
+* %raiders% - Returns a UUID List of the raider entities (not the player participants. it means the uuid of the entities you have to kill to advance/end the raid)
+
+### RAID\_FINISH
+
+* Plugins: ExecutableEvents
+* %badomen% - Returns the bad omen level of the raid
+* %heroes% - Returns the UUID List of the players involved in clearing the raid
+
 ### PLAYER\_EXPERIENCE\_CHANGE
 
 * Plugins: ExecutableItems / ExecutableEvents
@@ -305,6 +322,21 @@ They return the minecraft effect name instead of the spigot name
 
 * Plugins: ExecutableItems / ExecutableEvents
 * %critical% return true if the hit is a critical otherwise false
+
+### PLAYER\_TELEPORT
+
+* Plugins: ExecutableEvents
+* %teleportCause% - Returns the cause of the teleportation. Reference: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html)
+
+### BROADCAST\_MESSAGE
+
+* Plugins: ExecutableEvents
+* %message% - The message itself
+* %is\_async% - Returns true/false
+
+### PLUGIN\_DISABLE & PLUGIN\_ENABLE
+
+* %plugin\_name% - Returns the name of the enabled/disabled plugin
 
 
 
