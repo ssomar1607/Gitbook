@@ -326,7 +326,7 @@ They return the minecraft effect name instead of the spigot name
 ### PLAYER\_TELEPORT
 
 * Plugins: ExecutableEvents
-* %teleportCause% - Returns the cause of the teleportation. Reference: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html)
+* %teleport\_cause% - Returns the cause of the teleportation. Reference: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html)
 
 ### BROADCAST\_MESSAGE
 
