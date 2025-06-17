@@ -156,7 +156,17 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates when the world hits nighttime
 
+### REMOTE\_SERVER\_COMMAND
 
+* Activates when a command is received over RCON ([https://jd.papermc.io/paper/1.14.4/index.html?org/bukkit/event/server/RemoteServerCommandEvent.html](https://jd.papermc.io/paper/1.14.4/index.html?org/bukkit/event/server/RemoteServerCommandEvent.html))
+
+### SERVICE\_REGISTER
+
+* Activates when a service is registered ([https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceRegisterEvent.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceRegisterEvent.html))
+
+### SERVICE\_UNREGISTER
+
+* Activates when a service is unregistered ([https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceUnregisterEvent.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceUnregisterEvent.html))
 
 ## Player activators
 
@@ -164,7 +174,9 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates in repeat per player&#x20;
 
+### 🔹PLAYER\_ADVANCEMENT
 
+* Info: Activates when a player achieves an advancement
 
 ### 🔹PLAYER\_ALL\_CLICK
 
@@ -436,6 +448,10 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activates when a player participates on killing a player
 
+### 🔹PLAYER\_PICKUP\_ARROW
+
+* Info: Activates when the player pick ups an arrow in the ground (the arrow entity)
+
 ### 🔹PLAYER\_PICKUP\_ITEM
 
 * Info: Activates when the player pick ups an item&#x20;
@@ -509,6 +525,10 @@ Activator features are features that are exclusive to that activator.
 ### 🔹PLAYER\_SWAP\_HAND
 
 * Info: Activates when a player swap hands.&#x20;
+
+### 🔹PLAYER\_TAKE\_LECTERN\_BOOK
+
+* Info: Activates when a player takes a book from a lectern.
 
 ### 🔹PLAYER\_TARGETED\_BY\_AN\_ENTITY
 

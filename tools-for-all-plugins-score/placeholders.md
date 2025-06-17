@@ -336,7 +336,25 @@ They return the minecraft effect name instead of the spigot name
 
 ### PLUGIN\_DISABLE & PLUGIN\_ENABLE
 
+* Plugins: ExecutableEvents
 * %plugin\_name% - Returns the name of the enabled/disabled plugin
+
+### PLAYER\_ADVANCEMENT
+
+* Plugins: ExecutableEvents
+* %advancement% - Returns the advancement achieved by the player
+
+### REMOTE\_SERVER\_COMMAND
+
+* Plugins: ExecutableEvents
+* %is\_async% - returns true/false
+* %command% - returns the command used to trigger this activator
+
+### SERVICE\_REGISTER & SERVICE\_UNREGISTER
+
+* Plugins: ExecutableEvents
+* %is\_async% - returns true/false
+* %get\_event\_name% - returns the name of the registered service
 
 
 
