@@ -14,6 +14,20 @@ So in:
 
 _Sorted by alphabetical order_
 
+### ADD\_TEMPORARY\_ATTRIBUTE
+
+* Info: Adds temporary attributes to a player/entity
+* Command:
+  * ```
+    ADD_TEMPORARY_ATTRIBUTE {attribute} {amount} {operation} {time in ticks}
+    ```
+    * {attribute} : [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html#field-summary](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html#field-summary)
+    * {amount} : Double value that the temp attribute will have
+    * {operation} : [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html#enum-constant-summary](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html#enum-constant-summary)
+    * {time in ticks} : Amount of time before the attribute expires
+* Example:
+  * `ADD_TEMPORARY_ATTRIBUTE GRAVITY 2 ADD_NUMBER 5`
+
 ### ALL\_PLAYERS
 
 * Info: Targets all players.

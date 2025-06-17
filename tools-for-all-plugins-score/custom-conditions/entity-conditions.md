@@ -250,6 +250,21 @@ entityConditions:
 
 * Required: NO
 
+ifSheepColor:
+
+* Description: Checks if the entity has the correct sheep color
+* Example:
+
+```yaml
+entityConditions:
+    ifSheepColor:
+    - green
+    - BLACK
+    - yElloW
+```
+
+[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html)
+
 ### ifIsOnTheBlock - Not
 
 * Description: Checks if the entity is (not) standing on a block.

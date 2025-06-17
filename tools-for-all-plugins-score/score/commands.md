@@ -13,6 +13,17 @@
 
 * Command: /score inspect-loop
 
+Reload SCore variables, projectiles and hardness configurations
+
+* Command: /score reload
+
+Send a message to discord via webhook
+
+* /score webhook \<url> \<true|false> \<message...>
+  * \<url> : url for the webhook
+  * \<true|false> : whether to let the executor know if a webhook message is to be performed or not
+  * \<message...> : the message that will be sent by the target webhook
+
 #### [Hardnesses ](../blocks-hardnesses.md)
 
 #### [Particles ](../score-particles.md)
