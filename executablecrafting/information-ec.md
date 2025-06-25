@@ -28,7 +28,7 @@ Subscription: 4.99€/month
 For:&#x20;
 
 * MyFurniture Premium
-* ExecutableItems Premium
+* ExecutableEvents Premium
 * ExecutableCrafting Premium
 * ExecutableLevers
 * CustomPiglinsTrades
