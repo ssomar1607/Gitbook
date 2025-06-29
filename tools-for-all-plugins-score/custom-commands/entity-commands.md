@@ -160,11 +160,13 @@ it only works for 1.16.5+
 ### PLAYER\_RIDE\_ENTITY
 
 * Info: Makes the player to ride the entity targeted.
-* No command setting
+* Command settings:
+  * control: true/false whether you can manually controll the entity or not
+  * speed: how fast the entity can go as you ride it
 * Example:
 
 ```yaml
-- PLAYER_RIDE_ON_ENTITY
+- PLAYER_RIDE_ON_ENTITY control:true speed:1.0
 ```
 
 

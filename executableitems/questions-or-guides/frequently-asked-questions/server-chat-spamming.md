@@ -38,6 +38,14 @@ Check FAQ -> How to use vanilla commands and use the commands correctly.
 
 If the spam is on your console, just enable silenceOutput on your activator where your command is
 
+## Other Kinds of Spam
+
+<figure><img src="../../../.gitbook/assets/image (455).png" alt=""><figcaption></figcaption></figure>
+
+For information's sake, if you don't know how to make LuckPerms not display logs for opped players or players who have the logging perms, run `/lp log notify off`
+
+(Credits to: @dragonfeel.)
+
 ## Discord
 
 In case this didn't help you to achieve what you wanted or doesn't work for you, feel free to ask in the Discord of Ssomar plugins your question.

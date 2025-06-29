@@ -894,6 +894,8 @@ fireworkFeatures:
       hasTwinkle: true
 ```
 
+For the colors, you can either use the regular [color names](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)  or `RGB-<0-255>-<0-255>-<0-255>`
+
 ### Spawner features
 
 * Info: Feature that allows to create custom spawner with ExecutableItems

@@ -379,7 +379,34 @@ radius: 3
 incendiary: true
 ```
 
+### Firework
 
+**Lifetime**
+
+* To how long the firework can last before it vanishes (like how many gunpowders were used)
+* Example:
+
+```yaml
+lifeTime: 3
+```
+
+**fireworkExplosions:**
+
+* The settings of the firework explosion colors
+* Example:
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>  fireworkExplosions:
+</strong>    explosion_0:
+      colors:
+      - RGB-94-84-214
+      fadeColors:
+      - RGB-1-2-33
+      type: BALL_LARGE
+      hasTrail: true
+      hasTwinkle: true
+</code></pre>
+
+For the colors, you can either use the regular [color names](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)  or `RGB-<0-255>-<0-255>-<0-255>`
 
 ## YML Config
 

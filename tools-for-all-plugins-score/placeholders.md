@@ -291,7 +291,11 @@ Example: `%around_target_x%`
 They return the minecraft effect name instead of the spigot name
 {% endhint %}
 
+### PLAYER\_RECEIVE\_HIT\_PLAYER | PLAYER\_RECEIVE\_HIT\_ENTITY | PLAYER\_RECEIVE\_HIT\_GLOBAL
 
+* Plugins: ExecutableItems
+* %last\_damage\_taken\_final%
+* %last\_damage\_taken\_final\_int%
 
 ### PLAYER\_WRITE\_COMMAND | PLAYER\_SEND\_MESSAGE
 

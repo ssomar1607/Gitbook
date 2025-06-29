@@ -41,9 +41,7 @@ activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - ALL_PLAYERS SEND_MESSAGE Hello %parseother_{% raw %}
-{%around_target%}
-{% endraw %}_{player_name}%
+    - ALL_PLAYERS SEND_MESSAGE Hello %parseother_{%around_target%}_{player_name}%
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
@@ -258,9 +256,7 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_{% raw %}
-{%player%}
-{% endraw %}_{betterteams_name}::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
+    - AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_{%player%}_{betterteams_name}::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
 ```
 
 ```yaml
