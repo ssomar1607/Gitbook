@@ -126,6 +126,14 @@ You want to get the distance between you and a specific XYZ location which is x:
 %math_(SQRT(ABS(({x1})-({x2}))^2+ABS(({y1})-({y2}))^2+ABS(({z1})-({z2}))^2))%
 ```
 
+Example:
+
+{% code overflow="wrap" %}
+```
+%math_SQRT(((%player_x%)-(%entity_x%))^2+((%player_y%)-(%entity_y%))^2+((%player_z%)-(%entity_z%))^2)%
+```
+{% endcode %}
+
 ## Using offsets to distance target from location
 
 ```
