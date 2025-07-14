@@ -891,11 +891,13 @@ playerConditions:
           amount: 1
           detailedSlots:
           - 40
+      ifHasExecutableItemsMsg: war
       ifHasNotExecutableItems:
         hasExecutableItem0:
           executableItem: Leto2025_Srdcova10
           amount: 1
           detailedSlots: []
+      ifHasNotExecutableItemsMsg: famine
 ```
 
 * The example above works like this.&#x20;
