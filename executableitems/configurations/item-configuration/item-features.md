@@ -293,7 +293,7 @@ itemModel: "" # "mynamespace:mymodel"
 
 ### ⭐tooltipModel
 
-* Info: Path of a custom tooltip model on texture pack in the format of \<mynamespace:model\_id> that will target inside assets/\<mynamespace>/models/item/\<model\_id>.
+* Info: Path of a custom tooltip model on texture pack in the format of \<mynamespace:model\_id> that will target inside /assets/\<mynamespace>/textures/gui/sprites/tooltip/\<id>\_frame
 * Example:
 
 ```yaml
