@@ -149,6 +149,7 @@
       * [Uploading texture pack](executableitems/questions-or-guides/custom-textures/custom-textures-1.21/uploading-texture-pack.md)
       * [Fixing Invalid PNG Files](executableitems/questions-or-guides/custom-textures/custom-textures-1.21/fixing-invalid-png-files.md)
     * [Custom texture \[1.21+\]](executableitems/questions-or-guides/custom-textures/custom-texture-1.21+.md)
+    * [Custom textures \[1.21.4+\] (Article Version)](executableitems/questions-or-guides/custom-textures/custom-textures-1.21.4+-article-version.md)
   * [Custom sounds](executableitems/questions-or-guides/custom-sounds.md)
   * [Informal Guides](executableitems/questions-or-guides/informal-guides.md)
   * [Plugin performances optimization](executableitems/questions-or-guides/plugin-performances-optimization.md)

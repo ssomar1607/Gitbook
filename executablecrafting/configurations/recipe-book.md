@@ -42,24 +42,21 @@ Then you can open the recipe book using the command
 
 ### Tips
 
-| Description                                                            | Symbol | Example                                                                                                                       |
-| ---------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| You can use \*\* to show all available recipes.                        | \*\*   | <pre><code>recipeBooks:
+<table><thead><tr><th>Description</th><th>Symbol</th><th>Example</th></tr></thead><tbody><tr><td>You can use ** to show all available recipes.</td><td>**</td><td><pre><code>recipeBooks:
   1:
     recipes:
       - '**'
     folders: 
       allItems:
         - '**'
-</code></pre>             |
-| You can use \_\* to target all recipes that starts with what you wrote | \_\*   | <pre><code>recipeBooks:
+</code></pre></td></tr><tr><td>You can use _* to target all recipes that starts with what you wrote</td><td>_*</td><td><pre><code>recipeBooks:
   1:
     folders: 
       VIPItems:
         - Vip_* 
       CrownItems:
         - Crown_*
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ```
 recipeBooks:
