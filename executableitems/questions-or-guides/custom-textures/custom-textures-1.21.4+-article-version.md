@@ -152,3 +152,9 @@ Run the command:
 And it should give you the texture that you seek.
 
 <figure><img src="../../../.gitbook/assets/2025-08-13_17.12.58.png" alt=""><figcaption></figcaption></figure>
+
+## Conclusion:
+
+If you want to use 3d models, refer to Step 8 and use Blockbench software to create 3d textures and save the model output in that file.
+
+This page only helps you to gain a good understanding of the simplest way in creating custom textures at 1.21.4 and above.
