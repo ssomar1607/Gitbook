@@ -522,6 +522,22 @@ activators:
 
 
 
+### GIVE\_MONEY
+
+* Info: Give money to a player
+  * It requires Vault plugin
+* Command settings
+  * amount: the amount to give
+* Example:
+
+```yaml
+activators:
+  activator0: # Activator ID, you can create as many activator on the activators list
+    option: # Here goes an activator that is at least instance of player
+    commands:
+    - GIVE_MONEY amount:50.0
+```
+
 ### GRAVITY\_DISABLE
 
 * Info: It stops the gravity for the player, stopping the player to "fall" down or going up.

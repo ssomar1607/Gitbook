@@ -20,4 +20,5 @@ disableCustomMetadataOnEntities: false # to disable the metadata fromSpawner and
 #MAX : it will save all settings (its very verbose)
 configVerbosity: "NORMAL" # "NORMAL" or "MIN" or "MAX"
 enableCommentsInConfig: true # It will add a description of each setting in comment in the yaml config file.
+hologramsPlugin: "NONE" # The holograms plugin you want to use. By default None , it uses the vanilla holograms. You can use CMI, HOLOGRAPHIC_DISPLAYS or DECENT_HOLOGRAMS
 ```

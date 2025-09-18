@@ -342,6 +342,22 @@ color: AQUA
 silent: true
 ```
 
+#### Hit sound
+
+* Configure the sound it will emit when the arrow hits something
+* Its for Paper or Paper fork only
+* It works for ARROW, TRIDENT and SPECTRAL\_ARROW
+
+{% hint style="info" %}
+[Click to check all the available sounds](https://jd.papermc.io/paper/1.21.8/org/bukkit/Sound.html)
+{% endhint %}
+
+* Example:
+
+```yaml
+hitSound: BLOCK_BELL_USE
+```
+
 ### Wither skull
 
 #### Charged

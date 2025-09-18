@@ -230,6 +230,23 @@ entityConditions:
   * If the value is `>=40000`, the activator will only activate if the entity's health is 40000 and above.
 * Required: NO
 
+### ifEntityInRegion - IfNotEntityInRegion
+
+* Description: Checks if the entity is in a WorldGuard region.
+* Example:
+
+```yaml
+entityConditions:
+    ifEntityInRegion :
+        - 'donjon_zone'
+    ifEntityInRegionMsg: '' #<- Here is where you will add the custom message.
+    
+    
+    ifNotEntityInRegion :
+        - 'safe_zone'
+    ifNotEntityInRegionMsg: '' #<- Here is where you will add the custom message.
+```
+
 ### ifHasTag - Not
 
 * Description: Checks if the entity has (not) specifics tags
