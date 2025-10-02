@@ -492,6 +492,9 @@ Damages nearest player
   * \[takeFromInv]: Default true, it takes the seeds in the player inv, otherwise it generates the seeds
   * \[acceptEI]: Default false, accept EI for the seeds
   * \[cropType]: default all seeds accepted (it takes seeds depending of their order in the inventory)
+    * FARMLAND - WHEAT, CARROTS, BEETROOTS, POTATOES, SWEET\_BERRY\_BUSH, MELON\_STEM, PUMPKIN\_STEM, TORCHFLOWER\_CROP
+    * SOUL SAND - NETHER\_WART
+    * JUNGLE WOOD/LOG - COCOA
 * Example:
 
 ```
