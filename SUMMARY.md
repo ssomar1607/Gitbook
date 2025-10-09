@@ -154,6 +154,7 @@
   * [Informal Guides](executableitems/questions-or-guides/informal-guides.md)
   * [Plugin performances optimization](executableitems/questions-or-guides/plugin-performances-optimization.md)
 * [🔦 MC Versions Compatibility](executableitems/mc-versions-compatibility.md)
+* [Special Behaviors](executableitems/special-behaviors.md)
 * [⚙️ Developer API](executableitems/developer-api.md)
 
 ## ExecutableBlocks
