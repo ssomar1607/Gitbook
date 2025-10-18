@@ -231,7 +231,7 @@ itemRarity:
 
 * Info: This section configures the behavior of an equippable item. When enabled, the item can be equipped into a designated slot, optionally triggering a sound effect. You can also specify a custom model for the equipped item, define whether it takes damage when the wearer is hurt, and set flags to allow or restrict swapping and disposal. Additionally, you can restrict which entities are allowed to equip the item.
   * enable: Set to true to enable equipping for this item
-  * slot: The equipment slot (e.g., BODY, HEAD) where the item is equipped
+  * slot: The equipment slot (e.g., CHEST, HEAD, LEGS, FEET) where the item is equipped
   * enableSound: Boolean to play a sound when the item is equipped
   * sound: Sound effect to play when equipped
   * equipModel: Optional custom model for the equipped item (e.g., "mynamespace:mymodel")
@@ -245,7 +245,7 @@ itemRarity:
 ```yaml
 equippableFeatures:
     enable: false
-    slot: BODY
+    slot: CHEST
     enableSound: false
     sound: ITEM_ARMOR_EQUIP_DIAMOND
 
