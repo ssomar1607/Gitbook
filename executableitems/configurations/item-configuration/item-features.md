@@ -173,7 +173,8 @@ unbreakable: true
 * Example:
 
 ```yaml
-keepDefaultAttributes: false
+keepDefaultAttributes: true
+ignoreKeepDefaultAttributesFeature: false
 ```
 
 * On this link there is a tutorial for attributes, and its features.
